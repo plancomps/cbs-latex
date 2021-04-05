@@ -6,5 +6,5 @@ nav_exclude: true
 # TEST-Start.md
 
 ```latex
-{% include_relative TEST-Start.md %}
+{% include kramdown/TEST-Start.md %}
 ```

@@ -6,5 +6,5 @@ nav_exclude: true
 # Binding.md
 
 ```markdown
-{% include_relative Binding.md %}
+{% include kramdown/Binding.md %}
 ```
