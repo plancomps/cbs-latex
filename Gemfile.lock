@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/pdmosses/just-the-docs.git
-  revision: 755c86ca6a63a0df0b455234b8ad7f4e771241f3
+  revision: 5c0e6a875cfa6a4f76dbc6f8adbd1827e4ab4399
   branch: combination-rec-nav
   specs:
     just-the-docs (0.3.3)
