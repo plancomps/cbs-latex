@@ -1,0 +1,28 @@
+% {% raw %}
+
+
+\renewcommand{\VARHYPER}[3]{\VAR{#3}}
+\renewcommand{\NAMEHYPER}[3]{\NAME{#3}}
+\renewcommand{\SYNHYPER}[3]{\SYN{#3}}
+\renewcommand{\SEMHYPER}[3]{\SEM{#3}}
+\renewcommand{\SECTHYPER}[3]{\SECT{#3}}
+\begin{center}
+\rule{3in}{0.4pt}
+\end{center}
+
+\begin{displaymath}
+\KEY{Language} \quad \STRING{Test}
+\end{displaymath}
+
+\section{ASCII characters}\hypertarget{ascii-characters}{}\label{ascii-characters}
+
+The apostrophe and the backslash have to be escaped in terminal symbols.
+
+\begin{align*}
+  \KEY{Syntax} \quad
+     \SYN{test}
+      \ ::= \ & \
+      \LEX{{!}~{"}~{\HASH}~{\DOLLAR}~{\PERCENT}~{\AMPERSAND}~{\APOSTROPHE}~{(}~{)}~{*}~{+}~{,}~{-}~{.}~{/}~{:}~{;}} \\
+      \ \mid \ & \ \LEX{{<}~{=}~{>}~{?}~{@}~{[}~{\BACKSLASH}~{]}~{\CARET}~{\UNDERSCORE}~{\GRAVE}~{\LEFTBRACE}~{|}~{\RIGHTBRACE}~{\TILDE}~A~Z~a~z~0~9}
+\end{align*}
+% {% endraw %}
