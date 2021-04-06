@@ -16,10 +16,13 @@ $logo: "{{ site.logo | absolute_url }}";
 @import "./color_schemes/{{ light_color_scheme }}";
 @import "./modules";
 {% include css/custom.scss.liquid color_scheme=light_color_scheme %}
+{% include css/callouts.scss.liquid color_scheme=include.color_scheme %}
+
 @media (prefers-color-scheme: dark) {
   @import "./color_schemes/{{ site.auto_dark_scheme }}";
   @import "./modules";
   {% include css/custom.scss.liquid color_scheme="auto-dark" %}
+  {% include css/callouts.scss.liquid color_scheme="dark" %}
 }
 
 {% else %}
@@ -27,7 +30,6 @@ $logo: "{{ site.logo | absolute_url }}";
 @import "./color_schemes/{{ include.color_scheme }}";
 @import "./modules";
 {% include css/custom.scss.liquid color_scheme=include.color_scheme %}
+{% include css/callouts.scss.liquid color_scheme=include.color_scheme %}
 
 {% endif %}
-
-{% include css/callouts.scss.liquid color_scheme=include.color_scheme %}
