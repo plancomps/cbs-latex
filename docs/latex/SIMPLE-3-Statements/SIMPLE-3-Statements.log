@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.1.2)  4 APR 2021 23:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.1.2)  11 APR 2021 21:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -33,6 +33,9 @@ File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 \belowcaptionskip=\skip49
 \bibindent=\dimen138
 )
+(/Users/pdm/Library/texmf/tex/latex/local/cbs-latex-local.sty
+Package: cbs-latex-local 2021/04/11 CBS-LaTeX-Local package
+
 (/Users/pdm/Library/texmf/tex/latex/local/cbs-latex.sty
 Package: cbs-latex 2021/03/27 CBS-LaTeX package
 
@@ -267,7 +270,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
 \Hy@SectionHShift=\skip53
-)) (/usr/local/texlive/2020/texmf-dist/tex/latex/geometry/geometry.sty
+))) (/usr/local/texlive/2020/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
 (/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/ifvtex.sty
@@ -481,15 +484,15 @@ File: ot1cmtl.fd 2005/04/13 v8.1 (WaS)
 )
 (./SIMPLE-3-Statements.part.tex
 LaTeX Font Info:    Font shape `OT1/cmbr/b/n' in size <14.4> not available
-(Font)              Font shape `OT1/cmbr/bx/n' tried instead on input line 17.
+(Font)              Font shape `OT1/cmbr/bx/n' tried instead on input line 12.
 LaTeX Font Info:    Font shape `OT1/cmbr/b/n' in size <10> not available
-(Font)              Font shape `OT1/cmbr/bx/n' tried instead on input line 17.
+(Font)              Font shape `OT1/cmbr/bx/n' tried instead on input line 12.
 LaTeX Font Info:    Font shape `OT1/cmbr/b/n' in size <7> not available
-(Font)              Font shape `OT1/cmbr/bx/n' tried instead on input line 17.
+(Font)              Font shape `OT1/cmbr/bx/n' tried instead on input line 12.
 
 
 LaTeX Font Warning: Font shape `OT1/cmbr/bx/n' in size <7> not available
-(Font)              Font shape `OT1/cmbr/m/n' tried instead on input line 17.
+(Font)              Font shape `OT1/cmbr/m/n' tried instead on input line 12.
 
 [1
 
@@ -499,13 +502,13 @@ Package rerunfilecheck Info: File `SIMPLE-3-Statements.out' has not changed.
 (rerunfilecheck)             Checksum: 9E839D825543A6461BC0B1335DBF961D;48.
  ) 
 Here is how much of TeX's memory you used:
- 7830 strings out of 479310
- 113878 string characters out of 5867403
- 471788 words of memory out of 5000000
- 24867 multiletter control sequences out of 15000+600000
+ 7841 strings out of 479310
+ 114167 string characters out of 5867403
+ 471967 words of memory out of 5000000
+ 24875 multiletter control sequences out of 15000+600000
  417972 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 82i,11n,82p,529b,333s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 96i,11n,94p,529b,333s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/hfbright/hfbr10.pfb></
 usr/local/texlive/2020/texmf-dist/fonts/type1/public/hfbright/hfbr17.pfb></usr/
 local/texlive/2020/texmf-dist/fonts/type1/public/hfbright/hfbr8.pfb></usr/local

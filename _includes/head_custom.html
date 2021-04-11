@@ -2,11 +2,12 @@
   Math rendering
 {%- endcomment -%}
 
-{% case page.math %}
+{% assign math = page.math | default: layout.math %}
+{% case math %}
   {% when "katex" %}
-    {% include cbs-katex.html %}
+    {% include katex.html %}
   {% when "mathjax" %}
-    {% include cbs-mathjax.html %}
+    {% include mathjax.html %}
 {% endcase %}
 
 <link rel="shortcut icon" type="image/x-icon"   href="/cbs-latex/assets/icons/favicon.ico">

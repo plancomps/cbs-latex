@@ -1,6 +1,6 @@
 ---
 title: Samples
-math: katex
+layout: cbs-katex
 ---
 
 # Samples

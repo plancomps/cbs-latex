@@ -5,8 +5,8 @@ parent: Macros
 
 # CBS-KaTeX
 
-`cbs-katex.html` is a configuration defining KaTeX macros for use in web pages:
+`cbs-katex.sty` is a package defining KaTeX macros for use in web pages:
 
-```html
-{% include cbs-katex.html %}
+```latex
+{% include cbs-katex.sty %}
 ```

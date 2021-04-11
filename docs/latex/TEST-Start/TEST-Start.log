@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.1.2)  4 APR 2021 23:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.1.2)  11 APR 2021 22:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -33,6 +33,9 @@ File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 \belowcaptionskip=\skip49
 \bibindent=\dimen138
 )
+(/Users/pdm/Library/texmf/tex/latex/local/cbs-latex-local.sty
+Package: cbs-latex-local 2021/04/11 CBS-LaTeX-Local package
+
 (/Users/pdm/Library/texmf/tex/latex/local/cbs-latex.sty
 Package: cbs-latex 2021/03/27 CBS-LaTeX package
 
@@ -267,7 +270,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
 \Hy@SectionHShift=\skip53
-)) (/usr/local/texlive/2020/texmf-dist/tex/latex/geometry/geometry.sty
+))) (/usr/local/texlive/2020/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
 (/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/ifvtex.sty
@@ -475,19 +478,14 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 2
 (/usr/local/texlive/2020/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 (./TEST-Start.part.tex
 LaTeX Font Info:    Trying to load font information for OT1+cmtl on input line 
-14.
+9.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/cmbright/ot1cmtl.fd
 File: ot1cmtl.fd 2005/04/13 v8.1 (WaS)
 )
 LaTeX Font Info:    Font shape `OT1/cmbr/b/n' in size <14.4> not available
-(Font)              Font shape `OT1/cmbr/bx/n' tried instead on input line 17.
-LaTeX Font Info:    Trying to load font information for TS1+cmtl on input line 
-27.
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/cmbright/ts1cmtl.fd
-File: ts1cmtl.fd 2005/04/13 v8.1 (WaS)
-)) [1
+(Font)              Font shape `OT1/cmbr/bx/n' tried instead on input line 12.
+) [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./TEST-Start.aux)
@@ -495,25 +493,23 @@ Package rerunfilecheck Info: File `TEST-Start.out' has not changed.
 (rerunfilecheck)             Checksum: 89EA3C253355F00CFCBE17A57C9613EC;52.
  ) 
 Here is how much of TeX's memory you used:
- 7830 strings out of 479310
- 113739 string characters out of 5867403
- 429892 words of memory out of 5000000
- 24869 multiletter control sequences out of 15000+600000
- 416974 words of font info for 80 fonts, out of 8000000 for 9000
+ 7825 strings out of 479310
+ 113737 string characters out of 5867403
+ 431964 words of memory out of 5000000
+ 24865 multiletter control sequences out of 15000+600000
+ 416080 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 82i,11n,82p,520b,323s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/hfbright/hfbr10.pfb></u
-sr/local/texlive/2020/texmf-dist/fonts/type1/public/hfbright/hfbr17.pfb></usr/l
-ocal/texlive/2020/texmf-dist/fonts/type1/public/hfbright/hfbrbx10.pfb></usr/loc
-al/texlive/2020/texmf-dist/fonts/type1/public/hfbright/hfbrsl10.pfb></usr/local
-/texlive/2020/texmf-dist/fonts/type1/public/hfbright/hfbrsy10.pfb></usr/local/t
-exlive/2020/texmf-dist/fonts/type1/public/hfbright/hftl10.pfb></usr/local/texli
-ve/2020/texmf-dist/fonts/type1/public/cm-super/sfbtl10.pfb>
-Output written on TEST-Start.pdf (1 page, 73010 bytes).
+ 96i,11n,94p,520b,321s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2020/texmf-dist/fonts/type1/public/hfbright/hfbr10.pfb></
+usr/local/texlive/2020/texmf-dist/fonts/type1/public/hfbright/hfbr17.pfb></usr/
+local/texlive/2020/texmf-dist/fonts/type1/public/hfbright/hfbrbx10.pfb></usr/lo
+cal/texlive/2020/texmf-dist/fonts/type1/public/hfbright/hfbrsl10.pfb></usr/loca
+l/texlive/2020/texmf-dist/fonts/type1/public/hfbright/hfbrsy10.pfb></usr/local/
+texlive/2020/texmf-dist/fonts/type1/public/hfbright/hftl10.pfb>
+Output written on TEST-Start.pdf (1 page, 58046 bytes).
 PDF statistics:
- 48 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
+ 43 PDF objects out of 1000 (max. 8388607)
+ 33 compressed objects within 1 object stream
  4 named destinations out of 1000 (max. 500000)
  9 words of extra memory for PDF output out of 10000 (max. 10000000)
 

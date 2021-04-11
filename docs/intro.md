@@ -1,6 +1,6 @@
 ---
 title: Introduction
-math: katex
+layout: cbs-katex
 ---
 
 # Introduction

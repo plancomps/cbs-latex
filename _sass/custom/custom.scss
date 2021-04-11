@@ -20,7 +20,7 @@ p, li, a, dt, dd, td, th, h1, h2, h3, h4, h5, h6 {
   background-image: none;
 }
 
-// Potential workaround for KaTeX 0.13.0 bug https://github.com/KaTeX/KaTeX/issues/2815
+// Potential workaround for KaTeX 0.13.2 bug https://github.com/KaTeX/KaTeX/issues/2815
 
 .katex .vlist-t2 > .vlist-r:nth-child(2) > .vlist {
   pointer-events: none;

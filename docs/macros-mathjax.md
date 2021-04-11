@@ -1,9 +1,10 @@
 ---
-title: Macros
-layout: cbs-katex
+title: Macros - MathJax
+layout: cbs-mathjax-local
+nav_exclude: true
 ---
 
-> This page is using $$\KaTeX$$. [See the same page using MathJax](macros-mathjax).
+> This page is using MathJax. [See the same page using KaTeX](macros).
 
 {% include kramdown/macros.md %}
 

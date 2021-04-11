@@ -5,8 +5,8 @@ parent: Macros
 
 # CBS-MathJax
 
-`cbs-mathjax.html` is a configuration defining MathJax macros for use in web pages:
+`cbs-mathjax.sty` is a package defining MathJax macros for use in web pages:
 
-```html
-{% include cbs-mathjax.html %}
+```latex
+{% include cbs-mathjax.sty %}
 ```
