@@ -5,7 +5,7 @@ $logo: "{{ site.logo | absolute_url }}";
 
 @import "./support/support";
 
-{% if include.color_scheme == "auto_dark" %}
+{% if include.color_scheme == "auto-dark" %}
 
 {% if site.color_scheme and site.color_scheme != "nil" %}
   {% assign light_color_scheme = site.color_scheme %}

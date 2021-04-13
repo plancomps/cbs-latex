@@ -1,7 +1,7 @@
 ---
 ---
 {% if site.auto_dark_scheme and site.auto_dark_scheme != "nil" %}
-  {% assign color_scheme = "auto_dark" %}
+  {% assign color_scheme = "auto-dark" %}
 {% elsif site.color_scheme and site.color_scheme != "nil" %}
   {% assign color_scheme = site.color_scheme %}
 {% else %}
