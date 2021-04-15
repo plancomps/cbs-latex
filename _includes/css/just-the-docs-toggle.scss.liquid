@@ -13,7 +13,7 @@ html, html[data-theme="light"] {
   @import "./support/support";
   @import "./color_schemes/{{ include.color_scheme }}";
   @import "./modules";
-  {% include css/custom.scss.liquid %}
+  {% include css/custom.scss.liquid color_scheme = include.color_scheme %}
   {% include css/callouts.scss.liquid color_scheme = include.color_scheme %}
 }
 
