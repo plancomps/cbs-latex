@@ -1,6 +1,9 @@
 # Macros
 {: .no_toc }
 
+This page explains how to mark up CBS specifications in LaTeX when using the `cbs-latex` package.
+It also provides links to the macro definitions for use with LaTeX, KaTeX, and MathJax.
+
 <details open markdown="block">
   <summary>
     Table of contents
@@ -30,8 +33,11 @@ Each package defines the same collection of LaTeX macro names, taking the same a
 The rendering of the macros should have the same layout and symbols,
 regardless of which format is used, except that the font families may differ.
 
-All macro names are uppercase, to reduce the risk of clashes with macros defined by other packages.
+All macro names are uppercase, to reduce the risk of clashes with macros defined by other packages.[^prefix]
 They are intended for use primarily in math mode.
+
+[^prefix]:
+    An alternative would be to prefix all macro names with `cbs`.
 
 ## Required packages
 
@@ -92,7 +98,7 @@ and the colors depend on the configured `color_scheme`.
 
 Variants of the name markup macros indicate that the occurrence of a name is a declaration or a reference.
 In both PDFs and web pages, each name reference becomes a hyperlink to the declaration of that name.
-A name should not be declared (in the same namespace) more than once per file.
+A name should not be declared (in the same namespace) more than once per document.
 
 | Plain CBS | CBS-LaTeX | Formatted CBS |
 | - | - | - | 
@@ -104,9 +110,12 @@ Similarly for `\SYN`, `\SEM`, `\SECT`.
 
 ### Variables
 
-The macro for variables formats its argument in text mode.
-A Greek letter used as a variable has to be in math mode.
-Any primes, subscripts, and multiplicity come after the macro argument.
+The macro for variable names formats its argument in text mode.
+A Greek letter used as a variable name has to be in math mode.
+Subscripts should be marked up directly after the variable name,
+to ensure that they are in the intended sans serif font
+(and to support italic spacing correction).
+Any primes and multiplicity are written after the name and subscript.
 
 | Plain CBS | CBS-LaTeX | Formatted CBS |
 | - | - | - | 
@@ -151,10 +160,10 @@ and characters that look different in text and math mode.
 | `'0...9A...Za...z'` | `\LEX{0...9A...Za...z}` | $$\LEX{0...9A...Za...z}$$ |
 | `'!()*,./:;=?@[]'` | `\LEX{!()*,./:;=?@[]}` | $$\LEX{!()*,./:;=?@[]}$$ |
 | `'#'` | `\LEX{\HASH}` | $$\LEX{\HASH}$$ |
-| `'#'` | `\LEX{\DOLLAR}` | $$\LEX{\DOLLAR}$$ |
-| `'#'` | `\LEX{\PERCENT}` | $$\LEX{\PERCENT}$$ |
-| `'#'` | `\LEX{\AMPERSAND}` | $$\LEX{\AMPERSAND}$$ |
-| `'#'` | `\LEX{\APOSTROPHE}` | $$\LEX{\APOSTROPHE}$$ |
+| `'$'` | `\LEX{\DOLLAR}` | $$\LEX{\DOLLAR}$$ |
+| `'%'` | `\LEX{\PERCENT}` | $$\LEX{\PERCENT}$$ |
+| `'&'` | `\LEX{\AMPERSAND}` | $$\LEX{\AMPERSAND}$$ |
+| `'\''` | `\LEX{\APOSTROPHE}` | $$\LEX{\APOSTROPHE}$$ |
 | `'\\'` | `\LEX{\BACKSLASH}` | $$\LEX{\BACKSLASH}$$ |
 | `'^'` | `\LEX{\CARET}` | $$\LEX{\CARET}$$ |
 | `'_'` | `\LEX{\UNDERSCORE}` | $$\LEX{\UNDERSCORE}$$ |

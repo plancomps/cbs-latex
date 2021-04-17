@@ -10,7 +10,7 @@ using the CBS-LaTeX macros, and the resulting PDFs and web pages.
 
 ## Funcon specifications
 
-[CBS-beta/Funcons-beta/Computations/Normal/Binding](https://plancomps.github.io/CBS-beta/Funcons-beta/Computations/Normal/Binding):
+[CBS-beta/Funcons-beta/Computations/Normal/Binding](https://plancomps.github.io/CBS-beta/docs/Funcons-beta/Computations/Normal/Binding):
 
 > [CBS source](cbs/Binding.cbs.txt) \|
   [CBS-LaTeX](latex/Binding/Binding.part.tex.html) \|
@@ -20,7 +20,7 @@ using the CBS-LaTeX macros, and the resulting PDFs and web pages.
 
 ## Language specifications
 
-[CBS-beta/Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-3-Statements](https://plancomps.github.io/CBS-beta/Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-3-Statements):
+[CBS-beta/Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-3-Statements](https://plancomps.github.io/CBS-beta/docs/Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-3-Statements):
 
 > [CBS source](cbs/SIMPLE-3-Statements.cbs.txt) \|
   [CBS-LaTeX](latex/SIMPLE-3-Statements/SIMPLE-3-Statements.part.tex.html) \|
@@ -43,7 +43,9 @@ using the CBS-LaTeX macros, and used to produce a PDF and a web page:
 
 PDFs
 
-: Acrobat Reader is recommended. The Preview app on macOS Catalina does not support hyperlinks from references to declarations, which are needed for navigation in multi-file CBS specifications.
+: Acrobat Reader is recommended. The Preview app on macOS (Catalina) does not support hyperlinks from references to declarations, which are needed for navigation in multi-file CBS specifications.
+
+  PDFs can also be browsed directly in a web browser.
 
 Web pages
 
@@ -69,7 +71,7 @@ Production of a PDF and a web page from a literate CBS source file involves the 
 
 3. The kramdown converter generates LaTeX document bodies from the kramdown files with the command:
    ```
-   kramdown -o remove_html_tags,latex KRAMDOWN-FILE.md > LATEX-FILE.part.tex
+   kramdown -o remove_html_tags,latex FILE.md > FILE.part.tex
    ```
 
 4. pdflatex produces PDFs from the generated LaTeX source files by inputting them in a document template with the `cbs-latex` package.
@@ -77,8 +79,10 @@ Production of a PDF and a web page from a literate CBS source file involves the 
 
 5. The kramdown converter automatically generates HTML pages from the kramdown files when building a website on GitHub Pages (or locally) with [Jekyll].
 
-6. The `cbs-katex` package uses JavaScript and CSS in the browser to automatically render LaTeX code in HTML pages,
-   with an option that provides the CBS-LaTeX macros.
+6. KaTeX uses JavaScript and CSS in the browser to automatically render LaTeX code in HTML pages.
+   The `cbs-katex` package defines the CBS-LaTeX macros for use with KaTeX,
+   and needs to be included by the Jekyll layout
+   (as with the [source files for this website](https://github.com/plancomps/cbs-latex)).
    The CSS specifications of the highlighting colours can be overridden (the standard HTML colour names can be used).
 
 ----

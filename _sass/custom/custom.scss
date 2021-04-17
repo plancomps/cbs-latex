@@ -18,7 +18,6 @@ p, li, a, dt, dd, td, th, h1, h2, h3, h4, h5, h6 {
 .MathJax a, .katex a {
   color: $body-text-color;
   background-image: none;
-  white-space: nowrap;
 }
 
 // Potential workaround for KaTeX 0.13.2 bug https://github.com/KaTeX/KaTeX/issues/2815
@@ -35,7 +34,7 @@ mjx-container[jax="SVG"] > svg a[href] {
 }
 
 // CBS highlighting
-      
+
 .MathJax, .katex {
   .cbs-Key {
     color: Silver;
