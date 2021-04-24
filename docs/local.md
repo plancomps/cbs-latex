@@ -46,7 +46,7 @@ The CBS highlighting colors can be changed by editing the SCSS files in `_sass/c
 {:.note}
 > When browsing these web pages on GitHub, the color scheme can be toggled between `light` and `dark`.
 
-The toggle button is at the top of the navigation panel on the [home page](..).
+The toggle button is at the top of the navigation panel.
 
 For local browsing, the following configuration options are provided:
 
