@@ -1,0 +1,949 @@
+{'\\FUNCON@abrupt':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Abrupting}{Abrupting}{abrupt}'  ,
+ '\\FUNCON@abrupted':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Abrupting}{Abrupting}{abrupted}'  ,
+ '\\FUNCON@abstraction':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Abstraction/Generic}{Generic}{abstraction}'  ,
+ '\\FUNCON@abstractions':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Abstraction/Generic}{Generic}{abstractions}'  ,
+ '\\FUNCON@accumulate':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Binding}{Binding}{accumulate}'  ,
+ '\\FUNCON@alloc':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Storing}{Storing}{alloc}'  ,
+ '\\FUNCON@alloc@init':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Storing}{Storing}{alloc-init}'  ,
+ '\\FUNCON@allocate@initialised@variable':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Storing}{Storing}{allocate-initialised-variable}'  ,
+ '\\FUNCON@allocate@variable':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Storing}{Storing}{allocate-variable}'  ,
+ '\\FUNCON@and':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Booleans}{Booleans}{and}'  ,
+ '\\FUNCON@apply':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Abstraction/Functions}{Functions}{apply}'  ,
+ '\\FUNCON@ascii@char':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{ascii-char}'  ,
+ '\\FUNCON@ascii@character':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{ascii-character}'  ,
+ '\\FUNCON@ascii@characters':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{ascii-characters}'  ,
+ '\\FUNCON@ascii@chars':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{ascii-chars}'  ,
+ '\\FUNCON@ascii@points':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{ascii-points}'  ,
+ '\\FUNCON@assign':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Storing}{Storing}{assign}'  ,
+ '\\FUNCON@assigned':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Storing}{Storing}{assigned}'  ,
+ '\\FUNCON@atomic':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Flowing}{Flowing}{atomic}'  ,
+ '\\FUNCON@atoms':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Generating}{Generating}{atoms}'  ,
+ '\\FUNCON@backslash':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{backslash}'  ,
+ '\\FUNCON@backspace':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{backspace}'  ,
+ '\\FUNCON@basic@multilingual@plane@characters':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{basic-multilingual-plane-characters}'  ,
+ '\\FUNCON@basic@multilingual@plane@points':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{basic-multilingual-plane-points}'  ,
+ '\\FUNCON@binary':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{binary}'  ,
+ '\\FUNCON@binary@natural':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{binary-natural}'  ,
+ '\\FUNCON@binaryONETWOEIGHT':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{binary128}'  ,
+ '\\FUNCON@binarySIXFOUR':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{binary64}'  ,
+ '\\FUNCON@binaryTHREETWO':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{binary32}'  ,
+ '\\FUNCON@bind':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Binding}{Binding}{bind}'  ,
+ '\\FUNCON@bind@recursively':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Binding}{Binding}{bind-recursively}'  ,
+ '\\FUNCON@bind@to@forward@links':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Binding}{Binding}{bind-to-forward-links}'  ,
+ '\\FUNCON@bind@value':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Binding}{Binding}{bind-value}'  ,
+ '\\FUNCON@bit@vector':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector}'  ,
+ '\\FUNCON@bit@vector@and':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector-and}'  ,
+ '\\FUNCON@bit@vector@arithmetic@shift@right':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector-arithmetic-shift-right}'  ,
+ '\\FUNCON@bit@vector@logical@shift@right':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector-logical-shift-right}'  ,
+ '\\FUNCON@bit@vector@not':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector-not}'  ,
+ '\\FUNCON@bit@vector@or':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector-or}'  ,
+ '\\FUNCON@bit@vector@shift@left':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector-shift-left}'  ,
+ '\\FUNCON@bit@vector@to@integer':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector-to-integer}'  ,
+ '\\FUNCON@bit@vector@to@natural':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector-to-natural}'  ,
+ '\\FUNCON@bit@vector@xor':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector-xor}'  ,
+ '\\FUNCON@bit@vectors':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vectors}'  ,
+ '\\FUNCON@bits':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Bits}{Bits}{bits}'  ,
+ '\\FUNCON@bmp@chars':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{bmp-chars}'  ,
+ '\\FUNCON@booleans':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Booleans}{Booleans}{booleans}'  ,
+ '\\FUNCON@bools':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Booleans}{Booleans}{bools}'  ,
+ '\\FUNCON@bound':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Binding}{Binding}{bound}'  ,
+ '\\FUNCON@bound@directly':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Binding}{Binding}{bound-directly}'  ,
+ '\\FUNCON@bound@value':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Binding}{Binding}{bound-value}'  ,
+ '\\FUNCON@bounded@integers':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{bounded-integers}'  ,
+ '\\FUNCON@bounded@ints':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{bounded-ints}'  ,
+ '\\FUNCON@break':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Breaking}{Breaking}{break}'  ,
+ '\\FUNCON@breaking':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Breaking}{Breaking}{breaking}'  ,
+ '\\FUNCON@broken':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Breaking}{Breaking}{broken}'  ,
+ '\\FUNCON@bytes':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Bits}{Bits}{bytes}'  ,
+ '\\FUNCON@carriage@return':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{carriage-return}'  ,
+ '\\FUNCON@case@match':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{case-match}'  ,
+ '\\FUNCON@case@match@loosely':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{case-match-loosely}'  ,
+ '\\FUNCON@case@variant@value':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{case-variant-value}'  ,
+ '\\FUNCON@cast':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Value-Types}{Value-Types}{cast}'  ,
+ '\\FUNCON@cast@to@type':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Value-Types}{Value-Types}{cast-to-type}'  ,
+ '\\FUNCON@catch@else@throw':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Throwing}{Throwing}{catch-else-throw}'  ,
+ '\\FUNCON@characters':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{characters}'  ,
+ '\\FUNCON@chars':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{chars}'  ,
+ '\\FUNCON@check':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Failing}{Failing}{check}'  ,
+ '\\FUNCON@check@true':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Failing}{Failing}{check-true}'  ,
+ '\\FUNCON@checked':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Failing}{Failing}{checked}'  ,
+ '\\FUNCON@choice':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Flowing}{Flowing}{choice}'  ,
+ '\\FUNCON@class':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Classes}{Classes}{class}'  ,
+ '\\FUNCON@class@feature@map':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Classes}{Classes}{class-feature-map}'  ,
+ '\\FUNCON@class@instantiator':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Classes}{Classes}{class-instantiator}'  ,
+ '\\FUNCON@class@name@single@inheritance@feature@map':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Classes}{Classes}{class-name-single-inheritance-feature-map}'  ,
+ '\\FUNCON@class@name@tree':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Classes}{Classes}{class-name-tree}'  ,
+ '\\FUNCON@class@superclass@name@sequence':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Classes}{Classes}{class-superclass-name-sequence}'  ,
+ '\\FUNCON@classes':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Classes}{Classes}{classes}'  ,
+ '\\FUNCON@closed':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Binding}{Binding}{closed}'  ,
+ '\\FUNCON@closure':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Abstraction/Generic}{Generic}{closure}'  ,
+ '\\FUNCON@collateral':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Binding}{Binding}{collateral}'  ,
+ '\\FUNCON@compose':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Abstraction/Functions}{Functions}{compose}'  ,
+ '\\FUNCON@computation@types':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Computation-Types}{Computation-Types}{computation-types}'  ,
+ '\\FUNCON@cons':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Lists}{Lists}{cons}'  ,
+ '\\FUNCON@continuation':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Controlling}{Controlling}{continuation}'  ,
+ '\\FUNCON@continuations':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Controlling}{Controlling}{continuations}'  ,
+ '\\FUNCON@continue':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Continuing}{Continuing}{continue}'  ,
+ '\\FUNCON@continued':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Continuing}{Continuing}{continued}'  ,
+ '\\FUNCON@continuing':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Continuing}{Continuing}{continuing}'  ,
+ '\\FUNCON@control':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Controlling}{Controlling}{control}'  ,
+ '\\FUNCON@control@signal':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Controlling}{Controlling}{control-signal}'  ,
+ '\\FUNCON@current@value':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Storing}{Storing}{current-value}'  ,
+ '\\FUNCON@curry':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Abstraction/Functions}{Functions}{curry}'  ,
+ '\\FUNCON@datatype@value':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Datatypes}{Datatypes}{datatype-value}'  ,
+ '\\FUNCON@datatype@value@elements':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Datatypes}{Datatypes}{datatype-value-elements}'  ,
+ '\\FUNCON@datatype@value@id':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Datatypes}{Datatypes}{datatype-value-id}'  ,
+ '\\FUNCON@datatype@values':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Datatypes}{Datatypes}{datatype-values}'  ,
+ '\\FUNCON@decimal':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{decimal}'  ,
+ '\\FUNCON@decimal@float':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{decimal-float}'  ,
+ '\\FUNCON@decimal@natural':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{decimal-natural}'  ,
+ '\\FUNCON@decimalONETWOEIGHT':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{decimal128}'  ,
+ '\\FUNCON@decimalSIXFOUR':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{decimal64}'  ,
+ '\\FUNCON@delimit@cc':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Controlling}{Controlling}{delimit-cc}'  ,
+ '\\FUNCON@delimit@current@continuation':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Controlling}{Controlling}{delimit-current-continuation}'  ,
+ '\\FUNCON@dereference':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/References}{References}{dereference}'  ,
+ '\\FUNCON@directed@graphs':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Graphs}{Graphs}{directed-graphs}'  ,
+ '\\FUNCON@do@while':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Flowing}{Flowing}{do-while}'  ,
+ '\\FUNCON@do@while@true':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Flowing}{Flowing}{do-while-true}'  ,
+ '\\FUNCON@dom':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Maps}{Maps}{dom}'  ,
+ '\\FUNCON@double@quote':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{double-quote}'  ,
+ '\\FUNCON@drop@first@n':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Sequences}{Sequences}{drop-first-n}'  ,
+ '\\FUNCON@effect':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Flowing}{Flowing}{effect}'  ,
+ '\\FUNCON@element@not@in':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Sets}{Sets}{element-not-in}'  ,
+ '\\FUNCON@else':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Failing}{Failing}{else}'  ,
+ '\\FUNCON@else@choice':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Failing}{Failing}{else-choice}'  ,
+ '\\FUNCON@empty@type':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Value-Types}{Value-Types}{empty-type}'  ,
+ '\\FUNCON@enact':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Abstraction/Generic}{Generic}{enact}'  ,
+ '\\FUNCON@env':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Binding}{Binding}{env}'  ,
+ '\\FUNCON@environment':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Binding}{Binding}{environment}'  ,
+ '\\FUNCON@environments':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Binding}{Binding}{environments}'  ,
+ '\\FUNCON@envs':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Binding}{Binding}{envs}'  ,
+ '\\FUNCON@exclusive@or':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Booleans}{Booleans}{exclusive-or}'  ,
+ '\\FUNCON@fail':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Failing}{Failing}{fail}'  ,
+ '\\FUNCON@failed':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Failing}{Failing}{failed}'  ,
+ '\\FUNCON@failing':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Failing}{Failing}{failing}'  ,
+ '\\FUNCON@false':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Booleans}{Booleans}{false}'  ,
+ '\\FUNCON@finalise@abrupting':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Abrupting}{Abrupting}{finalise-abrupting}'  ,
+ '\\FUNCON@finalise@breaking':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Breaking}{Breaking}{finalise-breaking}'  ,
+ '\\FUNCON@finalise@continuing':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Continuing}{Continuing}{finalise-continuing}'  ,
+ '\\FUNCON@finalise@failing':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Failing}{Failing}{finalise-failing}'  ,
+ '\\FUNCON@finalise@returning':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Returning}{Returning}{finalise-returning}'  ,
+ '\\FUNCON@finalise@throwing':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Throwing}{Throwing}{finalise-throwing}'  ,
+ '\\FUNCON@finally':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Abrupting}{Abrupting}{finally}'  ,
+ '\\FUNCON@first':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Sequences}{Sequences}{first}'  ,
+ '\\FUNCON@first@n':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Sequences}{Sequences}{first-n}'  ,
+ '\\FUNCON@float':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float}'  ,
+ '\\FUNCON@float@absolute@value':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-absolute-value}'  ,
+ '\\FUNCON@float@acos':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-acos}'  ,
+ '\\FUNCON@float@acosh':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-acosh}'  ,
+ '\\FUNCON@float@add':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-add}'  ,
+ '\\FUNCON@float@asin':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-asin}'  ,
+ '\\FUNCON@float@asinh':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-asinh}'  ,
+ '\\FUNCON@float@atan':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-atan}'  ,
+ '\\FUNCON@float@atanh':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-atanh}'  ,
+ '\\FUNCON@float@atanTWO':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-atan2}'  ,
+ '\\FUNCON@float@ceiling':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-ceiling}'  ,
+ '\\FUNCON@float@convert':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-convert}'  ,
+ '\\FUNCON@float@cos':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-cos}'  ,
+ '\\FUNCON@float@cosh':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-cosh}'  ,
+ '\\FUNCON@float@divide':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-divide}'  ,
+ '\\FUNCON@float@e':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-e}'  ,
+ '\\FUNCON@float@equal':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-equal}'  ,
+ '\\FUNCON@float@exp':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-exp}'  ,
+ '\\FUNCON@float@float@power':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-float-power}'  ,
+ '\\FUNCON@float@floor':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-floor}'  ,
+ '\\FUNCON@float@formats':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-formats}'  ,
+ '\\FUNCON@float@integer@power':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-integer-power}'  ,
+ '\\FUNCON@float@is@greater':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-is-greater}'  ,
+ '\\FUNCON@float@is@greater@or@equal':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-is-greater-or-equal}'  ,
+ '\\FUNCON@float@is@less':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-is-less}'  ,
+ '\\FUNCON@float@is@less@or@equal':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-is-less-or-equal}'  ,
+ '\\FUNCON@float@log':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-log}'  ,
+ '\\FUNCON@float@logONEZERO':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-log10}'  ,
+ '\\FUNCON@float@multiply':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-multiply}'  ,
+ '\\FUNCON@float@multiply@add':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-multiply-add}'  ,
+ '\\FUNCON@float@negate':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-negate}'  ,
+ '\\FUNCON@float@pi':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-pi}'  ,
+ '\\FUNCON@float@remainder':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-remainder}'  ,
+ '\\FUNCON@float@round@ties@to@even':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-round-ties-to-even}'  ,
+ '\\FUNCON@float@round@ties@to@infinity':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-round-ties-to-infinity}'  ,
+ '\\FUNCON@float@sin':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-sin}'  ,
+ '\\FUNCON@float@sinh':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-sinh}'  ,
+ '\\FUNCON@float@sqrt':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-sqrt}'  ,
+ '\\FUNCON@float@subtract':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-subtract}'  ,
+ '\\FUNCON@float@tan':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-tan}'  ,
+ '\\FUNCON@float@tanh':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-tanh}'  ,
+ '\\FUNCON@float@truncate':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{float-truncate}'  ,
+ '\\FUNCON@floats':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{floats}'  ,
+ '\\FUNCON@fold@left':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Giving}{Giving}{fold-left}'  ,
+ '\\FUNCON@fold@right':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Giving}{Giving}{fold-right}'  ,
+ '\\FUNCON@follow@if@link':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Linking}{Linking}{follow-if-link}'  ,
+ '\\FUNCON@follow@link':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Linking}{Linking}{follow-link}'  ,
+ '\\FUNCON@force':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Abstraction/Thunks}{Thunks}{force}'  ,
+ '\\FUNCON@forest@branch@sequence':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Trees}{Trees}{forest-branch-sequence}'  ,
+ '\\FUNCON@forest@root@value@sequence':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Trees}{Trees}{forest-root-value-sequence}'  ,
+ '\\FUNCON@forest@value@sequence':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Trees}{Trees}{forest-value-sequence}'  ,
+ '\\FUNCON@form@feed':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{form-feed}'  ,
+ '\\FUNCON@fresh@atom':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Generating}{Generating}{fresh-atom}'  ,
+ '\\FUNCON@fresh@identifier':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Binding}{Binding}{fresh-identifier}'  ,
+ '\\FUNCON@fresh@init@link':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Linking}{Linking}{fresh-init-link}'  ,
+ '\\FUNCON@fresh@initialised@link':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Linking}{Linking}{fresh-initialised-link}'  ,
+ '\\FUNCON@fresh@link':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Linking}{Linking}{fresh-link}'  ,
+ '\\FUNCON@from':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{from}'  ,
+ '\\FUNCON@function':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Abstraction/Functions}{Functions}{function}'  ,
+ '\\FUNCON@functions':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Abstraction/Functions}{Functions}{functions}'  ,
+ '\\FUNCON@give':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Giving}{Giving}{give}'  ,
+ '\\FUNCON@given':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Giving}{Giving}{given}'  ,
+ '\\FUNCON@given@value':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Giving}{Giving}{given-value}'  ,
+ '\\FUNCON@ground@vals':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Value-Types}{Value-Types}{ground-vals}'  ,
+ '\\FUNCON@ground@values':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Value-Types}{Value-Types}{ground-values}'  ,
+ '\\FUNCON@handle@abrupt':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Abrupting}{Abrupting}{handle-abrupt}'  ,
+ '\\FUNCON@handle@break':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Breaking}{Breaking}{handle-break}'  ,
+ '\\FUNCON@handle@continue':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Continuing}{Continuing}{handle-continue}'  ,
+ '\\FUNCON@handle@recursively':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Throwing}{Throwing}{handle-recursively}'  ,
+ '\\FUNCON@handle@return':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Returning}{Returning}{handle-return}'  ,
+ '\\FUNCON@handle@thrown':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Throwing}{Throwing}{handle-thrown}'  ,
+ '\\FUNCON@head':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Lists}{Lists}{head}'  ,
+ '\\FUNCON@hexadecimal':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{hexadecimal}'  ,
+ '\\FUNCON@hexadecimal@natural':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{hexadecimal-natural}'  ,
+ '\\FUNCON@hole':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Controlling}{Controlling}{hole}'  ,
+ '\\FUNCON@horizontal@tab':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{horizontal-tab}'  ,
+ '\\FUNCON@id@tagged':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Binding}{Binding}{id-tagged}'  ,
+ '\\FUNCON@identifier@tagged':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Binding}{Binding}{identifier-tagged}'  ,
+ '\\FUNCON@identifiers':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Binding}{Binding}{identifiers}'  ,
+ '\\FUNCON@ids':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Binding}{Binding}{ids}'  ,
+ '\\FUNCON@if@else':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Flowing}{Flowing}{if-else}'  ,
+ '\\FUNCON@if@true@else':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Flowing}{Flowing}{if-true-else}'  ,
+ '\\FUNCON@implies':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Booleans}{Booleans}{implies}'  ,
+ '\\FUNCON@index':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Sequences}{Sequences}{index}'  ,
+ '\\FUNCON@init':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Storing}{Storing}{init}'  ,
+ '\\FUNCON@init@storing':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Storing}{Storing}{init-storing}'  ,
+ '\\FUNCON@initialise@binding':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Binding}{Binding}{initialise-binding}'  ,
+ '\\FUNCON@initialise@generating':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Generating}{Generating}{initialise-generating}'  ,
+ '\\FUNCON@initialise@giving':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Giving}{Giving}{initialise-giving}'  ,
+ '\\FUNCON@initialise@linking':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Linking}{Linking}{initialise-linking}'  ,
+ '\\FUNCON@initialise@storing':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Storing}{Storing}{initialise-storing}'  ,
+ '\\FUNCON@initialise@variable':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Storing}{Storing}{initialise-variable}'  ,
+ '\\FUNCON@int@abs':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{int-abs}'  ,
+ '\\FUNCON@int@add':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{int-add}'  ,
+ '\\FUNCON@int@div':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{int-div}'  ,
+ '\\FUNCON@int@mod':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{int-mod}'  ,
+ '\\FUNCON@int@mul':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{int-mul}'  ,
+ '\\FUNCON@int@neg':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{int-neg}'  ,
+ '\\FUNCON@int@pow':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{int-pow}'  ,
+ '\\FUNCON@int@sub':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{int-sub}'  ,
+ '\\FUNCON@integer@absolute@value':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-absolute-value}'  ,
+ '\\FUNCON@integer@add':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-add}'  ,
+ '\\FUNCON@integer@divide':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-divide}'  ,
+ '\\FUNCON@integer@is@greater':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-is-greater}'  ,
+ '\\FUNCON@integer@is@greater@or@equal':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-is-greater-or-equal}'  ,
+ '\\FUNCON@integer@is@less':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-is-less}'  ,
+ '\\FUNCON@integer@is@less@or@equal':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-is-less-or-equal}'  ,
+ '\\FUNCON@integer@modulo':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-modulo}'  ,
+ '\\FUNCON@integer@multiply':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-multiply}'  ,
+ '\\FUNCON@integer@negate':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-negate}'  ,
+ '\\FUNCON@integer@power':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-power}'  ,
+ '\\FUNCON@integer@sequence':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-sequence}'  ,
+ '\\FUNCON@integer@subtract':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-subtract}'  ,
+ '\\FUNCON@integer@to@bit@vector':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Bits}{Bits}{integer-to-bit-vector}'  ,
+ '\\FUNCON@integers':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{integers}'  ,
+ '\\FUNCON@integers@from':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{integers-from}'  ,
+ '\\FUNCON@integers@up@to':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{integers-up-to}'  ,
+ '\\FUNCON@interleave':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Flowing}{Flowing}{interleave}'  ,
+ '\\FUNCON@interleave@filter':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Giving}{Giving}{interleave-filter}'  ,
+ '\\FUNCON@interleave@map':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Giving}{Giving}{interleave-map}'  ,
+ '\\FUNCON@interleave@repeat':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Giving}{Giving}{interleave-repeat}'  ,
+ '\\FUNCON@intersperse':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Sequences}{Sequences}{intersperse}'  ,
+ '\\FUNCON@ints':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{ints}'  ,
+ '\\FUNCON@is':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Value-Types}{Value-Types}{is}'  ,
+ '\\FUNCON@is@cyclic':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Graphs}{Graphs}{is-cyclic}'  ,
+ '\\FUNCON@is@eq':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Value-Types}{Value-Types}{is-eq}'  ,
+ '\\FUNCON@is@equal':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Value-Types}{Value-Types}{is-equal}'  ,
+ '\\FUNCON@is@greater':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{is-greater}'  ,
+ '\\FUNCON@is@greater@or@equal':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{is-greater-or-equal}'  ,
+ '\\FUNCON@is@in':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Sequences}{Sequences}{is-in}'  ,
+ '\\FUNCON@is@in@set':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Sets}{Sets}{is-in-set}'  ,
+ '\\FUNCON@is@in@signed@bit@vector':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Bits}{Bits}{is-in-signed-bit-vector}'  ,
+ '\\FUNCON@is@in@type':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Value-Types}{Value-Types}{is-in-type}'  ,
+ '\\FUNCON@is@in@unsigned@bit@vector':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Bits}{Bits}{is-in-unsigned-bit-vector}'  ,
+ '\\FUNCON@is@less':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{is-less}'  ,
+ '\\FUNCON@is@less@or@equal':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{is-less-or-equal}'  ,
+ '\\FUNCON@is@subclass@name':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Classes}{Classes}{is-subclass-name}'  ,
+ '\\FUNCON@is@submultiset':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Multisets}{Multisets}{is-submultiset}'  ,
+ '\\FUNCON@is@subset':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Sets}{Sets}{is-subset}'  ,
+ '\\FUNCON@is@val':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Value-Types}{Value-Types}{is-val}'  ,
+ '\\FUNCON@is@value':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Value-Types}{Value-Types}{is-value}'  ,
+ '\\FUNCON@iso@latin@ONE@characters':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{iso-latin-1-characters}'  ,
+ '\\FUNCON@iso@latin@ONE@points':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{iso-latin-1-points}'  ,
+ '\\FUNCON@l@to@r':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Flowing}{Flowing}{l-to-r}'  ,
+ '\\FUNCON@latin@ONE@chars':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{latin-1-chars}'  ,
+ '\\FUNCON@left@to@right':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Flowing}{Flowing}{left-to-right}'  ,
+ '\\FUNCON@left@to@right@filter':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Giving}{Giving}{left-to-right-filter}'  ,
+ '\\FUNCON@left@to@right@map':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Giving}{Giving}{left-to-right-map}'  ,
+ '\\FUNCON@left@to@right@repeat':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Giving}{Giving}{left-to-right-repeat}'  ,
+ '\\FUNCON@length':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Sequences}{Sequences}{length}'  ,
+ '\\FUNCON@line@feed':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{line-feed}'  ,
+ '\\FUNCON@link':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Linking}{Linking}{link}'  ,
+ '\\FUNCON@links':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Linking}{Linking}{links}'  ,
+ '\\FUNCON@list':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Lists}{Lists}{list}'  ,
+ '\\FUNCON@list@append':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Lists}{Lists}{list-append}'  ,
+ '\\FUNCON@list@cons':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Lists}{Lists}{list-cons}'  ,
+ '\\FUNCON@list@elements':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Lists}{Lists}{list-elements}'  ,
+ '\\FUNCON@list@head':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Lists}{Lists}{list-head}'  ,
+ '\\FUNCON@list@length':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Lists}{Lists}{list-length}'  ,
+ '\\FUNCON@list@nil':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Lists}{Lists}{list-nil}'  ,
+ '\\FUNCON@list@tail':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Lists}{Lists}{list-tail}'  ,
+ '\\FUNCON@lists':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Lists}{Lists}{lists}'  ,
+ '\\FUNCON@locations':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Storing}{Storing}{locations}'  ,
+ '\\FUNCON@locs':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Storing}{Storing}{locs}'  ,
+ '\\FUNCON@lookup':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Maps}{Maps}{lookup}'  ,
+ '\\FUNCON@map':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Maps}{Maps}{map}'  ,
+ '\\FUNCON@map@delete':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Maps}{Maps}{map-delete}'  ,
+ '\\FUNCON@map@domain':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Maps}{Maps}{map-domain}'  ,
+ '\\FUNCON@map@elements':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Maps}{Maps}{map-elements}'  ,
+ '\\FUNCON@map@lookup':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Maps}{Maps}{map-lookup}'  ,
+ '\\FUNCON@map@override':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Maps}{Maps}{map-override}'  ,
+ '\\FUNCON@map@unite':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Maps}{Maps}{map-unite}'  ,
+ '\\FUNCON@maps':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Maps}{Maps}{maps}'  ,
+ '\\FUNCON@match':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{match}'  ,
+ '\\FUNCON@match@loosely':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{match-loosely}'  ,
+ '\\FUNCON@multiset':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Multisets}{Multisets}{multiset}'  ,
+ '\\FUNCON@multiset@delete':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Multisets}{Multisets}{multiset-delete}'  ,
+ '\\FUNCON@multiset@elements':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Multisets}{Multisets}{multiset-elements}'  ,
+ '\\FUNCON@multiset@insert':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Multisets}{Multisets}{multiset-insert}'  ,
+ '\\FUNCON@multiset@occurrences':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Multisets}{Multisets}{multiset-occurrences}'  ,
+ '\\FUNCON@multisets':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Multisets}{Multisets}{multisets}'  ,
+ '\\FUNCON@n@of':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Sequences}{Sequences}{n-of}'  ,
+ '\\FUNCON@nat@pred':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{nat-pred}'  ,
+ '\\FUNCON@nat@succ':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{nat-succ}'  ,
+ '\\FUNCON@nats':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{nats}'  ,
+ '\\FUNCON@natural@numbers':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{natural-numbers}'  ,
+ '\\FUNCON@natural@predecessor':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{natural-predecessor}'  ,
+ '\\FUNCON@natural@successor':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{natural-successor}'  ,
+ '\\FUNCON@neg@inf':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{neg-inf}'  ,
+ '\\FUNCON@neg@ints':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{neg-ints}'  ,
+ '\\FUNCON@negative@infinity':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{negative-infinity}'  ,
+ '\\FUNCON@negative@integers':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{negative-integers}'  ,
+ '\\FUNCON@nil':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Lists}{Lists}{nil}'  ,
+ '\\FUNCON@no@given':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Giving}{Giving}{no-given}'  ,
+ '\\FUNCON@not':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Booleans}{Booleans}{not}'  ,
+ '\\FUNCON@null':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Null}{Null}{null}'  ,
+ '\\FUNCON@null@type':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Null}{Null}{null-type}'  ,
+ '\\FUNCON@null@value':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Null}{Null}{null-value}'  ,
+ '\\FUNCON@object':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Objects}{Objects}{object}'  ,
+ '\\FUNCON@object@class@name':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Objects}{Objects}{object-class-name}'  ,
+ '\\FUNCON@object@feature@map':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Objects}{Objects}{object-feature-map}'  ,
+ '\\FUNCON@object@identity':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Objects}{Objects}{object-identity}'  ,
+ '\\FUNCON@object@single@inheritance@feature@map':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Objects}{Objects}{object-single-inheritance-feature-map}'  ,
+ '\\FUNCON@object@subobject@sequence':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Objects}{Objects}{object-subobject-sequence}'  ,
+ '\\FUNCON@object@tree':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Objects}{Objects}{object-tree}'  ,
+ '\\FUNCON@objects':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Objects}{Objects}{objects}'  ,
+ '\\FUNCON@octal':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{octal}'  ,
+ '\\FUNCON@octal@natural':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{octal-natural}'  ,
+ '\\FUNCON@octets':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Bits}{Bits}{octets}'  ,
+ '\\FUNCON@or':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Booleans}{Booleans}{or}'  ,
+ '\\FUNCON@partial@apply':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Abstraction/Functions}{Functions}{partial-apply}'  ,
+ '\\FUNCON@pattern':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{pattern}'  ,
+ '\\FUNCON@pattern@any':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{pattern-any}'  ,
+ '\\FUNCON@pattern@bind':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{pattern-bind}'  ,
+ '\\FUNCON@pattern@else':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{pattern-else}'  ,
+ '\\FUNCON@pattern@type':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{pattern-type}'  ,
+ '\\FUNCON@pattern@unite':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{pattern-unite}'  ,
+ '\\FUNCON@patterns':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{patterns}'  ,
+ '\\FUNCON@plug@signal':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Controlling}{Controlling}{plug-signal}'  ,
+ '\\FUNCON@pointer@null':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/References}{References}{pointer-null}'  ,
+ '\\FUNCON@pointers':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/References}{References}{pointers}'  ,
+ '\\FUNCON@pos@inf':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{pos-inf}'  ,
+ '\\FUNCON@pos@ints':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{pos-ints}'  ,
+ '\\FUNCON@positive@infinity':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{positive-infinity}'  ,
+ '\\FUNCON@positive@integers':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{positive-integers}'  ,
+ '\\FUNCON@print':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Interacting}{Interacting}{print}'  ,
+ '\\FUNCON@qNaN':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{qNaN}'  ,
+ '\\FUNCON@quiet@not@a@number':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{quiet-not-a-number}'  ,
+ '\\FUNCON@r@to@l':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Flowing}{Flowing}{r-to-l}'  ,
+ '\\FUNCON@re@close':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Binding}{Binding}{re-close}'  ,
+ '\\FUNCON@read':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Interacting}{Interacting}{read}'  ,
+ '\\FUNCON@record':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Records}{Records}{record}'  ,
+ '\\FUNCON@record@map':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Records}{Records}{record-map}'  ,
+ '\\FUNCON@record@select':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Records}{Records}{record-select}'  ,
+ '\\FUNCON@records':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Records}{Records}{records}'  ,
+ '\\FUNCON@recursive':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Binding}{Binding}{recursive}'  ,
+ '\\FUNCON@recycle':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Storing}{Storing}{recycle}'  ,
+ '\\FUNCON@recycle@variables':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Storing}{Storing}{recycle-variables}'  ,
+ '\\FUNCON@reference':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/References}{References}{reference}'  ,
+ '\\FUNCON@references':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/References}{References}{references}'  ,
+ '\\FUNCON@resume@continuation':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Controlling}{Controlling}{resume-continuation}'  ,
+ '\\FUNCON@return':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Returning}{Returning}{return}'  ,
+ '\\FUNCON@returned':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Returning}{Returning}{returned}'  ,
+ '\\FUNCON@returning':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Returning}{Returning}{returning}'  ,
+ '\\FUNCON@reverse':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Sequences}{Sequences}{reverse}'  ,
+ '\\FUNCON@right@to@left':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Flowing}{Flowing}{right-to-left}'  ,
+ '\\FUNCON@scope':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Binding}{Binding}{scope}'  ,
+ '\\FUNCON@second':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Sequences}{Sequences}{second}'  ,
+ '\\FUNCON@seq':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Flowing}{Flowing}{seq}'  ,
+ '\\FUNCON@sequential':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Flowing}{Flowing}{sequential}'  ,
+ '\\FUNCON@set':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Sets}{Sets}{set}'  ,
+ '\\FUNCON@set@difference':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Sets}{Sets}{set-difference}'  ,
+ '\\FUNCON@set@elements':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Sets}{Sets}{set-elements}'  ,
+ '\\FUNCON@set@forward@links':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Binding}{Binding}{set-forward-links}'  ,
+ '\\FUNCON@set@insert':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Sets}{Sets}{set-insert}'  ,
+ '\\FUNCON@set@intersect':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Sets}{Sets}{set-intersect}'  ,
+ '\\FUNCON@set@link':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Linking}{Linking}{set-link}'  ,
+ '\\FUNCON@set@size':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Sets}{Sets}{set-size}'  ,
+ '\\FUNCON@set@unite':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Sets}{Sets}{set-unite}'  ,
+ '\\FUNCON@sets':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Sets}{Sets}{sets}'  ,
+ '\\FUNCON@signal':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Flowing}{Flowing}{signal}'  ,
+ '\\FUNCON@signaling@not@a@number':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{signaling-not-a-number}'  ,
+ '\\FUNCON@signed@bit@vector@maximum':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Bits}{Bits}{signed-bit-vector-maximum}'  ,
+ '\\FUNCON@signed@bit@vector@minimum':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Bits}{Bits}{signed-bit-vector-minimum}'  ,
+ '\\FUNCON@single@branching@sequence':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Trees}{Trees}{single-branching-sequence}'  ,
+ '\\FUNCON@single@quote':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{single-quote}'  ,
+ '\\FUNCON@sNaN':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Floats}{Floats}{sNaN}'  ,
+ '\\FUNCON@some@element':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Sets}{Sets}{some-element}'  ,
+ '\\FUNCON@standard@in':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Interacting}{Interacting}{standard-in}'  ,
+ '\\FUNCON@standard@out':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Interacting}{Interacting}{standard-out}'  ,
+ '\\FUNCON@store':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Storing}{Storing}{store}'  ,
+ '\\FUNCON@store@clear':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Storing}{Storing}{store-clear}'  ,
+ '\\FUNCON@stores':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Storing}{Storing}{stores}'  ,
+ '\\FUNCON@string':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Strings}{Strings}{string}'  ,
+ '\\FUNCON@string@append':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Strings}{Strings}{string-append}'  ,
+ '\\FUNCON@strings':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Strings}{Strings}{strings}'  ,
+ '\\FUNCON@structural@assign':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Storing}{Storing}{structural-assign}'  ,
+ '\\FUNCON@structural@assigned':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Storing}{Storing}{structural-assigned}'  ,
+ '\\FUNCON@stuck':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Abrupting}{Abrupting}{stuck}'  ,
+ '\\FUNCON@supply':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Abstraction/Functions}{Functions}{supply}'  ,
+ '\\FUNCON@tail':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Lists}{Lists}{tail}'  ,
+ '\\FUNCON@third':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Sequences}{Sequences}{third}'  ,
+ '\\FUNCON@throw':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Throwing}{Throwing}{throw}'  ,
+ '\\FUNCON@throwing':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Throwing}{Throwing}{throwing}'  ,
+ '\\FUNCON@thrown':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Abnormal/Throwing}{Throwing}{thrown}'  ,
+ '\\FUNCON@thunk':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Abstraction/Thunks}{Thunks}{thunk}'  ,
+ '\\FUNCON@thunks':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Abstraction/Thunks}{Thunks}{thunks}'  ,
+ '\\FUNCON@to@string':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Strings}{Strings}{to-string}'  ,
+ '\\FUNCON@topological@sort':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Graphs}{Graphs}{topological-sort}'  ,
+ '\\FUNCON@tree':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Trees}{Trees}{tree}'  ,
+ '\\FUNCON@tree@branch@sequence':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Trees}{Trees}{tree-branch-sequence}'  ,
+ '\\FUNCON@tree@root@value':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Trees}{Trees}{tree-root-value}'  ,
+ '\\FUNCON@trees':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Trees}{Trees}{trees}'  ,
+ '\\FUNCON@true':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Booleans}{Booleans}{true}'  ,
+ '\\FUNCON@tuple':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Tuples}{Tuples}{tuple}'  ,
+ '\\FUNCON@tuple@elements':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Tuples}{Tuples}{tuple-elements}'  ,
+ '\\FUNCON@tuple@zip':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Tuples}{Tuples}{tuple-zip}'  ,
+ '\\FUNCON@tuples':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Tuples}{Tuples}{tuples}'  ,
+ '\\FUNCON@types':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Value-Types}{Value-Types}{types}'  ,
+ '\\FUNCON@un@assign':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Storing}{Storing}{un-assign}'  ,
+ '\\FUNCON@unbind':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Binding}{Binding}{unbind}'  ,
+ '\\FUNCON@uncurry':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Abstraction/Functions}{Functions}{uncurry}'  ,
+ '\\FUNCON@unicode':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{unicode}'  ,
+ '\\FUNCON@unicode@char':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{unicode-char}'  ,
+ '\\FUNCON@unicode@character':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{unicode-character}'  ,
+ '\\FUNCON@unicode@characters':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{unicode-characters}'  ,
+ '\\FUNCON@unicode@chars':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{unicode-chars}'  ,
+ '\\FUNCON@unicode@point':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{unicode-point}'  ,
+ '\\FUNCON@unicode@points':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{unicode-points}'  ,
+ '\\FUNCON@unsigned@bit@vector@maximum':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Bits}{Bits}{unsigned-bit-vector-maximum}'  ,
+ '\\FUNCON@up@to':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Integers}{Integers}{up-to}'  ,
+ '\\FUNCON@use@atom@not@in':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Generating}{Generating}{use-atom-not-in}'  ,
+ '\\FUNCON@used@atom@set':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Generating}{Generating}{used-atom-set}'  ,
+ '\\FUNCON@utf@EIGHT':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{utf-8}'  ,
+ '\\FUNCON@utf@ONESIX':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{utf-16}'  ,
+ '\\FUNCON@utf@THREETWO':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Characters}{Characters}{utf-32}'  ,
+ '\\FUNCON@vals':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Value-Types}{Value-Types}{vals}'  ,
+ '\\FUNCON@value@types':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Value-Types}{Value-Types}{value-types}'  ,
+ '\\FUNCON@values':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Value-Types}{Value-Types}{values}'  ,
+ '\\FUNCON@var':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Storing}{Storing}{var}'  ,
+ '\\FUNCON@variable':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Storing}{Storing}{variable}'  ,
+ '\\FUNCON@variables':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Storing}{Storing}{variables}'  ,
+ '\\FUNCON@variant':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Variants}{Variants}{variant}'  ,
+ '\\FUNCON@variant@id':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Variants}{Variants}{variant-id}'  ,
+ '\\FUNCON@variant@value':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Variants}{Variants}{variant-value}'  ,
+ '\\FUNCON@variants':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Variants}{Variants}{variants}'  ,
+ '\\FUNCON@vars':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Storing}{Storing}{vars}'  ,
+ '\\FUNCON@vector':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Vectors}{Vectors}{vector}'  ,
+ '\\FUNCON@vector@elements':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Vectors}{Vectors}{vector-elements}'  ,
+ '\\FUNCON@vectors':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Composite/Vectors}{Vectors}{vectors}'  ,
+ '\\FUNCON@when':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Value-Types}{Value-Types}{when}'  ,
+ '\\FUNCON@when@true':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Value-Types}{Value-Types}{when-true}'  ,
+ '\\FUNCON@while':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Flowing}{Flowing}{while}'  ,
+ '\\FUNCON@while@true':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Flowing}{Flowing}{while-true}'  ,
+ '\\FUNCON@xor':
+   '\\FUNCONHYPERBETA{Funcons-beta/Values/Primitive/Booleans}{Booleans}{xor}'  ,
+ '\\FUNCON@yield':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Flowing}{Flowing}{yield}'  ,
+ '\\FUNCON@yield@on@abrupt':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Flowing}{Flowing}{yield-on-abrupt}'  ,
+ '\\FUNCON@yield@on@value':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Flowing}{Flowing}{yield-on-value}'  ,
+ '\\FUNCON@yielded':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Flowing}{Flowing}{yielded}'  ,
+ '\\FUNCON@yielding':
+   '\\FUNCONHYPERBETA{Funcons-beta/Computations/Normal/Flowing}{Flowing}{yielding}'
+}

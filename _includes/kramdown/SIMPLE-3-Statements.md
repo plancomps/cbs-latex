@@ -1,28 +1,28 @@
 {::comment}{% raw %}{:/}
 
+
 ----
 
 $$\KEY{Language} \quad \STRING{SIMPLE}$$
 
-# $$\SECT{3}$$ Statements
-           
+# $$\SECT{3}$$ Statements {#SectionNumber:3}
 
 
 $$\begin{align*}
   \KEY{Syntax} \quad
-    \VARDECL{Block} : \SYN{block}
+    \VARDECL{Block} : \SYNDECL{block}
       \ ::= \ & \
       \LEX{{\LEFTBRACE}} \ \SYNREF{stmts}\QUERY \ \LEX{{\RIGHTBRACE}}
     \\
-    \VARDECL{Stmts} : \SYN{stmts}
+    \VARDECL{Stmts} : \SYNDECL{stmts}
       \ ::= \ & \
       \SYNREF{stmt} \ \SYNREF{stmts}\QUERY
     \\
-    \VARDECL{Stmt} : \SYN{stmt}
+    \VARDECL{Stmt} : \SYNDECL{stmt}
       \ ::= \ & \
       \SYNREF{imp-stmt} \mid \SYNHYPER{../.}{SIMPLE-4-Declarations}{vars-decl}
     \\
-    \VARDECL{ImpStmt} : \SYN{imp-stmt}
+    \VARDECL{ImpStmt} : \SYNDECL{imp-stmt}
       \ ::= \ & \
       \SYNREF{block} \\
       \ \mid \ & \ \SYNHYPER{../.}{SIMPLE-2-Expressions}{exp} \ \LEX{{;}} \\
@@ -212,7 +212,7 @@ $$\begin{align*}
   "UNSTABLE-LANGUAGES-BETA"
 [CBS-beta]: /CBS-beta
   "CBS-BETA"
-[SIMPLE-3-Statements.cbs]: https://github.com/plancomps/CBS-beta/blob/master/Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-3-Statements/SIMPLE-3-Statements.cbs
+[SIMPLE-3-Statements.cbs]: https://github.com/plancomps/CBS-beta/blob/math/Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-3-Statements/SIMPLE-3-Statements.cbs
   "CBS SOURCE FILE ON GITHUB"
 [PLAIN]: /CBS-beta/docs/Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-3-Statements
   "CBS SOURCE WEB PAGE"

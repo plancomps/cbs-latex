@@ -8,6 +8,7 @@
 {:toc}
 </details>
 
+
 ----
 
 ### Binding
@@ -63,10 +64,10 @@ $$\begin{align*}
 
 
   An environment represents bindings of identifiers to values.
-  Mapping an identifier to $$\SHADE{(   \  )}$$ represents that its binding is hidden.
+  Mapping an identifier to $$(   \  )$$ represents that its binding is hidden.
   
   Circularity in environments (due to recursive bindings) is represented using
-  bindings to cut-points called $$\SHADE{\NAMEHYPER{../.}{Linking}{links}}$$. Funcons are provided for making
+  bindings to cut-points called $$\NAMEHYPER{../.}{Linking}{links}$$. Funcons are provided for making
   declarations recursive and for referring to bound values without explicit
   mention of links, so their existence can generally be ignored.
 
@@ -99,7 +100,7 @@ $$\begin{align*}
 \end{align*}$$
 
 
-  $$\SHADE{\NAMEREF{fresh-identifier}}$$ computes an identifier distinct from all previously
+  $$\NAMEREF{fresh-identifier}$$ computes an identifier distinct from all previously
   computed identifiers.
 
 
@@ -142,8 +143,8 @@ $$\begin{align*}
 \end{align*}$$
 
 
-  $$\SHADE{\NAMEREF{initialise-binding}
-           (  \VAR{X} )}$$ ensures that $$\SHADE{\VAR{X}}$$ does not depend on non-local bindings.
+  $$\NAMEREF{initialise-binding}
+    (  \VAR{X} )$$ ensures that $$\VAR{X}$$ does not depend on non-local bindings.
   It also ensures that the linking entity (used to represent potentially cyclic
   bindings) and the generating entity (for creating fresh identifiers) are 
   initialised.
@@ -162,10 +163,10 @@ $$\begin{align*}
 \end{align*}$$
 
 
-  $$\SHADE{\NAMEREF{bind-value}
-           (  \VAR{I}, 
-                  \VAR{X} )}$$ computes the environment that binds only $$\SHADE{\VAR{I}}$$ to the value
-  computed by $$\SHADE{\VAR{X}}$$.
+  $$\NAMEREF{bind-value}
+    (  \VAR{I}, 
+           \VAR{X} )$$ computes the environment that binds only $$\VAR{I}$$ to the value
+  computed by $$\VAR{X}$$.
 
 
 $$\begin{align*}
@@ -178,8 +179,8 @@ $$\begin{align*}
 \end{align*}$$
 
 
-  $$\SHADE{\NAMEREF{unbind}
-           (  \VAR{I} )}$$ computes the environment that hides the binding of $$\SHADE{\VAR{I}}$$.
+  $$\NAMEREF{unbind}
+    (  \VAR{I} )$$ computes the environment that hides the binding of $$\VAR{I}$$.
 
 
 $$\begin{align*}
@@ -190,38 +191,38 @@ $$\begin{align*}
 \end{align*}$$
 
  
-  $$\SHADE{\NAMEREF{bound-directly}
-           (  \VAR{I} )}$$ returns the value to which $$\SHADE{\VAR{I}}$$ is currently bound, if any,
+  $$\NAMEREF{bound-directly}
+    (  \VAR{I} )$$ returns the value to which $$\VAR{I}$$ is currently bound, if any,
   and otherwise fails.
 
-  $$\SHADE{\NAMEREF{bound-directly}
-           (  \VAR{I} )}$$ does *not* follow links. It is used only in connection with
+  $$\NAMEREF{bound-directly}
+    (  \VAR{I} )$$ does *not* follow links. It is used only in connection with
   recursively-bound values when references are not encapsulated in abstractions.
 
 
 $$\begin{align*}
   \KEY{Rule} \quad
-    & \RULE{
-      & \NAMEHYPER{../../../Values/Composite}{Maps}{lookup}
-          (  \VAR{$\rho$}, 
-                 \VAR{I} ) \leadsto 
-          (  \VAR{V} : \NAMEHYPER{../../../Values}{Value-Types}{values} )
+    & \frac{
+      \NAMEHYPER{../../../Values/Composite}{Maps}{lookup}
+        (  \VAR{\ensuremath{\rho}}, 
+               \VAR{I} ) \leadsto 
+        (  \VAR{V} : \NAMEHYPER{../../../Values}{Value-Types}{values} )
       }{
-      & \NAMEREF{environment} (  \VAR{$\rho$} ) \vdash \NAMEREF{bound-directly}
-                      (  \VAR{I} : \NAMEREF{identifiers} ) \TRANS 
-          \VAR{V}
+      \NAMEREF{environment} (  \VAR{\ensuremath{\rho}} ) \vdash \NAMEREF{bound-directly}
+                    (  \VAR{I} : \NAMEREF{identifiers} ) \TRANS 
+        \VAR{V}
       }
 \\
   \KEY{Rule} \quad
-    & \RULE{
-      & \NAMEHYPER{../../../Values/Composite}{Maps}{lookup}
-          (  \VAR{$\rho$}, 
-                 \VAR{I} ) \leadsto 
-          (   \  )
+    & \frac{
+      \NAMEHYPER{../../../Values/Composite}{Maps}{lookup}
+        (  \VAR{\ensuremath{\rho}}, 
+               \VAR{I} ) \leadsto 
+        (   \  )
       }{
-      & \NAMEREF{environment} (  \VAR{$\rho$} ) \vdash \NAMEREF{bound-directly}
-                      (  \VAR{I} : \NAMEREF{identifiers} ) \TRANS 
-          \NAMEHYPER{../../Abnormal}{Failing}{fail}
+      \NAMEREF{environment} (  \VAR{\ensuremath{\rho}} ) \vdash \NAMEREF{bound-directly}
+                    (  \VAR{I} : \NAMEREF{identifiers} ) \TRANS 
+        \NAMEHYPER{../../Abnormal}{Failing}{fail}
       }
 \end{align*}$$
 
@@ -239,16 +240,16 @@ $$\begin{align*}
 \end{align*}$$
 
  
-   $$\SHADE{\NAMEREF{bound-value}
-           (  \VAR{I} )}$$ inspects the value to which $$\SHADE{\VAR{I}}$$ is currently bound, if any,
-   and otherwise fails. If the value is a link, $$\SHADE{\NAMEREF{bound-value}
-           (  \VAR{I} )}$$ returns the
+   $$\NAMEREF{bound-value}
+    (  \VAR{I} )$$ inspects the value to which $$\VAR{I}$$ is currently bound, if any,
+   and otherwise fails. If the value is a link, $$\NAMEREF{bound-value}
+    (  \VAR{I} )$$ returns the
    value obtained by following the link, if any, and otherwise fails. If the 
-   inspected value is not a link, $$\SHADE{\NAMEREF{bound-value}
-           (  \VAR{I} )}$$ returns it. 
+   inspected value is not a link, $$\NAMEREF{bound-value}
+    (  \VAR{I} )$$ returns it. 
    
-   $$\SHADE{\NAMEREF{bound-value}
-           (  \VAR{I} )}$$ is used for references to non-recursive bindings and to
+   $$\NAMEREF{bound-value}
+    (  \VAR{I} )$$ is used for references to non-recursive bindings and to
    recursively-bound values when references are encapsulated in abstractions.
 
 
@@ -264,21 +265,21 @@ $$\begin{align*}
 \end{align*}$$
 
 
-  $$\SHADE{\NAMEREF{closed}
-           (  \VAR{X} )}$$ ensures that $$\SHADE{\VAR{X}}$$ does not depend on non-local bindings.
+  $$\NAMEREF{closed}
+    (  \VAR{X} )$$ ensures that $$\VAR{X}$$ does not depend on non-local bindings.
 
 
 $$\begin{align*}
   \KEY{Rule} \quad
-    & \RULE{
-      & \NAMEREF{environment} (  \NAMEHYPER{../../../Values/Composite}{Maps}{map}
-                                     (   \  ) ) \vdash \VAR{X} \TRANS 
-          \VAR{X}'
+    & \frac{
+      \NAMEREF{environment} (  \NAMEHYPER{../../../Values/Composite}{Maps}{map}
+                                   (   \  ) ) \vdash \VAR{X} \TRANS 
+        \VAR{X}'
       }{
-      & \NAMEREF{environment} (  \_ ) \vdash \NAMEREF{closed}
-                      (  \VAR{X} ) \TRANS 
-          \NAMEREF{closed}
-            (  \VAR{X}' )
+      \NAMEREF{environment} (  \_ ) \vdash \NAMEREF{closed}
+                    (  \VAR{X} ) \TRANS 
+        \NAMEREF{closed}
+          (  \VAR{X}' )
       }
 \\
   \KEY{Rule} \quad
@@ -295,34 +296,34 @@ $$\begin{align*}
 \end{align*}$$
 
 
-  $$\SHADE{\NAMEREF{scope}
-           (  \VAR{D}, 
-                  \VAR{X} )}$$ executes $$\SHADE{\VAR{D}}$$ with the current bindings, to compute an environment
-  $$\SHADE{\VAR{$\rho$}}$$ representing local bindings. It then executes $$\SHADE{\VAR{X}}$$ to compute the result,
-  with the current bindings extended by $$\SHADE{\VAR{$\rho$}}$$, which may shadow or hide previous
+  $$\NAMEREF{scope}
+    (  \VAR{D}, 
+           \VAR{X} )$$ executes $$\VAR{D}$$ with the current bindings, to compute an environment
+  $$\VAR{\ensuremath{\rho}}$$ representing local bindings. It then executes $$\VAR{X}$$ to compute the result,
+  with the current bindings extended by $$\VAR{\ensuremath{\rho}}$$, which may shadow or hide previous
   bindings.
   
-  $$\SHADE{\NAMEREF{closed}
-           (  \NAMEREF{scope}
-                   (  \VAR{$\rho$}, 
-                          \VAR{X} ) )}$$ ensures that $$\SHADE{\VAR{X}}$$ can reference only the bindings
-  provided by $$\SHADE{\VAR{$\rho$}}$$.
+  $$\NAMEREF{closed}
+    (  \NAMEREF{scope}
+            (  \VAR{\ensuremath{\rho}}, 
+                   \VAR{X} ) )$$ ensures that $$\VAR{X}$$ can reference only the bindings
+  provided by $$\VAR{\ensuremath{\rho}}$$.
 
 
 $$\begin{align*}
   \KEY{Rule} \quad
-    & \RULE{
-      & \NAMEREF{environment} (  \NAMEHYPER{../../../Values/Composite}{Maps}{map-override}
-                                     (  \VAR{$\rho$}\SUB{1}, 
-                                            \VAR{$\rho$}\SUB{0} ) ) \vdash \VAR{X} \TRANS 
-          \VAR{X}'
+    & \frac{
+      \NAMEREF{environment} (  \NAMEHYPER{../../../Values/Composite}{Maps}{map-override}
+                                   (  \VAR{\ensuremath{\rho}}\SUB{1}, 
+                                          \VAR{\ensuremath{\rho}}\SUB{0} ) ) \vdash \VAR{X} \TRANS 
+        \VAR{X}'
       }{
-      & \NAMEREF{environment} (  \VAR{$\rho$}\SUB{0} ) \vdash \NAMEREF{scope}
-                      (  \VAR{$\rho$}\SUB{1} : \NAMEREF{environments}, 
-                             \VAR{X} ) \TRANS 
-          \NAMEREF{scope}
-            (  \VAR{$\rho$}\SUB{1}, 
-                   \VAR{X}' )
+      \NAMEREF{environment} (  \VAR{\ensuremath{\rho}}\SUB{0} ) \vdash \NAMEREF{scope}
+                    (  \VAR{\ensuremath{\rho}}\SUB{1} : \NAMEREF{environments}, 
+                           \VAR{X} ) \TRANS 
+        \NAMEREF{scope}
+          (  \VAR{\ensuremath{\rho}}\SUB{1}, 
+                 \VAR{X}' )
       }
 \\
   \KEY{Rule} \quad
@@ -340,45 +341,45 @@ $$\begin{align*}
 \end{align*}$$
 
 
-  $$\SHADE{\NAMEREF{accumulate}
-           (  \VAR{D}\SUB{1}, 
-                  \VAR{D}\SUB{2} )}$$ executes $$\SHADE{\VAR{D}\SUB{1}}$$ with the current bindings, to compute an
-  environment $$\SHADE{\VAR{$\rho$}\SUB{1}}$$ representing some local bindings. It then executes $$\SHADE{\VAR{D}\SUB{2}}$$ to
-  compute an environment $$\SHADE{\VAR{$\rho$}\SUB{2}}$$ representing further local bindings, with the
-  current bindings extended by $$\SHADE{\VAR{$\rho$}\SUB{1}}$$, which may shadow or hide previous
-  current bindings. The result is $$\SHADE{\VAR{$\rho$}\SUB{1}}$$ extended by $$\SHADE{\VAR{$\rho$}\SUB{2}}$$, which may shadow
-  or hide the bindings of $$\SHADE{\VAR{$\rho$}\SUB{1}}$$.
+  $$\NAMEREF{accumulate}
+    (  \VAR{D}\SUB{1}, 
+           \VAR{D}\SUB{2} )$$ executes $$\VAR{D}\SUB{1}$$ with the current bindings, to compute an
+  environment $$\VAR{\ensuremath{\rho}}\SUB{1}$$ representing some local bindings. It then executes $$\VAR{D}\SUB{2}$$ to
+  compute an environment $$\VAR{\ensuremath{\rho}}\SUB{2}$$ representing further local bindings, with the
+  current bindings extended by $$\VAR{\ensuremath{\rho}}\SUB{1}$$, which may shadow or hide previous
+  current bindings. The result is $$\VAR{\ensuremath{\rho}}\SUB{1}$$ extended by $$\VAR{\ensuremath{\rho}}\SUB{2}$$, which may shadow
+  or hide the bindings of $$\VAR{\ensuremath{\rho}}\SUB{1}$$.
   
-  $$\SHADE{\NAMEREF{accumulate}
-           (  \_, 
-                  \_ )}$$ is associative, with $$\SHADE{\NAMEHYPER{../../../Values/Composite}{Maps}{map}
-           (   \  )}$$ as unit, and extends to any
+  $$\NAMEREF{accumulate}
+    (  \_, 
+           \_ )$$ is associative, with $$\NAMEHYPER{../../../Values/Composite}{Maps}{map}
+    (   \  )$$ as unit, and extends to any
   number of arguments.
 
 
 $$\begin{align*}
   \KEY{Rule} \quad
-    & \RULE{
-      &  \VAR{D}\SUB{1} \TRANS 
-          \VAR{D}\SUB{1}'
+    & \frac{
+       \VAR{D}\SUB{1} \TRANS 
+        \VAR{D}\SUB{1}'
       }{
-      &  \NAMEREF{accumulate}
-                      (  \VAR{D}\SUB{1}, 
-                             \VAR{D}\SUB{2} ) \TRANS 
-          \NAMEREF{accumulate}
-            (  \VAR{D}\SUB{1}', 
-                   \VAR{D}\SUB{2} )
+       \NAMEREF{accumulate}
+                    (  \VAR{D}\SUB{1}, 
+                           \VAR{D}\SUB{2} ) \TRANS 
+        \NAMEREF{accumulate}
+          (  \VAR{D}\SUB{1}', 
+                 \VAR{D}\SUB{2} )
       }
 \\
   \KEY{Rule} \quad
     & \NAMEREF{accumulate}
-        (  \VAR{$\rho$}\SUB{1} : \NAMEREF{environments}, 
+        (  \VAR{\ensuremath{\rho}}\SUB{1} : \NAMEREF{environments}, 
                \VAR{D}\SUB{2} ) \leadsto 
         \NAMEREF{scope}
-          (  \VAR{$\rho$}\SUB{1}, 
+          (  \VAR{\ensuremath{\rho}}\SUB{1}, 
                  \NAMEHYPER{../../../Values/Composite}{Maps}{map-override}
                   (  \VAR{D}\SUB{2}, 
-                         \VAR{$\rho$}\SUB{1} ) )
+                         \VAR{\ensuremath{\rho}}\SUB{1} ) )
 \\
   \KEY{Rule} \quad
     & \NAMEREF{accumulate}
@@ -406,24 +407,24 @@ $$\begin{align*}
 $$\begin{align*}
   \KEY{Funcon} \quad
   & \NAMEDECL{collateral}(
-                       \VAR{$\rho$}\STAR : \NAMEREF{environments}\STAR) 
+                       \VAR{\ensuremath{\rho}}\STAR : \NAMEREF{environments}\STAR) 
     :  \TO \NAMEREF{environments} \\&\quad
     \leadsto \NAMEHYPER{../../Abnormal}{Failing}{checked} \ 
                \NAMEHYPER{../../../Values/Composite}{Maps}{map-unite}
-                 (  \VAR{$\rho$}\STAR )
+                 (  \VAR{\ensuremath{\rho}}\STAR )
 \end{align*}$$
 
  
-  $$\SHADE{\NAMEREF{collateral}
-           (  \VAR{D}\SUB{1}, 
-                  \cdots )}$$ pre-evaluates its arguments with the current bindings,
+  $$\NAMEREF{collateral}
+    (  \VAR{D}\SUB{1}, 
+           \cdots )$$ pre-evaluates its arguments with the current bindings,
   and unites the resulting maps, which fails if the domains are not pairwise
   disjoint.
 
-  $$\SHADE{\NAMEREF{collateral}
-           (  \VAR{D}\SUB{1}, 
-                  \VAR{D}\SUB{2} )}$$ is associative and commutative with $$\SHADE{\NAMEHYPER{../../../Values/Composite}{Maps}{map}
-           (   \  )}$$ as unit, 
+  $$\NAMEREF{collateral}
+    (  \VAR{D}\SUB{1}, 
+           \VAR{D}\SUB{2} )$$ is associative and commutative with $$\NAMEHYPER{../../../Values/Composite}{Maps}{map}
+    (   \  )$$ as unit, 
   and extends to any number of arguments.
 
 
@@ -444,13 +445,13 @@ $$\begin{align*}
 \end{align*}$$
 
 
-  $$\SHADE{\NAMEREF{bind-recursively}
-           (  \VAR{I}, 
-                  \VAR{E} )}$$ binds $$\SHADE{\VAR{I}}$$ to a link that refers to the value of $$\SHADE{\VAR{E}}$$, 
-  representing a recursive binding of $$\SHADE{\VAR{I}}$$ to the value of $$\SHADE{\VAR{E}}$$.
-  Since $$\SHADE{\NAMEREF{bound-value}
-           (  \VAR{I} )}$$ follows links, it should not be executed during the
-  evaluation of $$\SHADE{\VAR{E}}$$.
+  $$\NAMEREF{bind-recursively}
+    (  \VAR{I}, 
+           \VAR{E} )$$ binds $$\VAR{I}$$ to a link that refers to the value of $$\VAR{E}$$, 
+  representing a recursive binding of $$\VAR{I}$$ to the value of $$\VAR{E}$$.
+  Since $$\NAMEREF{bound-value}
+    (  \VAR{I} )$$ follows links, it should not be executed during the
+  evaluation of $$\VAR{E}$$.
 
 
 $$\begin{align*}
@@ -466,11 +467,11 @@ $$\begin{align*}
 \end{align*}$$
 
 
-  $$\SHADE{\NAMEREF{recursive}
-           (  \VAR{SI}, 
-                  \VAR{D} )}$$ executes $$\SHADE{\VAR{D}}$$ with potential recursion on the bindings of 
-  the identifiers in the set $$\SHADE{\VAR{SI}}$$ (which need not be the same as the set of
-  identifiers bound by $$\SHADE{\VAR{D}}$$).
+  $$\NAMEREF{recursive}
+    (  \VAR{SI}, 
+           \VAR{D} )$$ executes $$\VAR{D}$$ with potential recursion on the bindings of 
+  the identifiers in the set $$\VAR{SI}$$ (which need not be the same as the set of
+  identifiers bound by $$\VAR{D}$$).
 
 
 $$\begin{align*}
@@ -492,13 +493,13 @@ $$\begin{align*}
 \end{align*}$$
 
 
-  $$\SHADE{\NAMEREF{re-close}
-           (  \VAR{M}, 
-                  \VAR{D} )}$$ first executes $$\SHADE{\VAR{D}}$$ in the scope $$\SHADE{\VAR{M}}$$, which maps identifiers
-  to freshly allocated links. This computes an environment $$\SHADE{\VAR{$\rho$}}$$ where the bound
+  $$\NAMEREF{re-close}
+    (  \VAR{M}, 
+           \VAR{D} )$$ first executes $$\VAR{D}$$ in the scope $$\VAR{M}$$, which maps identifiers
+  to freshly allocated links. This computes an environment $$\VAR{\ensuremath{\rho}}$$ where the bound
   values may contain links, or implicit references to links in abstraction
-  values. It then sets the link for each identifier in the domain of $$\SHADE{\VAR{M}}$$ to
-  refer to its bound value in $$\SHADE{\VAR{$\rho$}}$$, and returns $$\SHADE{\VAR{$\rho$}}$$ as the result.
+  values. It then sets the link for each identifier in the domain of $$\VAR{M}$$ to
+  refer to its bound value in $$\VAR{\ensuremath{\rho}}$$, and returns $$\VAR{\ensuremath{\rho}}$$ as the result.
 
 
 $$\begin{align*}
@@ -520,8 +521,8 @@ $$\begin{align*}
 \end{align*}$$
 
 
-  $$\SHADE{\NAMEREF{bind-to-forward-links}
-           (  \VAR{SI} )}$$ binds each identifier in the set $$\SHADE{\VAR{SI}}$$ to a
+  $$\NAMEREF{bind-to-forward-links}
+    (  \VAR{SI} )$$ binds each identifier in the set $$\VAR{SI}$$ to a
   freshly allocated link.
 
 
@@ -546,9 +547,9 @@ $$\begin{align*}
 \end{align*}$$
 
 
-  For each identifier $$\SHADE{\VAR{I}}$$ in the domain of $$\SHADE{\VAR{M}}$$, $$\SHADE{\NAMEREF{set-forward-links}
-           (  \VAR{M} )}$$ sets the 
-  link to which $$\SHADE{\VAR{I}}$$ is mapped by $$\SHADE{\VAR{M}}$$ to the current bound value of $$\SHADE{\VAR{I}}$$.
+  For each identifier $$\VAR{I}$$ in the domain of $$\VAR{M}$$, $$\NAMEREF{set-forward-links}
+    (  \VAR{M} )$$ sets the 
+  link to which $$\VAR{I}$$ is mapped by $$\VAR{M}$$ to the current bound value of $$\VAR{I}$$.
 
 
 
@@ -563,7 +564,7 @@ $$\begin{align*}
   "UNSTABLE-LANGUAGES-BETA"
 [CBS-beta]: /CBS-beta
   "CBS-BETA"
-[Binding.cbs]: https://github.com/plancomps/CBS-beta/blob/master/Funcons-beta/Computations/Normal/Binding/Binding.cbs
+[Binding.cbs]: https://github.com/plancomps/CBS-beta/blob/math/Funcons-beta/Computations/Normal/Binding/Binding.cbs
   "CBS SOURCE FILE ON GITHUB"
 [PLAIN]: /CBS-beta/docs/Funcons-beta/Computations/Normal/Binding
   "CBS SOURCE WEB PAGE"
