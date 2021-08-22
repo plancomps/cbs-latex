@@ -88,8 +88,8 @@ and the colors depend on the configured `color_scheme`.
 
 | Plain CBS | CBS-LaTeX | Formatted CBS |
 | - | - | - | 
-| `funcon-name` | `\NAME{funcon-name}` | $$\NAME{funcon-name}$$ |
-| `entity-name` | `\NAME{entity-name}` | $$\NAME{entity-name}$$ |
+| `funcon-name` | `\FUN{funcon-name}` | $$\FUN{funcon-name}$$ |
+| `entity-name` | `\FUN{entity-name}` | $$\FUN{entity-name}$$ |
 | `syntax-name` | `\SYN{syntax-name}` | $$\SYN{syntax-name}$$ |
 | `semantics-name` | `\SEM{semantics-name}` | $$\SEM{semantics-name}$$ |
 | `§2.1 A section` | `\textsf{\S\SECT{2.1} A section}` | $$\textsf{\S\SECT{2.1} A section}$$ |
@@ -102,9 +102,9 @@ A name should not be declared (in the same namespace) more than once per documen
 
 | Plain CBS | CBS-LaTeX | Formatted CBS |
 | - | - | - | 
-| `name` | `\NAMEDECL{name}` | $$\NAMEDECL{name}$$ |
-| `name` | `\NAMEREF{name}` | $$\NAMEREF{name}$$ |
-| `name` | `\NAMEHYPER{url}{file}{name}` | $$\NAMEHYPER{.}{macros}{name}$$ |
+| `name` | `\FUNDEC{name}` | $$\FUNDEC{name}$$ |
+| `name` | `\FUNREF{name}` | $$\FUNREF{name}$$ |
+| `name` | `\FUNHYP{url}{file}{name}` | $$\FUNHYP{.}{macros}{name}$$ |
 
 Similarly for `\SYN`, `\SEM`, `\SECT`.
 
@@ -176,7 +176,7 @@ and characters that look different in text and math mode.
 
 | Plain CBS | CBS-LaTeX | Formatted CBS |
 | - | - | - | 
-|  `Semantics s-n[[_:...]] : ...` | `\KEY{Semantics} ~ \SEMDECL{s-n} \LEFTPHRASE \_ : ... \RIGHTPHRASE : ...` | $$\KEY{Semantics} ~ \SEM{s-n} \LEFTPHRASE \_ : \nobreak \ldots \RIGHTPHRASE : \ldots$$ |
+|  `Semantics s-n[[_:...]] : ...` | `\KEY{Semantics} ~ \SEMDEC{s-n} \LEFTPHRASE \_ : ... \RIGHTPHRASE : ...` | $$\KEY{Semantics} ~ \SEM{s-n} \LEFTPHRASE \_ : \nobreak \ldots \RIGHTPHRASE : \ldots$$ |
 | `Rule ... = ...` | `\KEY{Rule} ~ ... = ...` | $$\KEY{Rule} ~ \ldots = \ldots$$ |
 | `[[...]]` | `\LEFTPHRASE ... \RIGHTPHRASE` | $$\LEFTPHRASE \ldots \RIGHTPHRASE$$ |
 | `s-n[[...]]` | `\SEMREF{s-n} \LEFTPHRASE ... \RIGHTPHRASE` | $$\SEMREF{s-n} \LEFTPHRASE \ldots \RIGHTPHRASE$$ |
@@ -185,18 +185,18 @@ and characters that look different in text and math mode.
 
 | Plain CBS | CBS-LaTeX | Formatted CBS |
 | - | - | - | 
-| `Funcon f-n ... : ...` | `\KEY{Funcon} ~ \NAMEDECL{f-n} ... : ...` | $$\KEY{Funcon} ~ \NAME{f-n} \ldots : \ldots$$ |
-| `Alias f-n1 = f-n2` | `\KEY{Alias} ~ \NAMEDECL{f-n1} = \NAMEREF{f-n2}` | $$\KEY{Alias} ~ \NAMEDECL{f-n1} = \NAMEREF{f-n2}$$ |
-| `Type t-n ...` | `\KEY{Type} ~ \NAMEDECL{t-n} ...` | $$\KEY{Type} ~ \NAMEDECL{t-n} \ldots$$ |
+| `Funcon f-n ... : ...` | `\KEY{Funcon} ~ \FUNDEC{f-n} ... : ...` | $$\KEY{Funcon} ~ \FUN{f-n} \ldots : \ldots$$ |
+| `Alias f-n1 = f-n2` | `\KEY{Alias} ~ \FUNDEC{f-n1} = \FUNREF{f-n2}` | $$\KEY{Alias} ~ \FUNDEC{f-n1} = \FUNREF{f-n2}$$ |
+| `Type t-n ...` | `\KEY{Type} ~ \FUNDEC{t-n} ...` | $$\KEY{Type} ~ \FUNDEC{t-n} \ldots$$ |
 
 ### Datatype specifications
 
 | Plain CBS | CBS-LaTeX | Formatted CBS |
 | - | - | - | 
-| `Datatype d-n ::= ...` | `\KEY{Datatype} ~ \NAMEDECL{d-n} ::= ...` | $$\KEY{Datatype} ~ \NAMEDECL{d-n} ::= \ldots$$ |
+| `Datatype d-n ::= ...` | `\KEY{Datatype} ~ \FUNDEC{d-n} ::= ...` | $$\KEY{Datatype} ~ \FUNDEC{d-n} ::= \ldots$$ |
 | `... | ...` | `... \mid ...` | $$\ldots \mid \ldots$$ |
-| `c-n` | `\NAMEDECL{c-n}` | $$\NAMEDECL{c-n}$$ |
-| `c-n(...)` | `\NAMEDECL{c-n}(...)` | $$\NAMEDECL{c-n}(\ldots)$$ |
+| `c-n` | `\FUNDEC{c-n}` | $$\FUNDEC{c-n}$$ |
+| `c-n(...)` | `\FUNDEC{c-n}(...)` | $$\FUNDEC{c-n}(\ldots)$$ |
 | `{ _ : ... }` | `\{ ~ _ : ... ~ \}` | $$\{ ~ \_ : \ldots ~ \}$$ |
 
 ### Entity declarations
@@ -204,9 +204,9 @@ and characters that look different in text and math mode.
 | Plain CBS | CBS-LaTeX | Formatted CBS |
 | - | - | - | 
 | `Entity ...` | `\KEY{Entity} ~ ...` | $$\KEY{Entity} ~ \ldots$$ |
-| `e-n(_:...)|- _ ---> _` | `\NAMEDECL{e-n}(\_:...) \vdash \_\TRANS\_` | $$\NAMEDECL{e-n}(\_ : \ldots) \vdash \_ \TRANS \_$$ |
-| `<_,e-n(_:...)> ---> <_,e-n(_:...)>` | `\langle\_,\NAMEDECL{e-n}(\_:...)\rangle \TRANS \langle\_,\NAME{e-n}(\_:...)\rangle` | $$\langle\_,\NAME{e-n}(\_:\ldots)\rangle \TRANS \langle\_,\NAME{e-n}(\_:\ldots)\rangle$$ |
-| `_ -- e-n.(_:...) -> _` | `\_ \xrightarrow{\NAMEDECL{e-n}.(\_:...)} \_` | $$\_ \xrightarrow{\NAME{e-n}.(\_:\ldots)} \_$$ |
+| `e-n(_:...)|- _ ---> _` | `\FUNDEC{e-n}(\_:...) \vdash \_\TRANS\_` | $$\FUNDEC{e-n}(\_ : \ldots) \vdash \_ \TRANS \_$$ |
+| `<_,e-n(_:...)> ---> <_,e-n(_:...)>` | `\langle\_,\FUNDEC{e-n}(\_:...)\rangle \TRANS \langle\_,\FUN{e-n}(\_:...)\rangle` | $$\langle\_,\FUN{e-n}(\_:\ldots)\rangle \TRANS \langle\_,\FUN{e-n}(\_:\ldots)\rangle$$ |
+| `_ -- e-n.(_:...) -> _` | `\_ \xrightarrow{\FUNDEC{e-n}.(\_:...)} \_` | $$\_ \xrightarrow{\FUN{e-n}.(\_:\ldots)} \_$$ |
 
 The `.` in the last line above should be `!`, `?`, or omitted.
 
@@ -215,7 +215,7 @@ The `.` in the last line above should be `!`, `?`, or omitted.
 | Plain CBS | CBS-LaTeX | Formatted CBS |
 | - | - | - | 
 | `Rule ...` | `\KEY{Rule} ~ ...` | $$\KEY{Rule} ~ \ldots$$ |
-| `Rule ... ⏎ ...` | `\KEY{Rule} ~ \AXIOM{& ... \\ & ...}` | $$\KEY{Rule} ~ \AXIOM{& \ldots \\ & \ldots}$$ |
+| `Rule ... ⏎ ...` | `\begin{aligned} \KEY{Rule} ~ & ...\\ & ... \end{aligned}` | $$\begin{aligned}\KEY{Rule}~&\ldots\\[-2ex]&\quad\ldots\end{aligned}$$ |
 | `Rule ... ⏎ ---- ⏎ ...` | `\KEY{Rule} ~ \RULE{...}{...}` | $$\KEY{Rule} ~ \RULE{\ldots}{\ldots}$$ |
 | `Otherwise ...` | `\KEY{Otherwise} ~ ...` | $$\KEY{Otherwise} ~ \ldots$$ |
 | `Assert ...` | `\KEY{Assert} ~ ...` | $$\KEY{Assert} ~ \ldots$$ |
@@ -229,9 +229,9 @@ The `.` in the last line above should be `!`, `?`, or omitted.
 | `... =/= ...` | `... \neq ...` | $$\ldots \neq \ldots$$ |
 | `... <: ...` | `... <: ...` | $$\ldots <: \ldots$$ |
 | `... ---> ...` | `... \TRANS ...` | $$\ldots \TRANS \ldots$$ |
-| `e-n(...)|- ...--->...` | `\NAME{e-n}(...) \vdash ...\TRANS...` | $$\NAMEREF{e-n}(\ldots) \vdash \ldots \TRANS \ldots$$ |
-| `<...,e-n(...)> ---> <...,e-n(...)>` | `\langle...,\NAME{e-n}(...)\rangle \TRANS \langle...,\NAME{e-n}(...)\rangle` | $$\langle\ldots,\NAME{e-n}(\ldots)\rangle \TRANS \langle\ldots,\NAME{e-n}(\ldots)\rangle$$ |
-| `... -- e-n.(...) -> ...` | `...\xrightarrow{\NAME{e-n}.(...)}...` | $$\ldots\xrightarrow{\NAME{e-n}.(\ldots)}\ldots$$ |
+| `e-n(...)|- ...--->...` | `\FUN{e-n}(...) \vdash ...\TRANS...` | $$\FUNREF{e-n}(\ldots) \vdash \ldots \TRANS \ldots$$ |
+| `<...,e-n(...)> ---> <...,e-n(...)>` | `\langle...,\FUN{e-n}(...)\rangle \TRANS \langle...,\FUN{e-n}(...)\rangle` | $$\langle\ldots,\FUN{e-n}(\ldots)\rangle \TRANS \langle\ldots,\FUN{e-n}(\ldots)\rangle$$ |
+| `... -- e-n.(...) -> ...` | `...\xrightarrow{\FUN{e-n}.(...)}...` | $$\ldots\xrightarrow{\FUN{e-n}.(\ldots)}\ldots$$ |
 
 The `.` in the last line above should be `!`, `?`, or omitted.
 

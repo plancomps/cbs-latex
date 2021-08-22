@@ -1,0 +1,951 @@
+\ProvidesPackage{Funcons-beta}[2021/08/18 Package declaring hyperlinks for use with cbs-latex]
+\RequirePackage{cbs-latex}
+
+\def\FUNCON@abrupt
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Abrupting}{Abrupting}{abrupt}}
+\def\FUNCON@abrupted
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Abrupting}{Abrupting}{abrupted}}
+\def\FUNCON@abstraction
+  {\FUNCBS{Funcons-beta/Values/Abstraction/Generic}{Generic}{abstraction}}
+\def\FUNCON@abstractions
+  {\FUNCBS{Funcons-beta/Values/Abstraction/Generic}{Generic}{abstractions}}
+\def\FUNCON@accumulate
+  {\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{accumulate}}
+\def\FUNCON@alloc
+  {\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{alloc}}
+\def\FUNCON@alloc@init
+  {\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{alloc-init}}
+\def\FUNCON@allocate@initialised@variable
+  {\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{allocate-initialised-variable}}
+\def\FUNCON@allocate@variable
+  {\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{allocate-variable}}
+\def\FUNCON@and
+  {\FUNCBS{Funcons-beta/Values/Primitive/Booleans}{Booleans}{and}}
+\def\FUNCON@apply
+  {\FUNCBS{Funcons-beta/Values/Abstraction/Functions}{Functions}{apply}}
+\def\FUNCON@ascii@char
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{ascii-char}}
+\def\FUNCON@ascii@character
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{ascii-character}}
+\def\FUNCON@ascii@characters
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{ascii-characters}}
+\def\FUNCON@ascii@chars
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{ascii-chars}}
+\def\FUNCON@ascii@points
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{ascii-points}}
+\def\FUNCON@assign
+  {\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{assign}}
+\def\FUNCON@assigned
+  {\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{assigned}}
+\def\FUNCON@atomic
+  {\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{atomic}}
+\def\FUNCON@atoms
+  {\FUNCBS{Funcons-beta/Computations/Normal/Generating}{Generating}{atoms}}
+\def\FUNCON@backslash
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{backslash}}
+\def\FUNCON@backspace
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{backspace}}
+\def\FUNCON@basic@multilingual@plane@characters
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{basic-multilingual-plane-characters}}
+\def\FUNCON@basic@multilingual@plane@points
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{basic-multilingual-plane-points}}
+\def\FUNCON@binary
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{binary}}
+\def\FUNCON@binary@natural
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{binary-natural}}
+\def\FUNCON@binaryONETWOEIGHT
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{binary128}}
+\def\FUNCON@binarySIXFOUR
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{binary64}}
+\def\FUNCON@binaryTHREETWO
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{binary32}}
+\def\FUNCON@bind
+  {\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{bind}}
+\def\FUNCON@bind@recursively
+  {\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{bind-recursively}}
+\def\FUNCON@bind@to@forward@links
+  {\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{bind-to-forward-links}}
+\def\FUNCON@bind@value
+  {\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{bind-value}}
+\def\FUNCON@bit@vector
+  {\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector}}
+\def\FUNCON@bit@vector@and
+  {\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector-and}}
+\def\FUNCON@bit@vector@arithmetic@shift@right
+  {\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector-arithmetic-shift-right}}
+\def\FUNCON@bit@vector@logical@shift@right
+  {\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector-logical-shift-right}}
+\def\FUNCON@bit@vector@not
+  {\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector-not}}
+\def\FUNCON@bit@vector@or
+  {\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector-or}}
+\def\FUNCON@bit@vector@shift@left
+  {\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector-shift-left}}
+\def\FUNCON@bit@vector@to@integer
+  {\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector-to-integer}}
+\def\FUNCON@bit@vector@to@natural
+  {\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector-to-natural}}
+\def\FUNCON@bit@vector@xor
+  {\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector-xor}}
+\def\FUNCON@bit@vectors
+  {\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vectors}}
+\def\FUNCON@bits
+  {\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{bits}}
+\def\FUNCON@bmp@chars
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{bmp-chars}}
+\def\FUNCON@booleans
+  {\FUNCBS{Funcons-beta/Values/Primitive/Booleans}{Booleans}{booleans}}
+\def\FUNCON@bools
+  {\FUNCBS{Funcons-beta/Values/Primitive/Booleans}{Booleans}{bools}}
+\def\FUNCON@bound
+  {\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{bound}}
+\def\FUNCON@bound@directly
+  {\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{bound-directly}}
+\def\FUNCON@bound@value
+  {\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{bound-value}}
+\def\FUNCON@bounded@integers
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{bounded-integers}}
+\def\FUNCON@bounded@ints
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{bounded-ints}}
+\def\FUNCON@break
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Breaking}{Breaking}{break}}
+\def\FUNCON@breaking
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Breaking}{Breaking}{breaking}}
+\def\FUNCON@broken
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Breaking}{Breaking}{broken}}
+\def\FUNCON@bytes
+  {\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{bytes}}
+\def\FUNCON@carriage@return
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{carriage-return}}
+\def\FUNCON@case@match
+  {\FUNCBS{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{case-match}}
+\def\FUNCON@case@match@loosely
+  {\FUNCBS{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{case-match-loosely}}
+\def\FUNCON@case@variant@value
+  {\FUNCBS{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{case-variant-value}}
+\def\FUNCON@cast
+  {\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{cast}}
+\def\FUNCON@cast@to@type
+  {\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{cast-to-type}}
+\def\FUNCON@catch@else@throw
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Throwing}{Throwing}{catch-else-throw}}
+\def\FUNCON@characters
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{characters}}
+\def\FUNCON@chars
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{chars}}
+\def\FUNCON@check
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Failing}{Failing}{check}}
+\def\FUNCON@check@true
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Failing}{Failing}{check-true}}
+\def\FUNCON@checked
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Failing}{Failing}{checked}}
+\def\FUNCON@choice
+  {\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{choice}}
+\def\FUNCON@class
+  {\FUNCBS{Funcons-beta/Values/Composite/Classes}{Classes}{class}}
+\def\FUNCON@class@feature@map
+  {\FUNCBS{Funcons-beta/Values/Composite/Classes}{Classes}{class-feature-map}}
+\def\FUNCON@class@instantiator
+  {\FUNCBS{Funcons-beta/Values/Composite/Classes}{Classes}{class-instantiator}}
+\def\FUNCON@class@name@single@inheritance@feature@map
+  {\FUNCBS{Funcons-beta/Values/Composite/Classes}{Classes}{class-name-single-inheritance-feature-map}}
+\def\FUNCON@class@name@tree
+  {\FUNCBS{Funcons-beta/Values/Composite/Classes}{Classes}{class-name-tree}}
+\def\FUNCON@class@superclass@name@sequence
+  {\FUNCBS{Funcons-beta/Values/Composite/Classes}{Classes}{class-superclass-name-sequence}}
+\def\FUNCON@classes
+  {\FUNCBS{Funcons-beta/Values/Composite/Classes}{Classes}{classes}}
+\def\FUNCON@closed
+  {\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{closed}}
+\def\FUNCON@closure
+  {\FUNCBS{Funcons-beta/Values/Abstraction/Generic}{Generic}{closure}}
+\def\FUNCON@collateral
+  {\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{collateral}}
+\def\FUNCON@compose
+  {\FUNCBS{Funcons-beta/Values/Abstraction/Functions}{Functions}{compose}}
+\def\FUNCON@computation@types
+  {\FUNCBS{Funcons-beta/Computations/Computation-Types}{Computation-Types}{computation-types}}
+\def\FUNCON@cons
+  {\FUNCBS{Funcons-beta/Values/Composite/Lists}{Lists}{cons}}
+\def\FUNCON@continuation
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Controlling}{Controlling}{continuation}}
+\def\FUNCON@continuations
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Controlling}{Controlling}{continuations}}
+\def\FUNCON@continue
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Continuing}{Continuing}{continue}}
+\def\FUNCON@continued
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Continuing}{Continuing}{continued}}
+\def\FUNCON@continuing
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Continuing}{Continuing}{continuing}}
+\def\FUNCON@control
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Controlling}{Controlling}{control}}
+\def\FUNCON@control@signal
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Controlling}{Controlling}{control-signal}}
+\def\FUNCON@current@value
+  {\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{current-value}}
+\def\FUNCON@curry
+  {\FUNCBS{Funcons-beta/Values/Abstraction/Functions}{Functions}{curry}}
+\def\FUNCON@datatype@value
+  {\FUNCBS{Funcons-beta/Values/Composite/Datatypes}{Datatypes}{datatype-value}}
+\def\FUNCON@datatype@value@elements
+  {\FUNCBS{Funcons-beta/Values/Composite/Datatypes}{Datatypes}{datatype-value-elements}}
+\def\FUNCON@datatype@value@id
+  {\FUNCBS{Funcons-beta/Values/Composite/Datatypes}{Datatypes}{datatype-value-id}}
+\def\FUNCON@datatype@values
+  {\FUNCBS{Funcons-beta/Values/Composite/Datatypes}{Datatypes}{datatype-values}}
+\def\FUNCON@decimal
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{decimal}}
+\def\FUNCON@decimal@float
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{decimal-float}}
+\def\FUNCON@decimal@natural
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{decimal-natural}}
+\def\FUNCON@decimalONETWOEIGHT
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{decimal128}}
+\def\FUNCON@decimalSIXFOUR
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{decimal64}}
+\def\FUNCON@delimit@cc
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Controlling}{Controlling}{delimit-cc}}
+\def\FUNCON@delimit@current@continuation
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Controlling}{Controlling}{delimit-current-continuation}}
+\def\FUNCON@dereference
+  {\FUNCBS{Funcons-beta/Values/Composite/References}{References}{dereference}}
+\def\FUNCON@directed@graphs
+  {\FUNCBS{Funcons-beta/Values/Composite/Graphs}{Graphs}{directed-graphs}}
+\def\FUNCON@do@while
+  {\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{do-while}}
+\def\FUNCON@do@while@true
+  {\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{do-while-true}}
+\def\FUNCON@dom
+  {\FUNCBS{Funcons-beta/Values/Composite/Maps}{Maps}{dom}}
+\def\FUNCON@double@quote
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{double-quote}}
+\def\FUNCON@drop@first@n
+  {\FUNCBS{Funcons-beta/Values/Composite/Sequences}{Sequences}{drop-first-n}}
+\def\FUNCON@effect
+  {\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{effect}}
+\def\FUNCON@element@not@in
+  {\FUNCBS{Funcons-beta/Values/Composite/Sets}{Sets}{element-not-in}}
+\def\FUNCON@else
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Failing}{Failing}{else}}
+\def\FUNCON@else@choice
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Failing}{Failing}{else-choice}}
+\def\FUNCON@empty@type
+  {\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{empty-type}}
+\def\FUNCON@enact
+  {\FUNCBS{Funcons-beta/Values/Abstraction/Generic}{Generic}{enact}}
+\def\FUNCON@env
+  {\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{env}}
+\def\FUNCON@environment
+  {\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{environment}}
+\def\FUNCON@environments
+  {\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{environments}}
+\def\FUNCON@envs
+  {\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{envs}}
+\def\FUNCON@exclusive@or
+  {\FUNCBS{Funcons-beta/Values/Primitive/Booleans}{Booleans}{exclusive-or}}
+\def\FUNCON@fail
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Failing}{Failing}{fail}}
+\def\FUNCON@failed
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Failing}{Failing}{failed}}
+\def\FUNCON@failing
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Failing}{Failing}{failing}}
+\def\FUNCON@false
+  {\FUNCBS{Funcons-beta/Values/Primitive/Booleans}{Booleans}{false}}
+\def\FUNCON@finalise@abrupting
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Abrupting}{Abrupting}{finalise-abrupting}}
+\def\FUNCON@finalise@breaking
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Breaking}{Breaking}{finalise-breaking}}
+\def\FUNCON@finalise@continuing
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Continuing}{Continuing}{finalise-continuing}}
+\def\FUNCON@finalise@failing
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Failing}{Failing}{finalise-failing}}
+\def\FUNCON@finalise@returning
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Returning}{Returning}{finalise-returning}}
+\def\FUNCON@finalise@throwing
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Throwing}{Throwing}{finalise-throwing}}
+\def\FUNCON@finally
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Abrupting}{Abrupting}{finally}}
+\def\FUNCON@first
+  {\FUNCBS{Funcons-beta/Values/Composite/Sequences}{Sequences}{first}}
+\def\FUNCON@first@n
+  {\FUNCBS{Funcons-beta/Values/Composite/Sequences}{Sequences}{first-n}}
+\def\FUNCON@float
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float}}
+\def\FUNCON@float@absolute@value
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-absolute-value}}
+\def\FUNCON@float@acos
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-acos}}
+\def\FUNCON@float@acosh
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-acosh}}
+\def\FUNCON@float@add
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-add}}
+\def\FUNCON@float@asin
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-asin}}
+\def\FUNCON@float@asinh
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-asinh}}
+\def\FUNCON@float@atan
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-atan}}
+\def\FUNCON@float@atanh
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-atanh}}
+\def\FUNCON@float@atanTWO
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-atan2}}
+\def\FUNCON@float@ceiling
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-ceiling}}
+\def\FUNCON@float@convert
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-convert}}
+\def\FUNCON@float@cos
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-cos}}
+\def\FUNCON@float@cosh
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-cosh}}
+\def\FUNCON@float@divide
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-divide}}
+\def\FUNCON@float@e
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-e}}
+\def\FUNCON@float@equal
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-equal}}
+\def\FUNCON@float@exp
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-exp}}
+\def\FUNCON@float@float@power
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-float-power}}
+\def\FUNCON@float@floor
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-floor}}
+\def\FUNCON@float@formats
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-formats}}
+\def\FUNCON@float@integer@power
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-integer-power}}
+\def\FUNCON@float@is@greater
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-is-greater}}
+\def\FUNCON@float@is@greater@or@equal
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-is-greater-or-equal}}
+\def\FUNCON@float@is@less
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-is-less}}
+\def\FUNCON@float@is@less@or@equal
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-is-less-or-equal}}
+\def\FUNCON@float@log
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-log}}
+\def\FUNCON@float@logONEZERO
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-log10}}
+\def\FUNCON@float@multiply
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-multiply}}
+\def\FUNCON@float@multiply@add
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-multiply-add}}
+\def\FUNCON@float@negate
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-negate}}
+\def\FUNCON@float@pi
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-pi}}
+\def\FUNCON@float@remainder
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-remainder}}
+\def\FUNCON@float@round@ties@to@even
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-round-ties-to-even}}
+\def\FUNCON@float@round@ties@to@infinity
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-round-ties-to-infinity}}
+\def\FUNCON@float@sin
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-sin}}
+\def\FUNCON@float@sinh
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-sinh}}
+\def\FUNCON@float@sqrt
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-sqrt}}
+\def\FUNCON@float@subtract
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-subtract}}
+\def\FUNCON@float@tan
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-tan}}
+\def\FUNCON@float@tanh
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-tanh}}
+\def\FUNCON@float@truncate
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-truncate}}
+\def\FUNCON@floats
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{floats}}
+\def\FUNCON@fold@left
+  {\FUNCBS{Funcons-beta/Computations/Normal/Giving}{Giving}{fold-left}}
+\def\FUNCON@fold@right
+  {\FUNCBS{Funcons-beta/Computations/Normal/Giving}{Giving}{fold-right}}
+\def\FUNCON@follow@if@link
+  {\FUNCBS{Funcons-beta/Computations/Normal/Linking}{Linking}{follow-if-link}}
+\def\FUNCON@follow@link
+  {\FUNCBS{Funcons-beta/Computations/Normal/Linking}{Linking}{follow-link}}
+\def\FUNCON@force
+  {\FUNCBS{Funcons-beta/Values/Abstraction/Thunks}{Thunks}{force}}
+\def\FUNCON@forest@branch@sequence
+  {\FUNCBS{Funcons-beta/Values/Composite/Trees}{Trees}{forest-branch-sequence}}
+\def\FUNCON@forest@root@value@sequence
+  {\FUNCBS{Funcons-beta/Values/Composite/Trees}{Trees}{forest-root-value-sequence}}
+\def\FUNCON@forest@value@sequence
+  {\FUNCBS{Funcons-beta/Values/Composite/Trees}{Trees}{forest-value-sequence}}
+\def\FUNCON@form@feed
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{form-feed}}
+\def\FUNCON@fresh@atom
+  {\FUNCBS{Funcons-beta/Computations/Normal/Generating}{Generating}{fresh-atom}}
+\def\FUNCON@fresh@identifier
+  {\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{fresh-identifier}}
+\def\FUNCON@fresh@init@link
+  {\FUNCBS{Funcons-beta/Computations/Normal/Linking}{Linking}{fresh-init-link}}
+\def\FUNCON@fresh@initialised@link
+  {\FUNCBS{Funcons-beta/Computations/Normal/Linking}{Linking}{fresh-initialised-link}}
+\def\FUNCON@fresh@link
+  {\FUNCBS{Funcons-beta/Computations/Normal/Linking}{Linking}{fresh-link}}
+\def\FUNCON@from
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{from}}
+\def\FUNCON@function
+  {\FUNCBS{Funcons-beta/Values/Abstraction/Functions}{Functions}{function}}
+\def\FUNCON@functions
+  {\FUNCBS{Funcons-beta/Values/Abstraction/Functions}{Functions}{functions}}
+\def\FUNCON@give
+  {\FUNCBS{Funcons-beta/Computations/Normal/Giving}{Giving}{give}}
+\def\FUNCON@given
+  {\FUNCBS{Funcons-beta/Computations/Normal/Giving}{Giving}{given}}
+\def\FUNCON@given@value
+  {\FUNCBS{Funcons-beta/Computations/Normal/Giving}{Giving}{given-value}}
+\def\FUNCON@ground@vals
+  {\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{ground-vals}}
+\def\FUNCON@ground@values
+  {\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{ground-values}}
+\def\FUNCON@handle@abrupt
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Abrupting}{Abrupting}{handle-abrupt}}
+\def\FUNCON@handle@break
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Breaking}{Breaking}{handle-break}}
+\def\FUNCON@handle@continue
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Continuing}{Continuing}{handle-continue}}
+\def\FUNCON@handle@recursively
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Throwing}{Throwing}{handle-recursively}}
+\def\FUNCON@handle@return
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Returning}{Returning}{handle-return}}
+\def\FUNCON@handle@thrown
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Throwing}{Throwing}{handle-thrown}}
+\def\FUNCON@head
+  {\FUNCBS{Funcons-beta/Values/Composite/Lists}{Lists}{head}}
+\def\FUNCON@hexadecimal
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{hexadecimal}}
+\def\FUNCON@hexadecimal@natural
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{hexadecimal-natural}}
+\def\FUNCON@hole
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Controlling}{Controlling}{hole}}
+\def\FUNCON@horizontal@tab
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{horizontal-tab}}
+\def\FUNCON@id@tagged
+  {\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{id-tagged}}
+\def\FUNCON@identifier@tagged
+  {\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{identifier-tagged}}
+\def\FUNCON@identifiers
+  {\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{identifiers}}
+\def\FUNCON@ids
+  {\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{ids}}
+\def\FUNCON@if@else
+  {\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{if-else}}
+\def\FUNCON@if@true@else
+  {\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{if-true-else}}
+\def\FUNCON@implies
+  {\FUNCBS{Funcons-beta/Values/Primitive/Booleans}{Booleans}{implies}}
+\def\FUNCON@index
+  {\FUNCBS{Funcons-beta/Values/Composite/Sequences}{Sequences}{index}}
+\def\FUNCON@init
+  {\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{init}}
+\def\FUNCON@init@storing
+  {\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{init-storing}}
+\def\FUNCON@initialise@binding
+  {\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{initialise-binding}}
+\def\FUNCON@initialise@generating
+  {\FUNCBS{Funcons-beta/Computations/Normal/Generating}{Generating}{initialise-generating}}
+\def\FUNCON@initialise@giving
+  {\FUNCBS{Funcons-beta/Computations/Normal/Giving}{Giving}{initialise-giving}}
+\def\FUNCON@initialise@linking
+  {\FUNCBS{Funcons-beta/Computations/Normal/Linking}{Linking}{initialise-linking}}
+\def\FUNCON@initialise@storing
+  {\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{initialise-storing}}
+\def\FUNCON@initialise@variable
+  {\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{initialise-variable}}
+\def\FUNCON@int@abs
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{int-abs}}
+\def\FUNCON@int@add
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{int-add}}
+\def\FUNCON@int@div
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{int-div}}
+\def\FUNCON@int@mod
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{int-mod}}
+\def\FUNCON@int@mul
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{int-mul}}
+\def\FUNCON@int@neg
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{int-neg}}
+\def\FUNCON@int@pow
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{int-pow}}
+\def\FUNCON@int@sub
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{int-sub}}
+\def\FUNCON@integer@absolute@value
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-absolute-value}}
+\def\FUNCON@integer@add
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-add}}
+\def\FUNCON@integer@divide
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-divide}}
+\def\FUNCON@integer@is@greater
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-is-greater}}
+\def\FUNCON@integer@is@greater@or@equal
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-is-greater-or-equal}}
+\def\FUNCON@integer@is@less
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-is-less}}
+\def\FUNCON@integer@is@less@or@equal
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-is-less-or-equal}}
+\def\FUNCON@integer@modulo
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-modulo}}
+\def\FUNCON@integer@multiply
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-multiply}}
+\def\FUNCON@integer@negate
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-negate}}
+\def\FUNCON@integer@power
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-power}}
+\def\FUNCON@integer@sequence
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-sequence}}
+\def\FUNCON@integer@subtract
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-subtract}}
+\def\FUNCON@integer@to@bit@vector
+  {\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{integer-to-bit-vector}}
+\def\FUNCON@integers
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integers}}
+\def\FUNCON@integers@from
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integers-from}}
+\def\FUNCON@integers@up@to
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integers-up-to}}
+\def\FUNCON@interleave
+  {\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{interleave}}
+\def\FUNCON@interleave@filter
+  {\FUNCBS{Funcons-beta/Computations/Normal/Giving}{Giving}{interleave-filter}}
+\def\FUNCON@interleave@map
+  {\FUNCBS{Funcons-beta/Computations/Normal/Giving}{Giving}{interleave-map}}
+\def\FUNCON@interleave@repeat
+  {\FUNCBS{Funcons-beta/Computations/Normal/Giving}{Giving}{interleave-repeat}}
+\def\FUNCON@intersperse
+  {\FUNCBS{Funcons-beta/Values/Composite/Sequences}{Sequences}{intersperse}}
+\def\FUNCON@ints
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{ints}}
+\def\FUNCON@is
+  {\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{is}}
+\def\FUNCON@is@cyclic
+  {\FUNCBS{Funcons-beta/Values/Composite/Graphs}{Graphs}{is-cyclic}}
+\def\FUNCON@is@eq
+  {\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{is-eq}}
+\def\FUNCON@is@equal
+  {\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{is-equal}}
+\def\FUNCON@is@greater
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{is-greater}}
+\def\FUNCON@is@greater@or@equal
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{is-greater-or-equal}}
+\def\FUNCON@is@in
+  {\FUNCBS{Funcons-beta/Values/Composite/Sequences}{Sequences}{is-in}}
+\def\FUNCON@is@in@set
+  {\FUNCBS{Funcons-beta/Values/Composite/Sets}{Sets}{is-in-set}}
+\def\FUNCON@is@in@signed@bit@vector
+  {\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{is-in-signed-bit-vector}}
+\def\FUNCON@is@in@type
+  {\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{is-in-type}}
+\def\FUNCON@is@in@unsigned@bit@vector
+  {\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{is-in-unsigned-bit-vector}}
+\def\FUNCON@is@less
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{is-less}}
+\def\FUNCON@is@less@or@equal
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{is-less-or-equal}}
+\def\FUNCON@is@subclass@name
+  {\FUNCBS{Funcons-beta/Values/Composite/Classes}{Classes}{is-subclass-name}}
+\def\FUNCON@is@submultiset
+  {\FUNCBS{Funcons-beta/Values/Composite/Multisets}{Multisets}{is-submultiset}}
+\def\FUNCON@is@subset
+  {\FUNCBS{Funcons-beta/Values/Composite/Sets}{Sets}{is-subset}}
+\def\FUNCON@is@val
+  {\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{is-val}}
+\def\FUNCON@is@value
+  {\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{is-value}}
+\def\FUNCON@iso@latin@ONE@characters
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{iso-latin-1-characters}}
+\def\FUNCON@iso@latin@ONE@points
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{iso-latin-1-points}}
+\def\FUNCON@l@to@r
+  {\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{l-to-r}}
+\def\FUNCON@latin@ONE@chars
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{latin-1-chars}}
+\def\FUNCON@left@to@right
+  {\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{left-to-right}}
+\def\FUNCON@left@to@right@filter
+  {\FUNCBS{Funcons-beta/Computations/Normal/Giving}{Giving}{left-to-right-filter}}
+\def\FUNCON@left@to@right@map
+  {\FUNCBS{Funcons-beta/Computations/Normal/Giving}{Giving}{left-to-right-map}}
+\def\FUNCON@left@to@right@repeat
+  {\FUNCBS{Funcons-beta/Computations/Normal/Giving}{Giving}{left-to-right-repeat}}
+\def\FUNCON@length
+  {\FUNCBS{Funcons-beta/Values/Composite/Sequences}{Sequences}{length}}
+\def\FUNCON@line@feed
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{line-feed}}
+\def\FUNCON@link
+  {\FUNCBS{Funcons-beta/Computations/Normal/Linking}{Linking}{link}}
+\def\FUNCON@links
+  {\FUNCBS{Funcons-beta/Computations/Normal/Linking}{Linking}{links}}
+\def\FUNCON@list
+  {\FUNCBS{Funcons-beta/Values/Composite/Lists}{Lists}{list}}
+\def\FUNCON@list@append
+  {\FUNCBS{Funcons-beta/Values/Composite/Lists}{Lists}{list-append}}
+\def\FUNCON@list@cons
+  {\FUNCBS{Funcons-beta/Values/Composite/Lists}{Lists}{list-cons}}
+\def\FUNCON@list@elements
+  {\FUNCBS{Funcons-beta/Values/Composite/Lists}{Lists}{list-elements}}
+\def\FUNCON@list@head
+  {\FUNCBS{Funcons-beta/Values/Composite/Lists}{Lists}{list-head}}
+\def\FUNCON@list@length
+  {\FUNCBS{Funcons-beta/Values/Composite/Lists}{Lists}{list-length}}
+\def\FUNCON@list@nil
+  {\FUNCBS{Funcons-beta/Values/Composite/Lists}{Lists}{list-nil}}
+\def\FUNCON@list@tail
+  {\FUNCBS{Funcons-beta/Values/Composite/Lists}{Lists}{list-tail}}
+\def\FUNCON@lists
+  {\FUNCBS{Funcons-beta/Values/Composite/Lists}{Lists}{lists}}
+\def\FUNCON@locations
+  {\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{locations}}
+\def\FUNCON@locs
+  {\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{locs}}
+\def\FUNCON@lookup
+  {\FUNCBS{Funcons-beta/Values/Composite/Maps}{Maps}{lookup}}
+\def\FUNCON@map
+  {\FUNCBS{Funcons-beta/Values/Composite/Maps}{Maps}{map}}
+\def\FUNCON@map@delete
+  {\FUNCBS{Funcons-beta/Values/Composite/Maps}{Maps}{map-delete}}
+\def\FUNCON@map@domain
+  {\FUNCBS{Funcons-beta/Values/Composite/Maps}{Maps}{map-domain}}
+\def\FUNCON@map@elements
+  {\FUNCBS{Funcons-beta/Values/Composite/Maps}{Maps}{map-elements}}
+\def\FUNCON@map@lookup
+  {\FUNCBS{Funcons-beta/Values/Composite/Maps}{Maps}{map-lookup}}
+\def\FUNCON@map@override
+  {\FUNCBS{Funcons-beta/Values/Composite/Maps}{Maps}{map-override}}
+\def\FUNCON@map@unite
+  {\FUNCBS{Funcons-beta/Values/Composite/Maps}{Maps}{map-unite}}
+\def\FUNCON@maps
+  {\FUNCBS{Funcons-beta/Values/Composite/Maps}{Maps}{maps}}
+\def\FUNCON@match
+  {\FUNCBS{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{match}}
+\def\FUNCON@match@loosely
+  {\FUNCBS{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{match-loosely}}
+\def\FUNCON@multiset
+  {\FUNCBS{Funcons-beta/Values/Composite/Multisets}{Multisets}{multiset}}
+\def\FUNCON@multiset@delete
+  {\FUNCBS{Funcons-beta/Values/Composite/Multisets}{Multisets}{multiset-delete}}
+\def\FUNCON@multiset@elements
+  {\FUNCBS{Funcons-beta/Values/Composite/Multisets}{Multisets}{multiset-elements}}
+\def\FUNCON@multiset@insert
+  {\FUNCBS{Funcons-beta/Values/Composite/Multisets}{Multisets}{multiset-insert}}
+\def\FUNCON@multiset@occurrences
+  {\FUNCBS{Funcons-beta/Values/Composite/Multisets}{Multisets}{multiset-occurrences}}
+\def\FUNCON@multisets
+  {\FUNCBS{Funcons-beta/Values/Composite/Multisets}{Multisets}{multisets}}
+\def\FUNCON@n@of
+  {\FUNCBS{Funcons-beta/Values/Composite/Sequences}{Sequences}{n-of}}
+\def\FUNCON@nat@pred
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{nat-pred}}
+\def\FUNCON@nat@succ
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{nat-succ}}
+\def\FUNCON@nats
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{nats}}
+\def\FUNCON@natural@numbers
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{natural-numbers}}
+\def\FUNCON@natural@predecessor
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{natural-predecessor}}
+\def\FUNCON@natural@successor
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{natural-successor}}
+\def\FUNCON@neg@inf
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{neg-inf}}
+\def\FUNCON@neg@ints
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{neg-ints}}
+\def\FUNCON@negative@infinity
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{negative-infinity}}
+\def\FUNCON@negative@integers
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{negative-integers}}
+\def\FUNCON@nil
+  {\FUNCBS{Funcons-beta/Values/Composite/Lists}{Lists}{nil}}
+\def\FUNCON@no@given
+  {\FUNCBS{Funcons-beta/Computations/Normal/Giving}{Giving}{no-given}}
+\def\FUNCON@not
+  {\FUNCBS{Funcons-beta/Values/Primitive/Booleans}{Booleans}{not}}
+\def\FUNCON@null
+  {\FUNCBS{Funcons-beta/Values/Primitive/Null}{Null}{null}}
+\def\FUNCON@null@type
+  {\FUNCBS{Funcons-beta/Values/Primitive/Null}{Null}{null-type}}
+\def\FUNCON@null@value
+  {\FUNCBS{Funcons-beta/Values/Primitive/Null}{Null}{null-value}}
+\def\FUNCON@object
+  {\FUNCBS{Funcons-beta/Values/Composite/Objects}{Objects}{object}}
+\def\FUNCON@object@class@name
+  {\FUNCBS{Funcons-beta/Values/Composite/Objects}{Objects}{object-class-name}}
+\def\FUNCON@object@feature@map
+  {\FUNCBS{Funcons-beta/Values/Composite/Objects}{Objects}{object-feature-map}}
+\def\FUNCON@object@identity
+  {\FUNCBS{Funcons-beta/Values/Composite/Objects}{Objects}{object-identity}}
+\def\FUNCON@object@single@inheritance@feature@map
+  {\FUNCBS{Funcons-beta/Values/Composite/Objects}{Objects}{object-single-inheritance-feature-map}}
+\def\FUNCON@object@subobject@sequence
+  {\FUNCBS{Funcons-beta/Values/Composite/Objects}{Objects}{object-subobject-sequence}}
+\def\FUNCON@object@tree
+  {\FUNCBS{Funcons-beta/Values/Composite/Objects}{Objects}{object-tree}}
+\def\FUNCON@objects
+  {\FUNCBS{Funcons-beta/Values/Composite/Objects}{Objects}{objects}}
+\def\FUNCON@octal
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{octal}}
+\def\FUNCON@octal@natural
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{octal-natural}}
+\def\FUNCON@octets
+  {\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{octets}}
+\def\FUNCON@or
+  {\FUNCBS{Funcons-beta/Values/Primitive/Booleans}{Booleans}{or}}
+\def\FUNCON@partial@apply
+  {\FUNCBS{Funcons-beta/Values/Abstraction/Functions}{Functions}{partial-apply}}
+\def\FUNCON@pattern
+  {\FUNCBS{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{pattern}}
+\def\FUNCON@pattern@any
+  {\FUNCBS{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{pattern-any}}
+\def\FUNCON@pattern@bind
+  {\FUNCBS{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{pattern-bind}}
+\def\FUNCON@pattern@else
+  {\FUNCBS{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{pattern-else}}
+\def\FUNCON@pattern@type
+  {\FUNCBS{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{pattern-type}}
+\def\FUNCON@pattern@unite
+  {\FUNCBS{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{pattern-unite}}
+\def\FUNCON@patterns
+  {\FUNCBS{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{patterns}}
+\def\FUNCON@plug@signal
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Controlling}{Controlling}{plug-signal}}
+\def\FUNCON@pointer@null
+  {\FUNCBS{Funcons-beta/Values/Composite/References}{References}{pointer-null}}
+\def\FUNCON@pointers
+  {\FUNCBS{Funcons-beta/Values/Composite/References}{References}{pointers}}
+\def\FUNCON@pos@inf
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{pos-inf}}
+\def\FUNCON@pos@ints
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{pos-ints}}
+\def\FUNCON@positive@infinity
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{positive-infinity}}
+\def\FUNCON@positive@integers
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{positive-integers}}
+\def\FUNCON@print
+  {\FUNCBS{Funcons-beta/Computations/Normal/Interacting}{Interacting}{print}}
+\def\FUNCON@qNaN
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{qNaN}}
+\def\FUNCON@quiet@not@a@number
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{quiet-not-a-number}}
+\def\FUNCON@r@to@l
+  {\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{r-to-l}}
+\def\FUNCON@re@close
+  {\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{re-close}}
+\def\FUNCON@read
+  {\FUNCBS{Funcons-beta/Computations/Normal/Interacting}{Interacting}{read}}
+\def\FUNCON@record
+  {\FUNCBS{Funcons-beta/Values/Composite/Records}{Records}{record}}
+\def\FUNCON@record@map
+  {\FUNCBS{Funcons-beta/Values/Composite/Records}{Records}{record-map}}
+\def\FUNCON@record@select
+  {\FUNCBS{Funcons-beta/Values/Composite/Records}{Records}{record-select}}
+\def\FUNCON@records
+  {\FUNCBS{Funcons-beta/Values/Composite/Records}{Records}{records}}
+\def\FUNCON@recursive
+  {\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{recursive}}
+\def\FUNCON@recycle
+  {\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{recycle}}
+\def\FUNCON@recycle@variables
+  {\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{recycle-variables}}
+\def\FUNCON@reference
+  {\FUNCBS{Funcons-beta/Values/Composite/References}{References}{reference}}
+\def\FUNCON@references
+  {\FUNCBS{Funcons-beta/Values/Composite/References}{References}{references}}
+\def\FUNCON@resume@continuation
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Controlling}{Controlling}{resume-continuation}}
+\def\FUNCON@return
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Returning}{Returning}{return}}
+\def\FUNCON@returned
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Returning}{Returning}{returned}}
+\def\FUNCON@returning
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Returning}{Returning}{returning}}
+\def\FUNCON@reverse
+  {\FUNCBS{Funcons-beta/Values/Composite/Sequences}{Sequences}{reverse}}
+\def\FUNCON@right@to@left
+  {\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{right-to-left}}
+\def\FUNCON@scope
+  {\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{scope}}
+\def\FUNCON@second
+  {\FUNCBS{Funcons-beta/Values/Composite/Sequences}{Sequences}{second}}
+\def\FUNCON@seq
+  {\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{seq}}
+\def\FUNCON@sequential
+  {\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{sequential}}
+\def\FUNCON@set
+  {\FUNCBS{Funcons-beta/Values/Composite/Sets}{Sets}{set}}
+\def\FUNCON@set@difference
+  {\FUNCBS{Funcons-beta/Values/Composite/Sets}{Sets}{set-difference}}
+\def\FUNCON@set@elements
+  {\FUNCBS{Funcons-beta/Values/Composite/Sets}{Sets}{set-elements}}
+\def\FUNCON@set@forward@links
+  {\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{set-forward-links}}
+\def\FUNCON@set@insert
+  {\FUNCBS{Funcons-beta/Values/Composite/Sets}{Sets}{set-insert}}
+\def\FUNCON@set@intersect
+  {\FUNCBS{Funcons-beta/Values/Composite/Sets}{Sets}{set-intersect}}
+\def\FUNCON@set@link
+  {\FUNCBS{Funcons-beta/Computations/Normal/Linking}{Linking}{set-link}}
+\def\FUNCON@set@size
+  {\FUNCBS{Funcons-beta/Values/Composite/Sets}{Sets}{set-size}}
+\def\FUNCON@set@unite
+  {\FUNCBS{Funcons-beta/Values/Composite/Sets}{Sets}{set-unite}}
+\def\FUNCON@sets
+  {\FUNCBS{Funcons-beta/Values/Composite/Sets}{Sets}{sets}}
+\def\FUNCON@signal
+  {\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{signal}}
+\def\FUNCON@signaling@not@a@number
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{signaling-not-a-number}}
+\def\FUNCON@signed@bit@vector@maximum
+  {\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{signed-bit-vector-maximum}}
+\def\FUNCON@signed@bit@vector@minimum
+  {\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{signed-bit-vector-minimum}}
+\def\FUNCON@single@branching@sequence
+  {\FUNCBS{Funcons-beta/Values/Composite/Trees}{Trees}{single-branching-sequence}}
+\def\FUNCON@single@quote
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{single-quote}}
+\def\FUNCON@sNaN
+  {\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{sNaN}}
+\def\FUNCON@some@element
+  {\FUNCBS{Funcons-beta/Values/Composite/Sets}{Sets}{some-element}}
+\def\FUNCON@standard@in
+  {\FUNCBS{Funcons-beta/Computations/Normal/Interacting}{Interacting}{standard-in}}
+\def\FUNCON@standard@out
+  {\FUNCBS{Funcons-beta/Computations/Normal/Interacting}{Interacting}{standard-out}}
+\def\FUNCON@store
+  {\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{store}}
+\def\FUNCON@store@clear
+  {\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{store-clear}}
+\def\FUNCON@stores
+  {\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{stores}}
+\def\FUNCON@string
+  {\FUNCBS{Funcons-beta/Values/Composite/Strings}{Strings}{string}}
+\def\FUNCON@string@append
+  {\FUNCBS{Funcons-beta/Values/Composite/Strings}{Strings}{string-append}}
+\def\FUNCON@strings
+  {\FUNCBS{Funcons-beta/Values/Composite/Strings}{Strings}{strings}}
+\def\FUNCON@structural@assign
+  {\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{structural-assign}}
+\def\FUNCON@structural@assigned
+  {\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{structural-assigned}}
+\def\FUNCON@stuck
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Abrupting}{Abrupting}{stuck}}
+\def\FUNCON@supply
+  {\FUNCBS{Funcons-beta/Values/Abstraction/Functions}{Functions}{supply}}
+\def\FUNCON@tail
+  {\FUNCBS{Funcons-beta/Values/Composite/Lists}{Lists}{tail}}
+\def\FUNCON@third
+  {\FUNCBS{Funcons-beta/Values/Composite/Sequences}{Sequences}{third}}
+\def\FUNCON@throw
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Throwing}{Throwing}{throw}}
+\def\FUNCON@throwing
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Throwing}{Throwing}{throwing}}
+\def\FUNCON@thrown
+  {\FUNCBS{Funcons-beta/Computations/Abnormal/Throwing}{Throwing}{thrown}}
+\def\FUNCON@thunk
+  {\FUNCBS{Funcons-beta/Values/Abstraction/Thunks}{Thunks}{thunk}}
+\def\FUNCON@thunks
+  {\FUNCBS{Funcons-beta/Values/Abstraction/Thunks}{Thunks}{thunks}}
+\def\FUNCON@to@string
+  {\FUNCBS{Funcons-beta/Values/Composite/Strings}{Strings}{to-string}}
+\def\FUNCON@topological@sort
+  {\FUNCBS{Funcons-beta/Values/Composite/Graphs}{Graphs}{topological-sort}}
+\def\FUNCON@tree
+  {\FUNCBS{Funcons-beta/Values/Composite/Trees}{Trees}{tree}}
+\def\FUNCON@tree@branch@sequence
+  {\FUNCBS{Funcons-beta/Values/Composite/Trees}{Trees}{tree-branch-sequence}}
+\def\FUNCON@tree@root@value
+  {\FUNCBS{Funcons-beta/Values/Composite/Trees}{Trees}{tree-root-value}}
+\def\FUNCON@trees
+  {\FUNCBS{Funcons-beta/Values/Composite/Trees}{Trees}{trees}}
+\def\FUNCON@true
+  {\FUNCBS{Funcons-beta/Values/Primitive/Booleans}{Booleans}{true}}
+\def\FUNCON@tuple
+  {\FUNCBS{Funcons-beta/Values/Composite/Tuples}{Tuples}{tuple}}
+\def\FUNCON@tuple@elements
+  {\FUNCBS{Funcons-beta/Values/Composite/Tuples}{Tuples}{tuple-elements}}
+\def\FUNCON@tuple@zip
+  {\FUNCBS{Funcons-beta/Values/Composite/Tuples}{Tuples}{tuple-zip}}
+\def\FUNCON@tuples
+  {\FUNCBS{Funcons-beta/Values/Composite/Tuples}{Tuples}{tuples}}
+\def\FUNCON@types
+  {\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{types}}
+\def\FUNCON@un@assign
+  {\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{un-assign}}
+\def\FUNCON@unbind
+  {\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{unbind}}
+\def\FUNCON@uncurry
+  {\FUNCBS{Funcons-beta/Values/Abstraction/Functions}{Functions}{uncurry}}
+\def\FUNCON@unicode
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{unicode}}
+\def\FUNCON@unicode@char
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{unicode-char}}
+\def\FUNCON@unicode@character
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{unicode-character}}
+\def\FUNCON@unicode@characters
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{unicode-characters}}
+\def\FUNCON@unicode@chars
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{unicode-chars}}
+\def\FUNCON@unicode@point
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{unicode-point}}
+\def\FUNCON@unicode@points
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{unicode-points}}
+\def\FUNCON@unsigned@bit@vector@maximum
+  {\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{unsigned-bit-vector-maximum}}
+\def\FUNCON@up@to
+  {\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{up-to}}
+\def\FUNCON@use@atom@not@in
+  {\FUNCBS{Funcons-beta/Computations/Normal/Generating}{Generating}{use-atom-not-in}}
+\def\FUNCON@used@atom@set
+  {\FUNCBS{Funcons-beta/Computations/Normal/Generating}{Generating}{used-atom-set}}
+\def\FUNCON@utf@EIGHT
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{utf-8}}
+\def\FUNCON@utf@ONESIX
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{utf-16}}
+\def\FUNCON@utf@THREETWO
+  {\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{utf-32}}
+\def\FUNCON@vals
+  {\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{vals}}
+\def\FUNCON@value@types
+  {\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{value-types}}
+\def\FUNCON@values
+  {\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{values}}
+\def\FUNCON@var
+  {\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{var}}
+\def\FUNCON@variable
+  {\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{variable}}
+\def\FUNCON@variables
+  {\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{variables}}
+\def\FUNCON@variant
+  {\FUNCBS{Funcons-beta/Values/Composite/Variants}{Variants}{variant}}
+\def\FUNCON@variant@id
+  {\FUNCBS{Funcons-beta/Values/Composite/Variants}{Variants}{variant-id}}
+\def\FUNCON@variant@value
+  {\FUNCBS{Funcons-beta/Values/Composite/Variants}{Variants}{variant-value}}
+\def\FUNCON@variants
+  {\FUNCBS{Funcons-beta/Values/Composite/Variants}{Variants}{variants}}
+\def\FUNCON@vars
+  {\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{vars}}
+\def\FUNCON@vector
+  {\FUNCBS{Funcons-beta/Values/Composite/Vectors}{Vectors}{vector}}
+\def\FUNCON@vector@elements
+  {\FUNCBS{Funcons-beta/Values/Composite/Vectors}{Vectors}{vector-elements}}
+\def\FUNCON@vectors
+  {\FUNCBS{Funcons-beta/Values/Composite/Vectors}{Vectors}{vectors}}
+\def\FUNCON@when
+  {\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{when}}
+\def\FUNCON@when@true
+  {\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{when-true}}
+\def\FUNCON@while
+  {\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{while}}
+\def\FUNCON@while@true
+  {\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{while-true}}
+\def\FUNCON@xor
+  {\FUNCBS{Funcons-beta/Values/Primitive/Booleans}{Booleans}{xor}}
+\def\FUNCON@yield
+  {\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{yield}}
+\def\FUNCON@yield@on@abrupt
+  {\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{yield-on-abrupt}}
+\def\FUNCON@yield@on@value
+  {\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{yield-on-value}}
+\def\FUNCON@yielded
+  {\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{yielded}}
+\def\FUNCON@yielding
+  {\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{yielding}}

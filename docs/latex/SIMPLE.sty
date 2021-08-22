@@ -1,0 +1,154 @@
+\ProvidesPackage{SIMPLE}[2021/08/18 Package declaring hyperlinks for use with cbs-latex]
+\RequirePackage{cbs-latex}
+\RequirePackage{Funcons-beta}
+
+\def\FUNCON@allocate@nested@vectors
+  {\FUNCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{allocate-nested-vectors}}
+\def\LANGUAGE@SIMPLE
+  {\LANGCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-Start}{SIMPLE-Start}{SIMPLE}}
+\def\SECTION@A
+  {\SECTCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-A-Disambiguation}{SIMPLE-A-Disambiguation}{A}}
+\def\SECTION@FIVE
+  {\SECTCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-5-Programs}{SIMPLE-5-Programs}{5}}
+\def\SECTION@FOUR
+  {\SECTCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{4}}
+\def\SECTION@FOUR@ONE
+  {\SECTCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{4.1}}
+\def\SECTION@FOUR@THREE
+  {\SECTCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{4.3}}
+\def\SECTION@FOUR@TWO
+  {\SECTCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{4.2}}
+\def\SECTION@ONE
+  {\SECTCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-1-Lexical}{SIMPLE-1-Lexical}{1}}
+\def\SECTION@ONE@FOUR
+  {\SECTCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-1-Lexical}{SIMPLE-1-Lexical}{1.4}}
+\def\SECTION@ONE@ONE
+  {\SECTCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-1-Lexical}{SIMPLE-1-Lexical}{1.1}}
+\def\SECTION@ONE@THREE
+  {\SECTCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-1-Lexical}{SIMPLE-1-Lexical}{1.3}}
+\def\SECTION@ONE@TWO
+  {\SECTCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-1-Lexical}{SIMPLE-1-Lexical}{1.2}}
+\def\SECTION@THREE
+  {\SECTCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-3-Statements}{SIMPLE-3-Statements}{3}}
+\def\SECTION@TWO
+  {\SECTCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-2-Expressions}{SIMPLE-2-Expressions}{2}}
+\def\SEMANTICS@declarations
+  {\SEMCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-5-Programs}{SIMPLE-5-Programs}{declarations}}
+\def\SEMANTICS@declare
+  {\SEMCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{declare}}
+\def\SEMANTICS@exec
+  {\SEMCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-3-Statements}{SIMPLE-3-Statements}{exec}}
+\def\SEMANTICS@id
+  {\SEMCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-1-Lexical}{SIMPLE-1-Lexical}{id}}
+\def\SEMANTICS@initialisations
+  {\SEMCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-5-Programs}{SIMPLE-5-Programs}{initialisations}}
+\def\SEMANTICS@initialise
+  {\SEMCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{initialise}}
+\def\SEMANTICS@lval
+  {\SEMCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-2-Expressions}{SIMPLE-2-Expressions}{lval}}
+\def\SEMANTICS@patts
+  {\SEMCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{patts}}
+\def\SEMANTICS@ranks
+  {\SEMCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{ranks}}
+\def\SEMANTICS@run
+  {\SEMCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-5-Programs}{SIMPLE-5-Programs}{run}}
+\def\SEMANTICS@rval
+  {\SEMCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-2-Expressions}{SIMPLE-2-Expressions}{rval}}
+\def\SEMANTICS@rvals
+  {\SEMCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-2-Expressions}{SIMPLE-2-Expressions}{rvals}}
+\def\SEMANTICS@start
+  {\SEMCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-Start}{SIMPLE-Start}{start}}
+\def\SEMANTICS@val
+  {\SEMCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-1-Lexical}{SIMPLE-1-Lexical}{val}}
+\def\SEMANTICS@var@declare
+  {\SEMCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{var-declare}}
+\def\SYNTAX@block
+  {\SYNCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-3-Statements}{SIMPLE-3-Statements}{block}}
+\def\SYNTAX@bool
+  {\SYNCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-1-Lexical}{SIMPLE-1-Lexical}{bool}}
+\def\SYNTAX@decl
+  {\SYNCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{decl}}
+\def\SYNTAX@declarator
+  {\SYNCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{declarator}}
+\def\SYNTAX@declarators
+  {\SYNCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{declarators}}
+\def\SYNTAX@decls
+  {\SYNCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-5-Programs}{SIMPLE-5-Programs}{decls}}
+\def\SYNTAX@exp
+  {\SYNCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-2-Expressions}{SIMPLE-2-Expressions}{exp}}
+\def\SYNTAX@exps
+  {\SYNCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-2-Expressions}{SIMPLE-2-Expressions}{exps}}
+\def\SYNTAX@func@decl
+  {\SYNCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{func-decl}}
+\def\SYNTAX@id
+  {\SYNCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-1-Lexical}{SIMPLE-1-Lexical}{id}}
+\def\SYNTAX@ids
+  {\SYNCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{ids}}
+\def\SYNTAX@imp@stmt
+  {\SYNCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-3-Statements}{SIMPLE-3-Statements}{imp-stmt}}
+\def\SYNTAX@int
+  {\SYNCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-1-Lexical}{SIMPLE-1-Lexical}{int}}
+\def\SYNTAX@keyword
+  {\SYNCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-1-Lexical}{SIMPLE-1-Lexical}{keyword}}
+\def\SYNTAX@lexp
+  {\SYNCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-2-Expressions}{SIMPLE-2-Expressions}{lexp}}
+\def\SYNTAX@pgm
+  {\SYNCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-5-Programs}{SIMPLE-5-Programs}{pgm}}
+\def\SYNTAX@ranks
+  {\SYNCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{ranks}}
+\def\SYNTAX@start
+  {\SYNCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-Start}{SIMPLE-Start}{start}}
+\def\SYNTAX@stmt
+  {\SYNCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-3-Statements}{SIMPLE-3-Statements}{stmt}}
+\def\SYNTAX@stmts
+  {\SYNCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-3-Statements}{SIMPLE-3-Statements}{stmts}}
+\def\SYNTAX@string
+  {\SYNCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-1-Lexical}{SIMPLE-1-Lexical}{string}}
+\def\SYNTAX@string@chars
+  {\SYNCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-1-Lexical}{SIMPLE-1-Lexical}{string-chars}}
+\def\SYNTAX@value
+  {\SYNCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-1-Lexical}{SIMPLE-1-Lexical}{value}}
+\def\SYNTAX@vars@decl
+  {\SYNCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{vars-decl}}
+\def\VARIABLE@Block
+  {\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-3-Statements}{SIMPLE-3-Statements}{Block}}
+\def\VARIABLE@Decl
+  {\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{Decl}}
+\def\VARIABLE@Declarator
+  {\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{Declarator}}
+\def\VARIABLE@Declarators
+  {\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{Declarators}}
+\def\VARIABLE@Decls
+  {\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-5-Programs}{SIMPLE-5-Programs}{Decls}}
+\def\VARIABLE@Exp
+  {\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-2-Expressions}{SIMPLE-2-Expressions}{Exp}}
+\def\VARIABLE@Exps
+  {\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-2-Expressions}{SIMPLE-2-Expressions}{Exps}}
+\def\VARIABLE@FuncDecl
+  {\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{FuncDecl}}
+\def\VARIABLE@Id
+  {\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-1-Lexical}{SIMPLE-1-Lexical}{Id}}
+\def\VARIABLE@Ids
+  {\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{Ids}}
+\def\VARIABLE@ImpStmt
+  {\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-3-Statements}{SIMPLE-3-Statements}{ImpStmt}}
+\def\VARIABLE@LExp
+  {\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-2-Expressions}{SIMPLE-2-Expressions}{LExp}}
+\def\VARIABLE@Pgm
+  {\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-5-Programs}{SIMPLE-5-Programs}{Pgm}}
+\def\VARIABLE@Ranks
+  {\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{Ranks}}
+\def\VARIABLE@S
+  {\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-1-Lexical}{SIMPLE-1-Lexical}{S}}
+\def\VARIABLE@START
+  {\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-Start}{SIMPLE-Start}{START}}
+\def\VARIABLE@Stmt
+  {\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-3-Statements}{SIMPLE-3-Statements}{Stmt}}
+\def\VARIABLE@Stmts
+  {\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-3-Statements}{SIMPLE-3-Statements}{Stmts}}
+\def\VARIABLE@V
+  {\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-1-Lexical}{SIMPLE-1-Lexical}{V}}
+\def\VARIABLE@VarsDecl
+  {\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{VarsDecl}}
+\def\VARIABLE@Z
+  {\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-1-Lexical}{SIMPLE-1-Lexical}{Z}}
