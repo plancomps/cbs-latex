@@ -1,7 +1,7 @@
 {'\\FUNCON@allocate@nested@vectors':
    '\\FUNCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{allocate-nested-vectors}'  ,
  '\\LANGUAGE@SIMPLE':
-   '\\LANGUAGECBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-Start}{SIMPLE-Start}{SIMPLE}'  ,
+   '\\LANGCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-Start}{SIMPLE-Start}{SIMPLE}'  ,
  '\\SECTION@A':
    '\\SECTCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-A-Disambiguation}{SIMPLE-A-Disambiguation}{A}'  ,
  '\\SECTION@FIVE':
@@ -107,45 +107,45 @@
  '\\SYNTAX@vars@decl':
    '\\SYNCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{vars-decl}'  ,
  '\\VARIABLE@Block':
-   '\\VARIABLECBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-3-Statements}{SIMPLE-3-Statements}{Block}'  ,
+   '\\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-3-Statements}{SIMPLE-3-Statements}{Block}'  ,
  '\\VARIABLE@Decl':
-   '\\VARIABLECBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{Decl}'  ,
+   '\\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{Decl}'  ,
  '\\VARIABLE@Declarator':
-   '\\VARIABLECBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{Declarator}'  ,
+   '\\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{Declarator}'  ,
  '\\VARIABLE@Declarators':
-   '\\VARIABLECBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{Declarators}'  ,
+   '\\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{Declarators}'  ,
  '\\VARIABLE@Decls':
-   '\\VARIABLECBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-5-Programs}{SIMPLE-5-Programs}{Decls}'  ,
+   '\\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-5-Programs}{SIMPLE-5-Programs}{Decls}'  ,
  '\\VARIABLE@Exp':
-   '\\VARIABLECBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-2-Expressions}{SIMPLE-2-Expressions}{Exp}'  ,
+   '\\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-2-Expressions}{SIMPLE-2-Expressions}{Exp}'  ,
  '\\VARIABLE@Exps':
-   '\\VARIABLECBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-2-Expressions}{SIMPLE-2-Expressions}{Exps}'  ,
+   '\\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-2-Expressions}{SIMPLE-2-Expressions}{Exps}'  ,
  '\\VARIABLE@FuncDecl':
-   '\\VARIABLECBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{FuncDecl}'  ,
+   '\\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{FuncDecl}'  ,
  '\\VARIABLE@Id':
-   '\\VARIABLECBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-1-Lexical}{SIMPLE-1-Lexical}{Id}'  ,
+   '\\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-1-Lexical}{SIMPLE-1-Lexical}{Id}'  ,
  '\\VARIABLE@Ids':
-   '\\VARIABLECBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{Ids}'  ,
+   '\\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{Ids}'  ,
  '\\VARIABLE@ImpStmt':
-   '\\VARIABLECBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-3-Statements}{SIMPLE-3-Statements}{ImpStmt}'  ,
+   '\\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-3-Statements}{SIMPLE-3-Statements}{ImpStmt}'  ,
  '\\VARIABLE@LExp':
-   '\\VARIABLECBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-2-Expressions}{SIMPLE-2-Expressions}{LExp}'  ,
+   '\\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-2-Expressions}{SIMPLE-2-Expressions}{LExp}'  ,
  '\\VARIABLE@Pgm':
-   '\\VARIABLECBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-5-Programs}{SIMPLE-5-Programs}{Pgm}'  ,
+   '\\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-5-Programs}{SIMPLE-5-Programs}{Pgm}'  ,
  '\\VARIABLE@Ranks':
-   '\\VARIABLECBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{Ranks}'  ,
+   '\\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{Ranks}'  ,
  '\\VARIABLE@S':
-   '\\VARIABLECBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-1-Lexical}{SIMPLE-1-Lexical}{S}'  ,
+   '\\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-1-Lexical}{SIMPLE-1-Lexical}{S}'  ,
  '\\VARIABLE@START':
-   '\\VARIABLECBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-Start}{SIMPLE-Start}{START}'  ,
+   '\\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-Start}{SIMPLE-Start}{START}'  ,
  '\\VARIABLE@Stmt':
-   '\\VARIABLECBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-3-Statements}{SIMPLE-3-Statements}{Stmt}'  ,
+   '\\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-3-Statements}{SIMPLE-3-Statements}{Stmt}'  ,
  '\\VARIABLE@Stmts':
-   '\\VARIABLECBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-3-Statements}{SIMPLE-3-Statements}{Stmts}'  ,
+   '\\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-3-Statements}{SIMPLE-3-Statements}{Stmts}'  ,
  '\\VARIABLE@V':
-   '\\VARIABLECBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-1-Lexical}{SIMPLE-1-Lexical}{V}'  ,
+   '\\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-1-Lexical}{SIMPLE-1-Lexical}{V}'  ,
  '\\VARIABLE@VarsDecl':
-   '\\VARIABLECBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{VarsDecl}'  ,
+   '\\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-4-Declarations}{SIMPLE-4-Declarations}{VarsDecl}'  ,
  '\\VARIABLE@Z':
-   '\\VARIABLECBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-1-Lexical}{SIMPLE-1-Lexical}{Z}'
+   '\\VARCBS{Languages-beta/SIMPLE/SIMPLE-cbs/SIMPLE/SIMPLE-1-Lexical}{SIMPLE-1-Lexical}{Z}'
 }

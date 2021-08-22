@@ -77,7 +77,7 @@ $$\begin{align*}
   \FUNDEC{identifiers} 
   \ ::= \ &
   \{ \_ : \FUNHYP{../../../Values/Composite}{Strings}{strings} \} \mid \FUNDEC{identifier-tagged}(
-                     \_ : \FUNREF{identifiers}, \_ : \FUNHYP{../../../Values}{Value-Types}{values})
+                   \_ : \FUNREF{identifiers}, \_ : \FUNHYP{../../../Values}{Value-Types}{values})
 \end{align*}$$
 
 $$\begin{align*}
@@ -134,7 +134,7 @@ $$\begin{align*}
 $$\begin{align*}
   \KEY{Funcon} \quad
   & \FUNDEC{initialise-binding}(
-                       \VAR{X} :  \TO \VAR{T}) 
+                     \VAR{X} :  \TO \VAR{T}) 
     :  \TO \VAR{T} \\&\quad
     \leadsto \FUNHYP{../.}{Linking}{initialise-linking}
                (  \FUNHYP{../.}{Generating}{initialise-generating}
@@ -153,7 +153,7 @@ $$\begin{align*}
 $$\begin{align*}
   \KEY{Funcon} \quad
   & \FUNDEC{bind-value}(
-                       \VAR{I} : \FUNREF{identifiers}, \VAR{V} : \FUNHYP{../../../Values}{Value-Types}{values}) 
+                     \VAR{I} : \FUNREF{identifiers}, \VAR{V} : \FUNHYP{../../../Values}{Value-Types}{values}) 
     :  \TO \FUNREF{environments} \\&\quad
     \leadsto \{ \VAR{I} \mapsto 
                   \VAR{V} \}
@@ -172,7 +172,7 @@ $$\begin{align*}
 $$\begin{align*}
   \KEY{Funcon} \quad
   & \FUNDEC{unbind}(
-                       \VAR{I} : \FUNREF{identifiers}) 
+                     \VAR{I} : \FUNREF{identifiers}) 
     :  \TO \FUNREF{environments} \\&\quad
     \leadsto \{ \VAR{I} \mapsto 
                   (   \  ) \}
@@ -186,7 +186,7 @@ $$\begin{align*}
 $$\begin{align*}
   \KEY{Funcon} \quad
   & \FUNDEC{bound-directly}(
-                       \_ : \FUNREF{identifiers}) 
+                     \_ : \FUNREF{identifiers}) 
     :  \TO \FUNHYP{../../../Values}{Value-Types}{values} 
 \end{align*}$$
 
@@ -229,7 +229,7 @@ $$\begin{align*}
 $$\begin{align*}
   \KEY{Funcon} \quad
   & \FUNDEC{bound-value}(
-                       \VAR{I} : \FUNREF{identifiers}) 
+                     \VAR{I} : \FUNREF{identifiers}) 
     :  \TO \FUNHYP{../../../Values}{Value-Types}{values} \\&\quad
     \leadsto \FUNHYP{../.}{Linking}{follow-if-link}
                (  \FUNREF{bound-directly}
@@ -260,7 +260,7 @@ $$\begin{align*}
 $$\begin{align*}
   \KEY{Funcon} \quad
   & \FUNDEC{closed}(
-                       \VAR{X} :  \TO \VAR{T}) 
+                     \VAR{X} :  \TO \VAR{T}) 
     :  \TO \VAR{T} 
 \end{align*}$$
 
@@ -273,7 +273,7 @@ $$\begin{align*}
   \KEY{Rule} \quad
     & \frac{
       \FUNREF{environment} (  \FUNHYP{../../../Values/Composite}{Maps}{map}
-                                   (   \  ) ) \vdash \VAR{X} \TRANS 
+                                  (   \  ) ) \vdash \VAR{X} \TRANS 
         \VAR{X}'
       }{
       \FUNREF{environment} (  \_ ) \vdash \FUNREF{closed}
@@ -291,7 +291,7 @@ $$\begin{align*}
 $$\begin{align*}
   \KEY{Funcon} \quad
   & \FUNDEC{scope}(
-                       \_ : \FUNREF{environments}, \_ :  \TO \VAR{T}) 
+                     \_ : \FUNREF{environments}, \_ :  \TO \VAR{T}) 
     :  \TO \VAR{T} 
 \end{align*}$$
 
@@ -314,8 +314,8 @@ $$\begin{align*}
   \KEY{Rule} \quad
     & \frac{
       \FUNREF{environment} (  \FUNHYP{../../../Values/Composite}{Maps}{map-override}
-                                   (  \VAR{\ensuremath{\rho}}\SUB{1}, 
-                                          \VAR{\ensuremath{\rho}}\SUB{0} ) ) \vdash \VAR{X} \TRANS 
+                                  (  \VAR{\ensuremath{\rho}}\SUB{1}, 
+                                         \VAR{\ensuremath{\rho}}\SUB{0} ) ) \vdash \VAR{X} \TRANS 
         \VAR{X}'
       }{
       \FUNREF{environment} (  \VAR{\ensuremath{\rho}}\SUB{0} ) \vdash \FUNREF{scope}
@@ -336,7 +336,7 @@ $$\begin{align*}
 $$\begin{align*}
   \KEY{Funcon} \quad
   & \FUNDEC{accumulate}(
-                       \_ : (   \TO \FUNREF{environments} )\STAR) 
+                     \_ : (   \TO \FUNREF{environments} )\STAR) 
     :  \TO \FUNREF{environments} 
 \end{align*}$$
 
@@ -407,7 +407,7 @@ $$\begin{align*}
 $$\begin{align*}
   \KEY{Funcon} \quad
   & \FUNDEC{collateral}(
-                       \VAR{\ensuremath{\rho}}\STAR : \FUNREF{environments}\STAR) 
+                     \VAR{\ensuremath{\rho}}\STAR : \FUNREF{environments}\STAR) 
     :  \TO \FUNREF{environments} \\&\quad
     \leadsto \FUNHYP{../../Abnormal}{Failing}{checked} \ 
                \FUNHYP{../../../Values/Composite}{Maps}{map-unite}
@@ -435,7 +435,7 @@ $$\begin{align*}
 $$\begin{align*}
   \KEY{Funcon} \quad
   & \FUNDEC{bind-recursively}(
-                       \VAR{I} : \FUNREF{identifiers}, \VAR{E} :  \TO \FUNHYP{../../../Values}{Value-Types}{values}) 
+                     \VAR{I} : \FUNREF{identifiers}, \VAR{E} :  \TO \FUNHYP{../../../Values}{Value-Types}{values}) 
     :  \TO \FUNREF{environments} \\&\quad
     \leadsto \FUNREF{recursive}
                (  \{  \VAR{I} \}, 
@@ -457,8 +457,8 @@ $$\begin{align*}
 $$\begin{align*}
   \KEY{Funcon} \quad
   & \FUNDEC{recursive}(
-                       \VAR{SI} : \FUNHYP{../../../Values/Composite}{Sets}{sets}
-                                 (  \FUNREF{identifiers} ), \VAR{D} :  \TO \FUNREF{environments}) 
+                     \VAR{SI} : \FUNHYP{../../../Values/Composite}{Sets}{sets}
+                               (  \FUNREF{identifiers} ), \VAR{D} :  \TO \FUNREF{environments}) 
     :  \TO \FUNREF{environments} \\&\quad
     \leadsto \FUNREF{re-close}
                (  \FUNREF{bind-to-forward-links}
@@ -477,9 +477,9 @@ $$\begin{align*}
 $$\begin{align*}
   \KEY{Auxiliary Funcon} \quad
   & \FUNDEC{re-close}(
-                       \VAR{M} : \FUNHYP{../../../Values/Composite}{Maps}{maps}
-                                 (  \FUNREF{identifiers}, 
-                                        \FUNHYP{../.}{Linking}{links} ), \VAR{D} :  \TO \FUNREF{environments}) 
+                     \VAR{M} : \FUNHYP{../../../Values/Composite}{Maps}{maps}
+                               (  \FUNREF{identifiers}, 
+                                      \FUNHYP{../.}{Linking}{links} ), \VAR{D} :  \TO \FUNREF{environments}) 
     :  \TO \FUNREF{environments} \\&\quad
     \leadsto \FUNREF{accumulate}
                (  \FUNREF{scope}
@@ -505,8 +505,8 @@ $$\begin{align*}
 $$\begin{align*}
   \KEY{Auxiliary Funcon} \quad
   & \FUNDEC{bind-to-forward-links}(
-                       \VAR{SI} : \FUNHYP{../../../Values/Composite}{Sets}{sets}
-                                 (  \FUNREF{identifiers} )) 
+                     \VAR{SI} : \FUNHYP{../../../Values/Composite}{Sets}{sets}
+                               (  \FUNREF{identifiers} )) 
     :  \TO \FUNHYP{../../../Values/Composite}{Maps}{maps}
                      (  \FUNREF{identifiers}, 
                             \FUNHYP{../.}{Linking}{links} ) \\&\quad
@@ -529,9 +529,9 @@ $$\begin{align*}
 $$\begin{align*}
   \KEY{Auxiliary Funcon} \quad
   & \FUNDEC{set-forward-links}(
-                       \VAR{M} : \FUNHYP{../../../Values/Composite}{Maps}{maps}
-                                 (  \FUNREF{identifiers}, 
-                                        \FUNHYP{../.}{Linking}{links} )) 
+                     \VAR{M} : \FUNHYP{../../../Values/Composite}{Maps}{maps}
+                               (  \FUNREF{identifiers}, 
+                                      \FUNHYP{../.}{Linking}{links} )) 
     :  \TO \FUNHYP{../../../Values/Primitive}{Null}{null-type} \\&\quad
     \leadsto \FUNHYP{../.}{Flowing}{effect}
                ( \\&\quad\quad\quad\quad \FUNHYP{../.}{Giving}{interleave-map}

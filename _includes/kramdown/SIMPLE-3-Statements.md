@@ -3,7 +3,7 @@
 
 ----
 
-$$\KEY{Language} \quad \STRING{SIMPLE}$$
+$$\KEY{Language} \quad \LANG{\STRING{SIMPLE}}$$
 
 # $$\SECT{3}$$ Statements {#SectionNumber:3}
 
