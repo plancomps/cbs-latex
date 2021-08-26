@@ -15,42 +15,42 @@
   \KEY{Syntax} \quad
     \VARDEC{Block} : \SYNDEC{block}
       \ ::= \ & \
-      \LEX{{\LEFTBRACE}} \ \SYNREF{stmts}\QUERY \ \LEX{{\RIGHTBRACE}}
+      \LEX{{\LEFTBRACE}} \ \SYN@stmts\QUERY \ \LEX{{\RIGHTBRACE}}
     \\
     \VARDEC{Stmts} : \SYNDEC{stmts}
       \ ::= \ & \
-      \SYNREF{stmt} \ \SYNREF{stmts}\QUERY
+      \SYN@stmt \ \SYN@stmts\QUERY
     \\
     \VARDEC{Stmt} : \SYNDEC{stmt}
       \ ::= \ & \
-      \SYNREF{imp-stmt} \mid \SYNHYP{../.}{SIMPLE-4-Declarations}{vars-decl}
+      \SYN@imp@stmt \mid \SYN@vars@decl
     \\
     \VARDEC{ImpStmt} : \SYNDEC{imp-stmt}
       \ ::= \ & \
-      \SYNREF{block} \\
-      \ \mid \ & \ \SYNHYP{../.}{SIMPLE-2-Expressions}{exp} \ \LEX{{;}} \\
-      \ \mid \ & \ \LEX{if} \ \LEX{{(}} \ \SYNHYP{../.}{SIMPLE-2-Expressions}{exp} \ \LEX{{)}} \ \SYNREF{block} \ \LEFTGROUP \LEX{else} \ \SYNREF{block} \RIGHTGROUP\QUERY \\
-      \ \mid \ & \ \LEX{while} \ \LEX{{(}} \ \SYNHYP{../.}{SIMPLE-2-Expressions}{exp} \ \LEX{{)}} \ \SYNREF{block} \\
-      \ \mid \ & \ \LEX{for} \ \LEX{{(}} \ \SYNREF{stmt} \ \SYNHYP{../.}{SIMPLE-2-Expressions}{exp} \ \LEX{{;}} \ \SYNHYP{../.}{SIMPLE-2-Expressions}{exp} \ \LEX{{)}} \ \SYNREF{block} \\
-      \ \mid \ & \ \LEX{print} \ \LEX{{(}} \ \SYNHYP{../.}{SIMPLE-2-Expressions}{exps} \ \LEX{{)}} \ \LEX{{;}} \\
-      \ \mid \ & \ \LEX{return} \ \SYNHYP{../.}{SIMPLE-2-Expressions}{exp}\QUERY \ \LEX{{;}} \\
-      \ \mid \ & \ \LEX{try} \ \SYNREF{block} \ \LEX{catch} \ \LEX{{(}} \ \SYNHYP{../.}{SIMPLE-1-Lexical}{id} \ \LEX{{)}} \ \SYNREF{block} \\
-      \ \mid \ & \ \LEX{throw} \ \SYNHYP{../.}{SIMPLE-2-Expressions}{exp} \ \LEX{{;}}
+      \SYN@block \\
+      \ \mid \ & \ \SYN@exp \ \LEX{{;}} \\
+      \ \mid \ & \ \LEX{if} \ \LEX{{(}} \ \SYN@exp \ \LEX{{)}} \ \SYN@block \ \LEFTGROUP \LEX{else} \ \SYN@block \RIGHTGROUP\QUERY \\
+      \ \mid \ & \ \LEX{while} \ \LEX{{(}} \ \SYN@exp \ \LEX{{)}} \ \SYN@block \\
+      \ \mid \ & \ \LEX{for} \ \LEX{{(}} \ \SYN@stmt \ \SYN@exp \ \LEX{{;}} \ \SYN@exp \ \LEX{{)}} \ \SYN@block \\
+      \ \mid \ & \ \LEX{print} \ \LEX{{(}} \ \SYN@exps \ \LEX{{)}} \ \LEX{{;}} \\
+      \ \mid \ & \ \LEX{return} \ \SYN@exp\QUERY \ \LEX{{;}} \\
+      \ \mid \ & \ \LEX{try} \ \SYN@block \ \LEX{catch} \ \LEX{{(}} \ \SYN@id \ \LEX{{)}} \ \SYN@block \\
+      \ \mid \ & \ \LEX{throw} \ \SYN@exp \ \LEX{{;}}
 \end{align*}
 \begin{align*}
   \KEY{Rule} \quad
     & \LEFTPHRASE \
-        \LEX{if} \ \LEX{{(}} \ \VARHYP{../.}{SIMPLE-2-Expressions}{Exp} \ \LEX{{)}} \ \VARREF{Block} \
-      \RIGHTPHRASE : \SYNREF{stmt} = \\&
+        \LEX{if} \ \LEX{{(}} \ \VAR@Exp \ \LEX{{)}} \ \VAR@Block \
+      \RIGHTPHRASE : \SYN@stmt = \\&
       \LEFTPHRASE \
         \LEX{if} \ \LEX{{(}} \ \VAR{Exp} \ \LEX{{)}} \ \VAR{Block} \ \LEX{else} \ \LEX{{\LEFTBRACE}} \ \LEX{{\RIGHTBRACE}} \
       \RIGHTPHRASE
 \\
   \KEY{Rule} \quad
     & \LEFTPHRASE \
-        \LEX{for} \ \LEX{{(}} \ \VARREF{Stmt} \ \VARHYP{../.}{SIMPLE-2-Expressions}{Exp}\SUB{1} \ \LEX{{;}} \ \VARHYP{../.}{SIMPLE-2-Expressions}{Exp}\SUB{2} \ \LEX{{)}} \\&\quad
-        \LEX{{\LEFTBRACE}} \ \VARREF{Stmts} \ \LEX{{\RIGHTBRACE}} \
-      \RIGHTPHRASE : \SYNREF{stmt} = \\&
+        \LEX{for} \ \LEX{{(}} \ \VAR@Stmt \ \VAR@Exp\SUB{1} \ \LEX{{;}} \ \VAR@Exp\SUB{2} \ \LEX{{)}} \\&\quad
+        \LEX{{\LEFTBRACE}} \ \VAR@Stmts \ \LEX{{\RIGHTBRACE}} \
+      \RIGHTPHRASE : \SYN@stmt = \\&
       \LEFTPHRASE \
         \LEX{{\LEFTBRACE}} \ \VAR{Stmt} \\&\quad
         \LEX{while} \ \LEX{{(}} \ \VAR{Exp}\SUB{1} \ \LEX{{)}} \\&\quad
@@ -60,145 +60,145 @@
 \end{align*}
 \begin{align*}
   \KEY{Semantics} \quad
-  & \SEMDEC{exec} \LEFTPHRASE \ \_ : \SYNREF{stmts} \ \RIGHTPHRASE  
-    :  \TO \FUNHYP{../../../../../Funcons-beta/Values/Primitive}{Null}{null-type} 
+  & \SEMDEC{exec} \LEFTPHRASE \ \_ : \SYN@stmts \ \RIGHTPHRASE  
+    :  \TO \FUN@null@type 
 \\
   \KEY{Rule} \quad
     & \SEMREF{exec} \LEFTPHRASE \
                             \LEX{{\LEFTBRACE}} \ \LEX{{\RIGHTBRACE}} \
                           \RIGHTPHRASE  = 
-      \FUNHYP{../../../../../Funcons-beta/Values/Primitive}{Null}{null}
+      \FUN@null
 \\
   \KEY{Rule} \quad
     & \SEMREF{exec} \LEFTPHRASE \
-                            \LEX{{\LEFTBRACE}} \ \VARREF{Stmts} \ \LEX{{\RIGHTBRACE}} \
+                            \LEX{{\LEFTBRACE}} \ \VAR@Stmts \ \LEX{{\RIGHTBRACE}} \
                           \RIGHTPHRASE  = 
-      \SEMREF{exec} \LEFTPHRASE \
-                            \VAR{Stmts} \
-                          \RIGHTPHRASE 
+      \SEM@exec \LEFTPHRASE \
+                \VAR{Stmts} \
+              \RIGHTPHRASE 
 \\
   \KEY{Rule} \quad
     & \SEMREF{exec} \LEFTPHRASE \
-                            \VARREF{ImpStmt} \ \VARREF{Stmts} \
+                            \VAR@ImpStmt \ \VAR@Stmts \
                           \RIGHTPHRASE  = \\&\quad
-      \FUNHYP{../../../../../Funcons-beta/Computations/Normal}{Flowing}{sequential}
-        (  \SEMREF{exec} \LEFTPHRASE \
-                                    \VAR{ImpStmt} \
-                                  \RIGHTPHRASE , 
-               \SEMREF{exec} \LEFTPHRASE \
-                                    \VAR{Stmts} \
-                                  \RIGHTPHRASE  )
+      \FUN@sequential
+        (  \SEM@exec \LEFTPHRASE \
+                        \VAR{ImpStmt} \
+                      \RIGHTPHRASE , 
+               \SEM@exec \LEFTPHRASE \
+                        \VAR{Stmts} \
+                      \RIGHTPHRASE  )
 \\
   \KEY{Rule} \quad
     & \SEMREF{exec} \LEFTPHRASE \
-                            \VARHYP{../.}{SIMPLE-4-Declarations}{VarsDecl} \ \VARREF{Stmts} \
+                            \VAR@VarsDecl \ \VAR@Stmts \
                           \RIGHTPHRASE  = \\&\quad
-      \FUNHYP{../../../../../Funcons-beta/Computations/Normal}{Binding}{scope}
-        (  \SEMHYP{../.}{SIMPLE-4-Declarations}{declare} \LEFTPHRASE \
-                                    \VAR{VarsDecl} \
-                                  \RIGHTPHRASE , 
-               \SEMREF{exec} \LEFTPHRASE \
-                                    \VAR{Stmts} \
-                                  \RIGHTPHRASE  )
+      \FUN@scope
+        (  \SEM@declare \LEFTPHRASE \
+                        \VAR{VarsDecl} \
+                      \RIGHTPHRASE , 
+               \SEM@exec \LEFTPHRASE \
+                        \VAR{Stmts} \
+                      \RIGHTPHRASE  )
 \\
   \KEY{Rule} \quad
     & \SEMREF{exec} \LEFTPHRASE \
-                            \VARHYP{../.}{SIMPLE-4-Declarations}{VarsDecl} \
+                            \VAR@VarsDecl \
                           \RIGHTPHRASE  = 
-      \FUNHYP{../../../../../Funcons-beta/Computations/Normal}{Flowing}{effect}
-        (  \SEMHYP{../.}{SIMPLE-4-Declarations}{declare} \LEFTPHRASE \
-                                    \VAR{VarsDecl} \
-                                  \RIGHTPHRASE  )
+      \FUN@effect
+        (  \SEM@declare \LEFTPHRASE \
+                        \VAR{VarsDecl} \
+                      \RIGHTPHRASE  )
 \\
   \KEY{Rule} \quad
     & \SEMREF{exec} \LEFTPHRASE \
-                            \VARHYP{../.}{SIMPLE-2-Expressions}{Exp} \ \LEX{{;}} \
+                            \VAR@Exp \ \LEX{{;}} \
                           \RIGHTPHRASE  = 
-      \FUNHYP{../../../../../Funcons-beta/Computations/Normal}{Flowing}{effect}
-        (  \SEMHYP{../.}{SIMPLE-2-Expressions}{rval} \LEFTPHRASE \
-                                    \VAR{Exp} \
-                                  \RIGHTPHRASE  )
+      \FUN@effect
+        (  \SEM@rval \LEFTPHRASE \
+                        \VAR{Exp} \
+                      \RIGHTPHRASE  )
 \\
   \KEY{Rule} \quad
     & \SEMREF{exec} \LEFTPHRASE \
-                            \LEX{if} \ \LEX{{(}} \ \VARHYP{../.}{SIMPLE-2-Expressions}{Exp} \ \LEX{{)}} \ \VARREF{Block}\SUB{1} \ \LEX{else} \ \VARREF{Block}\SUB{2} \
+                            \LEX{if} \ \LEX{{(}} \ \VAR@Exp \ \LEX{{)}} \ \VAR@Block\SUB{1} \ \LEX{else} \ \VAR@Block\SUB{2} \
                           \RIGHTPHRASE  = \\&\quad
-      \FUNHYP{../../../../../Funcons-beta/Computations/Normal}{Flowing}{if-else}
-        (  \SEMHYP{../.}{SIMPLE-2-Expressions}{rval} \LEFTPHRASE \
-                                    \VAR{Exp} \
-                                  \RIGHTPHRASE , 
-               \SEMREF{exec} \LEFTPHRASE \
-                                    \VAR{Block}\SUB{1} \
-                                  \RIGHTPHRASE , 
-               \SEMREF{exec} \LEFTPHRASE \
-                                    \VAR{Block}\SUB{2} \
-                                  \RIGHTPHRASE  )
+      \FUN@if@else
+        (  \SEM@rval \LEFTPHRASE \
+                        \VAR{Exp} \
+                      \RIGHTPHRASE , 
+               \SEM@exec \LEFTPHRASE \
+                        \VAR{Block}\SUB{1} \
+                      \RIGHTPHRASE , 
+               \SEM@exec \LEFTPHRASE \
+                        \VAR{Block}\SUB{2} \
+                      \RIGHTPHRASE  )
 \\
   \KEY{Rule} \quad
     & \SEMREF{exec} \LEFTPHRASE \
-                            \LEX{while} \ \LEX{{(}} \ \VARHYP{../.}{SIMPLE-2-Expressions}{Exp} \ \LEX{{)}} \ \VARREF{Block} \
+                            \LEX{while} \ \LEX{{(}} \ \VAR@Exp \ \LEX{{)}} \ \VAR@Block \
                           \RIGHTPHRASE  = 
-      \FUNHYP{../../../../../Funcons-beta/Computations/Normal}{Flowing}{while}
-        (  \SEMHYP{../.}{SIMPLE-2-Expressions}{rval} \LEFTPHRASE \
-                                    \VAR{Exp} \
-                                  \RIGHTPHRASE , 
-               \SEMREF{exec} \LEFTPHRASE \
-                                    \VAR{Block} \
-                                  \RIGHTPHRASE  )
+      \FUN@while
+        (  \SEM@rval \LEFTPHRASE \
+                        \VAR{Exp} \
+                      \RIGHTPHRASE , 
+               \SEM@exec \LEFTPHRASE \
+                        \VAR{Block} \
+                      \RIGHTPHRASE  )
 \\
   \KEY{Rule} \quad
     & \SEMREF{exec} \LEFTPHRASE \
-                            \LEX{print} \ \LEX{{(}} \ \VARHYP{../.}{SIMPLE-2-Expressions}{Exps} \ \LEX{{)}} \ \LEX{{;}} \
+                            \LEX{print} \ \LEX{{(}} \ \VAR@Exps \ \LEX{{)}} \ \LEX{{;}} \
                           \RIGHTPHRASE  = 
-      \FUNHYP{../../../../../Funcons-beta/Computations/Normal}{Interacting}{print}
-        (  \SEMHYP{../.}{SIMPLE-2-Expressions}{rvals} \LEFTPHRASE \
-                                    \VAR{Exps} \
-                                  \RIGHTPHRASE  )
+      \FUN@print
+        (  \SEM@rvals \LEFTPHRASE \
+                        \VAR{Exps} \
+                      \RIGHTPHRASE  )
 \\
   \KEY{Rule} \quad
     & \SEMREF{exec} \LEFTPHRASE \
-                            \LEX{return} \ \VARHYP{../.}{SIMPLE-2-Expressions}{Exp} \ \LEX{{;}} \
+                            \LEX{return} \ \VAR@Exp \ \LEX{{;}} \
                           \RIGHTPHRASE  = 
-      \FUNHYP{../../../../../Funcons-beta/Computations/Abnormal}{Returning}{return}
-        (  \SEMHYP{../.}{SIMPLE-2-Expressions}{rval} \LEFTPHRASE \
-                                    \VAR{Exp} \
-                                  \RIGHTPHRASE  )
+      \FUN@return
+        (  \SEM@rval \LEFTPHRASE \
+                        \VAR{Exp} \
+                      \RIGHTPHRASE  )
 \\
   \KEY{Rule} \quad
     & \SEMREF{exec} \LEFTPHRASE \
                             \LEX{return} \ \LEX{{;}} \
                           \RIGHTPHRASE  = 
-      \FUNHYP{../../../../../Funcons-beta/Computations/Abnormal}{Returning}{return}
-        (  \FUNHYP{../../../../../Funcons-beta/Values/Primitive}{Null}{null} )
+      \FUN@return
+        (  \FUN@null )
 \\
   \KEY{Rule} \quad
     & \SEMREF{exec} \LEFTPHRASE \
-                            \LEX{try} \ \VARREF{Block}\SUB{1} \ \LEX{catch} \ \LEX{{(}} \ \VARHYP{../.}{SIMPLE-1-Lexical}{Id} \ \LEX{{)}} \ \VARREF{Block}\SUB{2} \
+                            \LEX{try} \ \VAR@Block\SUB{1} \ \LEX{catch} \ \LEX{{(}} \ \VAR@Id \ \LEX{{)}} \ \VAR@Block\SUB{2} \
                           \RIGHTPHRASE  = \\&\quad
-      \FUNHYP{../../../../../Funcons-beta/Computations/Abnormal}{Throwing}{handle-thrown}
-        ( \\&\quad\quad \SEMREF{exec} \LEFTPHRASE \
-                                    \VAR{Block}\SUB{1} \
-                                  \RIGHTPHRASE , \\&\quad\quad
-               \FUNHYP{../../../../../Funcons-beta/Computations/Normal}{Binding}{scope}
-                ( \\&\quad\quad\quad \FUNHYP{../../../../../Funcons-beta/Computations/Normal}{Binding}{bind}
-                        (  \SEMHYP{../.}{SIMPLE-1-Lexical}{id} \LEFTPHRASE \
-                                                    \VAR{Id} \
-                                                  \RIGHTPHRASE , 
-                               \FUNHYP{../../../../../Funcons-beta/Computations/Normal}{Storing}{allocate-initialised-variable}
-                                (  \FUNHYP{../../../../../Funcons-beta/Values}{Value-Types}{values}, 
-                                       \FUNHYP{../../../../../Funcons-beta/Computations/Normal}{Giving}{given} ) ), \\&\quad\quad\quad
-                       \SEMREF{exec} \LEFTPHRASE \
-                                            \VAR{Block}\SUB{2} \
-                                          \RIGHTPHRASE  ) )
+      \FUN@handle@thrown
+        ( \\&\quad\quad \SEM@exec \LEFTPHRASE \
+                        \VAR{Block}\SUB{1} \
+                      \RIGHTPHRASE , \\&\quad\quad
+               \FUN@scope
+                ( \\&\quad\quad\quad \FUN@bind
+                        (  \SEM@id \LEFTPHRASE \
+                                        \VAR{Id} \
+                                      \RIGHTPHRASE , 
+                               \FUN@allocate@initialised@variable
+                                (  \FUN@values, 
+                                       \FUN@given ) ), \\&\quad\quad\quad
+                       \SEM@exec \LEFTPHRASE \
+                                \VAR{Block}\SUB{2} \
+                              \RIGHTPHRASE  ) )
 \\
   \KEY{Rule} \quad
     & \SEMREF{exec} \LEFTPHRASE \
-                            \LEX{throw} \ \VARHYP{../.}{SIMPLE-2-Expressions}{Exp} \ \LEX{{;}} \
+                            \LEX{throw} \ \VAR@Exp \ \LEX{{;}} \
                           \RIGHTPHRASE  = 
-      \FUNHYP{../../../../../Funcons-beta/Computations/Abnormal}{Throwing}{throw}
-        (  \SEMHYP{../.}{SIMPLE-2-Expressions}{rval} \LEFTPHRASE \
-                                    \VAR{Exp} \
-                                  \RIGHTPHRASE  )
+      \FUN@throw
+        (  \SEM@rval \LEFTPHRASE \
+                        \VAR{Exp} \
+                      \RIGHTPHRASE  )
 \end{align*}
 % {% endraw %}
 
