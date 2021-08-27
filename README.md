@@ -1,6 +1,6 @@
 # CBS-LaTeX
 
-This site presents `cbs-latex`, a small LaTeX package for CBS specifications.
+This site presents a small LaTeX package for formatting CBS specifications.
 When CBS is marked up using the package, LaTeX formatting produces mathematical
 typography, suitable for inclusion in published articles.
 

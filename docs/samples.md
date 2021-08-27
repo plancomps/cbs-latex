@@ -39,22 +39,6 @@ using the CBS-LaTeX macros, and used to produce a PDF and a web page:
   [Markdown](kramdown/TEST-Start.md.html) \|
   [Web](katex/TEST-Start) 
 
-# Browsing
-
-PDFs
-
-: Acrobat Reader is recommended. The Preview app on macOS (Catalina) does not support hyperlinks from references to declarations, which are needed for navigation in multi-file CBS specifications.
-
-  PDFs can also be browsed directly in a web browser.
-
-Web pages
-
-: Currently, KaTeX renders the CBS-LaTeX markup significantly faster than MathJax.[^caveat]
-  For example, compare this [KaTeX page](katex/SIMPLE-3-Statements) with the corresponding
-  [MathJax page](mathjax3/SIMPLE-3-Statements).
-
-  The appearance of the web pages (at least when using recent versions of Firefox and Safari) is close to that of the PDFs produced from the same CBS files using pdflatex.
-
 # Production
 
 A literate CBS source file is a Markdown text that includes plain CBS notation in code blocks.
@@ -65,31 +49,35 @@ and to HTML (relying on math engines such as KaTeX or MathJax to render the embe
 The current implementation of the required transformations uses [Spoofax], [kramdown], and pdflatex.
 Production of a PDF and a web page from a literate CBS source file involves the following steps.
 
-1. A CBS editor in Spoofax (generated from the SDF3 and NaBL2 definitions of CBS) parses all the literate CBS source files in a project,[^island] analysing and checking the names used in the plain CBS code blocks.
+1. A CBS editor in Spoofax (generated from the SDF3 and NaBL2 definitions of CBS)
+   parses all the literate CBS source files in a project,[^island] 
+   analysing and checking the names used in the plain CBS code blocks.
    
-2. A menu action in the CBS editor (implemented in Stratego) produces kramdown files with CBS-LaTeX markup in math blocks.
+2. A menu action in the CBS editor (implemented in Stratego) produces kramdown files
+   with CBS-LaTeX markup in math blocks.
 
 3. The kramdown converter generates LaTeX document bodies from the kramdown files with the command:
    ```
    kramdown -o remove_html_tags,latex FILE.md > FILE.part.tex
    ```
 
-4. pdflatex produces PDFs from the generated LaTeX source files by inputting them in a document template with the `cbs-latex` package.
-   The LaTeX definitions of the highlighting colours can be overridden using `\colorlet{...}{...}` (the `svgnames` colours are pre-loaded).
+4. pdflatex produces PDFs from the generated LaTeX source files by inputting them
+   in a document template with the `cbs-latex` package.
+   The LaTeX definitions of the highlighting colours can be overridden using
+   `\colorlet{...}{...}` (the `svgnames` colours are pre-loaded).
 
-5. The kramdown converter automatically generates HTML pages from the kramdown files when building a website on GitHub Pages (or locally) with [Jekyll].
+5. The kramdown converter automatically generates HTML pages from the kramdown files
+   when building a website on GitHub Pages (or locally) with [Jekyll].
 
 6. KaTeX uses JavaScript and CSS in the browser to automatically render LaTeX code in HTML pages.
    The `cbs-katex` package defines the CBS-LaTeX macros for use with KaTeX,
    and needs to be included by the Jekyll layout
    (as with the [source files for this website](https://github.com/plancomps/cbs-latex)).
-   The CSS specifications of the highlighting colours can be overridden (the standard HTML colour names can be used).
+   The CSS specifications of the highlighting colours can be overridden
+   (the standard HTML colour names can be used).
 
 ----
    
-[^caveat]:
-    Opportunities for optimization may have been overlooked.
-
 [^island]:
     The CBS grammar resembles a so-called island grammar, where the islands are the formal notation, and the water is informal text.
     Currently, the shores of the islands are marked by comment delimiters `/*...*/` instead of the code fences used in Markdown.
