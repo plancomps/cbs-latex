@@ -31,7 +31,7 @@
   % \FUN{name} highlights the name.
   % \FUNDEC{name} declares Name.name as the target of links to name.
   % \FUNREF{name} links name to the target Name.name in the current file.
-  % \FUNHYP{url}{file}{name} links name to Name.name at url/file/file.html.
+  % \FUNHYP{url}{file}{name} links name to Name.name at url/file/index.html.
   % Similarly for \VAR{partvariable}, \SYN{syntaxname}, \SEM{semanticsName},
   % and \SECT{sectionnumber}
 
@@ -87,11 +87,11 @@
   
   \newcommand\CBSBETAMATH{https:plancomps.github.io/CBS-beta/math}
   
-  \newcommand\VARCBS[3]{\VARHYP{\CBSBETAMATH/#1}{}{#3}}
-  \newcommand\FUNCBS[3]{\FUNHYP{\CBSBETAMATH/#1}{}{#3}}
-  \newcommand\SYNCBS[3]{\SYNHYP{\CBSBETAMATH/#1}{}{#3}}
-  \newcommand\SEMCBS[3]{\SEMHYP{\CBSBETAMATH/#1}{}{#3}}
-  \newcommand\SECTCBS[3]{\SECTHYP{\CBSBETAMATH/#1}{}{#3}}
+  \newcommand\VARCBS[3]{\VARHYP{\CBSBETAMATH/#1}{#2}{#3}}
+  \newcommand\FUNCBS[3]{\FUNHYP{\CBSBETAMATH/#1}{#2}{#3}}
+  \newcommand\SYNCBS[3]{\SYNHYP{\CBSBETAMATH/#1}{#2}{#3}}
+  \newcommand\SEMCBS[3]{\SEMHYP{\CBSBETAMATH/#1}{#2}{#3}}
+  \newcommand\SECTCBS[3]{\SECTHYP{\CBSBETAMATH/#1}{#2}{#3}}
   % \newcommand{\LANGCBS}[3]{\LANGHYP{\CBSBETAMATH/#1}{#2}{#3}}
 
   % \LEFTPHRASE MATH \RIGHTPHRASE produces [[ MATH ]] with proper brackets:

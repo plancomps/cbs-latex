@@ -2,7 +2,7 @@
 % {% raw %}
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{cbs-latex}[2021/08/22 CBS-LaTeX package]
+\ProvidesPackage{cbs-latex}[2021/08/27 CBS-LaTeX package]
 
 % This package uses sans-serif fonts for names in specifications.
 % For global sans-serif fonts, use together with the cmbright package.
@@ -85,7 +85,7 @@
 
 % REF
 
-\newcommand{\REF}[3]{\hyperref{\jobname}{#1}{#2}{#3}}
+\newcommand{\REF}[3]{\hyperref{\jobname.pdf}{#1}{#2}{#3}}
 
 \newcommand{\VARREF}[1]{\REF{PartVariable}{#1}{\VAR{#1}}}
 \newcommand{\FUNREF}[1]{\REF{Name}{#1}{\FUN{#1}}}
@@ -96,7 +96,7 @@
 
 % HYP
 
-\newcommand{\HYP}[5]{\hyperref{#1/#2/#2}{#3}{#4}{#5}}
+\newcommand{\HYP}[5]{\hyperref{#1/#2/#2.pdf}{#3}{#4}{#5}}
 
 \newcommand{\VARHYP}[3]{\HYP{#1}{#2}{PartVariable}{#3}{\VAR{#3}}}
 \newcommand{\FUNHYP}[3]{\HYP{#1}{#2}{Name}{#3}{\FUN{#3}}}
