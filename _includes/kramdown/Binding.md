@@ -119,9 +119,7 @@ $$\begin{align*}
 $$\begin{align*}
   \KEY{Entity} \quad
   & \FUNDEC{environment}(\_ : \FUN@environments) \vdash \_ \TRANS  \_
-\end{align*}$$
-
-$$\begin{align*}
+\\
   \KEY{Alias} \quad
   & \FUNDEC{env} = \FUN@environment
 \end{align*}$$
@@ -203,26 +201,28 @@ $$\begin{align*}
 $$\begin{align*}
   \KEY{Rule} \quad
     & \RULE{
-      \FUN@lookup
-        (  \VAR{\ensuremath{\rho}}, 
-               \VAR{I} ) \leadsto 
-        (  \VAR{V} : \FUN@values )
+        \FUN@lookup
+          (  \VAR{\ensuremath{\rho}}, 
+                 \VAR{I} ) \leadsto 
+          (  \VAR{V} : \FUN@values )
       }{
-      \FUN@environment (  \VAR{\ensuremath{\rho}} ) \vdash \FUN@bound@directly
-                    (  \VAR{I} : \FUN@identifiers ) \TRANS 
-        \VAR{V}
+        \FUN@environment (  \VAR{\ensuremath{\rho}} ) \vdash \FUN@bound@directly
+                      (  \VAR{I} : \FUN@identifiers ) \TRANS 
+          \VAR{V}
       }
-\\
+\end{align*}$$
+
+$$\begin{align*}
   \KEY{Rule} \quad
     & \RULE{
-      \FUN@lookup
-        (  \VAR{\ensuremath{\rho}}, 
-               \VAR{I} ) \leadsto 
-        (   \  )
+        \FUN@lookup
+          (  \VAR{\ensuremath{\rho}}, 
+                 \VAR{I} ) \leadsto 
+          (   \  )
       }{
-      \FUN@environment (  \VAR{\ensuremath{\rho}} ) \vdash \FUN@bound@directly
-                    (  \VAR{I} : \FUN@identifiers ) \TRANS 
-        \FUN@fail
+        \FUN@environment (  \VAR{\ensuremath{\rho}} ) \vdash \FUN@bound@directly
+                      (  \VAR{I} : \FUN@identifiers ) \TRANS 
+          \FUN@fail
       }
 \end{align*}$$
 
@@ -272,16 +272,18 @@ $$\begin{align*}
 $$\begin{align*}
   \KEY{Rule} \quad
     & \RULE{
-      \FUN@environment (  \FUN@map
-                      (   \  ) ) \vdash \VAR{X} \TRANS 
-        \VAR{X}'
+        \FUN@environment (  \FUN@map
+                        (   \  ) ) \vdash \VAR{X} \TRANS 
+          \VAR{X}'
       }{
-      \FUN@environment (  \_ ) \vdash \FUN@closed
-                    (  \VAR{X} ) \TRANS 
-        \FUN@closed
-          (  \VAR{X}' )
+        \FUN@environment (  \_ ) \vdash \FUN@closed
+                      (  \VAR{X} ) \TRANS 
+          \FUN@closed
+            (  \VAR{X}' )
       }
-\\
+\end{align*}$$
+
+$$\begin{align*}
   \KEY{Rule} \quad
     & \FUN@closed
         (  \VAR{V} : \VAR{T} ) \leadsto 
@@ -313,19 +315,21 @@ $$\begin{align*}
 $$\begin{align*}
   \KEY{Rule} \quad
     & \RULE{
-      \FUN@environment (  \FUN@map@override
-                      (  \VAR{\ensuremath{\rho}}\SUB{1}, 
-                             \VAR{\ensuremath{\rho}}\SUB{0} ) ) \vdash \VAR{X} \TRANS 
-        \VAR{X}'
+        \FUN@environment (  \FUN@map@override
+                        (  \VAR{\ensuremath{\rho}}\SUB{1}, 
+                               \VAR{\ensuremath{\rho}}\SUB{0} ) ) \vdash \VAR{X} \TRANS 
+          \VAR{X}'
       }{
-      \FUN@environment (  \VAR{\ensuremath{\rho}}\SUB{0} ) \vdash \FUN@scope
-                    (  \VAR{\ensuremath{\rho}}\SUB{1} : \FUN@environments, 
-                           \VAR{X} ) \TRANS 
-        \FUN@scope
-          (  \VAR{\ensuremath{\rho}}\SUB{1}, 
-                 \VAR{X}' )
+        \FUN@environment (  \VAR{\ensuremath{\rho}}\SUB{0} ) \vdash \FUN@scope
+                      (  \VAR{\ensuremath{\rho}}\SUB{1} : \FUN@environments, 
+                             \VAR{X} ) \TRANS 
+          \FUN@scope
+            (  \VAR{\ensuremath{\rho}}\SUB{1}, 
+                   \VAR{X}' )
       }
-\\
+\end{align*}$$
+
+$$\begin{align*}
   \KEY{Rule} \quad
     & \FUN@scope
         (  \_ : \FUN@environments, 
@@ -360,17 +364,19 @@ $$\begin{align*}
 $$\begin{align*}
   \KEY{Rule} \quad
     & \RULE{
-       \VAR{D}\SUB{1} \TRANS 
-        \VAR{D}\SUB{1}'
+         \VAR{D}\SUB{1} \TRANS 
+          \VAR{D}\SUB{1}'
       }{
-       \FUN@accumulate
-                    (  \VAR{D}\SUB{1}, 
-                           \VAR{D}\SUB{2} ) \TRANS 
-        \FUN@accumulate
-          (  \VAR{D}\SUB{1}', 
-                 \VAR{D}\SUB{2} )
+         \FUN@accumulate
+                      (  \VAR{D}\SUB{1}, 
+                             \VAR{D}\SUB{2} ) \TRANS 
+          \FUN@accumulate
+            (  \VAR{D}\SUB{1}', 
+                   \VAR{D}\SUB{2} )
       }
-\\
+\end{align*}$$
+
+$$\begin{align*}
   \KEY{Rule} \quad
     & \FUN@accumulate
         (  \VAR{\ensuremath{\rho}}\SUB{1} : \FUN@environments, 
@@ -380,18 +386,24 @@ $$\begin{align*}
                  \FUN@map@override
                   (  \VAR{D}\SUB{2}, 
                          \VAR{\ensuremath{\rho}}\SUB{1} ) )
-\\
+\end{align*}$$
+
+$$\begin{align*}
   \KEY{Rule} \quad
     & \FUN@accumulate
         (   \  ) \leadsto 
         \FUN@map
           (   \  )
-\\
+\end{align*}$$
+
+$$\begin{align*}
   \KEY{Rule} \quad
     & \FUN@accumulate
         (  \VAR{D}\SUB{1} ) \leadsto 
         \VAR{D}\SUB{1}
-\\
+\end{align*}$$
+
+$$\begin{align*}
   \KEY{Rule} \quad
     & \FUN@accumulate
         (  \VAR{D}\SUB{1}, 
