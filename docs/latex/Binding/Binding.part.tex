@@ -164,7 +164,7 @@ $\FUN@bound@directly
 
 \begin{align*}
   \KEY{Rule} \quad
-    & \frac{
+    & \RULE{
       \FUN@lookup
         (  \VAR{\ensuremath{\rho}}, 
                \VAR{I} ) \leadsto 
@@ -176,7 +176,7 @@ $\FUN@bound@directly
       }
 \\
   \KEY{Rule} \quad
-    & \frac{
+    & \RULE{
       \FUN@lookup
         (  \VAR{\ensuremath{\rho}}, 
                \VAR{I} ) \leadsto 
@@ -224,7 +224,7 @@ $\FUN@closed
 
 \begin{align*}
   \KEY{Rule} \quad
-    & \frac{
+    & \RULE{
       \FUN@environment (  \FUN@map
                       (   \  ) ) \vdash \VAR{X} \TRANS 
         \VAR{X}'
@@ -261,7 +261,7 @@ $\FUN@closed
 
 \begin{align*}
   \KEY{Rule} \quad
-    & \frac{
+    & \RULE{
       \FUN@environment (  \FUN@map@override
                       (  \VAR{\ensuremath{\rho}}\SUB{1}, 
                              \VAR{\ensuremath{\rho}}\SUB{0} ) ) \vdash \VAR{X} \TRANS 
@@ -304,7 +304,7 @@ $\FUN@accumulate
 
 \begin{align*}
   \KEY{Rule} \quad
-    & \frac{
+    & \RULE{
        \VAR{D}\SUB{1} \TRANS 
         \VAR{D}\SUB{1}'
       }{

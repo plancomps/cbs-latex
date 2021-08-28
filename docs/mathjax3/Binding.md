@@ -215,7 +215,7 @@ $$\begin{align*}
 
 $$\begin{align*}
   \KEY{Rule} \quad
-    & \frac{
+    & \RULE{
       \FUNHYP{../../../Values/Composite}{Maps}{lookup}
         (  \VAR{\ensuremath{\rho}}, 
                \VAR{I} ) \leadsto 
@@ -227,7 +227,7 @@ $$\begin{align*}
       }
 \\
   \KEY{Rule} \quad
-    & \frac{
+    & \RULE{
       \FUNHYP{../../../Values/Composite}{Maps}{lookup}
         (  \VAR{\ensuremath{\rho}}, 
                \VAR{I} ) \leadsto 
@@ -284,7 +284,7 @@ $$\begin{align*}
 
 $$\begin{align*}
   \KEY{Rule} \quad
-    & \frac{
+    & \RULE{
       \FUNREF{environment} (  \FUNHYP{../../../Values/Composite}{Maps}{map}
                       (   \  ) ) \vdash \VAR{X} \TRANS 
         \VAR{X}'
@@ -325,7 +325,7 @@ $$\begin{align*}
 
 $$\begin{align*}
   \KEY{Rule} \quad
-    & \frac{
+    & \RULE{
       \FUNREF{environment} (  \FUNHYP{../../../Values/Composite}{Maps}{map-override}
                       (  \VAR{\ensuremath{\rho}}\SUB{1}, 
                              \VAR{\ensuremath{\rho}}\SUB{0} ) ) \vdash \VAR{X} \TRANS 
@@ -372,7 +372,7 @@ $$\begin{align*}
 
 $$\begin{align*}
   \KEY{Rule} \quad
-    & \frac{
+    & \RULE{
        \VAR{D}\SUB{1} \TRANS 
         \VAR{D}\SUB{1}'
       }{

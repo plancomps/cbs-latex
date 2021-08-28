@@ -202,7 +202,7 @@ $$\begin{align*}
 
 $$\begin{align*}
   \KEY{Rule} \quad
-    & \frac{
+    & \RULE{
       \FUN@lookup
         (  \VAR{\ensuremath{\rho}}, 
                \VAR{I} ) \leadsto 
@@ -214,7 +214,7 @@ $$\begin{align*}
       }
 \\
   \KEY{Rule} \quad
-    & \frac{
+    & \RULE{
       \FUN@lookup
         (  \VAR{\ensuremath{\rho}}, 
                \VAR{I} ) \leadsto 
@@ -271,7 +271,7 @@ $$\begin{align*}
 
 $$\begin{align*}
   \KEY{Rule} \quad
-    & \frac{
+    & \RULE{
       \FUN@environment (  \FUN@map
                       (   \  ) ) \vdash \VAR{X} \TRANS 
         \VAR{X}'
@@ -312,7 +312,7 @@ $$\begin{align*}
 
 $$\begin{align*}
   \KEY{Rule} \quad
-    & \frac{
+    & \RULE{
       \FUN@environment (  \FUN@map@override
                       (  \VAR{\ensuremath{\rho}}\SUB{1}, 
                              \VAR{\ensuremath{\rho}}\SUB{0} ) ) \vdash \VAR{X} \TRANS 
@@ -359,7 +359,7 @@ $$\begin{align*}
 
 $$\begin{align*}
   \KEY{Rule} \quad
-    & \frac{
+    & \RULE{
        \VAR{D}\SUB{1} \TRANS 
         \VAR{D}\SUB{1}'
       }{
