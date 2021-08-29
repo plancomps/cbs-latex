@@ -1,149 +1,146 @@
 % cbs-mathjax.sty
-% {% raw %}
 
-  \newcommand{\llbracket}{[\![}
-  \newcommand{\rrbracket}{]\!]}
-  \newcommand{\nobreak}{}
-  \newcommand{\ensuremath}[1]{\(#1\)} % for use in text mode
+\newcommand{\llbracket}{[\![}
+\newcommand{\rrbracket}{]\!]}
+\newcommand{\nobreak}{}
+\newcommand{\ensuremath}[1]{\(#1\)} % for use in text mode
 
-  % \SHADE{MATH} can be defined to produce a shaded background to highlight
-  % inline MATH in running text:
+% \SHADE{MATH} can be defined to produce a shaded background to highlight
+% inline MATH in running text:
 
-  \newcommand{\SHADE}[1]{#1}
+\newcommand{\SHADE}[1]{#1}
 
-  % \KEY{text}, \STRING{text}, \ATOM{text}, \LEX{text} can be used in text or math mode:
+% \KEY{text}, \STRING{text}, \ATOM{text}, \LEX{text} can be used in text or math mode:
 
-  \newcommand{\KEY}[1]{\textit{\STYLE{Key}{#1}}}
-  \newcommand{\STRING}[1]{\text{``$\mathtt{#1}$''}}
-  \newcommand{\ATOM}[1]{\text{`$\mathtt{#1}$'}}
-  \newcommand{\LEX}[1]{\text{\STYLE{Key}{`}$\mathtt{#1}$\STYLE{Key}{'}}}
+\newcommand{\KEY}[1]{\textit{\STYLE{Key}{#1}}}
+\newcommand{\STRING}[1]{\text{``$\mathtt{#1}$''}}
+\newcommand{\ATOM}[1]{\text{`$\mathtt{#1}$'}}
+\newcommand{\LEX}[1]{\text{\STYLE{Key}{`}$\mathtt{#1}$\STYLE{Key}{'}}}
 
-  % The following commands produce ASCII characters that are treated specially by LaTeX:
+% The following commands produce ASCII characters that are treated specially by LaTeX:
 
-  \newcommand{\HASH}{\unicode{x0023}}        % {\char`\#}
-  \newcommand{\DOLLAR}{\unicode{x0024}}      % {\char`\$}
-  \newcommand{\PERCENT}{\unicode{x0025}}     % {\char`\%}
-  \newcommand{\AMPERSAND}{\unicode{x0026}}   % {\char`\&}
-  \newcommand{\APOSTROPHE}{\unicode{x0027}}  % {\char`\'}
-  \newcommand{\BACKSLASH}{\unicode{x005c}}   % {\char`\\}
-  \newcommand{\CARET}{\unicode{x005e}}       % {\char`\^}
-  \newcommand{\UNDERSCORE}{\unicode{x005f}}  % {\char`\_}
-  \newcommand{\GRAVE}{\unicode{x0060}}       % {\char`\`}
-  \newcommand{\LEFTBRACE}{\unicode{x007b}}   % {\char`\{}
-  \newcommand{\RIGHTBRACE}{\unicode{x007d}}  % {\char`\}}
-  \newcommand{\TILDE}{\unicode{x007e}}       % {\textasciitilde}
+\newcommand{\HASH}{\unicode{x0023}}        % {\char`\#}
+\newcommand{\DOLLAR}{\unicode{x0024}}      % {\char`\$}
+\newcommand{\PERCENT}{\unicode{x0025}}     % {\char`\%}
+\newcommand{\AMPERSAND}{\unicode{x0026}}   % {\char`\&}
+\newcommand{\APOSTROPHE}{\unicode{x0027}}  % {\char`\'}
+\newcommand{\BACKSLASH}{\unicode{x005c}}   % {\char`\\}
+\newcommand{\CARET}{\unicode{x005e}}       % {\char`\^}
+\newcommand{\UNDERSCORE}{\unicode{x005f}}  % {\char`\_}
+\newcommand{\GRAVE}{\unicode{x0060}}       % {\char`\`}
+\newcommand{\LEFTBRACE}{\unicode{x007b}}   % {\char`\{}
+\newcommand{\RIGHTBRACE}{\unicode{x007d}}  % {\char`\}}
+\newcommand{\TILDE}{\unicode{x007e}}       % {\textasciitilde}
 
-  % \FUN{name} highlights the name.
-  % \FUNDEC{name} declares Name.name as the target of links to name.
-  % \FUNREF{name} links name to the target Name.name in the current file.
-  % \FUNHYP{url}{file}{name} links name to Name.name at url/file/file.pdf.
-  % Similarly for \VAR{partvariable}, \SYN{syntaxname}, \SEM{semanticsName},
-  % and \SECT{sectionnumber}
+% \FUN{name} highlights the name.
+% \FUNDEC{name} declares Name.name as the target of links to name.
+% \FUNREF{name} links name to the target Name.name in the current file.
+% \FUNHYP{url}{file}{name} links name to Name.name at url/file/file.pdf.
+% Similarly for \VAR{partvariable}, \SYN{syntaxname}, \SEM{semanticsName},
+% and \SECT{sectionnumber}
 
-  % The kerns in \SUB and \VAR avoid overlaps with primes:
+% The kerns in \SUB and \VAR avoid overlaps with primes:
 
-  \newcommand{\SUB}[1]{_{\kern-2mu\STYLE{PartVariable}{\textsf{#1}}}}
+\newcommand{\SUB}[1]{_{\kern-2mu\STYLE{PartVariable}{\textsf{#1}}}}
 
-  % PLAIN
+% PLAIN
 
-  \newcommand{\STYLE}[2]{\class{cbs-#1}{#2}}
+\newcommand{\STYLE}[2]{\class{cbs-#1}{#2}}
 
-  \newcommand{\VAR}[1]{\STYLE{PartVariable}{\textit{#1\kern2mu}}}
-  \newcommand{\FUN}[1]{\STYLE{Name}{\textsf{#1}}}
-  \newcommand{\SYN}[1]{\STYLE{SyntaxName}{\textsf{#1}}}
-  \newcommand{\SEM}[1]{\STYLE{SemanticsName}{\textsf{#1}}}
-  \newcommand{\SECT}[1]{\STYLE{SectionNumber}{\textsf{#1}}}
-  \newcommand{\LANG}[1]{\STYLE{Language}{#1}}
+\newcommand{\VAR}[1]{\STYLE{PartVariable}{\textit{#1\kern2mu}}}
+\newcommand{\FUN}[1]{\STYLE{Name}{\textsf{#1}}}
+\newcommand{\SYN}[1]{\STYLE{SyntaxName}{\textsf{#1}}}
+\newcommand{\SEM}[1]{\STYLE{SemanticsName}{\textsf{#1}}}
+\newcommand{\SECT}[1]{\STYLE{SectionNumber}{\textsf{#1}}}
+\newcommand{\LANG}[1]{\STYLE{Language}{#1}}
 
-  % DEC
+% DEC
 
-  \newcommand{\DEC}[3]{\smash{\raise{2.4ex}{\cssId{#1:#2}{}}}#3}
+\newcommand{\DEC}[3]{\smash{\raise{2.4ex}{\cssId{#1:#2}{}}}#3}
 
-  \newcommand{\VARDEC}[1]{\DEC{PartVariable}{#1}{\VAR{#1}}}
-  \newcommand{\FUNDEC}[1]{\DEC{Name}{#1}{\FUN{#1}}}
-  \newcommand{\SYNDEC}[1]{\DEC{SyntaxName}{#1}{\SYN{#1}}}
-  \newcommand{\SEMDEC}[1]{\DEC{SemanticsName}{#1}{\SEM{#1}}}
-  \newcommand{\SECTDEC}[1]{\DEC{SectionNumber}{#1}{\textsf{#1}}}
-  % \newcommand{\LANGDEC}[1]{\DEC{Language}{#1}{\LANG{#1}}}
+\newcommand{\VARDEC}[1]{\DEC{PartVariable}{#1}{\VAR{#1}}}
+\newcommand{\FUNDEC}[1]{\DEC{Name}{#1}{\FUN{#1}}}
+\newcommand{\SYNDEC}[1]{\DEC{SyntaxName}{#1}{\SYN{#1}}}
+\newcommand{\SEMDEC}[1]{\DEC{SemanticsName}{#1}{\SEM{#1}}}
+\newcommand{\SECTDEC}[1]{\DEC{SectionNumber}{#1}{\textsf{#1}}}
+% \newcommand{\LANGDEC}[1]{\DEC{Language}{#1}{\LANG{#1}}}
 
-  % REF
+% REF
 
-  \newcommand{\REF}[3]{\href{###1%3A#2}{#3}}
+\newcommand{\REF}[3]{\href{###1%3A#2}{#3}}
 
-  \newcommand{\VARREF}[1]{\REF{PartVariable}{#1}{\VAR{#1}}}
-  \newcommand{\FUNREF}[1]{\REF{Name}{#1}{\FUN{#1}}}
-  \newcommand{\SYNREF}[1]{\REF{SyntaxName}{#1}{\SYN{#1}}}
-  \newcommand{\SEMREF}[1]{\REF{SemanticsName}{#1}{\SEM{#1}}}
-  \newcommand{\SECTREF}[1]{\REF{SectionNumber}{#1}{\SECT{#1}}}
-  % \newcommand{\LANGREF}[1]{\REF{Language}{#1}{\LANG{#1}}}
+\newcommand{\VARREF}[1]{\REF{PartVariable}{#1}{\VAR{#1}}}
+\newcommand{\FUNREF}[1]{\REF{Name}{#1}{\FUN{#1}}}
+\newcommand{\SYNREF}[1]{\REF{SyntaxName}{#1}{\SYN{#1}}}
+\newcommand{\SEMREF}[1]{\REF{SemanticsName}{#1}{\SEM{#1}}}
+\newcommand{\SECTREF}[1]{\REF{SectionNumber}{#1}{\SECT{#1}}}
+% \newcommand{\LANGREF}[1]{\REF{Language}{#1}{\LANG{#1}}}
 
-  % HYP
+% HYP
 
-  \newcommand{\HYP}[5]{\href{#1/#2/index.html###3%3A#4}{#5}}
-  
-  \newcommand{\VARHYP}[3]{\HYP{#1}{#2}{PartVariable}{#3}{\VAR{#3}}}
-  \newcommand{\FUNHYP}[3]{\HYP{#1}{#2}{Name}{#3}{\FUN{#3}}}
-  \newcommand{\SYNHYP}[3]{\HYP{#1}{#2}{SyntaxName}{#3}{\SYN{#3}}}
-  \newcommand{\SEMHYP}[3]{\HYP{#1}{#2}{SemanticsName}{#3}{\SEM{#3}}}
-  \newcommand{\SECTHYP}[3]{\HYP{#1}{#2}{SectionNumber}{#3}{\SECT{#3}}}
-  % \newcommand{\LANGHYP}[3]{\HYP{#1}{#2}{Language}{#3}{\LANG{#3}}}
+\newcommand{\HYP}[5]{\href{#1/#2/index.html###3%3A#4}{#5}}
 
-  % CBS-beta/math hyperlinks
+\newcommand{\VARHYP}[3]{\HYP{#1}{#2}{PartVariable}{#3}{\VAR{#3}}}
+\newcommand{\FUNHYP}[3]{\HYP{#1}{#2}{Name}{#3}{\FUN{#3}}}
+\newcommand{\SYNHYP}[3]{\HYP{#1}{#2}{SyntaxName}{#3}{\SYN{#3}}}
+\newcommand{\SEMHYP}[3]{\HYP{#1}{#2}{SemanticsName}{#3}{\SEM{#3}}}
+\newcommand{\SECTHYP}[3]{\HYP{#1}{#2}{SectionNumber}{#3}{\SECT{#3}}}
+% \newcommand{\LANGHYP}[3]{\HYP{#1}{#2}{Language}{#3}{\LANG{#3}}}
 
-  \newcommand{\CBSBETAMATH}{https://plancomps.github.io/CBS-beta/math}
+% CBS-beta/math hyperlinks
 
-  \newcommand{\VARCBS}[3]{\VARHYP{\CBSBETAMATH/#1}{#2}{#3}}
-  \newcommand{\FUNCBS}[3]{\FUNHYP{\CBSBETAMATH/#1}{#2}{#3}}
-  \newcommand{\SYNCBS}[3]{\SYNHYP{\CBSBETAMATH/#1}{#2}{#3}}
-  \newcommand{\SEMCBS}[3]{\SEMHYP{\CBSBETAMATH/#1}{#2}{#3}}
-  \newcommand{\SECTCBS}[3]{\SECTHYP{\CBSBETAMATH/#1}{#2}{#3}}
-  % \newcommand{\LANGCBS}[3]{\LANGHYP{\CBSBETAMATH/#1}{#2}{#3}}
+\newcommand{\CBSBETAMATH}{https://plancomps.github.io/CBS-beta/math}
 
-  % \LEFTPHRASE MATH \RIGHTPHRASE produces [[ MATH ]] with proper brackets:
+\newcommand{\VARCBS}[3]{\VARHYP{\CBSBETAMATH/#1}{#2}{#3}}
+\newcommand{\FUNCBS}[3]{\FUNHYP{\CBSBETAMATH/#1}{#2}{#3}}
+\newcommand{\SYNCBS}[3]{\SYNHYP{\CBSBETAMATH/#1}{#2}{#3}}
+\newcommand{\SEMCBS}[3]{\SEMHYP{\CBSBETAMATH/#1}{#2}{#3}}
+\newcommand{\SECTCBS}[3]{\SECTHYP{\CBSBETAMATH/#1}{#2}{#3}}
+% \newcommand{\LANGCBS}[3]{\LANGHYP{\CBSBETAMATH/#1}{#2}{#3}}
 
-  \newcommand{\LEFTPHRASE}{\llbracket}
-  \newcommand{\RIGHTPHRASE}{\rrbracket}
+% \LEFTPHRASE MATH \RIGHTPHRASE produces [[ MATH ]] with proper brackets:
 
-  % \LEFTGROUP MATH \RIGHTGROUP produces ( MATH ) where the parentheses are
-  % highlighted the same as keywords:
+\newcommand{\LEFTPHRASE}{\llbracket}
+\newcommand{\RIGHTPHRASE}{\rrbracket}
 
-  \newcommand{\LEFTGROUP}{\STYLE{Key}{(}}
-  \newcommand{\RIGHTGROUP}{\STYLE{Key}{)}}
+% \LEFTGROUP MATH \RIGHTGROUP produces ( MATH ) where the parentheses are
+% highlighted the same as keywords:
 
-  % MATH\PLUS produces a superscript +
-  % MATH\STAR produces a superscript *
-  % MATH\QUERY produces a superscript ?
+\newcommand{\LEFTGROUP}{\STYLE{Key}{(}}
+\newcommand{\RIGHTGROUP}{\STYLE{Key}{)}}
 
-  \newcommand{\PLUS}{{}^{\texttt{+}}}
-  \newcommand{\STAR}{{}^{\texttt{*}}}
-  \newcommand{\QUERY}{{}^{\texttt{?}}}
+% MATH\PLUS produces a superscript +
+% MATH\STAR produces a superscript *
+% MATH\QUERY produces a superscript ?
 
-  % \RULE{premise}{conclusion} produces
-  %     premise
-  %   ----------
-  %   conclusion
-  
-  \newcommand{\RULE}[2]{\frac{\displaystyle#1}{\displaystyle#2}}
-  % See https://tex.stackexchange.com/questions/337328/superscripts-appear-in-various-weird-places-in-fractions
+\newcommand{\PLUS}{ {}^{\texttt{+}}}
+\newcommand{\STAR}{ {}^{\texttt{*}}}
+\newcommand{\QUERY}{ {}^{\texttt{?}}}
 
-  % \RULE
-  %   {\begin{aligned} & premise \\ & ... \end{aligned}}
-  %   {\begin{aligned} & conclusion ... \\ & ... \end{aligned}}
-  % produces an inference rule with left-aligned premises and split conclusion
-  %      premise
-  %      ...
-  %   --------------
-  %   conclusion ...
-  %   ...
+% \RULE{premise}{conclusion} produces
+%     premise
+%   ----------
+%   conclusion
 
-  % \TO TYPE produces => TYPE
+\newcommand{\RULE}[2]{\frac{\displaystyle#1}{\displaystyle#2}}
+% See https://tex.stackexchange.com/questions/337328/superscripts-appear-in-various-weird-places-in-fractions
 
-  \newcommand{\TO}{\mathop{\Rightarrow}}
+% \RULE
+%   {\begin{aligned} & premise \\ & ... \end{aligned}}
+%   {\begin{aligned} & conclusion ... \\ & ... \end{aligned}}
+% produces an inference rule with left-aligned premises and split conclusion
+%      premise
+%      ...
+%   --------------
+%   conclusion ...
+%   ...
 
-  % TERM \TRANS TERM produces TERM ---> TERM
+% \TO TYPE produces => TYPE
 
-  \newcommand{\TRANS}{\longrightarrow}
+\newcommand{\TO}{\mathop{\Rightarrow}}
 
-  % TERM \xrightarrow{LABEL} TERM puts the label above the long arrow
-  
-% {% endraw %}
+% TERM \TRANS TERM produces TERM ---> TERM
+
+\newcommand{\TRANS}{\longrightarrow}
+
+% TERM \xrightarrow{LABEL} TERM puts the label above the long arrow

@@ -1,5 +1,4 @@
 % cbs-latex.sty
-% {% raw %}
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{cbs-latex}[2021/08/27 CBS-LaTeX package]
@@ -29,7 +28,7 @@
 
 % The following definition of \SHADE{TEXT} produces a faint grey background
 % for CBS notation in running text:
-\newcommand{\SHADE}[1]{{\setlength{\fboxsep}{0pt}\colorbox{gray!10}{$\strut#1\strut$}}}
+\newcommand{\SHADE}[1]{ {\setlength{\fboxsep}{0pt}\colorbox{gray!10}{$\strut#1\strut$}}}
 
 % \KEY{text}, \STRING{text}, \ATOM{text}, \LEX{text} can be used in text or math mode.
 
@@ -135,9 +134,9 @@
 % MATH\STAR produces a superscript *
 % MATH\QUERY produces a superscript ?
 
-\newcommand{\PLUS}{{}^{\text{\scriptsize+}}}
-\newcommand{\STAR}{{}^{\raisebox{-0.5ex}{\text{\scriptsize*}}}}
-\newcommand{\QUERY}{{}^{\raisebox{-0.5ex}{\text{\scriptsize?}}}}
+\newcommand{\PLUS}{ {}^{\text{\scriptsize+}}}
+\newcommand{\STAR}{ {}^{\raisebox{-0.5ex}{\text{\scriptsize*}}}}
+\newcommand{\QUERY}{ {}^{\raisebox{-0.5ex}{\text{\scriptsize?}}}}
 
 % \RULE{premise}{conclusion} produces
 %     premise
@@ -166,5 +165,3 @@
 \newcommand{\TRANS}{\longrightarrow}
 
 % TERM \xrightarrow{LABEL} TERM puts the label above the long arrow
-
-% {% endraw %}
