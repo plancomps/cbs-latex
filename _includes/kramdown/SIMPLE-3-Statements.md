@@ -43,7 +43,9 @@ $$\begin{align*}
       \LEFTPHRASE \
         \LEX{if} \ \LEX{{(}} \ \VAR{Exp} \ \LEX{{)}} \ \VAR{Block} \ \LEX{else} \ \LEX{{\LEFTBRACE}} \ \LEX{{\RIGHTBRACE}} \
       \RIGHTPHRASE
-\\
+\end{align*}$$
+
+$$\begin{align*}
   \KEY{Rule} \quad
     & \LEFTPHRASE \
         \LEX{for} \ \LEX{{(}} \ \VAR@Stmt \ \VAR@Exp\SUB{1} \ \LEX{{;}} \ \VAR@Exp\SUB{2} \ \LEX{{)}} \\&\quad
@@ -61,13 +63,17 @@ $$\begin{align*}
   \KEY{Semantics} \quad
   & \SEMDEC{exec} \LEFTPHRASE \ \_ : \SYN@stmts \ \RIGHTPHRASE  
     :  \TO \FUN@null@type 
-\\
+\end{align*}$$
+
+$$\begin{align*}
   \KEY{Rule} \quad
     & \SEMREF{exec} \LEFTPHRASE \
                             \LEX{{\LEFTBRACE}} \ \LEX{{\RIGHTBRACE}} \
                           \RIGHTPHRASE  = 
       \FUN@null
-\\
+\end{align*}$$
+
+$$\begin{align*}
   \KEY{Rule} \quad
     & \SEMREF{exec} \LEFTPHRASE \
                             \LEX{{\LEFTBRACE}} \ \VAR@Stmts \ \LEX{{\RIGHTBRACE}} \
@@ -75,7 +81,9 @@ $$\begin{align*}
       \SEM@exec \LEFTPHRASE \
                 \VAR{Stmts} \
               \RIGHTPHRASE 
-\\
+\end{align*}$$
+
+$$\begin{align*}
   \KEY{Rule} \quad
     & \SEMREF{exec} \LEFTPHRASE \
                             \VAR@ImpStmt \ \VAR@Stmts \
@@ -87,7 +95,9 @@ $$\begin{align*}
                \SEM@exec \LEFTPHRASE \
                         \VAR{Stmts} \
                       \RIGHTPHRASE  )
-\\
+\end{align*}$$
+
+$$\begin{align*}
   \KEY{Rule} \quad
     & \SEMREF{exec} \LEFTPHRASE \
                             \VAR@VarsDecl \ \VAR@Stmts \
@@ -99,7 +109,9 @@ $$\begin{align*}
                \SEM@exec \LEFTPHRASE \
                         \VAR{Stmts} \
                       \RIGHTPHRASE  )
-\\
+\end{align*}$$
+
+$$\begin{align*}
   \KEY{Rule} \quad
     & \SEMREF{exec} \LEFTPHRASE \
                             \VAR@VarsDecl \
@@ -108,7 +120,9 @@ $$\begin{align*}
         (  \SEM@declare \LEFTPHRASE \
                         \VAR{VarsDecl} \
                       \RIGHTPHRASE  )
-\\
+\end{align*}$$
+
+$$\begin{align*}
   \KEY{Rule} \quad
     & \SEMREF{exec} \LEFTPHRASE \
                             \VAR@Exp \ \LEX{{;}} \
@@ -117,7 +131,9 @@ $$\begin{align*}
         (  \SEM@rval \LEFTPHRASE \
                         \VAR{Exp} \
                       \RIGHTPHRASE  )
-\\
+\end{align*}$$
+
+$$\begin{align*}
   \KEY{Rule} \quad
     & \SEMREF{exec} \LEFTPHRASE \
                             \LEX{if} \ \LEX{{(}} \ \VAR@Exp \ \LEX{{)}} \ \VAR@Block\SUB{1} \ \LEX{else} \ \VAR@Block\SUB{2} \
@@ -132,7 +148,9 @@ $$\begin{align*}
                \SEM@exec \LEFTPHRASE \
                         \VAR{Block}\SUB{2} \
                       \RIGHTPHRASE  )
-\\
+\end{align*}$$
+
+$$\begin{align*}
   \KEY{Rule} \quad
     & \SEMREF{exec} \LEFTPHRASE \
                             \LEX{while} \ \LEX{{(}} \ \VAR@Exp \ \LEX{{)}} \ \VAR@Block \
@@ -144,7 +162,9 @@ $$\begin{align*}
                \SEM@exec \LEFTPHRASE \
                         \VAR{Block} \
                       \RIGHTPHRASE  )
-\\
+\end{align*}$$
+
+$$\begin{align*}
   \KEY{Rule} \quad
     & \SEMREF{exec} \LEFTPHRASE \
                             \LEX{print} \ \LEX{{(}} \ \VAR@Exps \ \LEX{{)}} \ \LEX{{;}} \
@@ -153,7 +173,9 @@ $$\begin{align*}
         (  \SEM@rvals \LEFTPHRASE \
                         \VAR{Exps} \
                       \RIGHTPHRASE  )
-\\
+\end{align*}$$
+
+$$\begin{align*}
   \KEY{Rule} \quad
     & \SEMREF{exec} \LEFTPHRASE \
                             \LEX{return} \ \VAR@Exp \ \LEX{{;}} \
@@ -162,14 +184,18 @@ $$\begin{align*}
         (  \SEM@rval \LEFTPHRASE \
                         \VAR{Exp} \
                       \RIGHTPHRASE  )
-\\
+\end{align*}$$
+
+$$\begin{align*}
   \KEY{Rule} \quad
     & \SEMREF{exec} \LEFTPHRASE \
                             \LEX{return} \ \LEX{{;}} \
                           \RIGHTPHRASE  = 
       \FUN@return
         (  \FUN@null )
-\\
+\end{align*}$$
+
+$$\begin{align*}
   \KEY{Rule} \quad
     & \SEMREF{exec} \LEFTPHRASE \
                             \LEX{try} \ \VAR@Block\SUB{1} \ \LEX{catch} \ \LEX{{(}} \ \VAR@Id \ \LEX{{)}} \ \VAR@Block\SUB{2} \
@@ -189,7 +215,9 @@ $$\begin{align*}
                        \SEM@exec \LEFTPHRASE \
                                 \VAR{Block}\SUB{2} \
                               \RIGHTPHRASE  ) )
-\\
+\end{align*}$$
+
+$$\begin{align*}
   \KEY{Rule} \quad
     & \SEMREF{exec} \LEFTPHRASE \
                             \LEX{throw} \ \VAR@Exp \ \LEX{{;}} \
