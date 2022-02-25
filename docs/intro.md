@@ -31,7 +31,7 @@ Web pages
 
 : Currently, KaTeX renders the CBS-LaTeX markup faster than MathJax.
   For example, compare this [KaTeX page](katex/SIMPLE-3-Statements) with the corresponding
-  [MathJax page](mathjax3/SIMPLE-3-Statements).
+  [MathJax page](mathjax-3/SIMPLE-3-Statements).
 
   The appearance of the web pages (at least when using recent versions of Firefox and Safari)
   is close to that of the PDFs produced from the same CBS files using pdflatex.

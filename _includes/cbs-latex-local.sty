@@ -6,6 +6,11 @@
 
 \RequirePackage{cbs-latex}
 
+% Heading names of the form `category.name` appear not to work in HTML,
+% so using \hypertarget and \hyperlink instead of \hyperdef and \hyperref:
+
+\renewcommand{\DEC}[3]{\raisebox{1.2\ht\strutbox}{\hypertarget{#1:#2}{}}#3}
+\renewcommand{\REF}[3]{\hyperlink{#1:#2}{#3}}
 \renewcommand{\HYP}[5]{\REF{#3}{#4}{#5}}
 
 % {% endraw %}

@@ -7,7 +7,11 @@
   {% when "katex" %}
     {% include katex.html %}
   {% when "mathjax" %}
-    {% include mathjax.html %}
+    {% include mathjax-3.html %}
+  {% when "mathjax-2.7" %}
+    {% include mathjax-2.7.html %}
+  {% when "mathjax-lncs" %}
+    {% include mathjax-lncs.html %}
 {% endcase %}
 
 <!-- https://www.primative.net/blog/how-to-get-rid-of-the-flash-of-unstyled-content/ -->

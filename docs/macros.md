@@ -9,4 +9,4 @@ layout: cbs-katex
 
 [`cbs-latex.sty`]: latex/cbs-latex
 [`cbs-katex.sty`]: katex/cbs-katex
-[`cbs-mathjax.sty`]: mathjax3/cbs-mathjax
+[`cbs-mathjax.sty`]: mathjax-3/cbs-mathjax

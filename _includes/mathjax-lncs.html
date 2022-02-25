@@ -1,0 +1,71 @@
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["mml2jax.js"],
+    jax: ["input/TeX", "input/MathML", "output/HTML-CSS"],
+    displayAlign: "left",
+    menuSettings: {
+        zoom: "Click"
+    },
+    tex2jax: {
+        inlineMath: [["\\(", "\\)"]],
+        displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+        preview: "TeX",
+        processEscapes: !0
+    },
+    mml2jax: {
+        preview: ["MathML"]
+    },
+    "fast-preview": {
+        disabled: !0
+     },
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": {
+        EqnChunk: 500,
+        EqnChunkFactor: 1,
+        EqnChunkDelay: 1e3,
+        availableFonts: ["STIX", "TeX"],
+        preferredFont: ["STIX"],
+        webFont: ["TeX"],
+        imageFont: ["TeX"],
+        mtextFontInherit: false,
+        styles: {
+            ".MathJax_Display": {
+                margin: 0
+            },
+            "#MathJax_Message": {
+                margin: 0
+            },
+            "html[data-theme=\"dark\"] .MathJax": {
+              "background-color": "#FFFFFF !important",
+              color: "#000000"
+            },
+            "html[data-theme=\"light\"] .MathJax": {
+              "background-color": "#FFFFFF !important",
+              color: "#000000"
+            }
+        }
+    },
+    TeX: {
+        TagSide: "right",
+        MAXBUFFER : 10 * 1024,
+        extensions: ["color.js"],
+        Macros: {
+            bgroup: "{\\unicode{x007B}}",
+            egroup: "{\\unicode{x007D}}",
+            enskip: "{\\enspace}",
+            lefteqn: ["\\rlap{#1}", 1],
+            parbox: ["\\mbox{#2}", 2],
+        }
+    },
+    MathMenu: {
+        showFontMenu: !0
+    }
+  });
+</script>
+<script type="text/javascript" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>

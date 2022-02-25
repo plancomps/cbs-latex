@@ -1,51 +1,43 @@
-% cbs-mathjax.sty
+% cbs-mathjax-2.7.sty
 
-% For use with mathjax-3.html.
+% For use with mathjax-2.7.html.
 
-% For formatting pages using CBS with MathJax-3. 
+% For formatting pages using CBS with MathJax-2.7. 
 
-% When using Jekyll, include this file in a page by adding to the front matter:
-%   layout: cbs-mathjax
-% or:
-%   layout: cbs-mathjax-local
-
-% The macros support formatting all of CBS. The MathJax-3 rendering is
-% compatible with the LaTeX rendering of articles that use cbs-latex.sty.
-% The colors are specified using CSS, so that they can be changed according
-% to the page background color.
-
-% The configuration tex block should include:
-%        maxBuffer : 10 * 1024
-% The output block should include:
-%        mtextFont: 'sans-serif'
+% The configuration TeX block should include:
+%        MAXBUFFER : 10 * 1024,
+%        extensions: ["color.js"],
+%        unicode: {
+%          fonts: \"STIXGeneral, 'Arial Unicode MS'\"
+%        },
 % See the docs at: 
-% ???
+% https://docs.mathjax.org/en/v2.7-latest/options/input-processors/TeX.html
+% https://docs.mathjax.org/en/v2.7-latest/tex.html#tex-and-latex-extensions
+
+% Using Jekyll, this file is included in a page by setting layout: cbs-mathjax-2.7
+% in the front matter.
 
 \newcommand{\llbracket}{[\![}
 \newcommand{\rrbracket}{]\!]}
 \newcommand{\nobreak}{}
+% \newcommand{\ensuremath}[1]{\(#1\)} % for use in text mode
 
 % \SHADE{MATH} can be defined to produce a shaded background to highlight
 % inline MATH in running text:
 
 \newcommand{\SHADE}[1]{#1}
 
-% \STYLE{STYLE-NAME}{TEXT-OR-MATH} lets CSS determine the color of TEXT-OR-MATH, 
-% so that it can change when a web page changes between light and dark modes.
-% STYLE-NAME should be either Key, PartVariable, Name, SyntaxName, SemanticsName,
-% Language, or SectNumber.
-% TO DO: Improve the style names!
+% \KEY{text}, \STRING{text}, \ATOM{text}, \LEX{text} can be used in text or math mode:
 
-\newcommand{\STYLE}[2]{\class{cbs-#1}{#2}}
-
-% \KEY{text}, \STRING{text}, \ATOM{text}, \LEX{text} can be used in text or math.
-% When the MathJax configuration includes mtextFont: 'sans-serif', \KEY{text}
-% renders as slanted sans-serif, but \VAR{text} still renders in a serif font.
-
-\newcommand{\KEY}[1]{\textit{\STYLE{Key}{#1}}}
-\newcommand{\STRING}[1]{\text{``$\mathtt{#1}$''}}
-\newcommand{\ATOM}[1]{\text{`$\mathtt{#1}$'}}
-\newcommand{\LEX}[1]{\text{\STYLE{Key}{`}$\mathtt{#1}$\STYLE{Key}{'}}}
+\newcommand{\KEY}[1]{ {\color{Grey}{\textsf{#1}}}}
+% MathJax-2.7 does not support the combination of sans-serif and italic/slanted.
+\newcommand{\STRING}[1]{\unicode{x201c}{\small\mathtt{#1}}\unicode{x201d}}
+\newcommand{\ATOM}[1]{\unicode{x2018}{\small\mathtt{#1}}\unicode{x2019}}
+\newcommand{\LEX}[1]{\unicode{x2018}{\small\mathtt{#1}}\unicode{x2019}}
+% \newcommand{\KEY}[1]{\textit{\STYLE{Key}{#1}}}
+% \newcommand{\STRING}[1]{\text{``$\mathtt{#1}$''}}
+% \newcommand{\ATOM}[1]{\text{`$\mathtt{#1}$'}}
+% \newcommand{\LEX}[1]{\text{`$\mathtt{#1}$'}}
 
 % The following commands produce ASCII characters that are treated specially by LaTeX:
 
@@ -69,19 +61,16 @@
 % Similarly for \VAR{partvariable}, \SYN{syntaxname}, \SEM{semanticsName},
 % and \SECT{sectionnumber}
 
-% The kerns in \SUB and \VAR avoid overlaps with primes:
-
-\newcommand{\SUB}[1]{_{\kern-2mu\STYLE{PartVariable}{#1}}}
+\newcommand{\SUB}[1]{_{#1}}
 
 % PLAIN
 
-\newcommand{\VAR}[1]{\STYLE{PartVariable}{\it#1\kern2mu}}
-% \it#1 currently formats #1 in the text italic font, independently of mtextFont.
-\newcommand{\FUN}[1]{\STYLE{Name}{\textsf{#1}}}
-\newcommand{\SYN}[1]{\STYLE{SyntaxName}{\textsf{#1}}}
-\newcommand{\SEM}[1]{\STYLE{SemanticsName}{\textsf{#1}}}
-\newcommand{\SECT}[1]{\STYLE{SectionNumber}{\textsf{#1}}}
-\newcommand{\LANG}[1]{\STYLE{Language}{#1}}
+\newcommand{\VAR}[1]{ {\it\small#1}}
+\newcommand{\FUN}[1]{ {\color{DarkRed}{\textsf{#1}}}}
+\newcommand{\SYN}[1]{ {\color{DarkGreen}{\textsf{#1}}}}
+\newcommand{\SEM}[1]{ {\color{DarkBlue}{\textsf{#1}}}}
+\newcommand{\SECT}[1]{\text{#1}}
+\newcommand{\LANG}[1]{#1}
 
 % DEC
 
@@ -135,8 +124,8 @@
 % \LEFTGROUP MATH \RIGHTGROUP produces ( MATH ) where the parentheses are
 % highlighted the same as keywords:
 
-\newcommand{\LEFTGROUP}{\STYLE{Key}{(}}
-\newcommand{\RIGHTGROUP}{\STYLE{Key}{)}}
+\newcommand{\LEFTGROUP}{\color{Grey}{(}}
+\newcommand{\RIGHTGROUP}{\color{Grey}{)}}
 
 % MATH\PLUS produces a superscript +
 % MATH\STAR produces a superscript *

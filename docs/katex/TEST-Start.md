@@ -5,6 +5,6 @@ parent: Samples
 nav_order: 5
 ---
 
-> This page is using $$\KaTeX$$. [See the same page using MathJax](../mathjax3/TEST-Start).
+> This page is using $$\KaTeX$$. [See the same page using MathJax-3](../mathjax-3/TEST-Start).
 
 {% include kramdown/TEST-Start.md %}
