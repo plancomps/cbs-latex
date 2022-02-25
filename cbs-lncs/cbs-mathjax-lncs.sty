@@ -1,0 +1,33 @@
+% cbs-mathjax-lncs.sty
+
+% When using Jekyll, include this file in a page by adding to the front matter:
+%   layout: cbs-mathjax-lncs
+
+% The macros support formatting a subset of CBS. The MathJax-2.7 rendering is
+% compatible with the LaTeX rendering of articles that use cbs-latex-lncs.sty.
+% The page background is assumed to be white; for dark background pages,
+% the colors used below would need to be lighter.
+
+% Configure MathJax-2.7 by including in the TeX block:
+%        MAXBUFFER : 10 * 1024,
+%        extensions: ["color.js"]
+% 
+% See the docs at: 
+% https://docs.mathjax.org/en/v2.7-latest/options/input-processors/TeX.html
+% https://docs.mathjax.org/en/v2.7-latest/tex.html#tex-and-latex-extensions
+
+\newcommand{\KEY}[1]{\textcolor{Gray}{\textsf{#1}}}
+\newcommand{\LEX}[1]{\textcolor{Gray}{\textsf{‘}}\texttt{#1}\textcolor{Gray}{\textsf{’}}}
+\newcommand{\VAR}[1]{\textit{#1}}
+
+\newcommand{\NAME}[1]{\textcolor{DarkRed}{\textsf{#1}}}
+\newcommand{\SYN}[1]{\textcolor{DarkGreen}{\textsf{#1}}}
+\newcommand{\SEM}[1]{\textcolor{DarkBlue}{\textsf{#1}}}
+\newcommand{\LEFTPHRASE}{[\![}
+\newcommand{\RIGHTPHRASE}{]\!]}
+
+\newcommand{\RULE}[2]{\frac{\begin{aligned}#1\end{aligned}}{\begin{aligned}#2\end{aligned}}}
+\newcommand{\AXIOM}[1]{\begin{aligned}#1\end{aligned}}
+
+\newcommand{\TO}{\mathop{\Rightarrow}}
+\newcommand{\TRANS}{\longrightarrow}
