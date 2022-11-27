@@ -1,0 +1,645 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Binding.part.tex - CBS-LaTeX</title>
+  <link rel="shortcut icon" href="/cbs-latex/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/cbs-latex/assets/css/just-the-docs-default.css">
+    <script type="text/javascript" src="/cbs-latex/assets/js/vendor/lunr.min.js"></script>
+  <script type="text/javascript" src="/cbs-latex/assets/js/just-the-docs.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Binding.part.tex | CBS-LaTeX</title>
+<meta name="generator" content="Jekyll v4.3.1" />
+<meta property="og:title" content="Binding.part.tex" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This site illustrates how CBS specifications of languages and funcons could be formatted for the web using LaTeX, Markdown, KaTeX, and MathJax. One of the aims is for CBS on web pages look like the CBS in published papers, using mathematical symbols instead of plain text." />
+<meta property="og:description" content="This site illustrates how CBS specifications of languages and funcons could be formatted for the web using LaTeX, Markdown, KaTeX, and MathJax. One of the aims is for CBS on web pages look like the CBS in published papers, using mathematical symbols instead of plain text." />
+<link rel="canonical" href="https://plancomps.github.io/cbs-latex/docs/latex/Binding/Binding.part.tex.html" />
+<meta property="og:url" content="https://plancomps.github.io/cbs-latex/docs/latex/Binding/Binding.part.tex.html" />
+<meta property="og:site_name" content="CBS-LaTeX" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Binding.part.tex" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"This site illustrates how CBS specifications of languages and funcons could be formatted for the web using LaTeX, Markdown, KaTeX, and MathJax. One of the aims is for CBS on web pages look like the CBS in published papers, using mathematical symbols instead of plain text.","headline":"Binding.part.tex","url":"https://plancomps.github.io/cbs-latex/docs/latex/Binding/Binding.part.tex.html"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- https://www.primative.net/blog/how-to-get-rid-of-the-flash-of-unstyled-content/ -->
+<style>
+  .no-js {
+    visibility: visible;
+  }
+</style>
+<link rel="shortcut icon" type="image/x-icon"   href="/cbs-latex/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180"    href="/cbs-latex/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/cbs-latex/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/cbs-latex/assets/icons/favicon-16x16.png">
+<link rel="mask-icon" href="/cbs-latex/assets/icons/safari-pinned-tab.svg">
+<link rel="manifest"  href="/cbs-latex/assets/icons/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="svg-link" viewBox="0 0 24 24">
+      <title>Link</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </symbol>
+    <symbol id="svg-search" viewBox="0 0 24 24">
+      <title>Search</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-menu" viewBox="0 0 24 24">
+      <title>Menu</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+      <title>Expand</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </symbol>
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+      <title>Document</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+      </svg>
+    </symbol>
+  </svg>
+  <script type="text/javascript" src="/cbs-latex/assets/js/toggle_init.js"></script>
+  <div class="side-bar">
+    <div class="site-header">
+      <a href="/cbs-latex/" class="site-title lh-tight">
+  CBS-LaTeX
+</a>
+      <a href="#" id="menu-button" class="site-button">
+        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+      </a>
+    </div>
+  <button id="theme-toggle" onclick="modeSwitcher()" 
+    type="button" name="button" class="btn theme-toggle" ></button>
+  <script>
+    function modeSwitcher() {
+      let currentMode = document.documentElement.getAttribute('data-theme');
+      if (currentMode === "dark") {
+        document.documentElement.setAttribute('data-theme', 'light');
+        window.localStorage.setItem('theme', 'light');
+        document.getElementById("theme-toggle").innerHTML = "&rarr; Dark Mode";
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        window.localStorage.setItem('theme', 'dark');
+        document.getElementById("theme-toggle").innerHTML = "&rarr; Light Mode";
+      }
+    }
+  </script>
+    <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
+      <ul class="nav-list"><li class="nav-list-item"><a href="/cbs-latex/docs/intro.html" class="nav-list-link">Introduction</a></li>
+<li class="nav-list-item"><a href="/cbs-latex/docs/local.html" class="nav-list-link">Local browsing</a></li>
+<li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="/cbs-latex/docs/macros.html" class="nav-list-link">Macros</a><ul class="nav-list"><li class="nav-list-item"><a href="/cbs-latex/docs/katex/cbs-katex.html" class="nav-list-link">CBS-KaTeX</a></li>
+<li class="nav-list-item"><a href="/cbs-latex/docs/latex/cbs-latex.html" class="nav-list-link">CBS-LaTeX</a></li>
+<li class="nav-list-item"><a href="/cbs-latex/docs/mathjax-3/cbs-mathjax.html" class="nav-list-link">CBS-MathJax</a></li>
+<li class="nav-list-item"><a href="/cbs-latex/docs/mathjax-2.7/cbs-mathjax-2.7.html" class="nav-list-link">CBS-MathJax-2.7</a></li>
+<li class="nav-list-item"><a href="/cbs-latex/docs/mathjax-2.7/cbs-mathjax-lncs.html" class="nav-list-link">CBS-MathJax-LNCS</a></li>
+</ul>
+</li>
+<li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="/cbs-latex/docs/samples.html" class="nav-list-link">Samples</a><ul class="nav-list"><li class="nav-list-item"><a href="/cbs-latex/docs/katex/Binding.html" class="nav-list-link">Funcon specifications</a></li>
+<li class="nav-list-item"><a href="/cbs-latex/docs/katex/SIMPLE-3-Statements.html" class="nav-list-link">Language specifications</a></li>
+<li class="nav-list-item"><a href="/cbs-latex/docs/katex/TEST-Start.html" class="nav-list-link">ASCII Tests</a></li>
+</ul>
+</li>
+</ul>
+    </nav>
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  </div>
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+        <div class="search">
+          <div class="search-input-wrap">
+            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search CBS-LaTeX" aria-label="Search CBS-LaTeX" autocomplete="off">
+            <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+        <nav aria-label="Auxiliary" class="aux-nav">
+          <ul class="aux-nav-list">
+              <li class="aux-nav-list-item">
+                <a href="https://github.com/plancomps/cbs-latex" class="site-button"
+                >
+                  CBS-LaTeX on GitHub
+                </a>
+              </li>
+          </ul>
+        </nav>
+    </div>
+    <div id="main-content-wrap" class="main-content-wrap">
+      <div id="main-content" class="main-content" role="main">
+          <h1 id="bindingparttex">
+          <a href="#bindingparttex" class="anchor-heading" aria-labelledby="bindingparttex"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Binding.part.tex
+      </h1>
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">% </span>
+
+
+
+    OUTLINE
+  <span class="k">\tableofcontents</span>
+<span class="nt">\begin{center}</span>
+<span class="k">\rule</span><span class="p">{</span>3in<span class="p">}{</span>0.4pt<span class="p">}</span>
+<span class="nt">\end{center}</span>
+
+<span class="k">\subsubsection</span><span class="p">{</span>Binding<span class="p">}</span><span class="k">\hypertarget</span><span class="p">{</span>binding<span class="p">}{}</span><span class="k">\label</span><span class="p">{</span>binding<span class="p">}</span>
+
+<span class="nt">\begin{align*}</span>
+  [ <span class="k">\
+  \KEY</span><span class="p">{</span>Type<span class="p">}</span> <span class="k">\quad</span> <span class="p">&amp;</span> <span class="k">\FUN</span>@environments <span class="k">\\</span>
+  <span class="k">\KEY</span><span class="p">{</span>Alias<span class="p">}</span> <span class="k">\quad</span> <span class="p">&amp;</span> <span class="k">\FUN</span>@envs <span class="k">\\</span>
+  <span class="k">\KEY</span><span class="p">{</span>Datatype<span class="p">}</span> <span class="k">\quad</span> <span class="p">&amp;</span> <span class="k">\FUN</span>@identifiers <span class="k">\\</span>
+  <span class="k">\KEY</span><span class="p">{</span>Alias<span class="p">}</span> <span class="k">\quad</span> <span class="p">&amp;</span> <span class="k">\FUN</span>@ids <span class="k">\\</span>
+  <span class="k">\KEY</span><span class="p">{</span>Funcon<span class="p">}</span> <span class="k">\quad</span> <span class="p">&amp;</span> <span class="k">\FUN</span>@identifier@tagged <span class="k">\\</span>
+  <span class="k">\KEY</span><span class="p">{</span>Alias<span class="p">}</span> <span class="k">\quad</span> <span class="p">&amp;</span> <span class="k">\FUN</span>@id@tagged <span class="k">\\</span>
+  <span class="k">\KEY</span><span class="p">{</span>Funcon<span class="p">}</span> <span class="k">\quad</span> <span class="p">&amp;</span> <span class="k">\FUN</span>@fresh@identifier <span class="k">\\</span>
+  <span class="k">\KEY</span><span class="p">{</span>Entity<span class="p">}</span> <span class="k">\quad</span> <span class="p">&amp;</span> <span class="k">\FUN</span>@environment <span class="k">\\</span>
+  <span class="k">\KEY</span><span class="p">{</span>Alias<span class="p">}</span> <span class="k">\quad</span> <span class="p">&amp;</span> <span class="k">\FUN</span>@env <span class="k">\\</span>
+  <span class="k">\KEY</span><span class="p">{</span>Funcon<span class="p">}</span> <span class="k">\quad</span> <span class="p">&amp;</span> <span class="k">\FUN</span>@initialise@binding <span class="k">\\</span>
+  <span class="k">\KEY</span><span class="p">{</span>Funcon<span class="p">}</span> <span class="k">\quad</span> <span class="p">&amp;</span> <span class="k">\FUN</span>@bind@value <span class="k">\\</span>
+  <span class="k">\KEY</span><span class="p">{</span>Alias<span class="p">}</span> <span class="k">\quad</span> <span class="p">&amp;</span> <span class="k">\FUN</span>@bind <span class="k">\\</span>
+  <span class="k">\KEY</span><span class="p">{</span>Funcon<span class="p">}</span> <span class="k">\quad</span> <span class="p">&amp;</span> <span class="k">\FUN</span>@unbind <span class="k">\\</span>
+  <span class="k">\KEY</span><span class="p">{</span>Funcon<span class="p">}</span> <span class="k">\quad</span> <span class="p">&amp;</span> <span class="k">\FUN</span>@bound@directly <span class="k">\\</span>
+  <span class="k">\KEY</span><span class="p">{</span>Funcon<span class="p">}</span> <span class="k">\quad</span> <span class="p">&amp;</span> <span class="k">\FUN</span>@bound@value <span class="k">\\</span>
+  <span class="k">\KEY</span><span class="p">{</span>Alias<span class="p">}</span> <span class="k">\quad</span> <span class="p">&amp;</span> <span class="k">\FUN</span>@bound <span class="k">\\</span>
+  <span class="k">\KEY</span><span class="p">{</span>Funcon<span class="p">}</span> <span class="k">\quad</span> <span class="p">&amp;</span> <span class="k">\FUN</span>@closed <span class="k">\\</span>
+  <span class="k">\KEY</span><span class="p">{</span>Funcon<span class="p">}</span> <span class="k">\quad</span> <span class="p">&amp;</span> <span class="k">\FUN</span>@scope <span class="k">\\</span>
+  <span class="k">\KEY</span><span class="p">{</span>Funcon<span class="p">}</span> <span class="k">\quad</span> <span class="p">&amp;</span> <span class="k">\FUN</span>@accumulate <span class="k">\\</span>
+  <span class="k">\KEY</span><span class="p">{</span>Funcon<span class="p">}</span> <span class="k">\quad</span> <span class="p">&amp;</span> <span class="k">\FUN</span>@collateral <span class="k">\\</span>
+  <span class="k">\KEY</span><span class="p">{</span>Funcon<span class="p">}</span> <span class="k">\quad</span> <span class="p">&amp;</span> <span class="k">\FUN</span>@bind@recursively <span class="k">\\</span>
+  <span class="k">\KEY</span><span class="p">{</span>Funcon<span class="p">}</span> <span class="k">\quad</span> <span class="p">&amp;</span> <span class="k">\FUN</span>@recursive
+  <span class="k">\ </span>]
+<span class="nt">\end{align*}</span>
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Meta-variables<span class="p">}</span> <span class="k">\quad</span>
+  <span class="p">&amp;</span> <span class="k">\VAR</span><span class="p">{</span>T<span class="p">}</span> &lt;: <span class="k">\FUN</span>@values
+<span class="nt">\end{align*}</span>
+<span class="k">\paragraph</span><span class="p">{</span>Environments<span class="p">}</span><span class="k">\hypertarget</span><span class="p">{</span>environments<span class="p">}{}</span><span class="k">\label</span><span class="p">{</span>environments<span class="p">}</span>
+
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Type<span class="p">}</span> <span class="k">\quad</span> 
+  <span class="p">&amp;</span> <span class="k">\FUNDEC</span><span class="p">{</span>environments<span class="p">}</span>  
+    <span class="k">\leadsto</span> <span class="k">\FUN</span>@maps
+               (  <span class="k">\FUN</span>@identifiers, 
+                      <span class="k">\FUN</span>@values<span class="k">\QUERY</span> )
+<span class="k">\\</span>
+  <span class="k">\KEY</span><span class="p">{</span>Alias<span class="p">}</span> <span class="k">\quad</span>
+  <span class="p">&amp;</span> <span class="k">\FUNDEC</span><span class="p">{</span>envs<span class="p">}</span> = <span class="k">\FUN</span>@environments
+<span class="nt">\end{align*}</span>
+An environment represents bindings of identifiers to values.
+  Mapping an identifier to <span class="p">$</span><span class="o">(</span><span class="nb">   </span><span class="nv">\  </span><span class="o">)</span><span class="p">$</span> represents that its binding is hidden.
+
+Circularity in environments (due to recursive bindings) is represented using
+  bindings to cut-points called <span class="p">$</span><span class="nv">\FUN</span><span class="nb">@links</span><span class="p">$</span>. Funcons are provided for making
+  declarations recursive and for referring to bound values without explicit
+  mention of links, so their existence can generally be ignored.
+
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Datatype<span class="p">}</span> <span class="k">\quad</span> 
+  <span class="k">\FUNDEC</span><span class="p">{</span>identifiers<span class="p">}</span> 
+  <span class="k">\ </span>::= <span class="k">\ </span><span class="p">&amp;</span>
+  <span class="k">\{</span> <span class="k">\_</span> : <span class="k">\FUN</span>@strings <span class="k">\}</span> <span class="k">\mid</span> <span class="k">\FUNDEC</span><span class="p">{</span>identifier-tagged<span class="p">}</span>(
+                   <span class="k">\_</span> : <span class="k">\FUN</span>@identifiers, <span class="k">\_</span> : <span class="k">\FUN</span>@values)
+<span class="nt">\end{align*}</span>
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Alias<span class="p">}</span> <span class="k">\quad</span>
+  <span class="p">&amp;</span> <span class="k">\FUNDEC</span><span class="p">{</span>ids<span class="p">}</span> = <span class="k">\FUN</span>@identifiers
+<span class="k">\\</span>
+  <span class="k">\KEY</span><span class="p">{</span>Alias<span class="p">}</span> <span class="k">\quad</span>
+  <span class="p">&amp;</span> <span class="k">\FUNDEC</span><span class="p">{</span>id-tagged<span class="p">}</span> = <span class="k">\FUN</span>@identifier@tagged
+<span class="nt">\end{align*}</span>
+An identifier is either a string of characters, or an identifier tagged with
+  some value (e.g., with the identifier of a namespace).
+
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Funcon<span class="p">}</span> <span class="k">\quad</span>
+  <span class="p">&amp;</span> <span class="k">\FUNDEC</span><span class="p">{</span>fresh-identifier<span class="p">}</span> 
+    :  <span class="k">\TO</span> <span class="k">\FUN</span>@identifiers 
+<span class="nt">\end{align*}</span>
+<span class="p">$</span><span class="nv">\FUN</span><span class="nb">@fresh@identifier</span><span class="p">$</span> computes an identifier distinct from all previously
+  computed identifiers.
+
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Rule<span class="p">}</span> <span class="k">\quad</span>
+    <span class="p">&amp;</span> <span class="k">\FUN</span>@fresh@identifier <span class="k">\leadsto</span> 
+        <span class="k">\FUN</span>@identifier@tagged
+          (  <span class="k">\STRING</span><span class="p">{</span>generated<span class="p">}</span>, 
+                 <span class="k">\FUN</span>@fresh@atom )
+<span class="nt">\end{align*}</span>
+<span class="k">\paragraph</span><span class="p">{</span>Current bindings<span class="p">}</span><span class="k">\hypertarget</span><span class="p">{</span>current-bindings<span class="p">}{}</span><span class="k">\label</span><span class="p">{</span>current-bindings<span class="p">}</span>
+
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Entity<span class="p">}</span> <span class="k">\quad</span>
+  <span class="p">&amp;</span> <span class="k">\FUNDEC</span><span class="p">{</span>environment<span class="p">}</span>(<span class="k">\_</span> : <span class="k">\FUN</span>@environments) <span class="k">\vdash</span> <span class="k">\_</span> <span class="k">\TRANS</span>  <span class="k">\_</span>
+<span class="k">\\</span>
+  <span class="k">\KEY</span><span class="p">{</span>Alias<span class="p">}</span> <span class="k">\quad</span>
+  <span class="p">&amp;</span> <span class="k">\FUNDEC</span><span class="p">{</span>env<span class="p">}</span> = <span class="k">\FUN</span>@environment
+<span class="nt">\end{align*}</span>
+The environment entity allows a computation to refer to the current bindings
+  of identifiers to values.
+
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Funcon<span class="p">}</span> <span class="k">\quad</span>
+  <span class="p">&amp;</span> <span class="k">\FUNDEC</span><span class="p">{</span>initialise-binding<span class="p">}</span>(
+                     <span class="k">\VAR</span><span class="p">{</span>X<span class="p">}</span> :  <span class="k">\TO</span> <span class="k">\VAR</span><span class="p">{</span>T<span class="p">}</span>) 
+    :  <span class="k">\TO</span> <span class="k">\VAR</span><span class="p">{</span>T<span class="p">}</span> <span class="k">\\</span><span class="p">&amp;</span><span class="k">\quad</span>
+    <span class="k">\leadsto</span> <span class="k">\FUN</span>@initialise@linking
+               (  <span class="k">\FUN</span>@initialise@generating
+                       (  <span class="k">\FUN</span>@closed
+                               (  <span class="k">\VAR</span><span class="p">{</span>X<span class="p">}</span> ) ) )
+<span class="nt">\end{align*}</span>
+<span class="p">$</span><span class="nv">\FUN</span><span class="nb">@initialise@binding
+    </span><span class="o">(</span><span class="nb">  </span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">X</span><span class="p">}</span><span class="nb"> </span><span class="o">)</span><span class="p">$</span> ensures that <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">X</span><span class="p">}$</span> does not depend on non-local bindings.
+  It also ensures that the linking entity (used to represent potentially cyclic
+  bindings) and the generating entity (for creating fresh identifiers) are 
+  initialised.
+
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Funcon<span class="p">}</span> <span class="k">\quad</span>
+  <span class="p">&amp;</span> <span class="k">\FUNDEC</span><span class="p">{</span>bind-value<span class="p">}</span>(
+                     <span class="k">\VAR</span><span class="p">{</span>I<span class="p">}</span> : <span class="k">\FUN</span>@identifiers, <span class="k">\VAR</span><span class="p">{</span>V<span class="p">}</span> : <span class="k">\FUN</span>@values) 
+    :  <span class="k">\TO</span> <span class="k">\FUN</span>@environments <span class="k">\\</span><span class="p">&amp;</span><span class="k">\quad</span>
+    <span class="k">\leadsto</span> <span class="k">\{</span> <span class="k">\VAR</span><span class="p">{</span>I<span class="p">}</span> <span class="k">\mapsto</span> 
+                  <span class="k">\VAR</span><span class="p">{</span>V<span class="p">}</span> <span class="k">\}</span>
+<span class="k">\\</span>
+  <span class="k">\KEY</span><span class="p">{</span>Alias<span class="p">}</span> <span class="k">\quad</span>
+  <span class="p">&amp;</span> <span class="k">\FUNDEC</span><span class="p">{</span>bind<span class="p">}</span> = <span class="k">\FUN</span>@bind@value
+<span class="nt">\end{align*}</span>
+<span class="p">$</span><span class="nv">\FUN</span><span class="nb">@bind@value
+    </span><span class="o">(</span><span class="nb">  </span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">I</span><span class="p">}</span><span class="nb">, 
+           </span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">X</span><span class="p">}</span><span class="nb"> </span><span class="o">)</span><span class="p">$</span> computes the environment that binds only <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">I</span><span class="p">}$</span> to the value
+  computed by <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">X</span><span class="p">}$</span>.
+
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Funcon<span class="p">}</span> <span class="k">\quad</span>
+  <span class="p">&amp;</span> <span class="k">\FUNDEC</span><span class="p">{</span>unbind<span class="p">}</span>(
+                     <span class="k">\VAR</span><span class="p">{</span>I<span class="p">}</span> : <span class="k">\FUN</span>@identifiers) 
+    :  <span class="k">\TO</span> <span class="k">\FUN</span>@environments <span class="k">\\</span><span class="p">&amp;</span><span class="k">\quad</span>
+    <span class="k">\leadsto</span> <span class="k">\{</span> <span class="k">\VAR</span><span class="p">{</span>I<span class="p">}</span> <span class="k">\mapsto</span> 
+                  (   <span class="k">\  </span>) <span class="k">\}</span>
+<span class="nt">\end{align*}</span>
+<span class="p">$</span><span class="nv">\FUN</span><span class="nb">@unbind
+    </span><span class="o">(</span><span class="nb">  </span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">I</span><span class="p">}</span><span class="nb"> </span><span class="o">)</span><span class="p">$</span> computes the environment that hides the binding of <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">I</span><span class="p">}$</span>.
+
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Funcon<span class="p">}</span> <span class="k">\quad</span>
+  <span class="p">&amp;</span> <span class="k">\FUNDEC</span><span class="p">{</span>bound-directly<span class="p">}</span>(
+                     <span class="k">\_</span> : <span class="k">\FUN</span>@identifiers) 
+    :  <span class="k">\TO</span> <span class="k">\FUN</span>@values 
+<span class="nt">\end{align*}</span>
+<span class="p">$</span><span class="nv">\FUN</span><span class="nb">@bound@directly
+    </span><span class="o">(</span><span class="nb">  </span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">I</span><span class="p">}</span><span class="nb"> </span><span class="o">)</span><span class="p">$</span> returns the value to which <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">I</span><span class="p">}$</span> is currently bound, if any,
+  and otherwise fails.
+
+<span class="p">$</span><span class="nv">\FUN</span><span class="nb">@bound@directly
+    </span><span class="o">(</span><span class="nb">  </span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">I</span><span class="p">}</span><span class="nb"> </span><span class="o">)</span><span class="p">$</span> does <span class="k">\emph</span><span class="p">{</span>not<span class="p">}</span> follow links. It is used only in connection with
+  recursively-bound values when references are not encapsulated in abstractions.
+
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Rule<span class="p">}</span> <span class="k">\quad</span>
+    <span class="p">&amp;</span> <span class="k">\RULE</span><span class="p">{</span>
+        <span class="k">\FUN</span>@lookup
+          (  <span class="k">\VAR</span><span class="p">{</span><span class="k">\ensuremath</span><span class="p">{</span><span class="k">\rho</span><span class="p">}}</span>, 
+                 <span class="k">\VAR</span><span class="p">{</span>I<span class="p">}</span> ) <span class="k">\leadsto</span> 
+          (  <span class="k">\VAR</span><span class="p">{</span>V<span class="p">}</span> : <span class="k">\FUN</span>@values )
+      <span class="p">}{</span>
+        <span class="k">\FUN</span>@environment (  <span class="k">\VAR</span><span class="p">{</span><span class="k">\ensuremath</span><span class="p">{</span><span class="k">\rho</span><span class="p">}}</span> ) <span class="k">\vdash</span> <span class="k">\FUN</span>@bound@directly
+                      (  <span class="k">\VAR</span><span class="p">{</span>I<span class="p">}</span> : <span class="k">\FUN</span>@identifiers ) <span class="k">\TRANS</span> 
+          <span class="k">\VAR</span><span class="p">{</span>V<span class="p">}</span>
+      <span class="p">}</span>
+<span class="nt">\end{align*}</span>
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Rule<span class="p">}</span> <span class="k">\quad</span>
+    <span class="p">&amp;</span> <span class="k">\RULE</span><span class="p">{</span>
+        <span class="k">\FUN</span>@lookup
+          (  <span class="k">\VAR</span><span class="p">{</span><span class="k">\ensuremath</span><span class="p">{</span><span class="k">\rho</span><span class="p">}}</span>, 
+                 <span class="k">\VAR</span><span class="p">{</span>I<span class="p">}</span> ) <span class="k">\leadsto</span> 
+          (   <span class="k">\  </span>)
+      <span class="p">}{</span>
+        <span class="k">\FUN</span>@environment (  <span class="k">\VAR</span><span class="p">{</span><span class="k">\ensuremath</span><span class="p">{</span><span class="k">\rho</span><span class="p">}}</span> ) <span class="k">\vdash</span> <span class="k">\FUN</span>@bound@directly
+                      (  <span class="k">\VAR</span><span class="p">{</span>I<span class="p">}</span> : <span class="k">\FUN</span>@identifiers ) <span class="k">\TRANS</span> 
+          <span class="k">\FUN</span>@fail
+      <span class="p">}</span>
+<span class="nt">\end{align*}</span>
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Funcon<span class="p">}</span> <span class="k">\quad</span>
+  <span class="p">&amp;</span> <span class="k">\FUNDEC</span><span class="p">{</span>bound-value<span class="p">}</span>(
+                     <span class="k">\VAR</span><span class="p">{</span>I<span class="p">}</span> : <span class="k">\FUN</span>@identifiers) 
+    :  <span class="k">\TO</span> <span class="k">\FUN</span>@values <span class="k">\\</span><span class="p">&amp;</span><span class="k">\quad</span>
+    <span class="k">\leadsto</span> <span class="k">\FUN</span>@follow@if@link
+               (  <span class="k">\FUN</span>@bound@directly
+                       (  <span class="k">\VAR</span><span class="p">{</span>I<span class="p">}</span> ) )
+<span class="k">\\</span>
+  <span class="k">\KEY</span><span class="p">{</span>Alias<span class="p">}</span> <span class="k">\quad</span>
+  <span class="p">&amp;</span> <span class="k">\FUNDEC</span><span class="p">{</span>bound<span class="p">}</span> = <span class="k">\FUN</span>@bound@value
+<span class="nt">\end{align*}</span>
+<span class="p">$</span><span class="nv">\FUN</span><span class="nb">@bound@value
+    </span><span class="o">(</span><span class="nb">  </span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">I</span><span class="p">}</span><span class="nb"> </span><span class="o">)</span><span class="p">$</span> inspects the value to which <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">I</span><span class="p">}$</span> is currently bound, if any,
+   and otherwise fails. If the value is a link, <span class="p">$</span><span class="nv">\FUN</span><span class="nb">@bound@value
+    </span><span class="o">(</span><span class="nb">  </span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">I</span><span class="p">}</span><span class="nb"> </span><span class="o">)</span><span class="p">$</span> returns the
+   value obtained by following the link, if any, and otherwise fails. If the 
+   inspected value is not a link, <span class="p">$</span><span class="nv">\FUN</span><span class="nb">@bound@value
+    </span><span class="o">(</span><span class="nb">  </span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">I</span><span class="p">}</span><span class="nb"> </span><span class="o">)</span><span class="p">$</span> returns it.
+
+<span class="p">$</span><span class="nv">\FUN</span><span class="nb">@bound@value
+    </span><span class="o">(</span><span class="nb">  </span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">I</span><span class="p">}</span><span class="nb"> </span><span class="o">)</span><span class="p">$</span> is used for references to non-recursive bindings and to
+   recursively-bound values when references are encapsulated in abstractions.
+
+<span class="k">\paragraph</span><span class="p">{</span>Scope<span class="p">}</span><span class="k">\hypertarget</span><span class="p">{</span>scope<span class="p">}{}</span><span class="k">\label</span><span class="p">{</span>scope<span class="p">}</span>
+
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Funcon<span class="p">}</span> <span class="k">\quad</span>
+  <span class="p">&amp;</span> <span class="k">\FUNDEC</span><span class="p">{</span>closed<span class="p">}</span>(
+                     <span class="k">\VAR</span><span class="p">{</span>X<span class="p">}</span> :  <span class="k">\TO</span> <span class="k">\VAR</span><span class="p">{</span>T<span class="p">}</span>) 
+    :  <span class="k">\TO</span> <span class="k">\VAR</span><span class="p">{</span>T<span class="p">}</span> 
+<span class="nt">\end{align*}</span>
+<span class="p">$</span><span class="nv">\FUN</span><span class="nb">@closed
+    </span><span class="o">(</span><span class="nb">  </span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">X</span><span class="p">}</span><span class="nb"> </span><span class="o">)</span><span class="p">$</span> ensures that <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">X</span><span class="p">}$</span> does not depend on non-local bindings.
+
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Rule<span class="p">}</span> <span class="k">\quad</span>
+    <span class="p">&amp;</span> <span class="k">\RULE</span><span class="p">{</span>
+        <span class="k">\FUN</span>@environment (  <span class="k">\FUN</span>@map
+                        (   <span class="k">\  </span>) ) <span class="k">\vdash</span> <span class="k">\VAR</span><span class="p">{</span>X<span class="p">}</span> <span class="k">\TRANS</span> 
+          <span class="k">\VAR</span><span class="p">{</span>X<span class="p">}</span>'
+      <span class="p">}{</span>
+        <span class="k">\FUN</span>@environment (  <span class="k">\_</span> ) <span class="k">\vdash</span> <span class="k">\FUN</span>@closed
+                      (  <span class="k">\VAR</span><span class="p">{</span>X<span class="p">}</span> ) <span class="k">\TRANS</span> 
+          <span class="k">\FUN</span>@closed
+            (  <span class="k">\VAR</span><span class="p">{</span>X<span class="p">}</span>' )
+      <span class="p">}</span>
+<span class="nt">\end{align*}</span>
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Rule<span class="p">}</span> <span class="k">\quad</span>
+    <span class="p">&amp;</span> <span class="k">\FUN</span>@closed
+        (  <span class="k">\VAR</span><span class="p">{</span>V<span class="p">}</span> : <span class="k">\VAR</span><span class="p">{</span>T<span class="p">}</span> ) <span class="k">\leadsto</span> 
+        <span class="k">\VAR</span><span class="p">{</span>V<span class="p">}</span>
+<span class="nt">\end{align*}</span>
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Funcon<span class="p">}</span> <span class="k">\quad</span>
+  <span class="p">&amp;</span> <span class="k">\FUNDEC</span><span class="p">{</span>scope<span class="p">}</span>(
+                     <span class="k">\_</span> : <span class="k">\FUN</span>@environments, <span class="k">\_</span> :  <span class="k">\TO</span> <span class="k">\VAR</span><span class="p">{</span>T<span class="p">}</span>) 
+    :  <span class="k">\TO</span> <span class="k">\VAR</span><span class="p">{</span>T<span class="p">}</span> 
+<span class="nt">\end{align*}</span>
+<span class="p">$</span><span class="nv">\FUN</span><span class="nb">@scope
+    </span><span class="o">(</span><span class="nb">  </span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">D</span><span class="p">}</span><span class="nb">, 
+           </span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">X</span><span class="p">}</span><span class="nb"> </span><span class="o">)</span><span class="p">$</span> executes <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">D</span><span class="p">}$</span> with the current bindings, to compute an environment
+  <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nv">\ensuremath</span><span class="p">{</span><span class="nv">\rho</span><span class="p">}}$</span> representing local bindings. It then executes <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">X</span><span class="p">}$</span> to compute the result,
+  with the current bindings extended by <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nv">\ensuremath</span><span class="p">{</span><span class="nv">\rho</span><span class="p">}}$</span>, which may shadow or hide previous
+  bindings.
+
+<span class="p">$</span><span class="nv">\FUN</span><span class="nb">@closed
+    </span><span class="o">(</span><span class="nb">  </span><span class="nv">\FUN</span><span class="nb">@scope
+            </span><span class="o">(</span><span class="nb">  </span><span class="nv">\VAR</span><span class="p">{</span><span class="nv">\ensuremath</span><span class="p">{</span><span class="nv">\rho</span><span class="p">}}</span><span class="nb">, 
+                   </span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">X</span><span class="p">}</span><span class="nb"> </span><span class="o">)</span><span class="nb"> </span><span class="o">)</span><span class="p">$</span> ensures that <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">X</span><span class="p">}$</span> can reference only the bindings
+  provided by <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nv">\ensuremath</span><span class="p">{</span><span class="nv">\rho</span><span class="p">}}$</span>.
+
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Rule<span class="p">}</span> <span class="k">\quad</span>
+    <span class="p">&amp;</span> <span class="k">\RULE</span><span class="p">{</span>
+        <span class="k">\FUN</span>@environment (  <span class="k">\FUN</span>@map@override
+                        (  <span class="k">\VAR</span><span class="p">{</span><span class="k">\ensuremath</span><span class="p">{</span><span class="k">\rho</span><span class="p">}}</span><span class="k">\SUB</span><span class="p">{</span>1<span class="p">}</span>, 
+                               <span class="k">\VAR</span><span class="p">{</span><span class="k">\ensuremath</span><span class="p">{</span><span class="k">\rho</span><span class="p">}}</span><span class="k">\SUB</span><span class="p">{</span>0<span class="p">}</span> ) ) <span class="k">\vdash</span> <span class="k">\VAR</span><span class="p">{</span>X<span class="p">}</span> <span class="k">\TRANS</span> 
+          <span class="k">\VAR</span><span class="p">{</span>X<span class="p">}</span>'
+      <span class="p">}{</span>
+        <span class="k">\FUN</span>@environment (  <span class="k">\VAR</span><span class="p">{</span><span class="k">\ensuremath</span><span class="p">{</span><span class="k">\rho</span><span class="p">}}</span><span class="k">\SUB</span><span class="p">{</span>0<span class="p">}</span> ) <span class="k">\vdash</span> <span class="k">\FUN</span>@scope
+                      (  <span class="k">\VAR</span><span class="p">{</span><span class="k">\ensuremath</span><span class="p">{</span><span class="k">\rho</span><span class="p">}}</span><span class="k">\SUB</span><span class="p">{</span>1<span class="p">}</span> : <span class="k">\FUN</span>@environments, 
+                             <span class="k">\VAR</span><span class="p">{</span>X<span class="p">}</span> ) <span class="k">\TRANS</span> 
+          <span class="k">\FUN</span>@scope
+            (  <span class="k">\VAR</span><span class="p">{</span><span class="k">\ensuremath</span><span class="p">{</span><span class="k">\rho</span><span class="p">}}</span><span class="k">\SUB</span><span class="p">{</span>1<span class="p">}</span>, 
+                   <span class="k">\VAR</span><span class="p">{</span>X<span class="p">}</span>' )
+      <span class="p">}</span>
+<span class="nt">\end{align*}</span>
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Rule<span class="p">}</span> <span class="k">\quad</span>
+    <span class="p">&amp;</span> <span class="k">\FUN</span>@scope
+        (  <span class="k">\_</span> : <span class="k">\FUN</span>@environments, 
+               <span class="k">\VAR</span><span class="p">{</span>V<span class="p">}</span> : <span class="k">\VAR</span><span class="p">{</span>T<span class="p">}</span> ) <span class="k">\leadsto</span> 
+        <span class="k">\VAR</span><span class="p">{</span>V<span class="p">}</span>
+<span class="nt">\end{align*}</span>
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Funcon<span class="p">}</span> <span class="k">\quad</span>
+  <span class="p">&amp;</span> <span class="k">\FUNDEC</span><span class="p">{</span>accumulate<span class="p">}</span>(
+                     <span class="k">\_</span> : (   <span class="k">\TO</span> <span class="k">\FUN</span>@environments )<span class="k">\STAR</span>) 
+    :  <span class="k">\TO</span> <span class="k">\FUN</span>@environments 
+<span class="nt">\end{align*}</span>
+<span class="p">$</span><span class="nv">\FUN</span><span class="nb">@accumulate
+    </span><span class="o">(</span><span class="nb">  </span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">D</span><span class="p">}</span><span class="nv">\SUB</span><span class="p">{</span><span class="m">1</span><span class="p">}</span><span class="nb">, 
+           </span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">D</span><span class="p">}</span><span class="nv">\SUB</span><span class="p">{</span><span class="m">2</span><span class="p">}</span><span class="nb"> </span><span class="o">)</span><span class="p">$</span> executes <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">D</span><span class="p">}</span><span class="nv">\SUB</span><span class="p">{</span><span class="m">1</span><span class="p">}$</span> with the current bindings, to compute an
+  environment <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nv">\ensuremath</span><span class="p">{</span><span class="nv">\rho</span><span class="p">}}</span><span class="nv">\SUB</span><span class="p">{</span><span class="m">1</span><span class="p">}$</span> representing some local bindings. It then executes <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">D</span><span class="p">}</span><span class="nv">\SUB</span><span class="p">{</span><span class="m">2</span><span class="p">}$</span> to
+  compute an environment <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nv">\ensuremath</span><span class="p">{</span><span class="nv">\rho</span><span class="p">}}</span><span class="nv">\SUB</span><span class="p">{</span><span class="m">2</span><span class="p">}$</span> representing further local bindings, with the
+  current bindings extended by <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nv">\ensuremath</span><span class="p">{</span><span class="nv">\rho</span><span class="p">}}</span><span class="nv">\SUB</span><span class="p">{</span><span class="m">1</span><span class="p">}$</span>, which may shadow or hide previous
+  current bindings. The result is <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nv">\ensuremath</span><span class="p">{</span><span class="nv">\rho</span><span class="p">}}</span><span class="nv">\SUB</span><span class="p">{</span><span class="m">1</span><span class="p">}$</span> extended by <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nv">\ensuremath</span><span class="p">{</span><span class="nv">\rho</span><span class="p">}}</span><span class="nv">\SUB</span><span class="p">{</span><span class="m">2</span><span class="p">}$</span>, which may shadow
+  or hide the bindings of <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nv">\ensuremath</span><span class="p">{</span><span class="nv">\rho</span><span class="p">}}</span><span class="nv">\SUB</span><span class="p">{</span><span class="m">1</span><span class="p">}$</span>.
+
+<span class="p">$</span><span class="nv">\FUN</span><span class="nb">@accumulate
+    </span><span class="o">(</span><span class="nb">  </span><span class="nv">\_</span><span class="nb">, 
+           </span><span class="nv">\_</span><span class="nb"> </span><span class="o">)</span><span class="p">$</span> is associative, with <span class="p">$</span><span class="nv">\FUN</span><span class="nb">@map
+    </span><span class="o">(</span><span class="nb">   </span><span class="nv">\  </span><span class="o">)</span><span class="p">$</span> as unit, and extends to any
+  number of arguments.
+
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Rule<span class="p">}</span> <span class="k">\quad</span>
+    <span class="p">&amp;</span> <span class="k">\RULE</span><span class="p">{</span>
+         <span class="k">\VAR</span><span class="p">{</span>D<span class="p">}</span><span class="k">\SUB</span><span class="p">{</span>1<span class="p">}</span> <span class="k">\TRANS</span> 
+          <span class="k">\VAR</span><span class="p">{</span>D<span class="p">}</span><span class="k">\SUB</span><span class="p">{</span>1<span class="p">}</span>'
+      <span class="p">}{</span>
+         <span class="k">\FUN</span>@accumulate
+                      (  <span class="k">\VAR</span><span class="p">{</span>D<span class="p">}</span><span class="k">\SUB</span><span class="p">{</span>1<span class="p">}</span>, 
+                             <span class="k">\VAR</span><span class="p">{</span>D<span class="p">}</span><span class="k">\SUB</span><span class="p">{</span>2<span class="p">}</span> ) <span class="k">\TRANS</span> 
+          <span class="k">\FUN</span>@accumulate
+            (  <span class="k">\VAR</span><span class="p">{</span>D<span class="p">}</span><span class="k">\SUB</span><span class="p">{</span>1<span class="p">}</span>', 
+                   <span class="k">\VAR</span><span class="p">{</span>D<span class="p">}</span><span class="k">\SUB</span><span class="p">{</span>2<span class="p">}</span> )
+      <span class="p">}</span>
+<span class="nt">\end{align*}</span>
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Rule<span class="p">}</span> <span class="k">\quad</span>
+    <span class="p">&amp;</span> <span class="k">\FUN</span>@accumulate
+        (  <span class="k">\VAR</span><span class="p">{</span><span class="k">\ensuremath</span><span class="p">{</span><span class="k">\rho</span><span class="p">}}</span><span class="k">\SUB</span><span class="p">{</span>1<span class="p">}</span> : <span class="k">\FUN</span>@environments, 
+               <span class="k">\VAR</span><span class="p">{</span>D<span class="p">}</span><span class="k">\SUB</span><span class="p">{</span>2<span class="p">}</span> ) <span class="k">\leadsto</span> 
+        <span class="k">\FUN</span>@scope
+          (  <span class="k">\VAR</span><span class="p">{</span><span class="k">\ensuremath</span><span class="p">{</span><span class="k">\rho</span><span class="p">}}</span><span class="k">\SUB</span><span class="p">{</span>1<span class="p">}</span>, 
+                 <span class="k">\FUN</span>@map@override
+                  (  <span class="k">\VAR</span><span class="p">{</span>D<span class="p">}</span><span class="k">\SUB</span><span class="p">{</span>2<span class="p">}</span>, 
+                         <span class="k">\VAR</span><span class="p">{</span><span class="k">\ensuremath</span><span class="p">{</span><span class="k">\rho</span><span class="p">}}</span><span class="k">\SUB</span><span class="p">{</span>1<span class="p">}</span> ) )
+<span class="nt">\end{align*}</span>
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Rule<span class="p">}</span> <span class="k">\quad</span>
+    <span class="p">&amp;</span> <span class="k">\FUN</span>@accumulate
+        (   <span class="k">\  </span>) <span class="k">\leadsto</span> 
+        <span class="k">\FUN</span>@map
+          (   <span class="k">\  </span>)
+<span class="nt">\end{align*}</span>
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Rule<span class="p">}</span> <span class="k">\quad</span>
+    <span class="p">&amp;</span> <span class="k">\FUN</span>@accumulate
+        (  <span class="k">\VAR</span><span class="p">{</span>D<span class="p">}</span><span class="k">\SUB</span><span class="p">{</span>1<span class="p">}</span> ) <span class="k">\leadsto</span> 
+        <span class="k">\VAR</span><span class="p">{</span>D<span class="p">}</span><span class="k">\SUB</span><span class="p">{</span>1<span class="p">}</span>
+<span class="nt">\end{align*}</span>
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Rule<span class="p">}</span> <span class="k">\quad</span>
+    <span class="p">&amp;</span> <span class="k">\FUN</span>@accumulate
+        (  <span class="k">\VAR</span><span class="p">{</span>D<span class="p">}</span><span class="k">\SUB</span><span class="p">{</span>1<span class="p">}</span>, 
+               <span class="k">\VAR</span><span class="p">{</span>D<span class="p">}</span><span class="k">\SUB</span><span class="p">{</span>2<span class="p">}</span>, 
+               <span class="k">\VAR</span><span class="p">{</span>D<span class="p">}</span><span class="k">\PLUS</span> ) <span class="k">\leadsto</span> 
+        <span class="k">\FUN</span>@accumulate
+          (  <span class="k">\VAR</span><span class="p">{</span>D<span class="p">}</span><span class="k">\SUB</span><span class="p">{</span>1<span class="p">}</span>, 
+                 <span class="k">\FUN</span>@accumulate
+                  (  <span class="k">\VAR</span><span class="p">{</span>D<span class="p">}</span><span class="k">\SUB</span><span class="p">{</span>2<span class="p">}</span>, 
+                         <span class="k">\VAR</span><span class="p">{</span>D<span class="p">}</span><span class="k">\PLUS</span> ) )
+<span class="nt">\end{align*}</span>
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Funcon<span class="p">}</span> <span class="k">\quad</span>
+  <span class="p">&amp;</span> <span class="k">\FUNDEC</span><span class="p">{</span>collateral<span class="p">}</span>(
+                     <span class="k">\VAR</span><span class="p">{</span><span class="k">\ensuremath</span><span class="p">{</span><span class="k">\rho</span><span class="p">}}</span><span class="k">\STAR</span> : <span class="k">\FUN</span>@environments<span class="k">\STAR</span>) 
+    :  <span class="k">\TO</span> <span class="k">\FUN</span>@environments <span class="k">\\</span><span class="p">&amp;</span><span class="k">\quad</span>
+    <span class="k">\leadsto</span> <span class="k">\FUN</span>@checked <span class="k">\ 
+               \FUN</span>@map@unite
+                 (  <span class="k">\VAR</span><span class="p">{</span><span class="k">\ensuremath</span><span class="p">{</span><span class="k">\rho</span><span class="p">}}</span><span class="k">\STAR</span> )
+<span class="nt">\end{align*}</span>
+<span class="p">$</span><span class="nv">\FUN</span><span class="nb">@collateral
+    </span><span class="o">(</span><span class="nb">  </span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">D</span><span class="p">}</span><span class="nv">\SUB</span><span class="p">{</span><span class="m">1</span><span class="p">}</span><span class="nb">, 
+           </span><span class="nv">\cdots</span><span class="nb"> </span><span class="o">)</span><span class="p">$</span> pre-evaluates its arguments with the current bindings,
+  and unites the resulting maps, which fails if the domains are not pairwise
+  disjoint.
+
+<span class="p">$</span><span class="nv">\FUN</span><span class="nb">@collateral
+    </span><span class="o">(</span><span class="nb">  </span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">D</span><span class="p">}</span><span class="nv">\SUB</span><span class="p">{</span><span class="m">1</span><span class="p">}</span><span class="nb">, 
+           </span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">D</span><span class="p">}</span><span class="nv">\SUB</span><span class="p">{</span><span class="m">2</span><span class="p">}</span><span class="nb"> </span><span class="o">)</span><span class="p">$</span> is associative and commutative with <span class="p">$</span><span class="nv">\FUN</span><span class="nb">@map
+    </span><span class="o">(</span><span class="nb">   </span><span class="nv">\  </span><span class="o">)</span><span class="p">$</span> as unit, 
+  and extends to any number of arguments.
+
+<span class="k">\paragraph</span><span class="p">{</span>Recurse<span class="p">}</span><span class="k">\hypertarget</span><span class="p">{</span>recurse<span class="p">}{}</span><span class="k">\label</span><span class="p">{</span>recurse<span class="p">}</span>
+
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Funcon<span class="p">}</span> <span class="k">\quad</span>
+  <span class="p">&amp;</span> <span class="k">\FUNDEC</span><span class="p">{</span>bind-recursively<span class="p">}</span>(
+                     <span class="k">\VAR</span><span class="p">{</span>I<span class="p">}</span> : <span class="k">\FUN</span>@identifiers, <span class="k">\VAR</span><span class="p">{</span>E<span class="p">}</span> :  <span class="k">\TO</span> <span class="k">\FUN</span>@values) 
+    :  <span class="k">\TO</span> <span class="k">\FUN</span>@environments <span class="k">\\</span><span class="p">&amp;</span><span class="k">\quad</span>
+    <span class="k">\leadsto</span> <span class="k">\FUN</span>@recursive
+               (  <span class="k">\{</span>  <span class="k">\VAR</span><span class="p">{</span>I<span class="p">}</span> <span class="k">\}</span>, 
+                      <span class="k">\FUN</span>@bind@value
+                       (  <span class="k">\VAR</span><span class="p">{</span>I<span class="p">}</span>, 
+                              <span class="k">\VAR</span><span class="p">{</span>E<span class="p">}</span> ) )
+<span class="nt">\end{align*}</span>
+<span class="p">$</span><span class="nv">\FUN</span><span class="nb">@bind@recursively
+    </span><span class="o">(</span><span class="nb">  </span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">I</span><span class="p">}</span><span class="nb">, 
+           </span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">E</span><span class="p">}</span><span class="nb"> </span><span class="o">)</span><span class="p">$</span> binds <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">I</span><span class="p">}$</span> to a link that refers to the value of <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">E</span><span class="p">}$</span>, 
+  representing a recursive binding of <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">I</span><span class="p">}$</span> to the value of <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">E</span><span class="p">}$</span>.
+  Since <span class="p">$</span><span class="nv">\FUN</span><span class="nb">@bound@value
+    </span><span class="o">(</span><span class="nb">  </span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">I</span><span class="p">}</span><span class="nb"> </span><span class="o">)</span><span class="p">$</span> follows links, it should not be executed during the
+  evaluation of <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">E</span><span class="p">}$</span>.
+
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Funcon<span class="p">}</span> <span class="k">\quad</span>
+  <span class="p">&amp;</span> <span class="k">\FUNDEC</span><span class="p">{</span>recursive<span class="p">}</span>(
+                     <span class="k">\VAR</span><span class="p">{</span>SI<span class="p">}</span> : <span class="k">\FUN</span>@sets
+                               (  <span class="k">\FUN</span>@identifiers ), <span class="k">\VAR</span><span class="p">{</span>D<span class="p">}</span> :  <span class="k">\TO</span> <span class="k">\FUN</span>@environments) 
+    :  <span class="k">\TO</span> <span class="k">\FUN</span>@environments <span class="k">\\</span><span class="p">&amp;</span><span class="k">\quad</span>
+    <span class="k">\leadsto</span> <span class="k">\FUN</span>@re@close
+               (  <span class="k">\FUN</span>@bind@to@forward@links
+                       (  <span class="k">\VAR</span><span class="p">{</span>SI<span class="p">}</span> ), 
+                      <span class="k">\VAR</span><span class="p">{</span>D<span class="p">}</span> )
+<span class="nt">\end{align*}</span>
+<span class="p">$</span><span class="nv">\FUN</span><span class="nb">@recursive
+    </span><span class="o">(</span><span class="nb">  </span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">SI</span><span class="p">}</span><span class="nb">, 
+           </span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">D</span><span class="p">}</span><span class="nb"> </span><span class="o">)</span><span class="p">$</span> executes <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">D</span><span class="p">}$</span> with potential recursion on the bindings of 
+  the identifiers in the set <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">SI</span><span class="p">}$</span> (which need not be the same as the set of
+  identifiers bound by <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">D</span><span class="p">}$</span>).
+
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Auxiliary Funcon<span class="p">}</span> <span class="k">\quad</span>
+  <span class="p">&amp;</span> <span class="k">\FUNDEC</span><span class="p">{</span>re-close<span class="p">}</span>(
+                     <span class="k">\VAR</span><span class="p">{</span>M<span class="p">}</span> : <span class="k">\FUN</span>@maps
+                               (  <span class="k">\FUN</span>@identifiers, 
+                                      <span class="k">\FUN</span>@links ), <span class="k">\VAR</span><span class="p">{</span>D<span class="p">}</span> :  <span class="k">\TO</span> <span class="k">\FUN</span>@environments) 
+    :  <span class="k">\TO</span> <span class="k">\FUN</span>@environments <span class="k">\\</span><span class="p">&amp;</span><span class="k">\quad</span>
+    <span class="k">\leadsto</span> <span class="k">\FUN</span>@accumulate
+               (  <span class="k">\FUN</span>@scope
+                       (  <span class="k">\VAR</span><span class="p">{</span>M<span class="p">}</span>, 
+                              <span class="k">\VAR</span><span class="p">{</span>D<span class="p">}</span> ), 
+                      <span class="k">\FUN</span>@sequential
+                       (  <span class="k">\FUN</span>@set@forward@links
+                               (  <span class="k">\VAR</span><span class="p">{</span>M<span class="p">}</span> ), 
+                              <span class="k">\FUN</span>@map
+                               (   <span class="k">\  </span>) ) )
+<span class="nt">\end{align*}</span>
+<span class="p">$</span><span class="nv">\FUN</span><span class="nb">@re@close
+    </span><span class="o">(</span><span class="nb">  </span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">M</span><span class="p">}</span><span class="nb">, 
+           </span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">D</span><span class="p">}</span><span class="nb"> </span><span class="o">)</span><span class="p">$</span> first executes <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">D</span><span class="p">}$</span> in the scope <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">M</span><span class="p">}$</span>, which maps identifiers
+  to freshly allocated links. This computes an environment <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nv">\ensuremath</span><span class="p">{</span><span class="nv">\rho</span><span class="p">}}$</span> where the bound
+  values may contain links, or implicit references to links in abstraction
+  values. It then sets the link for each identifier in the domain of <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">M</span><span class="p">}$</span> to
+  refer to its bound value in <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nv">\ensuremath</span><span class="p">{</span><span class="nv">\rho</span><span class="p">}}$</span>, and returns <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nv">\ensuremath</span><span class="p">{</span><span class="nv">\rho</span><span class="p">}}$</span> as the result.
+
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Auxiliary Funcon<span class="p">}</span> <span class="k">\quad</span>
+  <span class="p">&amp;</span> <span class="k">\FUNDEC</span><span class="p">{</span>bind-to-forward-links<span class="p">}</span>(
+                     <span class="k">\VAR</span><span class="p">{</span>SI<span class="p">}</span> : <span class="k">\FUN</span>@sets
+                               (  <span class="k">\FUN</span>@identifiers )) 
+    :  <span class="k">\TO</span> <span class="k">\FUN</span>@maps
+                     (  <span class="k">\FUN</span>@identifiers, 
+                            <span class="k">\FUN</span>@links ) <span class="k">\\</span><span class="p">&amp;</span><span class="k">\quad</span>
+    <span class="k">\leadsto</span> <span class="k">\FUN</span>@map@unite
+               ( <span class="k">\\</span><span class="p">&amp;</span><span class="k">\quad\quad\quad\quad</span> <span class="k">\FUN</span>@interleave@map
+                       ( <span class="k">\\</span><span class="p">&amp;</span><span class="k">\quad\quad\quad\quad\quad</span> <span class="k">\FUN</span>@bind@value
+                               (  <span class="k">\FUN</span>@given, 
+                                      <span class="k">\FUN</span>@fresh@link
+                                       (  <span class="k">\FUN</span>@values ) ), <span class="k">\\</span><span class="p">&amp;</span><span class="k">\quad\quad\quad\quad\quad</span>
+                              <span class="k">\FUN</span>@set@elements
+                               (  <span class="k">\VAR</span><span class="p">{</span>SI<span class="p">}</span> ) ) )
+<span class="nt">\end{align*}</span>
+<span class="p">$</span><span class="nv">\FUN</span><span class="nb">@bind@to@forward@links
+    </span><span class="o">(</span><span class="nb">  </span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">SI</span><span class="p">}</span><span class="nb"> </span><span class="o">)</span><span class="p">$</span> binds each identifier in the set <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">SI</span><span class="p">}$</span> to a
+  freshly allocated link.
+
+<span class="nt">\begin{align*}</span>
+  <span class="k">\KEY</span><span class="p">{</span>Auxiliary Funcon<span class="p">}</span> <span class="k">\quad</span>
+  <span class="p">&amp;</span> <span class="k">\FUNDEC</span><span class="p">{</span>set-forward-links<span class="p">}</span>(
+                     <span class="k">\VAR</span><span class="p">{</span>M<span class="p">}</span> : <span class="k">\FUN</span>@maps
+                               (  <span class="k">\FUN</span>@identifiers, 
+                                      <span class="k">\FUN</span>@links )) 
+    :  <span class="k">\TO</span> <span class="k">\FUN</span>@null@type <span class="k">\\</span><span class="p">&amp;</span><span class="k">\quad</span>
+    <span class="k">\leadsto</span> <span class="k">\FUN</span>@effect
+               ( <span class="k">\\</span><span class="p">&amp;</span><span class="k">\quad\quad\quad\quad</span> <span class="k">\FUN</span>@interleave@map
+                       ( <span class="k">\\</span><span class="p">&amp;</span><span class="k">\quad\quad\quad\quad\quad</span> <span class="k">\FUN</span>@set@link
+                               (  <span class="k">\FUN</span>@map@lookup
+                                       (  <span class="k">\VAR</span><span class="p">{</span>M<span class="p">}</span>, 
+                                              <span class="k">\FUN</span>@given ), 
+                                      <span class="k">\FUN</span>@bound@value
+                                       (  <span class="k">\FUN</span>@given ) ), <span class="k">\\</span><span class="p">&amp;</span><span class="k">\quad\quad\quad\quad\quad</span>
+                              <span class="k">\FUN</span>@set@elements
+                               (  <span class="k">\FUN</span>@map@domain
+                                       (  <span class="k">\VAR</span><span class="p">{</span>M<span class="p">}</span> ) ) ) )
+<span class="nt">\end{align*}</span>
+For each identifier <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">I</span><span class="p">}$</span> in the domain of <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">M</span><span class="p">}$</span>, <span class="p">$</span><span class="nv">\FUN</span><span class="nb">@set@forward@links
+    </span><span class="o">(</span><span class="nb">  </span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">M</span><span class="p">}</span><span class="nb"> </span><span class="o">)</span><span class="p">$</span> sets the 
+  link to which <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">I</span><span class="p">}$</span> is mapped by <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">M</span><span class="p">}$</span> to the current bound value of <span class="p">$</span><span class="nv">\VAR</span><span class="p">{</span><span class="nb">I</span><span class="p">}$</span>.
+
+<span class="c">% </span>
+
+
+
+</code></pre></div></div>
+          <hr>
+      </div>
+    </div>
+      <div class="search-overlay"></div>
+  </div>
+  <script type="text/javascript" src="/cbs-latex/assets/js/toggle_mode.js"></script>
+</body>
+</html>

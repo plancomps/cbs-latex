@@ -1,0 +1,28 @@
+% cbs-latex-lncs.sty
+
+% For formatting a Springer LNCS article that uses a limited subset of CBS. 
+
+\NeedsTeXFormat{LaTeX2e}
+
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{stmaryrd}
+\RequirePackage{textcomp}
+\RequirePackage[svgnames]{xcolor}
+\RequirePackage{hyperref}
+
+\newcommand{\KEY}[1]{\textcolor{Gray}{\textsf{#1}}}
+\newcommand{\LEX}[1]{\textcolor{Gray}{\textsf{‘}}\texttt{#1}\textcolor{Gray}{\textsf{’}}}
+\newcommand{\VAR}[1]{\textit{#1}}
+
+\newcommand{\NAME}[1]{\textcolor{DarkRed}{\textsf{#1}}}
+\newcommand{\SYN}[1]{\textcolor{DarkGreen}{\textsf{#1}}}
+\newcommand{\SEM}[1]{\textcolor{DarkBlue}{\textsf{#1}}}
+\newcommand{\LEFTPHRASE}{[\![}
+\newcommand{\RIGHTPHRASE}{]\!]}
+
+\newcommand{\RULE}[2]{\frac{\begin{aligned}#1\end{aligned}}{\begin{aligned}#2\end{aligned}}}
+\newcommand{\AXIOM}[1]{\begin{aligned}#1\end{aligned}}
+
+\newcommand{\TO}{\mathop{\Rightarrow}}
+\newcommand{\TRANS}{\longrightarrow}

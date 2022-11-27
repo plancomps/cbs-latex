@@ -1,0 +1,747 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Binding.md - CBS-LaTeX</title>
+  <link rel="shortcut icon" href="/cbs-latex/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/cbs-latex/assets/css/just-the-docs-default.css">
+    <script type="text/javascript" src="/cbs-latex/assets/js/vendor/lunr.min.js"></script>
+  <script type="text/javascript" src="/cbs-latex/assets/js/just-the-docs.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Binding.md | CBS-LaTeX</title>
+<meta name="generator" content="Jekyll v4.3.1" />
+<meta property="og:title" content="Binding.md" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This site illustrates how CBS specifications of languages and funcons could be formatted for the web using LaTeX, Markdown, KaTeX, and MathJax. One of the aims is for CBS on web pages look like the CBS in published papers, using mathematical symbols instead of plain text." />
+<meta property="og:description" content="This site illustrates how CBS specifications of languages and funcons could be formatted for the web using LaTeX, Markdown, KaTeX, and MathJax. One of the aims is for CBS on web pages look like the CBS in published papers, using mathematical symbols instead of plain text." />
+<link rel="canonical" href="https://plancomps.github.io/cbs-latex/docs/kramdown/Binding.md.html" />
+<meta property="og:url" content="https://plancomps.github.io/cbs-latex/docs/kramdown/Binding.md.html" />
+<meta property="og:site_name" content="CBS-LaTeX" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Binding.md" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"This site illustrates how CBS specifications of languages and funcons could be formatted for the web using LaTeX, Markdown, KaTeX, and MathJax. One of the aims is for CBS on web pages look like the CBS in published papers, using mathematical symbols instead of plain text.","headline":"Binding.md","url":"https://plancomps.github.io/cbs-latex/docs/kramdown/Binding.md.html"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- https://www.primative.net/blog/how-to-get-rid-of-the-flash-of-unstyled-content/ -->
+<style>
+  .no-js {
+    visibility: visible;
+  }
+</style>
+<link rel="shortcut icon" type="image/x-icon"   href="/cbs-latex/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180"    href="/cbs-latex/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/cbs-latex/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/cbs-latex/assets/icons/favicon-16x16.png">
+<link rel="mask-icon" href="/cbs-latex/assets/icons/safari-pinned-tab.svg">
+<link rel="manifest"  href="/cbs-latex/assets/icons/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="svg-link" viewBox="0 0 24 24">
+      <title>Link</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </symbol>
+    <symbol id="svg-search" viewBox="0 0 24 24">
+      <title>Search</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-menu" viewBox="0 0 24 24">
+      <title>Menu</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+      <title>Expand</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </symbol>
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+      <title>Document</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+      </svg>
+    </symbol>
+  </svg>
+  <script type="text/javascript" src="/cbs-latex/assets/js/toggle_init.js"></script>
+  <div class="side-bar">
+    <div class="site-header">
+      <a href="/cbs-latex/" class="site-title lh-tight">
+  CBS-LaTeX
+</a>
+      <a href="#" id="menu-button" class="site-button">
+        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+      </a>
+    </div>
+  <button id="theme-toggle" onclick="modeSwitcher()" 
+    type="button" name="button" class="btn theme-toggle" ></button>
+  <script>
+    function modeSwitcher() {
+      let currentMode = document.documentElement.getAttribute('data-theme');
+      if (currentMode === "dark") {
+        document.documentElement.setAttribute('data-theme', 'light');
+        window.localStorage.setItem('theme', 'light');
+        document.getElementById("theme-toggle").innerHTML = "&rarr; Dark Mode";
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        window.localStorage.setItem('theme', 'dark');
+        document.getElementById("theme-toggle").innerHTML = "&rarr; Light Mode";
+      }
+    }
+  </script>
+    <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
+      <ul class="nav-list"><li class="nav-list-item"><a href="/cbs-latex/docs/intro.html" class="nav-list-link">Introduction</a></li>
+<li class="nav-list-item"><a href="/cbs-latex/docs/local.html" class="nav-list-link">Local browsing</a></li>
+<li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="/cbs-latex/docs/macros.html" class="nav-list-link">Macros</a><ul class="nav-list"><li class="nav-list-item"><a href="/cbs-latex/docs/katex/cbs-katex.html" class="nav-list-link">CBS-KaTeX</a></li>
+<li class="nav-list-item"><a href="/cbs-latex/docs/latex/cbs-latex.html" class="nav-list-link">CBS-LaTeX</a></li>
+<li class="nav-list-item"><a href="/cbs-latex/docs/mathjax-3/cbs-mathjax.html" class="nav-list-link">CBS-MathJax</a></li>
+<li class="nav-list-item"><a href="/cbs-latex/docs/mathjax-2.7/cbs-mathjax-2.7.html" class="nav-list-link">CBS-MathJax-2.7</a></li>
+<li class="nav-list-item"><a href="/cbs-latex/docs/mathjax-2.7/cbs-mathjax-lncs.html" class="nav-list-link">CBS-MathJax-LNCS</a></li>
+</ul>
+</li>
+<li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="/cbs-latex/docs/samples.html" class="nav-list-link">Samples</a><ul class="nav-list"><li class="nav-list-item"><a href="/cbs-latex/docs/katex/Binding.html" class="nav-list-link">Funcon specifications</a></li>
+<li class="nav-list-item"><a href="/cbs-latex/docs/katex/SIMPLE-3-Statements.html" class="nav-list-link">Language specifications</a></li>
+<li class="nav-list-item"><a href="/cbs-latex/docs/katex/TEST-Start.html" class="nav-list-link">ASCII Tests</a></li>
+</ul>
+</li>
+</ul>
+    </nav>
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  </div>
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+        <div class="search">
+          <div class="search-input-wrap">
+            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search CBS-LaTeX" aria-label="Search CBS-LaTeX" autocomplete="off">
+            <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+        <nav aria-label="Auxiliary" class="aux-nav">
+          <ul class="aux-nav-list">
+              <li class="aux-nav-list-item">
+                <a href="https://github.com/plancomps/cbs-latex" class="site-button"
+                >
+                  CBS-LaTeX on GitHub
+                </a>
+              </li>
+          </ul>
+        </nav>
+    </div>
+    <div id="main-content-wrap" class="main-content-wrap">
+      <div id="main-content" class="main-content" role="main">
+          <h1 id="bindingmd">
+          <a href="#bindingmd" class="anchor-heading" aria-labelledby="bindingmd"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Binding.md
+      </h1>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{::comment}{:/}
+<span class="nt">&lt;details</span> <span class="na">open</span> <span class="na">markdown=</span><span class="s">"block"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;summary&gt;</span>
+    OUTLINE
+  <span class="nt">&lt;/summary&gt;</span>
+  {: .text-delta }
+<span class="p">-</span> TOC
+{:toc}
+<span class="nt">&lt;/details&gt;</span><span class="sb">
+
+
+</span><span class="p">----
+</span>
+<span class="gu">### Binding</span>
+               <span class="sb">
+
+
+</span>$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  [ <span class="err">\</span>
+  <span class="se">\K</span>EY{Type} <span class="se">\q</span>uad &amp; <span class="se">\F</span>UN@environments <span class="se">\\</span>
+  <span class="se">\K</span>EY{Alias} <span class="se">\q</span>uad &amp; <span class="se">\F</span>UN@envs <span class="se">\\</span>
+  <span class="se">\K</span>EY{Datatype} <span class="se">\q</span>uad &amp; <span class="se">\F</span>UN@identifiers <span class="se">\\</span>
+  <span class="se">\K</span>EY{Alias} <span class="se">\q</span>uad &amp; <span class="se">\F</span>UN@ids <span class="se">\\</span>
+  <span class="se">\K</span>EY{Funcon} <span class="se">\q</span>uad &amp; <span class="se">\F</span>UN@identifier@tagged <span class="se">\\</span>
+  <span class="se">\K</span>EY{Alias} <span class="se">\q</span>uad &amp; <span class="se">\F</span>UN@id@tagged <span class="se">\\</span>
+  <span class="se">\K</span>EY{Funcon} <span class="se">\q</span>uad &amp; <span class="se">\F</span>UN@fresh@identifier <span class="se">\\</span>
+  <span class="se">\K</span>EY{Entity} <span class="se">\q</span>uad &amp; <span class="se">\F</span>UN@environment <span class="se">\\</span>
+  <span class="se">\K</span>EY{Alias} <span class="se">\q</span>uad &amp; <span class="se">\F</span>UN@env <span class="se">\\</span>
+  <span class="se">\K</span>EY{Funcon} <span class="se">\q</span>uad &amp; <span class="se">\F</span>UN@initialise@binding <span class="se">\\</span>
+  <span class="se">\K</span>EY{Funcon} <span class="se">\q</span>uad &amp; <span class="se">\F</span>UN@bind@value <span class="se">\\</span>
+  <span class="se">\K</span>EY{Alias} <span class="se">\q</span>uad &amp; <span class="se">\F</span>UN@bind <span class="se">\\</span>
+  <span class="se">\K</span>EY{Funcon} <span class="se">\q</span>uad &amp; <span class="se">\F</span>UN@unbind <span class="se">\\</span>
+  <span class="se">\K</span>EY{Funcon} <span class="se">\q</span>uad &amp; <span class="se">\F</span>UN@bound@directly <span class="se">\\</span>
+  <span class="se">\K</span>EY{Funcon} <span class="se">\q</span>uad &amp; <span class="se">\F</span>UN@bound@value <span class="se">\\</span>
+  <span class="se">\K</span>EY{Alias} <span class="se">\q</span>uad &amp; <span class="se">\F</span>UN@bound <span class="se">\\</span>
+  <span class="se">\K</span>EY{Funcon} <span class="se">\q</span>uad &amp; <span class="se">\F</span>UN@closed <span class="se">\\</span>
+  <span class="se">\K</span>EY{Funcon} <span class="se">\q</span>uad &amp; <span class="se">\F</span>UN@scope <span class="se">\\</span>
+  <span class="se">\K</span>EY{Funcon} <span class="se">\q</span>uad &amp; <span class="se">\F</span>UN@accumulate <span class="se">\\</span>
+  <span class="se">\K</span>EY{Funcon} <span class="se">\q</span>uad &amp; <span class="se">\F</span>UN@collateral <span class="se">\\</span>
+  <span class="se">\K</span>EY{Funcon} <span class="se">\q</span>uad &amp; <span class="se">\F</span>UN@bind@recursively <span class="se">\\</span>
+  <span class="se">\K</span>EY{Funcon} <span class="se">\q</span>uad &amp; <span class="se">\F</span>UN@recursive
+  <span class="se">\ </span>]
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$
+
+$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Meta-variables} <span class="se">\q</span>uad
+  &amp; <span class="se">\V</span>AR{T} &lt;: <span class="se">\F</span>UN@values
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$
+
+<span class="gu">#### Environments</span>
+               <span class="sb">
+
+
+</span>$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Type} <span class="se">\q</span>uad 
+  &amp; <span class="se">\F</span>UNDEC{environments}  
+    <span class="se">\l</span>eadsto <span class="se">\F</span>UN@maps
+               (  <span class="se">\F</span>UN@identifiers, 
+                      <span class="se">\F</span>UN@values<span class="se">\Q</span>UERY )
+<span class="se">\\</span>
+  <span class="se">\K</span>EY{Alias} <span class="se">\q</span>uad
+  &amp; <span class="se">\F</span>UNDEC{envs} = <span class="se">\F</span>UN@environments
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$<span class="sb">
+
+
+</span>  An environment represents bindings of identifiers to values.
+  Mapping an identifier to $$(   <span class="se">\ </span> )$$ represents that its binding is hidden.
+  
+  Circularity in environments (due to recursive bindings) is represented using
+  bindings to cut-points called $$<span class="se">\F</span>UN@links$$. Funcons are provided for making
+  declarations recursive and for referring to bound values without explicit
+  mention of links, so their existence can generally be ignored.<span class="sb">
+
+
+</span>$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Datatype} <span class="se">\q</span>uad 
+  <span class="se">\F</span>UNDEC{identifiers} 
+  <span class="se">\ </span>::= <span class="se">\ </span>&amp;
+  <span class="se">\{</span> <span class="se">\_</span> : <span class="se">\F</span>UN@strings <span class="se">\}</span> <span class="se">\m</span>id <span class="se">\F</span>UNDEC{identifier-tagged}(
+                   <span class="se">\_</span> : <span class="se">\F</span>UN@identifiers, <span class="se">\_</span> : <span class="se">\F</span>UN@values)
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$
+
+$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Alias} <span class="se">\q</span>uad
+  &amp; <span class="se">\F</span>UNDEC{ids} = <span class="se">\F</span>UN@identifiers
+<span class="se">\\</span>
+  <span class="se">\K</span>EY{Alias} <span class="se">\q</span>uad
+  &amp; <span class="se">\F</span>UNDEC{id-tagged} = <span class="se">\F</span>UN@identifier@tagged
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$<span class="sb">
+
+
+</span>  An identifier is either a string of characters, or an identifier tagged with
+  some value (e.g., with the identifier of a namespace).<span class="sb">
+
+
+</span>$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Funcon} <span class="se">\q</span>uad
+  &amp; <span class="se">\F</span>UNDEC{fresh-identifier} 
+    :  <span class="se">\T</span>O <span class="se">\F</span>UN@identifiers 
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$<span class="sb">
+
+
+</span>  $$<span class="se">\F</span>UN@fresh@identifier$$ computes an identifier distinct from all previously
+  computed identifiers.<span class="sb">
+
+
+</span>$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Rule} <span class="se">\q</span>uad
+    &amp; <span class="se">\F</span>UN@fresh@identifier <span class="se">\l</span>eadsto 
+        <span class="se">\F</span>UN@identifier@tagged
+          (  <span class="se">\S</span>TRING{generated}, 
+                 <span class="se">\F</span>UN@fresh@atom )
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$
+
+<span class="gu">#### Current bindings</span>
+               <span class="sb">
+
+
+</span>$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Entity} <span class="se">\q</span>uad
+  &amp; <span class="se">\F</span>UNDEC{environment}(<span class="se">\_</span> : <span class="se">\F</span>UN@environments) <span class="se">\v</span>dash <span class="se">\_</span> <span class="se">\T</span>RANS  <span class="se">\_</span>
+<span class="se">\\</span>
+  <span class="se">\K</span>EY{Alias} <span class="se">\q</span>uad
+  &amp; <span class="se">\F</span>UNDEC{env} = <span class="se">\F</span>UN@environment
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$<span class="sb">
+
+
+</span>  The environment entity allows a computation to refer to the current bindings
+  of identifiers to values.<span class="sb">
+
+
+</span>$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Funcon} <span class="se">\q</span>uad
+  &amp; <span class="se">\F</span>UNDEC{initialise-binding}(
+                     <span class="se">\V</span>AR{X} :  <span class="se">\T</span>O <span class="se">\V</span>AR{T}) 
+    :  <span class="se">\T</span>O <span class="se">\V</span>AR{T} <span class="se">\\</span>&amp;<span class="se">\q</span>uad
+    <span class="se">\l</span>eadsto <span class="se">\F</span>UN@initialise@linking
+               (  <span class="se">\F</span>UN@initialise@generating
+                       (  <span class="se">\F</span>UN@closed
+                               (  <span class="se">\V</span>AR{X} ) ) )
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$<span class="sb">
+
+
+</span>  $$<span class="se">\F</span>UN@initialise@binding
+    (  <span class="se">\V</span>AR{X} )$$ ensures that $$<span class="se">\V</span>AR{X}$$ does not depend on non-local bindings.
+  It also ensures that the linking entity (used to represent potentially cyclic
+  bindings) and the generating entity (for creating fresh identifiers) are 
+  initialised.<span class="sb">
+
+
+</span>$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Funcon} <span class="se">\q</span>uad
+  &amp; <span class="se">\F</span>UNDEC{bind-value}(
+                     <span class="se">\V</span>AR{I} : <span class="se">\F</span>UN@identifiers, <span class="se">\V</span>AR{V} : <span class="se">\F</span>UN@values) 
+    :  <span class="se">\T</span>O <span class="se">\F</span>UN@environments <span class="se">\\</span>&amp;<span class="se">\q</span>uad
+    <span class="se">\l</span>eadsto <span class="se">\{</span> <span class="se">\V</span>AR{I} <span class="se">\m</span>apsto 
+                  <span class="se">\V</span>AR{V} <span class="se">\}</span>
+<span class="se">\\</span>
+  <span class="se">\K</span>EY{Alias} <span class="se">\q</span>uad
+  &amp; <span class="se">\F</span>UNDEC{bind} = <span class="se">\F</span>UN@bind@value
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$<span class="sb">
+
+
+</span>  $$<span class="se">\F</span>UN@bind@value
+    (  <span class="se">\V</span>AR{I}, 
+           <span class="se">\V</span>AR{X} )$$ computes the environment that binds only $$<span class="se">\V</span>AR{I}$$ to the value
+  computed by $$<span class="se">\V</span>AR{X}$$.<span class="sb">
+
+
+</span>$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Funcon} <span class="se">\q</span>uad
+  &amp; <span class="se">\F</span>UNDEC{unbind}(
+                     <span class="se">\V</span>AR{I} : <span class="se">\F</span>UN@identifiers) 
+    :  <span class="se">\T</span>O <span class="se">\F</span>UN@environments <span class="se">\\</span>&amp;<span class="se">\q</span>uad
+    <span class="se">\l</span>eadsto <span class="se">\{</span> <span class="se">\V</span>AR{I} <span class="se">\m</span>apsto 
+                  (   <span class="se">\ </span> ) <span class="se">\}</span>
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$<span class="sb">
+
+
+</span>  $$<span class="se">\F</span>UN@unbind
+    (  <span class="se">\V</span>AR{I} )$$ computes the environment that hides the binding of $$<span class="se">\V</span>AR{I}$$.<span class="sb">
+
+
+</span>$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Funcon} <span class="se">\q</span>uad
+  &amp; <span class="se">\F</span>UNDEC{bound-directly}(
+                     <span class="se">\_</span> : <span class="se">\F</span>UN@identifiers) 
+    :  <span class="se">\T</span>O <span class="se">\F</span>UN@values 
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$
+
+ 
+  $$<span class="se">\F</span>UN@bound@directly
+    (  <span class="se">\V</span>AR{I} )$$ returns the value to which $$<span class="se">\V</span>AR{I}$$ is currently bound, if any,
+  and otherwise fails.
+
+  $$<span class="se">\F</span>UN@bound@directly
+    (  <span class="se">\V</span>AR{I} )$$ does <span class="ge">*not*</span> follow links. It is used only in connection with
+  recursively-bound values when references are not encapsulated in abstractions.<span class="sb">
+
+
+</span>$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Rule} <span class="se">\q</span>uad
+    &amp; <span class="se">\R</span>ULE{
+        <span class="se">\F</span>UN@lookup
+          (  <span class="se">\V</span>AR{<span class="se">\e</span>nsuremath{<span class="se">\r</span>ho}}, 
+                 <span class="se">\V</span>AR{I} ) <span class="se">\l</span>eadsto 
+          (  <span class="se">\V</span>AR{V} : <span class="se">\F</span>UN@values )
+      }{
+        <span class="se">\F</span>UN@environment (  <span class="se">\V</span>AR{<span class="se">\e</span>nsuremath{<span class="se">\r</span>ho}} ) <span class="se">\v</span>dash <span class="se">\F</span>UN@bound@directly
+                      (  <span class="se">\V</span>AR{I} : <span class="se">\F</span>UN@identifiers ) <span class="se">\T</span>RANS 
+          <span class="se">\V</span>AR{V}
+      }
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$
+
+$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Rule} <span class="se">\q</span>uad
+    &amp; <span class="se">\R</span>ULE{
+        <span class="se">\F</span>UN@lookup
+          (  <span class="se">\V</span>AR{<span class="se">\e</span>nsuremath{<span class="se">\r</span>ho}}, 
+                 <span class="se">\V</span>AR{I} ) <span class="se">\l</span>eadsto 
+          (   <span class="se">\ </span> )
+      }{
+        <span class="se">\F</span>UN@environment (  <span class="se">\V</span>AR{<span class="se">\e</span>nsuremath{<span class="se">\r</span>ho}} ) <span class="se">\v</span>dash <span class="se">\F</span>UN@bound@directly
+                      (  <span class="se">\V</span>AR{I} : <span class="se">\F</span>UN@identifiers ) <span class="se">\T</span>RANS 
+          <span class="se">\F</span>UN@fail
+      }
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$
+
+$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Funcon} <span class="se">\q</span>uad
+  &amp; <span class="se">\F</span>UNDEC{bound-value}(
+                     <span class="se">\V</span>AR{I} : <span class="se">\F</span>UN@identifiers) 
+    :  <span class="se">\T</span>O <span class="se">\F</span>UN@values <span class="se">\\</span>&amp;<span class="se">\q</span>uad
+    <span class="se">\l</span>eadsto <span class="se">\F</span>UN@follow@if@link
+               (  <span class="se">\F</span>UN@bound@directly
+                       (  <span class="se">\V</span>AR{I} ) )
+<span class="se">\\</span>
+  <span class="se">\K</span>EY{Alias} <span class="se">\q</span>uad
+  &amp; <span class="se">\F</span>UNDEC{bound} = <span class="se">\F</span>UN@bound@value
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$
+
+ 
+   $$<span class="se">\F</span>UN@bound@value
+    (  <span class="se">\V</span>AR{I} )$$ inspects the value to which $$<span class="se">\V</span>AR{I}$$ is currently bound, if any,
+   and otherwise fails. If the value is a link, $$<span class="se">\F</span>UN@bound@value
+    (  <span class="se">\V</span>AR{I} )$$ returns the
+   value obtained by following the link, if any, and otherwise fails. If the 
+   inspected value is not a link, $$<span class="se">\F</span>UN@bound@value
+    (  <span class="se">\V</span>AR{I} )$$ returns it. 
+   
+   $$<span class="se">\F</span>UN@bound@value
+    (  <span class="se">\V</span>AR{I} )$$ is used for references to non-recursive bindings and to
+   recursively-bound values when references are encapsulated in abstractions.<span class="sb">
+
+
+</span><span class="gu">#### Scope</span>
+               <span class="sb">
+
+
+</span>$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Funcon} <span class="se">\q</span>uad
+  &amp; <span class="se">\F</span>UNDEC{closed}(
+                     <span class="se">\V</span>AR{X} :  <span class="se">\T</span>O <span class="se">\V</span>AR{T}) 
+    :  <span class="se">\T</span>O <span class="se">\V</span>AR{T} 
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$<span class="sb">
+
+
+</span>  $$<span class="se">\F</span>UN@closed
+    (  <span class="se">\V</span>AR{X} )$$ ensures that $$<span class="se">\V</span>AR{X}$$ does not depend on non-local bindings.<span class="sb">
+
+
+</span>$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Rule} <span class="se">\q</span>uad
+    &amp; <span class="se">\R</span>ULE{
+        <span class="se">\F</span>UN@environment (  <span class="se">\F</span>UN@map
+                        (   <span class="se">\ </span> ) ) <span class="se">\v</span>dash <span class="se">\V</span>AR{X} <span class="se">\T</span>RANS 
+          <span class="se">\V</span>AR{X}'
+      }{
+        <span class="se">\F</span>UN@environment (  <span class="se">\_</span> ) <span class="se">\v</span>dash <span class="se">\F</span>UN@closed
+                      (  <span class="se">\V</span>AR{X} ) <span class="se">\T</span>RANS 
+          <span class="se">\F</span>UN@closed
+            (  <span class="se">\V</span>AR{X}' )
+      }
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$
+
+$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Rule} <span class="se">\q</span>uad
+    &amp; <span class="se">\F</span>UN@closed
+        (  <span class="se">\V</span>AR{V} : <span class="se">\V</span>AR{T} ) <span class="se">\l</span>eadsto 
+        <span class="se">\V</span>AR{V}
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$
+
+$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Funcon} <span class="se">\q</span>uad
+  &amp; <span class="se">\F</span>UNDEC{scope}(
+                     <span class="se">\_</span> : <span class="se">\F</span>UN@environments, <span class="se">\_</span> :  <span class="se">\T</span>O <span class="se">\V</span>AR{T}) 
+    :  <span class="se">\T</span>O <span class="se">\V</span>AR{T} 
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$<span class="sb">
+
+
+</span>  $$<span class="se">\F</span>UN@scope
+    (  <span class="se">\V</span>AR{D}, 
+           <span class="se">\V</span>AR{X} )$$ executes $$<span class="se">\V</span>AR{D}$$ with the current bindings, to compute an environment
+  $$<span class="se">\V</span>AR{<span class="se">\e</span>nsuremath{<span class="se">\r</span>ho}}$$ representing local bindings. It then executes $$<span class="se">\V</span>AR{X}$$ to compute the result,
+  with the current bindings extended by $$<span class="se">\V</span>AR{<span class="se">\e</span>nsuremath{<span class="se">\r</span>ho}}$$, which may shadow or hide previous
+  bindings.
+  
+  $$<span class="se">\F</span>UN@closed
+    (  <span class="se">\F</span>UN@scope
+            (  <span class="se">\V</span>AR{<span class="se">\e</span>nsuremath{<span class="se">\r</span>ho}}, 
+                   <span class="se">\V</span>AR{X} ) )$$ ensures that $$<span class="se">\V</span>AR{X}$$ can reference only the bindings
+  provided by $$<span class="se">\V</span>AR{<span class="se">\e</span>nsuremath{<span class="se">\r</span>ho}}$$.<span class="sb">
+
+
+</span>$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Rule} <span class="se">\q</span>uad
+    &amp; <span class="se">\R</span>ULE{
+        <span class="se">\F</span>UN@environment (  <span class="se">\F</span>UN@map@override
+                        (  <span class="se">\V</span>AR{<span class="se">\e</span>nsuremath{<span class="se">\r</span>ho}}<span class="se">\S</span>UB{1}, 
+                               <span class="se">\V</span>AR{<span class="se">\e</span>nsuremath{<span class="se">\r</span>ho}}<span class="se">\S</span>UB{0} ) ) <span class="se">\v</span>dash <span class="se">\V</span>AR{X} <span class="se">\T</span>RANS 
+          <span class="se">\V</span>AR{X}'
+      }{
+        <span class="se">\F</span>UN@environment (  <span class="se">\V</span>AR{<span class="se">\e</span>nsuremath{<span class="se">\r</span>ho}}<span class="se">\S</span>UB{0} ) <span class="se">\v</span>dash <span class="se">\F</span>UN@scope
+                      (  <span class="se">\V</span>AR{<span class="se">\e</span>nsuremath{<span class="se">\r</span>ho}}<span class="se">\S</span>UB{1} : <span class="se">\F</span>UN@environments, 
+                             <span class="se">\V</span>AR{X} ) <span class="se">\T</span>RANS 
+          <span class="se">\F</span>UN@scope
+            (  <span class="se">\V</span>AR{<span class="se">\e</span>nsuremath{<span class="se">\r</span>ho}}<span class="se">\S</span>UB{1}, 
+                   <span class="se">\V</span>AR{X}' )
+      }
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$
+
+$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Rule} <span class="se">\q</span>uad
+    &amp; <span class="se">\F</span>UN@scope
+        (  <span class="se">\_</span> : <span class="se">\F</span>UN@environments, 
+               <span class="se">\V</span>AR{V} : <span class="se">\V</span>AR{T} ) <span class="se">\l</span>eadsto 
+        <span class="se">\V</span>AR{V}
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$
+
+$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Funcon} <span class="se">\q</span>uad
+  &amp; <span class="se">\F</span>UNDEC{accumulate}(
+                     <span class="se">\_</span> : (   <span class="se">\T</span>O <span class="se">\F</span>UN@environments )<span class="se">\S</span>TAR) 
+    :  <span class="se">\T</span>O <span class="se">\F</span>UN@environments 
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$<span class="sb">
+
+
+</span>  $$<span class="se">\F</span>UN@accumulate
+    (  <span class="se">\V</span>AR{D}<span class="se">\S</span>UB{1}, 
+           <span class="se">\V</span>AR{D}<span class="se">\S</span>UB{2} )$$ executes $$<span class="se">\V</span>AR{D}<span class="se">\S</span>UB{1}$$ with the current bindings, to compute an
+  environment $$<span class="se">\V</span>AR{<span class="se">\e</span>nsuremath{<span class="se">\r</span>ho}}<span class="se">\S</span>UB{1}$$ representing some local bindings. It then executes $$<span class="se">\V</span>AR{D}<span class="se">\S</span>UB{2}$$ to
+  compute an environment $$<span class="se">\V</span>AR{<span class="se">\e</span>nsuremath{<span class="se">\r</span>ho}}<span class="se">\S</span>UB{2}$$ representing further local bindings, with the
+  current bindings extended by $$<span class="se">\V</span>AR{<span class="se">\e</span>nsuremath{<span class="se">\r</span>ho}}<span class="se">\S</span>UB{1}$$, which may shadow or hide previous
+  current bindings. The result is $$<span class="se">\V</span>AR{<span class="se">\e</span>nsuremath{<span class="se">\r</span>ho}}<span class="se">\S</span>UB{1}$$ extended by $$<span class="se">\V</span>AR{<span class="se">\e</span>nsuremath{<span class="se">\r</span>ho}}<span class="se">\S</span>UB{2}$$, which may shadow
+  or hide the bindings of $$<span class="se">\V</span>AR{<span class="se">\e</span>nsuremath{<span class="se">\r</span>ho}}<span class="se">\S</span>UB{1}$$.
+  
+  $$<span class="se">\F</span>UN@accumulate
+    (  <span class="se">\_</span>, 
+           <span class="se">\_</span> )$$ is associative, with $$<span class="se">\F</span>UN@map
+    (   <span class="se">\ </span> )$$ as unit, and extends to any
+  number of arguments.<span class="sb">
+
+
+</span>$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Rule} <span class="se">\q</span>uad
+    &amp; <span class="se">\R</span>ULE{
+         <span class="se">\V</span>AR{D}<span class="se">\S</span>UB{1} <span class="se">\T</span>RANS 
+          <span class="se">\V</span>AR{D}<span class="se">\S</span>UB{1}'
+      }{
+         <span class="se">\F</span>UN@accumulate
+                      (  <span class="se">\V</span>AR{D}<span class="se">\S</span>UB{1}, 
+                             <span class="se">\V</span>AR{D}<span class="se">\S</span>UB{2} ) <span class="se">\T</span>RANS 
+          <span class="se">\F</span>UN@accumulate
+            (  <span class="se">\V</span>AR{D}<span class="se">\S</span>UB{1}', 
+                   <span class="se">\V</span>AR{D}<span class="se">\S</span>UB{2} )
+      }
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$
+
+$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Rule} <span class="se">\q</span>uad
+    &amp; <span class="se">\F</span>UN@accumulate
+        (  <span class="se">\V</span>AR{<span class="se">\e</span>nsuremath{<span class="se">\r</span>ho}}<span class="se">\S</span>UB{1} : <span class="se">\F</span>UN@environments, 
+               <span class="se">\V</span>AR{D}<span class="se">\S</span>UB{2} ) <span class="se">\l</span>eadsto 
+        <span class="se">\F</span>UN@scope
+          (  <span class="se">\V</span>AR{<span class="se">\e</span>nsuremath{<span class="se">\r</span>ho}}<span class="se">\S</span>UB{1}, 
+                 <span class="se">\F</span>UN@map@override
+                  (  <span class="se">\V</span>AR{D}<span class="se">\S</span>UB{2}, 
+                         <span class="se">\V</span>AR{<span class="se">\e</span>nsuremath{<span class="se">\r</span>ho}}<span class="se">\S</span>UB{1} ) )
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$
+
+$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Rule} <span class="se">\q</span>uad
+    &amp; <span class="se">\F</span>UN@accumulate
+        (   <span class="se">\ </span> ) <span class="se">\l</span>eadsto 
+        <span class="se">\F</span>UN@map
+          (   <span class="se">\ </span> )
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$
+
+$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Rule} <span class="se">\q</span>uad
+    &amp; <span class="se">\F</span>UN@accumulate
+        (  <span class="se">\V</span>AR{D}<span class="se">\S</span>UB{1} ) <span class="se">\l</span>eadsto 
+        <span class="se">\V</span>AR{D}<span class="se">\S</span>UB{1}
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$
+
+$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Rule} <span class="se">\q</span>uad
+    &amp; <span class="se">\F</span>UN@accumulate
+        (  <span class="se">\V</span>AR{D}<span class="se">\S</span>UB{1}, 
+               <span class="se">\V</span>AR{D}<span class="se">\S</span>UB{2}, 
+               <span class="se">\V</span>AR{D}<span class="se">\P</span>LUS ) <span class="se">\l</span>eadsto 
+        <span class="se">\F</span>UN@accumulate
+          (  <span class="se">\V</span>AR{D}<span class="se">\S</span>UB{1}, 
+                 <span class="se">\F</span>UN@accumulate
+                  (  <span class="se">\V</span>AR{D}<span class="se">\S</span>UB{2}, 
+                         <span class="se">\V</span>AR{D}<span class="se">\P</span>LUS ) )
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$
+
+$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Funcon} <span class="se">\q</span>uad
+  &amp; <span class="se">\F</span>UNDEC{collateral}(
+                     <span class="se">\V</span>AR{<span class="se">\e</span>nsuremath{<span class="se">\r</span>ho}}<span class="se">\S</span>TAR : <span class="se">\F</span>UN@environments<span class="se">\S</span>TAR) 
+    :  <span class="se">\T</span>O <span class="se">\F</span>UN@environments <span class="se">\\</span>&amp;<span class="se">\q</span>uad
+    <span class="se">\l</span>eadsto <span class="se">\F</span>UN@checked <span class="se">\ </span>
+               <span class="se">\F</span>UN@map@unite
+                 (  <span class="se">\V</span>AR{<span class="se">\e</span>nsuremath{<span class="se">\r</span>ho}}<span class="se">\S</span>TAR )
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$
+
+ 
+  $$<span class="se">\F</span>UN@collateral
+    (  <span class="se">\V</span>AR{D}<span class="se">\S</span>UB{1}, 
+           <span class="se">\c</span>dots )$$ pre-evaluates its arguments with the current bindings,
+  and unites the resulting maps, which fails if the domains are not pairwise
+  disjoint.
+
+  $$<span class="se">\F</span>UN@collateral
+    (  <span class="se">\V</span>AR{D}<span class="se">\S</span>UB{1}, 
+           <span class="se">\V</span>AR{D}<span class="se">\S</span>UB{2} )$$ is associative and commutative with $$<span class="se">\F</span>UN@map
+    (   <span class="se">\ </span> )$$ as unit, 
+  and extends to any number of arguments.<span class="sb">
+
+
+</span><span class="gu">#### Recurse</span>
+               <span class="sb">
+
+
+</span>$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Funcon} <span class="se">\q</span>uad
+  &amp; <span class="se">\F</span>UNDEC{bind-recursively}(
+                     <span class="se">\V</span>AR{I} : <span class="se">\F</span>UN@identifiers, <span class="se">\V</span>AR{E} :  <span class="se">\T</span>O <span class="se">\F</span>UN@values) 
+    :  <span class="se">\T</span>O <span class="se">\F</span>UN@environments <span class="se">\\</span>&amp;<span class="se">\q</span>uad
+    <span class="se">\l</span>eadsto <span class="se">\F</span>UN@recursive
+               (  <span class="se">\{</span>  <span class="se">\V</span>AR{I} <span class="se">\}</span>, 
+                      <span class="se">\F</span>UN@bind@value
+                       (  <span class="se">\V</span>AR{I}, 
+                              <span class="se">\V</span>AR{E} ) )
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$<span class="sb">
+
+
+</span>  $$<span class="se">\F</span>UN@bind@recursively
+    (  <span class="se">\V</span>AR{I}, 
+           <span class="se">\V</span>AR{E} )$$ binds $$<span class="se">\V</span>AR{I}$$ to a link that refers to the value of $$<span class="se">\V</span>AR{E}$$, 
+  representing a recursive binding of $$<span class="se">\V</span>AR{I}$$ to the value of $$<span class="se">\V</span>AR{E}$$.
+  Since $$<span class="se">\F</span>UN@bound@value
+    (  <span class="se">\V</span>AR{I} )$$ follows links, it should not be executed during the
+  evaluation of $$<span class="se">\V</span>AR{E}$$.<span class="sb">
+
+
+</span>$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Funcon} <span class="se">\q</span>uad
+  &amp; <span class="se">\F</span>UNDEC{recursive}(
+                     <span class="se">\V</span>AR{SI} : <span class="se">\F</span>UN@sets
+                               (  <span class="se">\F</span>UN@identifiers ), <span class="se">\V</span>AR{D} :  <span class="se">\T</span>O <span class="se">\F</span>UN@environments) 
+    :  <span class="se">\T</span>O <span class="se">\F</span>UN@environments <span class="se">\\</span>&amp;<span class="se">\q</span>uad
+    <span class="se">\l</span>eadsto <span class="se">\F</span>UN@re@close
+               (  <span class="se">\F</span>UN@bind@to@forward@links
+                       (  <span class="se">\V</span>AR{SI} ), 
+                      <span class="se">\V</span>AR{D} )
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$<span class="sb">
+
+
+</span>  $$<span class="se">\F</span>UN@recursive
+    (  <span class="se">\V</span>AR{SI}, 
+           <span class="se">\V</span>AR{D} )$$ executes $$<span class="se">\V</span>AR{D}$$ with potential recursion on the bindings of 
+  the identifiers in the set $$<span class="se">\V</span>AR{SI}$$ (which need not be the same as the set of
+  identifiers bound by $$<span class="se">\V</span>AR{D}$$).<span class="sb">
+
+
+</span>$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Auxiliary Funcon} <span class="se">\q</span>uad
+  &amp; <span class="se">\F</span>UNDEC{re-close}(
+                     <span class="se">\V</span>AR{M} : <span class="se">\F</span>UN@maps
+                               (  <span class="se">\F</span>UN@identifiers, 
+                                      <span class="se">\F</span>UN@links ), <span class="se">\V</span>AR{D} :  <span class="se">\T</span>O <span class="se">\F</span>UN@environments) 
+    :  <span class="se">\T</span>O <span class="se">\F</span>UN@environments <span class="se">\\</span>&amp;<span class="se">\q</span>uad
+    <span class="se">\l</span>eadsto <span class="se">\F</span>UN@accumulate
+               (  <span class="se">\F</span>UN@scope
+                       (  <span class="se">\V</span>AR{M}, 
+                              <span class="se">\V</span>AR{D} ), 
+                      <span class="se">\F</span>UN@sequential
+                       (  <span class="se">\F</span>UN@set@forward@links
+                               (  <span class="se">\V</span>AR{M} ), 
+                              <span class="se">\F</span>UN@map
+                               (   <span class="se">\ </span> ) ) )
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$<span class="sb">
+
+
+</span>  $$<span class="se">\F</span>UN@re@close
+    (  <span class="se">\V</span>AR{M}, 
+           <span class="se">\V</span>AR{D} )$$ first executes $$<span class="se">\V</span>AR{D}$$ in the scope $$<span class="se">\V</span>AR{M}$$, which maps identifiers
+  to freshly allocated links. This computes an environment $$<span class="se">\V</span>AR{<span class="se">\e</span>nsuremath{<span class="se">\r</span>ho}}$$ where the bound
+  values may contain links, or implicit references to links in abstraction
+  values. It then sets the link for each identifier in the domain of $$<span class="se">\V</span>AR{M}$$ to
+  refer to its bound value in $$<span class="se">\V</span>AR{<span class="se">\e</span>nsuremath{<span class="se">\r</span>ho}}$$, and returns $$<span class="se">\V</span>AR{<span class="se">\e</span>nsuremath{<span class="se">\r</span>ho}}$$ as the result.<span class="sb">
+
+
+</span>$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Auxiliary Funcon} <span class="se">\q</span>uad
+  &amp; <span class="se">\F</span>UNDEC{bind-to-forward-links}(
+                     <span class="se">\V</span>AR{SI} : <span class="se">\F</span>UN@sets
+                               (  <span class="se">\F</span>UN@identifiers )) 
+    :  <span class="se">\T</span>O <span class="se">\F</span>UN@maps
+                     (  <span class="se">\F</span>UN@identifiers, 
+                            <span class="se">\F</span>UN@links ) <span class="se">\\</span>&amp;<span class="se">\q</span>uad
+    <span class="se">\l</span>eadsto <span class="se">\F</span>UN@map@unite
+               ( <span class="se">\\</span>&amp;<span class="se">\q</span>uad<span class="se">\q</span>uad<span class="se">\q</span>uad<span class="se">\q</span>uad <span class="se">\F</span>UN@interleave@map
+                       ( <span class="se">\\</span>&amp;<span class="se">\q</span>uad<span class="se">\q</span>uad<span class="se">\q</span>uad<span class="se">\q</span>uad<span class="se">\q</span>uad <span class="se">\F</span>UN@bind@value
+                               (  <span class="se">\F</span>UN@given, 
+                                      <span class="se">\F</span>UN@fresh@link
+                                       (  <span class="se">\F</span>UN@values ) ), <span class="se">\\</span>&amp;<span class="se">\q</span>uad<span class="se">\q</span>uad<span class="se">\q</span>uad<span class="se">\q</span>uad<span class="se">\q</span>uad
+                              <span class="se">\F</span>UN@set@elements
+                               (  <span class="se">\V</span>AR{SI} ) ) )
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$<span class="sb">
+
+
+</span>  $$<span class="se">\F</span>UN@bind@to@forward@links
+    (  <span class="se">\V</span>AR{SI} )$$ binds each identifier in the set $$<span class="se">\V</span>AR{SI}$$ to a
+  freshly allocated link.<span class="sb">
+
+
+</span>$$<span class="se">\b</span>egin{align<span class="err">*</span>}
+  <span class="se">\K</span>EY{Auxiliary Funcon} <span class="se">\q</span>uad
+  &amp; <span class="se">\F</span>UNDEC{set-forward-links}(
+                     <span class="se">\V</span>AR{M} : <span class="se">\F</span>UN@maps
+                               (  <span class="se">\F</span>UN@identifiers, 
+                                      <span class="se">\F</span>UN@links )) 
+    :  <span class="se">\T</span>O <span class="se">\F</span>UN@null@type <span class="se">\\</span>&amp;<span class="se">\q</span>uad
+    <span class="se">\l</span>eadsto <span class="se">\F</span>UN@effect
+               ( <span class="se">\\</span>&amp;<span class="se">\q</span>uad<span class="se">\q</span>uad<span class="se">\q</span>uad<span class="se">\q</span>uad <span class="se">\F</span>UN@interleave@map
+                       ( <span class="se">\\</span>&amp;<span class="se">\q</span>uad<span class="se">\q</span>uad<span class="se">\q</span>uad<span class="se">\q</span>uad<span class="se">\q</span>uad <span class="se">\F</span>UN@set@link
+                               (  <span class="se">\F</span>UN@map@lookup
+                                       (  <span class="se">\V</span>AR{M}, 
+                                              <span class="se">\F</span>UN@given ), 
+                                      <span class="se">\F</span>UN@bound@value
+                                       (  <span class="se">\F</span>UN@given ) ), <span class="se">\\</span>&amp;<span class="se">\q</span>uad<span class="se">\q</span>uad<span class="se">\q</span>uad<span class="se">\q</span>uad<span class="se">\q</span>uad
+                              <span class="se">\F</span>UN@set@elements
+                               (  <span class="se">\F</span>UN@map@domain
+                                       (  <span class="se">\V</span>AR{M} ) ) ) )
+<span class="se">\e</span>nd{align<span class="err">*</span>}$$<span class="sb">
+
+
+</span>  For each identifier $$<span class="se">\V</span>AR{I}$$ in the domain of $$<span class="se">\V</span>AR{M}$$, $$<span class="se">\F</span>UN@set@forward@links
+    (  <span class="se">\V</span>AR{M} )$$ sets the 
+  link to which $$<span class="se">\V</span>AR{I}$$ is mapped by $$<span class="se">\V</span>AR{M}$$ to the current bound value of $$<span class="se">\V</span>AR{I}$$.<span class="sb">
+
+
+
+
+</span><span class="p">[</span><span class="ss">Funcons-beta</span><span class="p">]:</span> <span class="sx">/CBS-beta/math/Funcons-beta</span>
+  <span class="nn">"FUNCONS-BETA"</span>
+<span class="p">[</span><span class="ss">Unstable-Funcons-beta</span><span class="p">]:</span> <span class="sx">/CBS-beta/math/Unstable-Funcons-beta</span>
+  <span class="nn">"UNSTABLE-FUNCONS-BETA"</span>
+<span class="p">[</span><span class="ss">Languages-beta</span><span class="p">]:</span> <span class="sx">/CBS-beta/math/Languages-beta</span>
+  <span class="nn">"LANGUAGES-BETA"</span>
+<span class="p">[</span><span class="ss">Unstable-Languages-beta</span><span class="p">]:</span> <span class="sx">/CBS-beta/math/Unstable-Languages-beta</span>
+  <span class="nn">"UNSTABLE-LANGUAGES-BETA"</span>
+<span class="p">[</span><span class="ss">CBS-beta</span><span class="p">]:</span> <span class="sx">/CBS-beta</span>
+  <span class="nn">"CBS-BETA"</span>
+<span class="p">[</span><span class="ss">Binding.cbs</span><span class="p">]:</span> <span class="sx">https://github.com/plancomps/CBS-beta/blob/math/Funcons-beta/Computations/Normal/Binding/Binding.cbs</span>
+  <span class="nn">"CBS SOURCE FILE ON GITHUB"</span>
+<span class="p">[</span><span class="ss">PLAIN</span><span class="p">]:</span> <span class="sx">/CBS-beta/docs/Funcons-beta/Computations/Normal/Binding</span>
+  <span class="nn">"CBS SOURCE WEB PAGE"</span>
+ <span class="p">[</span><span class="ss">PRETTY</span><span class="p">]:</span> <span class="sx">/CBS-beta/math/Funcons-beta/Computations/Normal/Binding</span>
+  <span class="nn">"CBS-KATEX WEB PAGE"</span>
+<span class="p">[</span><span class="ss">PDF</span><span class="p">]:</span> <span class="sx">/CBS-beta/math/Funcons-beta/Computations/Normal/Binding/Binding.pdf</span>
+  <span class="nn">"CBS-LATEX PDF FILE"</span>
+<span class="p">[</span><span class="ss">PLanCompS Project</span><span class="p">]:</span> <span class="sx">https://plancomps.github.io</span>
+  <span class="nn">"PROGRAMMING LANGUAGE COMPONENTS AND SPECIFICATIONS PROJECT HOME PAGE"</span>
+{::comment}{:/}
+
+</code></pre></div></div>
+          <hr>
+      </div>
+    </div>
+      <div class="search-overlay"></div>
+  </div>
+  <script type="text/javascript" src="/cbs-latex/assets/js/toggle_mode.js"></script>
+</body>
+</html>

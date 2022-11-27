@@ -1,0 +1,1750 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Funcon specifications - CBS-LaTeX</title>
+  <link rel="shortcut icon" href="/cbs-latex/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/cbs-latex/assets/css/just-the-docs-default.css">
+    <script type="text/javascript" src="/cbs-latex/assets/js/vendor/lunr.min.js"></script>
+  <script type="text/javascript" src="/cbs-latex/assets/js/just-the-docs.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Funcon specifications | CBS-LaTeX</title>
+<meta name="generator" content="Jekyll v4.3.1" />
+<meta property="og:title" content="Funcon specifications" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This site illustrates how CBS specifications of languages and funcons could be formatted for the web using LaTeX, Markdown, KaTeX, and MathJax. One of the aims is for CBS on web pages look like the CBS in published papers, using mathematical symbols instead of plain text." />
+<meta property="og:description" content="This site illustrates how CBS specifications of languages and funcons could be formatted for the web using LaTeX, Markdown, KaTeX, and MathJax. One of the aims is for CBS on web pages look like the CBS in published papers, using mathematical symbols instead of plain text." />
+<link rel="canonical" href="https://plancomps.github.io/cbs-latex/docs/katex/Binding.html" />
+<meta property="og:url" content="https://plancomps.github.io/cbs-latex/docs/katex/Binding.html" />
+<meta property="og:site_name" content="CBS-LaTeX" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Funcon specifications" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"This site illustrates how CBS specifications of languages and funcons could be formatted for the web using LaTeX, Markdown, KaTeX, and MathJax. One of the aims is for CBS on web pages look like the CBS in published papers, using mathematical symbols instead of plain text.","headline":"Funcon specifications","url":"https://plancomps.github.io/cbs-latex/docs/katex/Binding.html"}</script>
+<!-- End Jekyll SEO tag -->
+    <!-- Copied from https://katex.org/docs/browser.html#starter-template -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.css" crossorigin="anonymous">
+<!-- The loading of KaTeX is deferred to speed up page rendering -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.js" crossorigin="anonymous">
+</script>
+<!-- Automatically display code inside script tags with type=math/tex using KaTeX -->
+<script defer src="/cbs-latex/assets/js/mathtex-script-type.js">
+</script>
+<!-- To automatically render math in text elements, include the auto-render extension: -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/contrib/auto-render.min.js" crossorigin="anonymous"
+  onload="
+    const macros = {
+      '\\\n': '\\ ',
+      '\\ensuremath': '\\TextOrMath{$#1$}{#1}',
+      '\\string': 
+        (context) => {
+          let arg = context.consumeArg().tokens;
+          if (arg.length !== 1) {
+            throw new ParseError(
+              '\\string argument must be a macro name');
+          }
+          const name = arg[0].text;
+          return name.slice(1);
+        },
+      };
+    var new_macros = {};
+      new_macros = {'\\FUN@abrupt':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Abrupting}{Abrupting}{abrupt}'  ,
+ '\\FUN@abrupted':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Abrupting}{Abrupting}{abrupted}'  ,
+ '\\FUN@abstraction':
+   '\\FUNCBS{Funcons-beta/Values/Abstraction/Generic}{Generic}{abstraction}'  ,
+ '\\FUN@abstractions':
+   '\\FUNCBS{Funcons-beta/Values/Abstraction/Generic}{Generic}{abstractions}'  ,
+ '\\FUN@accumulate':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{accumulate}'  ,
+ '\\FUN@alloc':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{alloc}'  ,
+ '\\FUN@alloc@init':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{alloc-init}'  ,
+ '\\FUN@allocate@initialised@variable':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{allocate-initialised-variable}'  ,
+ '\\FUN@allocate@variable':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{allocate-variable}'  ,
+ '\\FUN@and':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Booleans}{Booleans}{and}'  ,
+ '\\FUN@apply':
+   '\\FUNCBS{Funcons-beta/Values/Abstraction/Functions}{Functions}{apply}'  ,
+ '\\FUN@ascii@char':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{ascii-char}'  ,
+ '\\FUN@ascii@character':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{ascii-character}'  ,
+ '\\FUN@ascii@characters':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{ascii-characters}'  ,
+ '\\FUN@ascii@chars':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{ascii-chars}'  ,
+ '\\FUN@ascii@points':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{ascii-points}'  ,
+ '\\FUN@assign':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{assign}'  ,
+ '\\FUN@assigned':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{assigned}'  ,
+ '\\FUN@atomic':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{atomic}'  ,
+ '\\FUN@atoms':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Generating}{Generating}{atoms}'  ,
+ '\\FUN@backslash':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{backslash}'  ,
+ '\\FUN@backspace':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{backspace}'  ,
+ '\\FUN@basic@multilingual@plane@characters':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{basic-multilingual-plane-characters}'  ,
+ '\\FUN@basic@multilingual@plane@points':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{basic-multilingual-plane-points}'  ,
+ '\\FUN@binary':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{binary}'  ,
+ '\\FUN@binary@natural':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{binary-natural}'  ,
+ '\\FUN@binaryONETWOEIGHT':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{binary128}'  ,
+ '\\FUN@binarySIXFOUR':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{binary64}'  ,
+ '\\FUN@binaryTHREETWO':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{binary32}'  ,
+ '\\FUN@bind':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{bind}'  ,
+ '\\FUN@bind@recursively':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{bind-recursively}'  ,
+ '\\FUN@bind@to@forward@links':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{bind-to-forward-links}'  ,
+ '\\FUN@bind@value':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{bind-value}'  ,
+ '\\FUN@bit@vector':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector}'  ,
+ '\\FUN@bit@vector@and':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector-and}'  ,
+ '\\FUN@bit@vector@arithmetic@shift@right':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector-arithmetic-shift-right}'  ,
+ '\\FUN@bit@vector@logical@shift@right':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector-logical-shift-right}'  ,
+ '\\FUN@bit@vector@not':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector-not}'  ,
+ '\\FUN@bit@vector@or':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector-or}'  ,
+ '\\FUN@bit@vector@shift@left':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector-shift-left}'  ,
+ '\\FUN@bit@vector@to@integer':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector-to-integer}'  ,
+ '\\FUN@bit@vector@to@natural':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector-to-natural}'  ,
+ '\\FUN@bit@vector@xor':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vector-xor}'  ,
+ '\\FUN@bit@vectors':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{bit-vectors}'  ,
+ '\\FUN@bits':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{bits}'  ,
+ '\\FUN@bmp@chars':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{bmp-chars}'  ,
+ '\\FUN@booleans':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Booleans}{Booleans}{booleans}'  ,
+ '\\FUN@bools':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Booleans}{Booleans}{bools}'  ,
+ '\\FUN@bound':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{bound}'  ,
+ '\\FUN@bound@directly':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{bound-directly}'  ,
+ '\\FUN@bound@value':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{bound-value}'  ,
+ '\\FUN@bounded@integers':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{bounded-integers}'  ,
+ '\\FUN@bounded@ints':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{bounded-ints}'  ,
+ '\\FUN@break':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Breaking}{Breaking}{break}'  ,
+ '\\FUN@breaking':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Breaking}{Breaking}{breaking}'  ,
+ '\\FUN@broken':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Breaking}{Breaking}{broken}'  ,
+ '\\FUN@bytes':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{bytes}'  ,
+ '\\FUN@carriage@return':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{carriage-return}'  ,
+ '\\FUN@case@match':
+   '\\FUNCBS{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{case-match}'  ,
+ '\\FUN@case@match@loosely':
+   '\\FUNCBS{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{case-match-loosely}'  ,
+ '\\FUN@case@variant@value':
+   '\\FUNCBS{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{case-variant-value}'  ,
+ '\\FUN@cast':
+   '\\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{cast}'  ,
+ '\\FUN@cast@to@type':
+   '\\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{cast-to-type}'  ,
+ '\\FUN@catch@else@throw':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Throwing}{Throwing}{catch-else-throw}'  ,
+ '\\FUN@characters':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{characters}'  ,
+ '\\FUN@chars':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{chars}'  ,
+ '\\FUN@check':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Failing}{Failing}{check}'  ,
+ '\\FUN@check@true':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Failing}{Failing}{check-true}'  ,
+ '\\FUN@checked':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Failing}{Failing}{checked}'  ,
+ '\\FUN@choice':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{choice}'  ,
+ '\\FUN@class':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Classes}{Classes}{class}'  ,
+ '\\FUN@class@feature@map':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Classes}{Classes}{class-feature-map}'  ,
+ '\\FUN@class@instantiator':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Classes}{Classes}{class-instantiator}'  ,
+ '\\FUN@class@name@single@inheritance@feature@map':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Classes}{Classes}{class-name-single-inheritance-feature-map}'  ,
+ '\\FUN@class@name@tree':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Classes}{Classes}{class-name-tree}'  ,
+ '\\FUN@class@superclass@name@sequence':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Classes}{Classes}{class-superclass-name-sequence}'  ,
+ '\\FUN@classes':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Classes}{Classes}{classes}'  ,
+ '\\FUN@closed':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{closed}'  ,
+ '\\FUN@closure':
+   '\\FUNCBS{Funcons-beta/Values/Abstraction/Generic}{Generic}{closure}'  ,
+ '\\FUN@collateral':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{collateral}'  ,
+ '\\FUN@compose':
+   '\\FUNCBS{Funcons-beta/Values/Abstraction/Functions}{Functions}{compose}'  ,
+ '\\FUN@computation@types':
+   '\\FUNCBS{Funcons-beta/Computations/Computation-Types}{Computation-Types}{computation-types}'  ,
+ '\\FUN@cons':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Lists}{Lists}{cons}'  ,
+ '\\FUN@continuation':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Controlling}{Controlling}{continuation}'  ,
+ '\\FUN@continuations':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Controlling}{Controlling}{continuations}'  ,
+ '\\FUN@continue':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Continuing}{Continuing}{continue}'  ,
+ '\\FUN@continued':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Continuing}{Continuing}{continued}'  ,
+ '\\FUN@continuing':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Continuing}{Continuing}{continuing}'  ,
+ '\\FUN@control':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Controlling}{Controlling}{control}'  ,
+ '\\FUN@control@signal':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Controlling}{Controlling}{control-signal}'  ,
+ '\\FUN@current@value':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{current-value}'  ,
+ '\\FUN@curry':
+   '\\FUNCBS{Funcons-beta/Values/Abstraction/Functions}{Functions}{curry}'  ,
+ '\\FUN@datatype@value':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Datatypes}{Datatypes}{datatype-value}'  ,
+ '\\FUN@datatype@value@elements':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Datatypes}{Datatypes}{datatype-value-elements}'  ,
+ '\\FUN@datatype@value@id':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Datatypes}{Datatypes}{datatype-value-id}'  ,
+ '\\FUN@datatype@values':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Datatypes}{Datatypes}{datatype-values}'  ,
+ '\\FUN@decimal':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{decimal}'  ,
+ '\\FUN@decimal@float':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{decimal-float}'  ,
+ '\\FUN@decimal@natural':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{decimal-natural}'  ,
+ '\\FUN@decimalONETWOEIGHT':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{decimal128}'  ,
+ '\\FUN@decimalSIXFOUR':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{decimal64}'  ,
+ '\\FUN@delimit@cc':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Controlling}{Controlling}{delimit-cc}'  ,
+ '\\FUN@delimit@current@continuation':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Controlling}{Controlling}{delimit-current-continuation}'  ,
+ '\\FUN@dereference':
+   '\\FUNCBS{Funcons-beta/Values/Composite/References}{References}{dereference}'  ,
+ '\\FUN@directed@graphs':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Graphs}{Graphs}{directed-graphs}'  ,
+ '\\FUN@do@while':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{do-while}'  ,
+ '\\FUN@do@while@true':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{do-while-true}'  ,
+ '\\FUN@dom':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Maps}{Maps}{dom}'  ,
+ '\\FUN@double@quote':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{double-quote}'  ,
+ '\\FUN@drop@first@n':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Sequences}{Sequences}{drop-first-n}'  ,
+ '\\FUN@effect':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{effect}'  ,
+ '\\FUN@element@not@in':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Sets}{Sets}{element-not-in}'  ,
+ '\\FUN@else':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Failing}{Failing}{else}'  ,
+ '\\FUN@else@choice':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Failing}{Failing}{else-choice}'  ,
+ '\\FUN@empty@type':
+   '\\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{empty-type}'  ,
+ '\\FUN@enact':
+   '\\FUNCBS{Funcons-beta/Values/Abstraction/Generic}{Generic}{enact}'  ,
+ '\\FUN@env':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{env}'  ,
+ '\\FUN@environment':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{environment}'  ,
+ '\\FUN@environments':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{environments}'  ,
+ '\\FUN@envs':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{envs}'  ,
+ '\\FUN@exclusive@or':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Booleans}{Booleans}{exclusive-or}'  ,
+ '\\FUN@fail':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Failing}{Failing}{fail}'  ,
+ '\\FUN@failed':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Failing}{Failing}{failed}'  ,
+ '\\FUN@failing':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Failing}{Failing}{failing}'  ,
+ '\\FUN@false':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Booleans}{Booleans}{false}'  ,
+ '\\FUN@finalise@abrupting':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Abrupting}{Abrupting}{finalise-abrupting}'  ,
+ '\\FUN@finalise@breaking':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Breaking}{Breaking}{finalise-breaking}'  ,
+ '\\FUN@finalise@continuing':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Continuing}{Continuing}{finalise-continuing}'  ,
+ '\\FUN@finalise@failing':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Failing}{Failing}{finalise-failing}'  ,
+ '\\FUN@finalise@returning':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Returning}{Returning}{finalise-returning}'  ,
+ '\\FUN@finalise@throwing':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Throwing}{Throwing}{finalise-throwing}'  ,
+ '\\FUN@finally':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Abrupting}{Abrupting}{finally}'  ,
+ '\\FUN@first':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Sequences}{Sequences}{first}'  ,
+ '\\FUN@first@n':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Sequences}{Sequences}{first-n}'  ,
+ '\\FUN@float':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float}'  ,
+ '\\FUN@float@absolute@value':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-absolute-value}'  ,
+ '\\FUN@float@acos':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-acos}'  ,
+ '\\FUN@float@acosh':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-acosh}'  ,
+ '\\FUN@float@add':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-add}'  ,
+ '\\FUN@float@asin':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-asin}'  ,
+ '\\FUN@float@asinh':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-asinh}'  ,
+ '\\FUN@float@atan':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-atan}'  ,
+ '\\FUN@float@atanh':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-atanh}'  ,
+ '\\FUN@float@atanTWO':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-atan2}'  ,
+ '\\FUN@float@ceiling':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-ceiling}'  ,
+ '\\FUN@float@convert':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-convert}'  ,
+ '\\FUN@float@cos':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-cos}'  ,
+ '\\FUN@float@cosh':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-cosh}'  ,
+ '\\FUN@float@divide':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-divide}'  ,
+ '\\FUN@float@e':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-e}'  ,
+ '\\FUN@float@equal':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-equal}'  ,
+ '\\FUN@float@exp':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-exp}'  ,
+ '\\FUN@float@float@power':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-float-power}'  ,
+ '\\FUN@float@floor':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-floor}'  ,
+ '\\FUN@float@formats':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-formats}'  ,
+ '\\FUN@float@integer@power':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-integer-power}'  ,
+ '\\FUN@float@is@greater':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-is-greater}'  ,
+ '\\FUN@float@is@greater@or@equal':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-is-greater-or-equal}'  ,
+ '\\FUN@float@is@less':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-is-less}'  ,
+ '\\FUN@float@is@less@or@equal':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-is-less-or-equal}'  ,
+ '\\FUN@float@log':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-log}'  ,
+ '\\FUN@float@logONEZERO':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-log10}'  ,
+ '\\FUN@float@multiply':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-multiply}'  ,
+ '\\FUN@float@multiply@add':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-multiply-add}'  ,
+ '\\FUN@float@negate':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-negate}'  ,
+ '\\FUN@float@pi':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-pi}'  ,
+ '\\FUN@float@remainder':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-remainder}'  ,
+ '\\FUN@float@round@ties@to@even':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-round-ties-to-even}'  ,
+ '\\FUN@float@round@ties@to@infinity':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-round-ties-to-infinity}'  ,
+ '\\FUN@float@sin':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-sin}'  ,
+ '\\FUN@float@sinh':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-sinh}'  ,
+ '\\FUN@float@sqrt':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-sqrt}'  ,
+ '\\FUN@float@subtract':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-subtract}'  ,
+ '\\FUN@float@tan':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-tan}'  ,
+ '\\FUN@float@tanh':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-tanh}'  ,
+ '\\FUN@float@truncate':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{float-truncate}'  ,
+ '\\FUN@floats':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{floats}'  ,
+ '\\FUN@fold@left':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Giving}{Giving}{fold-left}'  ,
+ '\\FUN@fold@right':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Giving}{Giving}{fold-right}'  ,
+ '\\FUN@follow@if@link':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Linking}{Linking}{follow-if-link}'  ,
+ '\\FUN@follow@link':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Linking}{Linking}{follow-link}'  ,
+ '\\FUN@force':
+   '\\FUNCBS{Funcons-beta/Values/Abstraction/Thunks}{Thunks}{force}'  ,
+ '\\FUN@forest@branch@sequence':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Trees}{Trees}{forest-branch-sequence}'  ,
+ '\\FUN@forest@root@value@sequence':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Trees}{Trees}{forest-root-value-sequence}'  ,
+ '\\FUN@forest@value@sequence':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Trees}{Trees}{forest-value-sequence}'  ,
+ '\\FUN@form@feed':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{form-feed}'  ,
+ '\\FUN@fresh@atom':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Generating}{Generating}{fresh-atom}'  ,
+ '\\FUN@fresh@identifier':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{fresh-identifier}'  ,
+ '\\FUN@fresh@init@link':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Linking}{Linking}{fresh-init-link}'  ,
+ '\\FUN@fresh@initialised@link':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Linking}{Linking}{fresh-initialised-link}'  ,
+ '\\FUN@fresh@link':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Linking}{Linking}{fresh-link}'  ,
+ '\\FUN@from':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{from}'  ,
+ '\\FUN@function':
+   '\\FUNCBS{Funcons-beta/Values/Abstraction/Functions}{Functions}{function}'  ,
+ '\\FUN@functions':
+   '\\FUNCBS{Funcons-beta/Values/Abstraction/Functions}{Functions}{functions}'  ,
+ '\\FUN@give':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Giving}{Giving}{give}'  ,
+ '\\FUN@given':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Giving}{Giving}{given}'  ,
+ '\\FUN@given@value':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Giving}{Giving}{given-value}'  ,
+ '\\FUN@ground@vals':
+   '\\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{ground-vals}'  ,
+ '\\FUN@ground@values':
+   '\\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{ground-values}'  ,
+ '\\FUN@handle@abrupt':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Abrupting}{Abrupting}{handle-abrupt}'  ,
+ '\\FUN@handle@break':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Breaking}{Breaking}{handle-break}'  ,
+ '\\FUN@handle@continue':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Continuing}{Continuing}{handle-continue}'  ,
+ '\\FUN@handle@recursively':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Throwing}{Throwing}{handle-recursively}'  ,
+ '\\FUN@handle@return':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Returning}{Returning}{handle-return}'  ,
+ '\\FUN@handle@thrown':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Throwing}{Throwing}{handle-thrown}'  ,
+ '\\FUN@head':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Lists}{Lists}{head}'  ,
+ '\\FUN@hexadecimal':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{hexadecimal}'  ,
+ '\\FUN@hexadecimal@natural':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{hexadecimal-natural}'  ,
+ '\\FUN@hole':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Controlling}{Controlling}{hole}'  ,
+ '\\FUN@horizontal@tab':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{horizontal-tab}'  ,
+ '\\FUN@id@tagged':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{id-tagged}'  ,
+ '\\FUN@identifier@tagged':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{identifier-tagged}'  ,
+ '\\FUN@identifiers':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{identifiers}'  ,
+ '\\FUN@ids':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{ids}'  ,
+ '\\FUN@if@else':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{if-else}'  ,
+ '\\FUN@if@true@else':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{if-true-else}'  ,
+ '\\FUN@implies':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Booleans}{Booleans}{implies}'  ,
+ '\\FUN@index':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Sequences}{Sequences}{index}'  ,
+ '\\FUN@init':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{init}'  ,
+ '\\FUN@init@storing':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{init-storing}'  ,
+ '\\FUN@initialise@binding':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{initialise-binding}'  ,
+ '\\FUN@initialise@generating':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Generating}{Generating}{initialise-generating}'  ,
+ '\\FUN@initialise@giving':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Giving}{Giving}{initialise-giving}'  ,
+ '\\FUN@initialise@linking':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Linking}{Linking}{initialise-linking}'  ,
+ '\\FUN@initialise@storing':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{initialise-storing}'  ,
+ '\\FUN@initialise@variable':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{initialise-variable}'  ,
+ '\\FUN@int@abs':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{int-abs}'  ,
+ '\\FUN@int@add':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{int-add}'  ,
+ '\\FUN@int@div':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{int-div}'  ,
+ '\\FUN@int@mod':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{int-mod}'  ,
+ '\\FUN@int@mul':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{int-mul}'  ,
+ '\\FUN@int@neg':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{int-neg}'  ,
+ '\\FUN@int@pow':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{int-pow}'  ,
+ '\\FUN@int@sub':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{int-sub}'  ,
+ '\\FUN@integer@absolute@value':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-absolute-value}'  ,
+ '\\FUN@integer@add':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-add}'  ,
+ '\\FUN@integer@divide':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-divide}'  ,
+ '\\FUN@integer@is@greater':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-is-greater}'  ,
+ '\\FUN@integer@is@greater@or@equal':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-is-greater-or-equal}'  ,
+ '\\FUN@integer@is@less':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-is-less}'  ,
+ '\\FUN@integer@is@less@or@equal':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-is-less-or-equal}'  ,
+ '\\FUN@integer@modulo':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-modulo}'  ,
+ '\\FUN@integer@multiply':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-multiply}'  ,
+ '\\FUN@integer@negate':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-negate}'  ,
+ '\\FUN@integer@power':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-power}'  ,
+ '\\FUN@integer@sequence':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-sequence}'  ,
+ '\\FUN@integer@subtract':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integer-subtract}'  ,
+ '\\FUN@integer@to@bit@vector':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{integer-to-bit-vector}'  ,
+ '\\FUN@integers':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integers}'  ,
+ '\\FUN@integers@from':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integers-from}'  ,
+ '\\FUN@integers@up@to':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{integers-up-to}'  ,
+ '\\FUN@interleave':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{interleave}'  ,
+ '\\FUN@interleave@filter':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Giving}{Giving}{interleave-filter}'  ,
+ '\\FUN@interleave@map':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Giving}{Giving}{interleave-map}'  ,
+ '\\FUN@interleave@repeat':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Giving}{Giving}{interleave-repeat}'  ,
+ '\\FUN@intersperse':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Sequences}{Sequences}{intersperse}'  ,
+ '\\FUN@ints':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{ints}'  ,
+ '\\FUN@is':
+   '\\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{is}'  ,
+ '\\FUN@is@cyclic':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Graphs}{Graphs}{is-cyclic}'  ,
+ '\\FUN@is@eq':
+   '\\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{is-eq}'  ,
+ '\\FUN@is@equal':
+   '\\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{is-equal}'  ,
+ '\\FUN@is@greater':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{is-greater}'  ,
+ '\\FUN@is@greater@or@equal':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{is-greater-or-equal}'  ,
+ '\\FUN@is@in':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Sequences}{Sequences}{is-in}'  ,
+ '\\FUN@is@in@set':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Sets}{Sets}{is-in-set}'  ,
+ '\\FUN@is@in@signed@bit@vector':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{is-in-signed-bit-vector}'  ,
+ '\\FUN@is@in@type':
+   '\\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{is-in-type}'  ,
+ '\\FUN@is@in@unsigned@bit@vector':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{is-in-unsigned-bit-vector}'  ,
+ '\\FUN@is@less':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{is-less}'  ,
+ '\\FUN@is@less@or@equal':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{is-less-or-equal}'  ,
+ '\\FUN@is@subclass@name':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Classes}{Classes}{is-subclass-name}'  ,
+ '\\FUN@is@submultiset':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Multisets}{Multisets}{is-submultiset}'  ,
+ '\\FUN@is@subset':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Sets}{Sets}{is-subset}'  ,
+ '\\FUN@is@val':
+   '\\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{is-val}'  ,
+ '\\FUN@is@value':
+   '\\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{is-value}'  ,
+ '\\FUN@iso@latin@ONE@characters':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{iso-latin-1-characters}'  ,
+ '\\FUN@iso@latin@ONE@points':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{iso-latin-1-points}'  ,
+ '\\FUN@l@to@r':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{l-to-r}'  ,
+ '\\FUN@latin@ONE@chars':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{latin-1-chars}'  ,
+ '\\FUN@left@to@right':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{left-to-right}'  ,
+ '\\FUN@left@to@right@filter':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Giving}{Giving}{left-to-right-filter}'  ,
+ '\\FUN@left@to@right@map':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Giving}{Giving}{left-to-right-map}'  ,
+ '\\FUN@left@to@right@repeat':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Giving}{Giving}{left-to-right-repeat}'  ,
+ '\\FUN@length':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Sequences}{Sequences}{length}'  ,
+ '\\FUN@line@feed':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{line-feed}'  ,
+ '\\FUN@link':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Linking}{Linking}{link}'  ,
+ '\\FUN@links':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Linking}{Linking}{links}'  ,
+ '\\FUN@list':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Lists}{Lists}{list}'  ,
+ '\\FUN@list@append':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Lists}{Lists}{list-append}'  ,
+ '\\FUN@list@cons':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Lists}{Lists}{list-cons}'  ,
+ '\\FUN@list@elements':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Lists}{Lists}{list-elements}'  ,
+ '\\FUN@list@head':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Lists}{Lists}{list-head}'  ,
+ '\\FUN@list@length':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Lists}{Lists}{list-length}'  ,
+ '\\FUN@list@nil':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Lists}{Lists}{list-nil}'  ,
+ '\\FUN@list@tail':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Lists}{Lists}{list-tail}'  ,
+ '\\FUN@lists':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Lists}{Lists}{lists}'  ,
+ '\\FUN@locations':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{locations}'  ,
+ '\\FUN@locs':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{locs}'  ,
+ '\\FUN@lookup':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Maps}{Maps}{lookup}'  ,
+ '\\FUN@map':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Maps}{Maps}{map}'  ,
+ '\\FUN@map@delete':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Maps}{Maps}{map-delete}'  ,
+ '\\FUN@map@domain':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Maps}{Maps}{map-domain}'  ,
+ '\\FUN@map@elements':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Maps}{Maps}{map-elements}'  ,
+ '\\FUN@map@lookup':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Maps}{Maps}{map-lookup}'  ,
+ '\\FUN@map@override':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Maps}{Maps}{map-override}'  ,
+ '\\FUN@map@unite':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Maps}{Maps}{map-unite}'  ,
+ '\\FUN@maps':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Maps}{Maps}{maps}'  ,
+ '\\FUN@match':
+   '\\FUNCBS{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{match}'  ,
+ '\\FUN@match@loosely':
+   '\\FUNCBS{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{match-loosely}'  ,
+ '\\FUN@multiset':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Multisets}{Multisets}{multiset}'  ,
+ '\\FUN@multiset@delete':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Multisets}{Multisets}{multiset-delete}'  ,
+ '\\FUN@multiset@elements':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Multisets}{Multisets}{multiset-elements}'  ,
+ '\\FUN@multiset@insert':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Multisets}{Multisets}{multiset-insert}'  ,
+ '\\FUN@multiset@occurrences':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Multisets}{Multisets}{multiset-occurrences}'  ,
+ '\\FUN@multisets':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Multisets}{Multisets}{multisets}'  ,
+ '\\FUN@n@of':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Sequences}{Sequences}{n-of}'  ,
+ '\\FUN@nat@pred':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{nat-pred}'  ,
+ '\\FUN@nat@succ':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{nat-succ}'  ,
+ '\\FUN@nats':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{nats}'  ,
+ '\\FUN@natural@numbers':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{natural-numbers}'  ,
+ '\\FUN@natural@predecessor':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{natural-predecessor}'  ,
+ '\\FUN@natural@successor':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{natural-successor}'  ,
+ '\\FUN@neg@inf':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{neg-inf}'  ,
+ '\\FUN@neg@ints':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{neg-ints}'  ,
+ '\\FUN@negative@infinity':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{negative-infinity}'  ,
+ '\\FUN@negative@integers':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{negative-integers}'  ,
+ '\\FUN@nil':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Lists}{Lists}{nil}'  ,
+ '\\FUN@no@given':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Giving}{Giving}{no-given}'  ,
+ '\\FUN@not':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Booleans}{Booleans}{not}'  ,
+ '\\FUN@null':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Null}{Null}{null}'  ,
+ '\\FUN@null@type':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Null}{Null}{null-type}'  ,
+ '\\FUN@null@value':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Null}{Null}{null-value}'  ,
+ '\\FUN@object':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Objects}{Objects}{object}'  ,
+ '\\FUN@object@class@name':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Objects}{Objects}{object-class-name}'  ,
+ '\\FUN@object@feature@map':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Objects}{Objects}{object-feature-map}'  ,
+ '\\FUN@object@identity':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Objects}{Objects}{object-identity}'  ,
+ '\\FUN@object@single@inheritance@feature@map':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Objects}{Objects}{object-single-inheritance-feature-map}'  ,
+ '\\FUN@object@subobject@sequence':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Objects}{Objects}{object-subobject-sequence}'  ,
+ '\\FUN@object@tree':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Objects}{Objects}{object-tree}'  ,
+ '\\FUN@objects':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Objects}{Objects}{objects}'  ,
+ '\\FUN@octal':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{octal}'  ,
+ '\\FUN@octal@natural':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{octal-natural}'  ,
+ '\\FUN@octets':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{octets}'  ,
+ '\\FUN@or':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Booleans}{Booleans}{or}'  ,
+ '\\FUN@partial@apply':
+   '\\FUNCBS{Funcons-beta/Values/Abstraction/Functions}{Functions}{partial-apply}'  ,
+ '\\FUN@pattern':
+   '\\FUNCBS{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{pattern}'  ,
+ '\\FUN@pattern@any':
+   '\\FUNCBS{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{pattern-any}'  ,
+ '\\FUN@pattern@bind':
+   '\\FUNCBS{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{pattern-bind}'  ,
+ '\\FUN@pattern@else':
+   '\\FUNCBS{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{pattern-else}'  ,
+ '\\FUN@pattern@type':
+   '\\FUNCBS{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{pattern-type}'  ,
+ '\\FUN@pattern@unite':
+   '\\FUNCBS{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{pattern-unite}'  ,
+ '\\FUN@patterns':
+   '\\FUNCBS{Funcons-beta/Values/Abstraction/Patterns}{Patterns}{patterns}'  ,
+ '\\FUN@plug@signal':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Controlling}{Controlling}{plug-signal}'  ,
+ '\\FUN@pointer@null':
+   '\\FUNCBS{Funcons-beta/Values/Composite/References}{References}{pointer-null}'  ,
+ '\\FUN@pointers':
+   '\\FUNCBS{Funcons-beta/Values/Composite/References}{References}{pointers}'  ,
+ '\\FUN@pos@inf':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{pos-inf}'  ,
+ '\\FUN@pos@ints':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{pos-ints}'  ,
+ '\\FUN@positive@infinity':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{positive-infinity}'  ,
+ '\\FUN@positive@integers':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{positive-integers}'  ,
+ '\\FUN@print':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Interacting}{Interacting}{print}'  ,
+ '\\FUN@qNaN':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{qNaN}'  ,
+ '\\FUN@quiet@not@a@number':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{quiet-not-a-number}'  ,
+ '\\FUN@r@to@l':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{r-to-l}'  ,
+ '\\FUN@re@close':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{re-close}'  ,
+ '\\FUN@read':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Interacting}{Interacting}{read}'  ,
+ '\\FUN@record':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Records}{Records}{record}'  ,
+ '\\FUN@record@map':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Records}{Records}{record-map}'  ,
+ '\\FUN@record@select':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Records}{Records}{record-select}'  ,
+ '\\FUN@records':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Records}{Records}{records}'  ,
+ '\\FUN@recursive':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{recursive}'  ,
+ '\\FUN@recycle':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{recycle}'  ,
+ '\\FUN@recycle@variables':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{recycle-variables}'  ,
+ '\\FUN@reference':
+   '\\FUNCBS{Funcons-beta/Values/Composite/References}{References}{reference}'  ,
+ '\\FUN@references':
+   '\\FUNCBS{Funcons-beta/Values/Composite/References}{References}{references}'  ,
+ '\\FUN@resume@continuation':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Controlling}{Controlling}{resume-continuation}'  ,
+ '\\FUN@return':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Returning}{Returning}{return}'  ,
+ '\\FUN@returned':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Returning}{Returning}{returned}'  ,
+ '\\FUN@returning':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Returning}{Returning}{returning}'  ,
+ '\\FUN@reverse':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Sequences}{Sequences}{reverse}'  ,
+ '\\FUN@right@to@left':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{right-to-left}'  ,
+ '\\FUN@scope':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{scope}'  ,
+ '\\FUN@second':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Sequences}{Sequences}{second}'  ,
+ '\\FUN@seq':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{seq}'  ,
+ '\\FUN@sequential':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{sequential}'  ,
+ '\\FUN@set':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Sets}{Sets}{set}'  ,
+ '\\FUN@set@difference':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Sets}{Sets}{set-difference}'  ,
+ '\\FUN@set@elements':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Sets}{Sets}{set-elements}'  ,
+ '\\FUN@set@forward@links':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{set-forward-links}'  ,
+ '\\FUN@set@insert':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Sets}{Sets}{set-insert}'  ,
+ '\\FUN@set@intersect':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Sets}{Sets}{set-intersect}'  ,
+ '\\FUN@set@link':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Linking}{Linking}{set-link}'  ,
+ '\\FUN@set@size':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Sets}{Sets}{set-size}'  ,
+ '\\FUN@set@unite':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Sets}{Sets}{set-unite}'  ,
+ '\\FUN@sets':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Sets}{Sets}{sets}'  ,
+ '\\FUN@signal':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{signal}'  ,
+ '\\FUN@signaling@not@a@number':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{signaling-not-a-number}'  ,
+ '\\FUN@signed@bit@vector@maximum':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{signed-bit-vector-maximum}'  ,
+ '\\FUN@signed@bit@vector@minimum':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{signed-bit-vector-minimum}'  ,
+ '\\FUN@single@branching@sequence':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Trees}{Trees}{single-branching-sequence}'  ,
+ '\\FUN@single@quote':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{single-quote}'  ,
+ '\\FUN@sNaN':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Floats}{Floats}{sNaN}'  ,
+ '\\FUN@some@element':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Sets}{Sets}{some-element}'  ,
+ '\\FUN@standard@in':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Interacting}{Interacting}{standard-in}'  ,
+ '\\FUN@standard@out':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Interacting}{Interacting}{standard-out}'  ,
+ '\\FUN@store':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{store}'  ,
+ '\\FUN@store@clear':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{store-clear}'  ,
+ '\\FUN@stores':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{stores}'  ,
+ '\\FUN@string':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Strings}{Strings}{string}'  ,
+ '\\FUN@string@append':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Strings}{Strings}{string-append}'  ,
+ '\\FUN@strings':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Strings}{Strings}{strings}'  ,
+ '\\FUN@structural@assign':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{structural-assign}'  ,
+ '\\FUN@structural@assigned':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{structural-assigned}'  ,
+ '\\FUN@stuck':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Abrupting}{Abrupting}{stuck}'  ,
+ '\\FUN@supply':
+   '\\FUNCBS{Funcons-beta/Values/Abstraction/Functions}{Functions}{supply}'  ,
+ '\\FUN@tail':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Lists}{Lists}{tail}'  ,
+ '\\FUN@third':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Sequences}{Sequences}{third}'  ,
+ '\\FUN@throw':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Throwing}{Throwing}{throw}'  ,
+ '\\FUN@throwing':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Throwing}{Throwing}{throwing}'  ,
+ '\\FUN@thrown':
+   '\\FUNCBS{Funcons-beta/Computations/Abnormal/Throwing}{Throwing}{thrown}'  ,
+ '\\FUN@thunk':
+   '\\FUNCBS{Funcons-beta/Values/Abstraction/Thunks}{Thunks}{thunk}'  ,
+ '\\FUN@thunks':
+   '\\FUNCBS{Funcons-beta/Values/Abstraction/Thunks}{Thunks}{thunks}'  ,
+ '\\FUN@to@string':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Strings}{Strings}{to-string}'  ,
+ '\\FUN@topological@sort':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Graphs}{Graphs}{topological-sort}'  ,
+ '\\FUN@tree':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Trees}{Trees}{tree}'  ,
+ '\\FUN@tree@branch@sequence':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Trees}{Trees}{tree-branch-sequence}'  ,
+ '\\FUN@tree@root@value':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Trees}{Trees}{tree-root-value}'  ,
+ '\\FUN@trees':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Trees}{Trees}{trees}'  ,
+ '\\FUN@true':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Booleans}{Booleans}{true}'  ,
+ '\\FUN@tuple':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Tuples}{Tuples}{tuple}'  ,
+ '\\FUN@tuple@elements':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Tuples}{Tuples}{tuple-elements}'  ,
+ '\\FUN@tuple@zip':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Tuples}{Tuples}{tuple-zip}'  ,
+ '\\FUN@tuples':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Tuples}{Tuples}{tuples}'  ,
+ '\\FUN@types':
+   '\\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{types}'  ,
+ '\\FUN@un@assign':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{un-assign}'  ,
+ '\\FUN@unbind':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Binding}{Binding}{unbind}'  ,
+ '\\FUN@uncurry':
+   '\\FUNCBS{Funcons-beta/Values/Abstraction/Functions}{Functions}{uncurry}'  ,
+ '\\FUN@unicode':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{unicode}'  ,
+ '\\FUN@unicode@char':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{unicode-char}'  ,
+ '\\FUN@unicode@character':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{unicode-character}'  ,
+ '\\FUN@unicode@characters':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{unicode-characters}'  ,
+ '\\FUN@unicode@chars':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{unicode-chars}'  ,
+ '\\FUN@unicode@point':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{unicode-point}'  ,
+ '\\FUN@unicode@points':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{unicode-points}'  ,
+ '\\FUN@unsigned@bit@vector@maximum':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Bits}{Bits}{unsigned-bit-vector-maximum}'  ,
+ '\\FUN@up@to':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Integers}{Integers}{up-to}'  ,
+ '\\FUN@use@atom@not@in':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Generating}{Generating}{use-atom-not-in}'  ,
+ '\\FUN@used@atom@set':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Generating}{Generating}{used-atom-set}'  ,
+ '\\FUN@utf@EIGHT':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{utf-8}'  ,
+ '\\FUN@utf@ONESIX':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{utf-16}'  ,
+ '\\FUN@utf@THREETWO':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Characters}{Characters}{utf-32}'  ,
+ '\\FUN@vals':
+   '\\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{vals}'  ,
+ '\\FUN@value@types':
+   '\\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{value-types}'  ,
+ '\\FUN@values':
+   '\\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{values}'  ,
+ '\\FUN@var':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{var}'  ,
+ '\\FUN@variable':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{variable}'  ,
+ '\\FUN@variables':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{variables}'  ,
+ '\\FUN@variant':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Variants}{Variants}{variant}'  ,
+ '\\FUN@variant@id':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Variants}{Variants}{variant-id}'  ,
+ '\\FUN@variant@value':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Variants}{Variants}{variant-value}'  ,
+ '\\FUN@variants':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Variants}{Variants}{variants}'  ,
+ '\\FUN@vars':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Storing}{Storing}{vars}'  ,
+ '\\FUN@vector':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Vectors}{Vectors}{vector}'  ,
+ '\\FUN@vector@elements':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Vectors}{Vectors}{vector-elements}'  ,
+ '\\FUN@vectors':
+   '\\FUNCBS{Funcons-beta/Values/Composite/Vectors}{Vectors}{vectors}'  ,
+ '\\FUN@when':
+   '\\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{when}'  ,
+ '\\FUN@when@true':
+   '\\FUNCBS{Funcons-beta/Values/Value-Types}{Value-Types}{when-true}'  ,
+ '\\FUN@while':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{while}'  ,
+ '\\FUN@while@true':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{while-true}'  ,
+ '\\FUN@xor':
+   '\\FUNCBS{Funcons-beta/Values/Primitive/Booleans}{Booleans}{xor}'  ,
+ '\\FUN@yield':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{yield}'  ,
+ '\\FUN@yield@on@abrupt':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{yield-on-abrupt}'  ,
+ '\\FUN@yield@on@value':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{yield-on-value}'  ,
+ '\\FUN@yielded':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{yielded}'  ,
+ '\\FUN@yielding':
+   '\\FUNCBS{Funcons-beta/Computations/Normal/Flowing}{Flowing}{yielding}'
+}
+;
+      Object.assign(macros, new_macros);
+    renderMathInElement(document.body, {
+      fleqn: true,
+      globalGroup: true,
+      trust: true,
+      strict: false,
+      throwOnError: false,
+      maxExpand: 4000,
+      macros
+    });"></script>
+<!-- Override the KaTeX default of font-size: 1.21em -->
+<style>
+  .katex { 
+    font-size: 1em; 
+  }
+</style>
+<!-- https://www.primative.net/blog/how-to-get-rid-of-the-flash-of-unstyled-content/ -->
+<style>
+  .no-js {
+    visibility: visible;
+  }
+</style>
+<link rel="shortcut icon" type="image/x-icon"   href="/cbs-latex/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180"    href="/cbs-latex/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/cbs-latex/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/cbs-latex/assets/icons/favicon-16x16.png">
+<link rel="mask-icon" href="/cbs-latex/assets/icons/safari-pinned-tab.svg">
+<link rel="manifest"  href="/cbs-latex/assets/icons/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="svg-link" viewBox="0 0 24 24">
+      <title>Link</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </symbol>
+    <symbol id="svg-search" viewBox="0 0 24 24">
+      <title>Search</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-menu" viewBox="0 0 24 24">
+      <title>Menu</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+      <title>Expand</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </symbol>
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+      <title>Document</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+      </svg>
+    </symbol>
+  </svg>
+  <script type="text/javascript" src="/cbs-latex/assets/js/toggle_init.js"></script>
+  <div class="side-bar">
+    <div class="site-header">
+      <a href="/cbs-latex/" class="site-title lh-tight">
+  CBS-LaTeX
+</a>
+      <a href="#" id="menu-button" class="site-button">
+        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+      </a>
+    </div>
+  <button id="theme-toggle" onclick="modeSwitcher()" 
+    type="button" name="button" class="btn theme-toggle" ></button>
+  <script>
+    function modeSwitcher() {
+      let currentMode = document.documentElement.getAttribute('data-theme');
+      if (currentMode === "dark") {
+        document.documentElement.setAttribute('data-theme', 'light');
+        window.localStorage.setItem('theme', 'light');
+        document.getElementById("theme-toggle").innerHTML = "&rarr; Dark Mode";
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        window.localStorage.setItem('theme', 'dark');
+        document.getElementById("theme-toggle").innerHTML = "&rarr; Light Mode";
+      }
+    }
+  </script>
+    <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
+      <ul class="nav-list"><li class="nav-list-item"><a href="/cbs-latex/docs/intro.html" class="nav-list-link">Introduction</a></li>
+<li class="nav-list-item"><a href="/cbs-latex/docs/local.html" class="nav-list-link">Local browsing</a></li>
+<li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="/cbs-latex/docs/macros.html" class="nav-list-link">Macros</a><ul class="nav-list"><li class="nav-list-item"><a href="/cbs-latex/docs/katex/cbs-katex.html" class="nav-list-link">CBS-KaTeX</a></li>
+<li class="nav-list-item"><a href="/cbs-latex/docs/latex/cbs-latex.html" class="nav-list-link">CBS-LaTeX</a></li>
+<li class="nav-list-item"><a href="/cbs-latex/docs/mathjax-3/cbs-mathjax.html" class="nav-list-link">CBS-MathJax</a></li>
+<li class="nav-list-item"><a href="/cbs-latex/docs/mathjax-2.7/cbs-mathjax-2.7.html" class="nav-list-link">CBS-MathJax-2.7</a></li>
+<li class="nav-list-item"><a href="/cbs-latex/docs/mathjax-2.7/cbs-mathjax-lncs.html" class="nav-list-link">CBS-MathJax-LNCS</a></li>
+</ul>
+</li>
+<li class="nav-list-item active"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="/cbs-latex/docs/samples.html" class="nav-list-link active">Samples</a><ul class="nav-list"><li class="nav-list-item active"><a href="/cbs-latex/docs/katex/Binding.html" class="nav-list-link active">Funcon specifications</a></li>
+<li class="nav-list-item"><a href="/cbs-latex/docs/katex/SIMPLE-3-Statements.html" class="nav-list-link">Language specifications</a></li>
+<li class="nav-list-item"><a href="/cbs-latex/docs/katex/TEST-Start.html" class="nav-list-link">ASCII Tests</a></li>
+</ul>
+</li>
+</ul>
+    </nav>
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  </div>
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+        <div class="search">
+          <div class="search-input-wrap">
+            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search CBS-LaTeX" aria-label="Search CBS-LaTeX" autocomplete="off">
+            <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+        <nav aria-label="Auxiliary" class="aux-nav">
+          <ul class="aux-nav-list">
+              <li class="aux-nav-list-item">
+                <a href="https://github.com/plancomps/cbs-latex" class="site-button"
+                >
+                  CBS-LaTeX on GitHub
+                </a>
+              </li>
+          </ul>
+        </nav>
+    </div>
+    <div id="main-content-wrap" class="main-content-wrap">
+<nav class="nav-rel">
+    <a href="/cbs-latex/docs/samples.html" class="nav-rel-link">&uarr;</a>
+    <a href="/cbs-latex/docs/katex/SIMPLE-3-Statements.html" class="nav-rel-link">&rarr;</a>
+</nav>
+<nav aria-label="Breadcrumb" class="breadcrumb-nav">
+  <ol class="breadcrumb-nav-list"><li class="breadcrumb-nav-list-item">
+      <a href="/cbs-latex/docs/samples.html">Samples</a>
+    </li><li class="breadcrumb-nav-list-item">
+      <span>Funcon specifications</span>
+    </li>
+  </ol>
+</nav>
+      <div id="main-content" class="main-content" role="main">
+          <div style="display: none">
+  \(
+  % cbs-katex.sty
+% \SHADE{MATH} can be defined to produce a shaded background to highlight
+% inline MATH in running text:
+\newcommand{\SHADE}[1]{#1}
+% \KEY{text}, \STRING{text}, \ATOM{text}, \LEX{text} can be used in text or math mode:
+\newcommand{\KEY}[1]{\textsf{\textit{\STYLE{Key}{#1}}}}
+\newcommand{\STRING}[1]{\textsf{``\texttt{#1}''}}
+\newcommand{\ATOM}[1]{\textsf{`\texttt{#1}'}}
+\newcommand{\LEX}[1]{\textsf{\STYLE{Key}{`}\texttt{#1}\STYLE{Key}{'}}}
+% The following commands produce ASCII characters that are treated specially by LaTeX:
+\newcommand{\HASH}{\char`\#}
+\newcommand{\DOLLAR}{\char`\$}
+\newcommand{\PERCENT}{\char`\%}
+\newcommand{\AMPERSAND}{\char`\&}
+\newcommand{\APOSTROPHE}{\char`\'}
+\newcommand{\BACKSLASH}{\char`\\}
+\newcommand{\CARET}{\char`\^}
+\newcommand{\UNDERSCORE}{\char`\_}
+\newcommand{\GRAVE}{\char`\`}
+\newcommand{\LEFTBRACE}{\char`\{}
+\newcommand{\RIGHTBRACE}{\char`\}}
+\newcommand{\TILDE}{\textasciitilde} % {\char`\~}
+% \FUN{name} highlights the name.
+% \FUNDEC{name} declares Name.name as the target of links to name.
+% \FUNREF{name} links name to the target Name.name in the current file.
+% \FUNHYP{url}{file}{name} links name to Name.name at url/file/index.html.
+% Similarly for \VAR{partvariable}, \SYN{syntaxname}, \SEM{semanticsName},
+% and \SECT{sectionnumber}
+% The kerns in \SUB and \VAR avoid overlaps with primes:
+\newcommand{\SUB}[1]{_{\kern-2mu#1}}
+% PLAIN
+\newcommand{\STYLE}[2]{\htmlClass{cbs-#1}{#2}}
+\newcommand{\VAR}[1]{\STYLE{PartVariable}{\textit{#1\kern2mu}}}
+\newcommand{\FUN}[1]{\STYLE{Name}{\textsf{#1}}}
+\newcommand{\SYN}[1]{\STYLE{SyntaxName}{\textsf{#1}}}
+\newcommand{\SEM}[1]{\STYLE{SemanticsName}{\textsf{#1}}}
+\newcommand{\SECT}[1]{\STYLE{SectionNumber}{\textsf{#1}}}
+\newcommand{\LANG}[1]{\STYLE{Language}{\textsf{#1}}}
+% DEC
+\newcommand{\DEC}[3]{\htmlId{#1:#2}{#3}}
+\newcommand{\VARDEC}[1]{\DEC{PartVariable}{#1}{\VAR{#1}}}
+\newcommand{\FUNDEC}[1]{\DEC{Name}{#1}{\FUN{#1}}}
+\newcommand{\SYNDEC}[1]{\DEC{SyntaxName}{#1}{\SYN{#1}}}
+\newcommand{\SEMDEC}[1]{\DEC{SemanticsName}{#1}{\SEM{#1}}}
+\newcommand{\SECTDEC}[1]{\DEC{SectionNumber}{#1}{\textsf{#1}}}
+% \newcommand{\LANGDEC}[1]{\DEC{Language}{#1}{\LANG{#1}}}
+% REF
+\newcommand{\REF}[3]{\href{###1:#2}{#3}}
+\newcommand{\VARREF}[1]{\REF{PartVariable}{#1}{\VAR{#1}}}
+\newcommand{\FUNREF}[1]{\REF{Name}{#1}{\FUN{#1}}}
+\newcommand{\SYNREF}[1]{\REF{SyntaxName}{#1}{\SYN{#1}}}
+\newcommand{\SEMREF}[1]{\REF{SemanticsName}{#1}{\SEM{#1}}}
+\newcommand{\SECTREF}[1]{\REF{SectionNumber}{#1}{\SECT{#1}}}
+% \newcommand{\LANGREF}[1]{\REF{Language}{#1}{\LANG{#1}}}
+% HYP
+\newcommand{\HYP}[5]{\href{#1/#2/index.html###3:#4}{#5}}
+\newcommand{\VARHYP}[3]{\HYP{#1}{#2}{PartVariable}{#3}{\VAR{#3}}}
+\newcommand{\FUNHYP}[3]{\HYP{#1}{#2}{Name}{#3}{\FUN{#3}}}
+\newcommand{\SYNHYP}[3]{\HYP{#1}{#2}{SyntaxName}{#3}{\SYN{#3}}}
+\newcommand{\SEMHYP}[3]{\HYP{#1}{#2}{SemanticsName}{#3}{\SEM{#3}}}
+\newcommand{\SECTHYP}[3]{\HYP{#1}{#2}{SectionNumber}{#3}{\SECT{#3}}}
+% \newcommand{\LANGHYP}[3]{\HYP{#1}{#2}{Language}{#3}{\LANG{#3}}}
+% CBS-beta/math hyperlinks
+\newcommand\CBSBETAMATH{https://plancomps.github.io/CBS-beta/math}
+\newcommand\VARCBS[3]{\VARHYP{\CBSBETAMATH/#1}{#2}{#3}}
+\newcommand\FUNCBS[3]{\FUNHYP{\CBSBETAMATH/#1}{#2}{#3}}
+\newcommand\SYNCBS[3]{\SYNHYP{\CBSBETAMATH/#1}{#2}{#3}}
+\newcommand\SEMCBS[3]{\SEMHYP{\CBSBETAMATH/#1}{#2}{#3}}
+\newcommand\SECTCBS[3]{\SECTHYP{\CBSBETAMATH/#1}{#2}{#3}}
+% \newcommand{\LANGCBS}[3]{\LANGHYP{\CBSBETAMATH/#1}{#2}{#3}}
+% \LEFTPHRASE MATH \RIGHTPHRASE produces [[ MATH ]] with proper brackets:
+\newcommand{\LEFTPHRASE}{\llbracket}
+\newcommand{\RIGHTPHRASE}{\rrbracket}
+% \LEFTGROUP MATH \RIGHTGROUP produces ( MATH ) where the parentheses are
+% highlighted the same as keywords:
+\newcommand{\LEFTGROUP}{\STYLE{Key}{(}}
+\newcommand{\RIGHTGROUP}{\STYLE{Key}{)}}
+% MATH\PLUS produces a superscript +
+% MATH\STAR produces a superscript *
+% MATH\QUERY produces a superscript ?
+\newcommand{\PLUS}{ {}^{\texttt{+}}}
+\newcommand{\STAR}{ {}^{\texttt{*}}}
+\newcommand{\QUERY}{ {}^{\texttt{?}}}
+% \RULE{premise}{conclusion} produces
+%     premise
+%   ----------
+%   conclusion
+\newcommand{\RULE}[2]{\mkern-2.2mu\frac{\displaystyle#1}{\displaystyle#2}}
+% See https://tex.stackexchange.com/questions/337328/superscripts-appear-in-various-weird-places-in-fractions
+% \RULE
+%   {\begin{aligned} & premise \\ & ... \end{aligned}}
+%   {\begin{aligned} & conclusion ... \\ & ... \end{aligned}}
+% produces an inference rule with left-aligned premises and split conclusion
+%      premise
+%      ...
+%   --------------
+%   conclusion ...
+%   ...
+% \TO TYPE produces => TYPE
+\newcommand{\TO}{\mathop{\Rightarrow}}
+% TERM \TRANS TERM produces TERM ---> TERM
+\newcommand{\TRANS}{\longrightarrow}
+% TERM \xrightarrow{LABEL} TERM puts the label above the long arrow
+  \)
+</div>
+<div style="display: none">
+  \(
+  \renewcommand{\HYP}[5]{\REF{#3}{#4}{#5}}
+  \)
+</div>
+<blockquote>
+  <p>This page is using \(\KaTeX\). <a href="../mathjax-3/Binding">See the same page using MathJax-3</a>.</p>
+</blockquote>
+<blockquote class="note">
+  <p>Links to non-local declarations are disabled on this sample page.</p>
+</blockquote>
+<p><!--  --></p>
+<details open="">
+  <summary class="text-delta">
+    OUTLINE
+  </summary>
+<ul id="markdown-toc">
+  <li><a href="#binding" id="markdown-toc-binding">Binding</a>    <ul>
+      <li><a href="#environments" id="markdown-toc-environments">Environments</a></li>
+      <li><a href="#current-bindings" id="markdown-toc-current-bindings">Current bindings</a></li>
+      <li><a href="#scope" id="markdown-toc-scope">Scope</a></li>
+      <li><a href="#recurse" id="markdown-toc-recurse">Recurse</a></li>
+    </ul>
+  </li>
+</ul>
+</details><hr />
+      <h3 id="binding">
+          <a href="#binding" class="anchor-heading" aria-labelledby="binding"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Binding
+      </h3>
+\[\begin{align*}
+  [ \
+  \KEY{Type} \quad &amp; \FUN@environments \\
+  \KEY{Alias} \quad &amp; \FUN@envs \\
+  \KEY{Datatype} \quad &amp; \FUN@identifiers \\
+  \KEY{Alias} \quad &amp; \FUN@ids \\
+  \KEY{Funcon} \quad &amp; \FUN@identifier@tagged \\
+  \KEY{Alias} \quad &amp; \FUN@id@tagged \\
+  \KEY{Funcon} \quad &amp; \FUN@fresh@identifier \\
+  \KEY{Entity} \quad &amp; \FUN@environment \\
+  \KEY{Alias} \quad &amp; \FUN@env \\
+  \KEY{Funcon} \quad &amp; \FUN@initialise@binding \\
+  \KEY{Funcon} \quad &amp; \FUN@bind@value \\
+  \KEY{Alias} \quad &amp; \FUN@bind \\
+  \KEY{Funcon} \quad &amp; \FUN@unbind \\
+  \KEY{Funcon} \quad &amp; \FUN@bound@directly \\
+  \KEY{Funcon} \quad &amp; \FUN@bound@value \\
+  \KEY{Alias} \quad &amp; \FUN@bound \\
+  \KEY{Funcon} \quad &amp; \FUN@closed \\
+  \KEY{Funcon} \quad &amp; \FUN@scope \\
+  \KEY{Funcon} \quad &amp; \FUN@accumulate \\
+  \KEY{Funcon} \quad &amp; \FUN@collateral \\
+  \KEY{Funcon} \quad &amp; \FUN@bind@recursively \\
+  \KEY{Funcon} \quad &amp; \FUN@recursive
+  \ ]
+\end{align*}\]
+\[\begin{align*}
+  \KEY{Meta-variables} \quad
+  &amp; \VAR{T} &lt;: \FUN@values
+\end{align*}\]
+      <h4 id="environments">
+          <a href="#environments" class="anchor-heading" aria-labelledby="environments"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Environments
+      </h4>
+\[\begin{align*}
+  \KEY{Type} \quad 
+  &amp; \FUNDEC{environments}  
+    \leadsto \FUN@maps
+               (  \FUN@identifiers, 
+                      \FUN@values\QUERY )
+\\
+  \KEY{Alias} \quad
+  &amp; \FUNDEC{envs} = \FUN@environments
+\end{align*}\]
+<p>An environment represents bindings of identifiers to values.
+  Mapping an identifier to \((   \  )\) represents that its binding is hidden.</p>
+<p>Circularity in environments (due to recursive bindings) is represented using
+  bindings to cut-points called \(\FUN@links\). Funcons are provided for making
+  declarations recursive and for referring to bound values without explicit
+  mention of links, so their existence can generally be ignored.</p>
+\[\begin{align*}
+  \KEY{Datatype} \quad 
+  \FUNDEC{identifiers} 
+  \ ::= \ &amp;
+  \{ \_ : \FUN@strings \} \mid \FUNDEC{identifier-tagged}(
+                   \_ : \FUN@identifiers, \_ : \FUN@values)
+\end{align*}\]
+\[\begin{align*}
+  \KEY{Alias} \quad
+  &amp; \FUNDEC{ids} = \FUN@identifiers
+\\
+  \KEY{Alias} \quad
+  &amp; \FUNDEC{id-tagged} = \FUN@identifier@tagged
+\end{align*}\]
+<p>An identifier is either a string of characters, or an identifier tagged with
+  some value (e.g., with the identifier of a namespace).</p>
+\[\begin{align*}
+  \KEY{Funcon} \quad
+  &amp; \FUNDEC{fresh-identifier} 
+    :  \TO \FUN@identifiers 
+\end{align*}\]
+<p>\(\FUN@fresh@identifier\) computes an identifier distinct from all previously
+  computed identifiers.</p>
+\[\begin{align*}
+  \KEY{Rule} \quad
+    &amp; \FUN@fresh@identifier \leadsto 
+        \FUN@identifier@tagged
+          (  \STRING{generated}, 
+                 \FUN@fresh@atom )
+\end{align*}\]
+      <h4 id="current-bindings">
+          <a href="#current-bindings" class="anchor-heading" aria-labelledby="current-bindings"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Current bindings
+      </h4>
+\[\begin{align*}
+  \KEY{Entity} \quad
+  &amp; \FUNDEC{environment}(\_ : \FUN@environments) \vdash \_ \TRANS  \_
+\\
+  \KEY{Alias} \quad
+  &amp; \FUNDEC{env} = \FUN@environment
+\end{align*}\]
+<p>The environment entity allows a computation to refer to the current bindings
+  of identifiers to values.</p>
+\[\begin{align*}
+  \KEY{Funcon} \quad
+  &amp; \FUNDEC{initialise-binding}(
+                     \VAR{X} :  \TO \VAR{T}) 
+    :  \TO \VAR{T} \\&amp;\quad
+    \leadsto \FUN@initialise@linking
+               (  \FUN@initialise@generating
+                       (  \FUN@closed
+                               (  \VAR{X} ) ) )
+\end{align*}\]
+<p>\(\FUN@initialise@binding
+    (  \VAR{X} )\) ensures that \(\VAR{X}\) does not depend on non-local bindings.
+  It also ensures that the linking entity (used to represent potentially cyclic
+  bindings) and the generating entity (for creating fresh identifiers) are 
+  initialised.</p>
+\[\begin{align*}
+  \KEY{Funcon} \quad
+  &amp; \FUNDEC{bind-value}(
+                     \VAR{I} : \FUN@identifiers, \VAR{V} : \FUN@values) 
+    :  \TO \FUN@environments \\&amp;\quad
+    \leadsto \{ \VAR{I} \mapsto 
+                  \VAR{V} \}
+\\
+  \KEY{Alias} \quad
+  &amp; \FUNDEC{bind} = \FUN@bind@value
+\end{align*}\]
+<p>\(\FUN@bind@value
+    (  \VAR{I}, 
+           \VAR{X} )\) computes the environment that binds only \(\VAR{I}\) to the value
+  computed by \(\VAR{X}\).</p>
+\[\begin{align*}
+  \KEY{Funcon} \quad
+  &amp; \FUNDEC{unbind}(
+                     \VAR{I} : \FUN@identifiers) 
+    :  \TO \FUN@environments \\&amp;\quad
+    \leadsto \{ \VAR{I} \mapsto 
+                  (   \  ) \}
+\end{align*}\]
+<p>\(\FUN@unbind
+    (  \VAR{I} )\) computes the environment that hides the binding of \(\VAR{I}\).</p>
+\[\begin{align*}
+  \KEY{Funcon} \quad
+  &amp; \FUNDEC{bound-directly}(
+                     \_ : \FUN@identifiers) 
+    :  \TO \FUN@values 
+\end{align*}\]
+<p>\(\FUN@bound@directly
+    (  \VAR{I} )\) returns the value to which \(\VAR{I}\) is currently bound, if any,
+  and otherwise fails.</p>
+<p>\(\FUN@bound@directly
+    (  \VAR{I} )\) does <em>not</em> follow links. It is used only in connection with
+  recursively-bound values when references are not encapsulated in abstractions.</p>
+\[\begin{align*}
+  \KEY{Rule} \quad
+    &amp; \RULE{
+        \FUN@lookup
+          (  \VAR{\ensuremath{\rho}}, 
+                 \VAR{I} ) \leadsto 
+          (  \VAR{V} : \FUN@values )
+      }{
+        \FUN@environment (  \VAR{\ensuremath{\rho}} ) \vdash \FUN@bound@directly
+                      (  \VAR{I} : \FUN@identifiers ) \TRANS 
+          \VAR{V}
+      }
+\end{align*}\]
+\[\begin{align*}
+  \KEY{Rule} \quad
+    &amp; \RULE{
+        \FUN@lookup
+          (  \VAR{\ensuremath{\rho}}, 
+                 \VAR{I} ) \leadsto 
+          (   \  )
+      }{
+        \FUN@environment (  \VAR{\ensuremath{\rho}} ) \vdash \FUN@bound@directly
+                      (  \VAR{I} : \FUN@identifiers ) \TRANS 
+          \FUN@fail
+      }
+\end{align*}\]
+\[\begin{align*}
+  \KEY{Funcon} \quad
+  &amp; \FUNDEC{bound-value}(
+                     \VAR{I} : \FUN@identifiers) 
+    :  \TO \FUN@values \\&amp;\quad
+    \leadsto \FUN@follow@if@link
+               (  \FUN@bound@directly
+                       (  \VAR{I} ) )
+\\
+  \KEY{Alias} \quad
+  &amp; \FUNDEC{bound} = \FUN@bound@value
+\end{align*}\]
+<p>\(\FUN@bound@value
+    (  \VAR{I} )\) inspects the value to which \(\VAR{I}\) is currently bound, if any,
+   and otherwise fails. If the value is a link, \(\FUN@bound@value
+    (  \VAR{I} )\) returns the
+   value obtained by following the link, if any, and otherwise fails. If the 
+   inspected value is not a link, \(\FUN@bound@value
+    (  \VAR{I} )\) returns it.</p>
+<p>\(\FUN@bound@value
+    (  \VAR{I} )\) is used for references to non-recursive bindings and to
+   recursively-bound values when references are encapsulated in abstractions.</p>
+      <h4 id="scope">
+          <a href="#scope" class="anchor-heading" aria-labelledby="scope"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Scope
+      </h4>
+\[\begin{align*}
+  \KEY{Funcon} \quad
+  &amp; \FUNDEC{closed}(
+                     \VAR{X} :  \TO \VAR{T}) 
+    :  \TO \VAR{T} 
+\end{align*}\]
+<p>\(\FUN@closed
+    (  \VAR{X} )\) ensures that \(\VAR{X}\) does not depend on non-local bindings.</p>
+\[\begin{align*}
+  \KEY{Rule} \quad
+    &amp; \RULE{
+        \FUN@environment (  \FUN@map
+                        (   \  ) ) \vdash \VAR{X} \TRANS 
+          \VAR{X}'
+      }{
+        \FUN@environment (  \_ ) \vdash \FUN@closed
+                      (  \VAR{X} ) \TRANS 
+          \FUN@closed
+            (  \VAR{X}' )
+      }
+\end{align*}\]
+\[\begin{align*}
+  \KEY{Rule} \quad
+    &amp; \FUN@closed
+        (  \VAR{V} : \VAR{T} ) \leadsto 
+        \VAR{V}
+\end{align*}\]
+\[\begin{align*}
+  \KEY{Funcon} \quad
+  &amp; \FUNDEC{scope}(
+                     \_ : \FUN@environments, \_ :  \TO \VAR{T}) 
+    :  \TO \VAR{T} 
+\end{align*}\]
+<p>\(\FUN@scope
+    (  \VAR{D}, 
+           \VAR{X} )\) executes \(\VAR{D}\) with the current bindings, to compute an environment
+  \(\VAR{\ensuremath{\rho}}\) representing local bindings. It then executes \(\VAR{X}\) to compute the result,
+  with the current bindings extended by \(\VAR{\ensuremath{\rho}}\), which may shadow or hide previous
+  bindings.</p>
+<p>\(\FUN@closed
+    (  \FUN@scope
+            (  \VAR{\ensuremath{\rho}}, 
+                   \VAR{X} ) )\) ensures that \(\VAR{X}\) can reference only the bindings
+  provided by \(\VAR{\ensuremath{\rho}}\).</p>
+\[\begin{align*}
+  \KEY{Rule} \quad
+    &amp; \RULE{
+        \FUN@environment (  \FUN@map@override
+                        (  \VAR{\ensuremath{\rho}}\SUB{1}, 
+                               \VAR{\ensuremath{\rho}}\SUB{0} ) ) \vdash \VAR{X} \TRANS 
+          \VAR{X}'
+      }{
+        \FUN@environment (  \VAR{\ensuremath{\rho}}\SUB{0} ) \vdash \FUN@scope
+                      (  \VAR{\ensuremath{\rho}}\SUB{1} : \FUN@environments, 
+                             \VAR{X} ) \TRANS 
+          \FUN@scope
+            (  \VAR{\ensuremath{\rho}}\SUB{1}, 
+                   \VAR{X}' )
+      }
+\end{align*}\]
+\[\begin{align*}
+  \KEY{Rule} \quad
+    &amp; \FUN@scope
+        (  \_ : \FUN@environments, 
+               \VAR{V} : \VAR{T} ) \leadsto 
+        \VAR{V}
+\end{align*}\]
+\[\begin{align*}
+  \KEY{Funcon} \quad
+  &amp; \FUNDEC{accumulate}(
+                     \_ : (   \TO \FUN@environments )\STAR) 
+    :  \TO \FUN@environments 
+\end{align*}\]
+<p>\(\FUN@accumulate
+    (  \VAR{D}\SUB{1}, 
+           \VAR{D}\SUB{2} )\) executes \(\VAR{D}\SUB{1}\) with the current bindings, to compute an
+  environment \(\VAR{\ensuremath{\rho}}\SUB{1}\) representing some local bindings. It then executes \(\VAR{D}\SUB{2}\) to
+  compute an environment \(\VAR{\ensuremath{\rho}}\SUB{2}\) representing further local bindings, with the
+  current bindings extended by \(\VAR{\ensuremath{\rho}}\SUB{1}\), which may shadow or hide previous
+  current bindings. The result is \(\VAR{\ensuremath{\rho}}\SUB{1}\) extended by \(\VAR{\ensuremath{\rho}}\SUB{2}\), which may shadow
+  or hide the bindings of \(\VAR{\ensuremath{\rho}}\SUB{1}\).</p>
+<p>\(\FUN@accumulate
+    (  \_, 
+           \_ )\) is associative, with \(\FUN@map
+    (   \  )\) as unit, and extends to any
+  number of arguments.</p>
+\[\begin{align*}
+  \KEY{Rule} \quad
+    &amp; \RULE{
+         \VAR{D}\SUB{1} \TRANS 
+          \VAR{D}\SUB{1}'
+      }{
+         \FUN@accumulate
+                      (  \VAR{D}\SUB{1}, 
+                             \VAR{D}\SUB{2} ) \TRANS 
+          \FUN@accumulate
+            (  \VAR{D}\SUB{1}', 
+                   \VAR{D}\SUB{2} )
+      }
+\end{align*}\]
+\[\begin{align*}
+  \KEY{Rule} \quad
+    &amp; \FUN@accumulate
+        (  \VAR{\ensuremath{\rho}}\SUB{1} : \FUN@environments, 
+               \VAR{D}\SUB{2} ) \leadsto 
+        \FUN@scope
+          (  \VAR{\ensuremath{\rho}}\SUB{1}, 
+                 \FUN@map@override
+                  (  \VAR{D}\SUB{2}, 
+                         \VAR{\ensuremath{\rho}}\SUB{1} ) )
+\end{align*}\]
+\[\begin{align*}
+  \KEY{Rule} \quad
+    &amp; \FUN@accumulate
+        (   \  ) \leadsto 
+        \FUN@map
+          (   \  )
+\end{align*}\]
+\[\begin{align*}
+  \KEY{Rule} \quad
+    &amp; \FUN@accumulate
+        (  \VAR{D}\SUB{1} ) \leadsto 
+        \VAR{D}\SUB{1}
+\end{align*}\]
+\[\begin{align*}
+  \KEY{Rule} \quad
+    &amp; \FUN@accumulate
+        (  \VAR{D}\SUB{1}, 
+               \VAR{D}\SUB{2}, 
+               \VAR{D}\PLUS ) \leadsto 
+        \FUN@accumulate
+          (  \VAR{D}\SUB{1}, 
+                 \FUN@accumulate
+                  (  \VAR{D}\SUB{2}, 
+                         \VAR{D}\PLUS ) )
+\end{align*}\]
+\[\begin{align*}
+  \KEY{Funcon} \quad
+  &amp; \FUNDEC{collateral}(
+                     \VAR{\ensuremath{\rho}}\STAR : \FUN@environments\STAR) 
+    :  \TO \FUN@environments \\&amp;\quad
+    \leadsto \FUN@checked \ 
+               \FUN@map@unite
+                 (  \VAR{\ensuremath{\rho}}\STAR )
+\end{align*}\]
+<p>\(\FUN@collateral
+    (  \VAR{D}\SUB{1}, 
+           \cdots )\) pre-evaluates its arguments with the current bindings,
+  and unites the resulting maps, which fails if the domains are not pairwise
+  disjoint.</p>
+<p>\(\FUN@collateral
+    (  \VAR{D}\SUB{1}, 
+           \VAR{D}\SUB{2} )\) is associative and commutative with \(\FUN@map
+    (   \  )\) as unit, 
+  and extends to any number of arguments.</p>
+      <h4 id="recurse">
+          <a href="#recurse" class="anchor-heading" aria-labelledby="recurse"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Recurse
+      </h4>
+\[\begin{align*}
+  \KEY{Funcon} \quad
+  &amp; \FUNDEC{bind-recursively}(
+                     \VAR{I} : \FUN@identifiers, \VAR{E} :  \TO \FUN@values) 
+    :  \TO \FUN@environments \\&amp;\quad
+    \leadsto \FUN@recursive
+               (  \{  \VAR{I} \}, 
+                      \FUN@bind@value
+                       (  \VAR{I}, 
+                              \VAR{E} ) )
+\end{align*}\]
+<p>\(\FUN@bind@recursively
+    (  \VAR{I}, 
+           \VAR{E} )\) binds \(\VAR{I}\) to a link that refers to the value of \(\VAR{E}\), 
+  representing a recursive binding of \(\VAR{I}\) to the value of \(\VAR{E}\).
+  Since \(\FUN@bound@value
+    (  \VAR{I} )\) follows links, it should not be executed during the
+  evaluation of \(\VAR{E}\).</p>
+\[\begin{align*}
+  \KEY{Funcon} \quad
+  &amp; \FUNDEC{recursive}(
+                     \VAR{SI} : \FUN@sets
+                               (  \FUN@identifiers ), \VAR{D} :  \TO \FUN@environments) 
+    :  \TO \FUN@environments \\&amp;\quad
+    \leadsto \FUN@re@close
+               (  \FUN@bind@to@forward@links
+                       (  \VAR{SI} ), 
+                      \VAR{D} )
+\end{align*}\]
+<p>\(\FUN@recursive
+    (  \VAR{SI}, 
+           \VAR{D} )\) executes \(\VAR{D}\) with potential recursion on the bindings of 
+  the identifiers in the set \(\VAR{SI}\) (which need not be the same as the set of
+  identifiers bound by \(\VAR{D}\)).</p>
+\[\begin{align*}
+  \KEY{Auxiliary Funcon} \quad
+  &amp; \FUNDEC{re-close}(
+                     \VAR{M} : \FUN@maps
+                               (  \FUN@identifiers, 
+                                      \FUN@links ), \VAR{D} :  \TO \FUN@environments) 
+    :  \TO \FUN@environments \\&amp;\quad
+    \leadsto \FUN@accumulate
+               (  \FUN@scope
+                       (  \VAR{M}, 
+                              \VAR{D} ), 
+                      \FUN@sequential
+                       (  \FUN@set@forward@links
+                               (  \VAR{M} ), 
+                              \FUN@map
+                               (   \  ) ) )
+\end{align*}\]
+<p>\(\FUN@re@close
+    (  \VAR{M}, 
+           \VAR{D} )\) first executes \(\VAR{D}\) in the scope \(\VAR{M}\), which maps identifiers
+  to freshly allocated links. This computes an environment \(\VAR{\ensuremath{\rho}}\) where the bound
+  values may contain links, or implicit references to links in abstraction
+  values. It then sets the link for each identifier in the domain of \(\VAR{M}\) to
+  refer to its bound value in \(\VAR{\ensuremath{\rho}}\), and returns \(\VAR{\ensuremath{\rho}}\) as the result.</p>
+\[\begin{align*}
+  \KEY{Auxiliary Funcon} \quad
+  &amp; \FUNDEC{bind-to-forward-links}(
+                     \VAR{SI} : \FUN@sets
+                               (  \FUN@identifiers )) 
+    :  \TO \FUN@maps
+                     (  \FUN@identifiers, 
+                            \FUN@links ) \\&amp;\quad
+    \leadsto \FUN@map@unite
+               ( \\&amp;\quad\quad\quad\quad \FUN@interleave@map
+                       ( \\&amp;\quad\quad\quad\quad\quad \FUN@bind@value
+                               (  \FUN@given, 
+                                      \FUN@fresh@link
+                                       (  \FUN@values ) ), \\&amp;\quad\quad\quad\quad\quad
+                              \FUN@set@elements
+                               (  \VAR{SI} ) ) )
+\end{align*}\]
+<p>\(\FUN@bind@to@forward@links
+    (  \VAR{SI} )\) binds each identifier in the set \(\VAR{SI}\) to a
+  freshly allocated link.</p>
+\[\begin{align*}
+  \KEY{Auxiliary Funcon} \quad
+  &amp; \FUNDEC{set-forward-links}(
+                     \VAR{M} : \FUN@maps
+                               (  \FUN@identifiers, 
+                                      \FUN@links )) 
+    :  \TO \FUN@null@type \\&amp;\quad
+    \leadsto \FUN@effect
+               ( \\&amp;\quad\quad\quad\quad \FUN@interleave@map
+                       ( \\&amp;\quad\quad\quad\quad\quad \FUN@set@link
+                               (  \FUN@map@lookup
+                                       (  \VAR{M}, 
+                                              \FUN@given ), 
+                                      \FUN@bound@value
+                                       (  \FUN@given ) ), \\&amp;\quad\quad\quad\quad\quad
+                              \FUN@set@elements
+                               (  \FUN@map@domain
+                                       (  \VAR{M} ) ) ) )
+\end{align*}\]
+<p>For each identifier \(\VAR{I}\) in the domain of \(\VAR{M}\), \(\FUN@set@forward@links
+    (  \VAR{M} )\) sets the 
+  link to which \(\VAR{I}\) is mapped by \(\VAR{M}\) to the current bound value of \(\VAR{I}\).</p>
+<p><!--  --></p>
+          <hr>
+  <p class="nav-rel">
+      <a href="/cbs-latex/docs/samples.html" class="nav-rel-link">&uarr;</a>
+      <a href="/cbs-latex/docs/katex/SIMPLE-3-Statements.html" class="nav-rel-link">&rarr;</a>
+  </p>
+      </div>
+    </div>
+      <div class="search-overlay"></div>
+  </div>
+  <script type="text/javascript" src="/cbs-latex/assets/js/toggle_mode.js"></script>
+</body>
+</html>

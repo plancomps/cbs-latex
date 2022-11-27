@@ -1,0 +1,1115 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Macros - MathJax - CBS-LaTeX</title>
+  <link rel="shortcut icon" href="/cbs-latex/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/cbs-latex/assets/css/just-the-docs-default.css">
+    <script type="text/javascript" src="/cbs-latex/assets/js/vendor/lunr.min.js"></script>
+  <script type="text/javascript" src="/cbs-latex/assets/js/just-the-docs.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Macros - MathJax | CBS-LaTeX</title>
+<meta name="generator" content="Jekyll v4.3.1" />
+<meta property="og:title" content="Macros - MathJax" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This site illustrates how CBS specifications of languages and funcons could be formatted for the web using LaTeX, Markdown, KaTeX, and MathJax. One of the aims is for CBS on web pages look like the CBS in published papers, using mathematical symbols instead of plain text." />
+<meta property="og:description" content="This site illustrates how CBS specifications of languages and funcons could be formatted for the web using LaTeX, Markdown, KaTeX, and MathJax. One of the aims is for CBS on web pages look like the CBS in published papers, using mathematical symbols instead of plain text." />
+<link rel="canonical" href="https://plancomps.github.io/cbs-latex/docs/macros-mathjax.html" />
+<meta property="og:url" content="https://plancomps.github.io/cbs-latex/docs/macros-mathjax.html" />
+<meta property="og:site_name" content="CBS-LaTeX" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Macros - MathJax" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"This site illustrates how CBS specifications of languages and funcons could be formatted for the web using LaTeX, Markdown, KaTeX, and MathJax. One of the aims is for CBS on web pages look like the CBS in published papers, using mathematical symbols instead of plain text.","headline":"Macros - MathJax","url":"https://plancomps.github.io/cbs-latex/docs/macros-mathjax.html"}</script>
+<!-- End Jekyll SEO tag -->
+    <script>
+  MathJax = { 
+    tex: { 
+      maxBuffer: 10 * 1024,
+      tags: 'ams',
+      packages: {'[+]': ['textmacros']},
+      macros: {
+        relax: ''
+        }
+    },
+    loader: {
+      load: ['[tex]/textmacros', 'ui/lazy']
+    },
+    chtml: { 
+      mtextFont: 'sans-serif', 
+      displayAlign: 'left', 
+      displayIndent: '2em'
+    },
+    svg: { 
+      mtextFont: 'sans-serif', 
+      displayAlign: 'left', 
+      displayIndent: '2em',
+      fontCache: 'global'
+    }
+  };
+</script>
+<!-- Automatically display code inside script tags with type=math/tex using MathJax -->
+<script type="text/javascript" defer
+  src="/just-the-docs-tests/assets/js/mathjax-script-type.js">
+</script>
+<!-- Copied from https://docs.mathjax.org/en/latest/web/components/combined.html -->
+<script type="text/javascript" id="MathJax-script" defer
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<!-- https://www.primative.net/blog/how-to-get-rid-of-the-flash-of-unstyled-content/ -->
+<style>
+  .no-js {
+    visibility: visible;
+  }
+</style>
+<link rel="shortcut icon" type="image/x-icon"   href="/cbs-latex/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180"    href="/cbs-latex/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/cbs-latex/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/cbs-latex/assets/icons/favicon-16x16.png">
+<link rel="mask-icon" href="/cbs-latex/assets/icons/safari-pinned-tab.svg">
+<link rel="manifest"  href="/cbs-latex/assets/icons/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="svg-link" viewBox="0 0 24 24">
+      <title>Link</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </symbol>
+    <symbol id="svg-search" viewBox="0 0 24 24">
+      <title>Search</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-menu" viewBox="0 0 24 24">
+      <title>Menu</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+      <title>Expand</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </symbol>
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+      <title>Document</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+      </svg>
+    </symbol>
+  </svg>
+  <script type="text/javascript" src="/cbs-latex/assets/js/toggle_init.js"></script>
+  <div class="side-bar">
+    <div class="site-header">
+      <a href="/cbs-latex/" class="site-title lh-tight">
+  CBS-LaTeX
+</a>
+      <a href="#" id="menu-button" class="site-button">
+        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+      </a>
+    </div>
+  <button id="theme-toggle" onclick="modeSwitcher()" 
+    type="button" name="button" class="btn theme-toggle" ></button>
+  <script>
+    function modeSwitcher() {
+      let currentMode = document.documentElement.getAttribute('data-theme');
+      if (currentMode === "dark") {
+        document.documentElement.setAttribute('data-theme', 'light');
+        window.localStorage.setItem('theme', 'light');
+        document.getElementById("theme-toggle").innerHTML = "&rarr; Dark Mode";
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        window.localStorage.setItem('theme', 'dark');
+        document.getElementById("theme-toggle").innerHTML = "&rarr; Light Mode";
+      }
+    }
+  </script>
+    <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
+      <ul class="nav-list"><li class="nav-list-item"><a href="/cbs-latex/docs/intro.html" class="nav-list-link">Introduction</a></li>
+<li class="nav-list-item"><a href="/cbs-latex/docs/local.html" class="nav-list-link">Local browsing</a></li>
+<li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="/cbs-latex/docs/macros.html" class="nav-list-link">Macros</a><ul class="nav-list"><li class="nav-list-item"><a href="/cbs-latex/docs/katex/cbs-katex.html" class="nav-list-link">CBS-KaTeX</a></li>
+<li class="nav-list-item"><a href="/cbs-latex/docs/latex/cbs-latex.html" class="nav-list-link">CBS-LaTeX</a></li>
+<li class="nav-list-item"><a href="/cbs-latex/docs/mathjax-3/cbs-mathjax.html" class="nav-list-link">CBS-MathJax</a></li>
+<li class="nav-list-item"><a href="/cbs-latex/docs/mathjax-2.7/cbs-mathjax-2.7.html" class="nav-list-link">CBS-MathJax-2.7</a></li>
+<li class="nav-list-item"><a href="/cbs-latex/docs/mathjax-2.7/cbs-mathjax-lncs.html" class="nav-list-link">CBS-MathJax-LNCS</a></li>
+</ul>
+</li>
+<li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="/cbs-latex/docs/samples.html" class="nav-list-link">Samples</a><ul class="nav-list"><li class="nav-list-item"><a href="/cbs-latex/docs/katex/Binding.html" class="nav-list-link">Funcon specifications</a></li>
+<li class="nav-list-item"><a href="/cbs-latex/docs/katex/SIMPLE-3-Statements.html" class="nav-list-link">Language specifications</a></li>
+<li class="nav-list-item"><a href="/cbs-latex/docs/katex/TEST-Start.html" class="nav-list-link">ASCII Tests</a></li>
+</ul>
+</li>
+</ul>
+    </nav>
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  </div>
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+        <div class="search">
+          <div class="search-input-wrap">
+            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search CBS-LaTeX" aria-label="Search CBS-LaTeX" autocomplete="off">
+            <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+        <nav aria-label="Auxiliary" class="aux-nav">
+          <ul class="aux-nav-list">
+              <li class="aux-nav-list-item">
+                <a href="https://github.com/plancomps/cbs-latex" class="site-button"
+                >
+                  CBS-LaTeX on GitHub
+                </a>
+              </li>
+          </ul>
+        </nav>
+    </div>
+    <div id="main-content-wrap" class="main-content-wrap">
+      <div id="main-content" class="main-content" role="main">
+          <div style="display: none">
+  \(
+  % cbs-mathjax.sty
+% For use with mathjax-3.html.
+% For formatting pages using CBS with MathJax-3. 
+% When using Jekyll, include this file in a page by adding to the front matter:
+%   layout: cbs-mathjax
+% or:
+%   layout: cbs-mathjax-local
+% The macros support formatting all of CBS. The MathJax-3 rendering is
+% compatible with the LaTeX rendering of articles that use cbs-latex.sty.
+% The colors are specified using CSS, so that they can be changed according
+% to the page background color.
+% The configuration tex block should include:
+%        maxBuffer : 10 * 1024
+% The output block should include:
+%        mtextFont: 'sans-serif'
+% See the docs at: 
+% ???
+\newcommand{\llbracket}{[\![}
+\newcommand{\rrbracket}{]\!]}
+\newcommand{\nobreak}{}
+% \SHADE{MATH} can be defined to produce a shaded background to highlight
+% inline MATH in running text:
+\newcommand{\SHADE}[1]{#1}
+% \STYLE{STYLE-NAME}{TEXT-OR-MATH} lets CSS determine the color of TEXT-OR-MATH, 
+% so that it can change when a web page changes between light and dark modes.
+% STYLE-NAME should be either Key, PartVariable, Name, SyntaxName, SemanticsName,
+% Language, or SectNumber.
+% TO DO: Improve the style names!
+\newcommand{\STYLE}[2]{\class{cbs-#1}{#2}}
+% \KEY{text}, \STRING{text}, \ATOM{text}, \LEX{text} can be used in text or math.
+% When the MathJax configuration includes mtextFont: 'sans-serif', \KEY{text}
+% renders as slanted sans-serif, but \VAR{text} still renders in a serif font.
+\newcommand{\KEY}[1]{\textit{\STYLE{Key}{#1}}}
+\newcommand{\STRING}[1]{\text{``$\mathtt{#1}$''}}
+\newcommand{\ATOM}[1]{\text{`$\mathtt{#1}$'}}
+\newcommand{\LEX}[1]{\text{\STYLE{Key}{`}$\mathtt{#1}$\STYLE{Key}{'}}}
+% The following commands produce ASCII characters that are treated specially by LaTeX:
+\newcommand{\HASH}{\unicode{x0023}}        % {\char`\#}
+\newcommand{\DOLLAR}{\unicode{x0024}}      % {\char`\$}
+\newcommand{\PERCENT}{\unicode{x0025}}     % {\char`\%}
+\newcommand{\AMPERSAND}{\unicode{x0026}}   % {\char`\&}
+\newcommand{\APOSTROPHE}{\unicode{x0027}}  % {\char`\'}
+\newcommand{\BACKSLASH}{\unicode{x005c}}   % {\char`\\}
+\newcommand{\CARET}{\unicode{x005e}}       % {\char`\^}
+\newcommand{\UNDERSCORE}{\unicode{x005f}}  % {\char`\_}
+\newcommand{\GRAVE}{\unicode{x0060}}       % {\char`\`}
+\newcommand{\LEFTBRACE}{\unicode{x007b}}   % {\char`\{}
+\newcommand{\RIGHTBRACE}{\unicode{x007d}}  % {\char`\}}
+\newcommand{\TILDE}{\unicode{x007e}}       % {\textasciitilde}
+% \FUN{name} highlights the name.
+% \FUNDEC{name} declares Name.name as the target of links to name.
+% \FUNREF{name} links name to the target Name.name in the current file.
+% \FUNHYP{url}{file}{name} links name to Name.name at url/file/file.pdf.
+% Similarly for \VAR{partvariable}, \SYN{syntaxname}, \SEM{semanticsName},
+% and \SECT{sectionnumber}
+% The kerns in \SUB and \VAR avoid overlaps with primes:
+\newcommand{\SUB}[1]{_{\kern-2mu\STYLE{PartVariable}{#1}}}
+% PLAIN
+\newcommand{\VAR}[1]{\STYLE{PartVariable}{\it#1\kern2mu}}
+% \it#1 currently formats #1 in the text italic font, independently of mtextFont.
+\newcommand{\FUN}[1]{\STYLE{Name}{\textsf{#1}}}
+\newcommand{\SYN}[1]{\STYLE{SyntaxName}{\textsf{#1}}}
+\newcommand{\SEM}[1]{\STYLE{SemanticsName}{\textsf{#1}}}
+\newcommand{\SECT}[1]{\STYLE{SectionNumber}{\textsf{#1}}}
+\newcommand{\LANG}[1]{\STYLE{Language}{#1}}
+% DEC
+\newcommand{\DEC}[3]{\smash{\raise{2.4ex}{\cssId{#1:#2}{}}}#3}
+\newcommand{\VARDEC}[1]{\DEC{PartVariable}{#1}{\VAR{#1}}}
+\newcommand{\FUNDEC}[1]{\DEC{Name}{#1}{\FUN{#1}}}
+\newcommand{\SYNDEC}[1]{\DEC{SyntaxName}{#1}{\SYN{#1}}}
+\newcommand{\SEMDEC}[1]{\DEC{SemanticsName}{#1}{\SEM{#1}}}
+\newcommand{\SECTDEC}[1]{\DEC{SectionNumber}{#1}{\textsf{#1}}}
+% \newcommand{\LANGDEC}[1]{\DEC{Language}{#1}{\LANG{#1}}}
+% REF
+\newcommand{\REF}[3]{\href{###1%3A#2}{#3}}
+\newcommand{\VARREF}[1]{\REF{PartVariable}{#1}{\VAR{#1}}}
+\newcommand{\FUNREF}[1]{\REF{Name}{#1}{\FUN{#1}}}
+\newcommand{\SYNREF}[1]{\REF{SyntaxName}{#1}{\SYN{#1}}}
+\newcommand{\SEMREF}[1]{\REF{SemanticsName}{#1}{\SEM{#1}}}
+\newcommand{\SECTREF}[1]{\REF{SectionNumber}{#1}{\SECT{#1}}}
+% \newcommand{\LANGREF}[1]{\REF{Language}{#1}{\LANG{#1}}}
+% HYP
+\newcommand{\HYP}[5]{\href{#1/#2/index.html###3%3A#4}{#5}}
+\newcommand{\VARHYP}[3]{\HYP{#1}{#2}{PartVariable}{#3}{\VAR{#3}}}
+\newcommand{\FUNHYP}[3]{\HYP{#1}{#2}{Name}{#3}{\FUN{#3}}}
+\newcommand{\SYNHYP}[3]{\HYP{#1}{#2}{SyntaxName}{#3}{\SYN{#3}}}
+\newcommand{\SEMHYP}[3]{\HYP{#1}{#2}{SemanticsName}{#3}{\SEM{#3}}}
+\newcommand{\SECTHYP}[3]{\HYP{#1}{#2}{SectionNumber}{#3}{\SECT{#3}}}
+% \newcommand{\LANGHYP}[3]{\HYP{#1}{#2}{Language}{#3}{\LANG{#3}}}
+% CBS-beta/math hyperlinks
+\newcommand{\CBSBETAMATH}{https://plancomps.github.io/CBS-beta/math}
+\newcommand{\VARCBS}[3]{\VARHYP{\CBSBETAMATH/#1}{#2}{#3}}
+\newcommand{\FUNCBS}[3]{\FUNHYP{\CBSBETAMATH/#1}{#2}{#3}}
+\newcommand{\SYNCBS}[3]{\SYNHYP{\CBSBETAMATH/#1}{#2}{#3}}
+\newcommand{\SEMCBS}[3]{\SEMHYP{\CBSBETAMATH/#1}{#2}{#3}}
+\newcommand{\SECTCBS}[3]{\SECTHYP{\CBSBETAMATH/#1}{#2}{#3}}
+% \newcommand{\LANGCBS}[3]{\LANGHYP{\CBSBETAMATH/#1}{#2}{#3}}
+% \LEFTPHRASE MATH \RIGHTPHRASE produces [[ MATH ]] with proper brackets:
+\newcommand{\LEFTPHRASE}{\llbracket}
+\newcommand{\RIGHTPHRASE}{\rrbracket}
+% \LEFTGROUP MATH \RIGHTGROUP produces ( MATH ) where the parentheses are
+% highlighted the same as keywords:
+\newcommand{\LEFTGROUP}{\STYLE{Key}{(}}
+\newcommand{\RIGHTGROUP}{\STYLE{Key}{)}}
+% MATH\PLUS produces a superscript +
+% MATH\STAR produces a superscript *
+% MATH\QUERY produces a superscript ?
+\newcommand{\PLUS}{ {}^{\texttt{+}}}
+\newcommand{\STAR}{ {}^{\texttt{*}}}
+\newcommand{\QUERY}{ {}^{\texttt{?}}}
+% \RULE{premise}{conclusion} produces
+%     premise
+%   ----------
+%   conclusion
+\newcommand{\RULE}[2]{\frac{\displaystyle#1}{\displaystyle#2}}
+% See https://tex.stackexchange.com/questions/337328/superscripts-appear-in-various-weird-places-in-fractions
+% \RULE
+%   {\begin{aligned} & premise \\ & ... \end{aligned}}
+%   {\begin{aligned} & conclusion ... \\ & ... \end{aligned}}
+% produces an inference rule with left-aligned premises and split conclusion
+%      premise
+%      ...
+%   --------------
+%   conclusion ...
+%   ...
+% \TO TYPE produces => TYPE
+\newcommand{\TO}{\mathop{\Rightarrow}}
+% TERM \TRANS TERM produces TERM ---> TERM
+\newcommand{\TRANS}{\longrightarrow}
+% TERM \xrightarrow{LABEL} TERM puts the label above the long arrow
+  \)
+</div>
+<div style="display: none">
+  \(
+  \renewcommand{\HYP}[5]{#5}
+  \)
+</div>
+<blockquote>
+  <p>This page is using MathJax. <a href="macros">See the same page using KaTeX</a>.</p>
+</blockquote>
+      <h1 class="no_toc" id="macros">
+          <a href="#macros" class="anchor-heading" aria-labelledby="macros"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Macros
+      </h1>
+<p>This page explains how to mark up CBS specifications in LaTeX when using the <code class="language-plaintext highlighter-rouge">cbs-latex</code> package.
+It also provides links to the macro definitions for use with LaTeX, KaTeX, and MathJax.</p>
+<details open="">
+  <summary class="text-delta">
+    Table of contents
+  </summary>
+<ul id="markdown-toc">
+  <li><a href="#required-packages" id="markdown-toc-required-packages">Required packages</a></li>
+  <li><a href="#names" id="markdown-toc-names">Names</a>    <ul>
+      <li><a href="#hyperlinks" id="markdown-toc-hyperlinks">Hyperlinks</a></li>
+      <li><a href="#variables" id="markdown-toc-variables">Variables</a></li>
+    </ul>
+  </li>
+  <li><a href="#language-specifications" id="markdown-toc-language-specifications">Language specifications</a>    <ul>
+      <li><a href="#grammars" id="markdown-toc-grammars">Grammars</a></li>
+      <li><a href="#syntactic-phrase-types" id="markdown-toc-syntactic-phrase-types">Syntactic phrase types</a></li>
+      <li><a href="#lexemes" id="markdown-toc-lexemes">Lexemes</a></li>
+      <li><a href="#semantic-functions" id="markdown-toc-semantic-functions">Semantic functions</a></li>
+    </ul>
+  </li>
+  <li><a href="#funcon-specifications" id="markdown-toc-funcon-specifications">Funcon specifications</a>    <ul>
+      <li><a href="#datatype-specifications" id="markdown-toc-datatype-specifications">Datatype specifications</a></li>
+      <li><a href="#entity-declarations" id="markdown-toc-entity-declarations">Entity declarations</a></li>
+      <li><a href="#rules" id="markdown-toc-rules">Rules</a></li>
+      <li><a href="#formulae" id="markdown-toc-formulae">Formulae</a></li>
+      <li><a href="#terms" id="markdown-toc-terms">Terms</a></li>
+      <li><a href="#other-specifications" id="markdown-toc-other-specifications">Other specifications</a></li>
+    </ul>
+  </li>
+  <li><a href="#alignment" id="markdown-toc-alignment">Alignment</a></li>
+</ul>
+</details><hr />
+<p>Markup using CBS-LaTeX is quite low-level. This makes it easy to adjust the
+layout to fit the intended page width, but tedious to write.<sup id="fnref:generation" role="doc-noteref"><a href="#fn:generation" class="footnote" rel="footnote">1</a></sup></p>
+<p>CBS-LaTeX provides the following files:</p>
+<ul>
+  <li><a href="latex/cbs-latex"><code class="language-plaintext highlighter-rouge">cbs-latex.sty</code></a>: a package of macro definitions for use in LaTeX documents</li>
+  <li><a href="katex/cbs-katex"><code class="language-plaintext highlighter-rouge">cbs-katex.sty</code></a>: a configuration defining <a href="https://katex.org">KaTeX</a> macros for use in web pages</li>
+  <li><a href="mathjax-3/cbs-mathjax"><code class="language-plaintext highlighter-rouge">cbs-mathjax.sty</code></a>: a configuration defining <a href="https://docs.mathjax.org">MathJax</a> macros for use in web pages</li>
+</ul>
+<p>The packages include some explanatory comments.
+Each package defines the same collection of LaTeX macro names, taking the same arguments.
+The rendering of the macros should have the same layout and symbols,
+regardless of which format is used, except that the font families may differ.</p>
+<p>All macro names are uppercase, to reduce the risk of clashes with macros defined by other packages.<sup id="fnref:prefix" role="doc-noteref"><a href="#fn:prefix" class="footnote" rel="footnote">2</a></sup>
+They are intended for use primarily in math mode.</p>
+      <h2 id="required-packages">
+          <a href="#required-packages" class="anchor-heading" aria-labelledby="required-packages"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Required packages
+      </h2>
+<p>When used with \(\LaTeX\), the <code class="language-plaintext highlighter-rouge">cbs-latex</code> package requires the following packages (all included in <a href="https://www.tug.org/texlive">TeXLive</a>):</p>
+<dl>
+  <dt><code class="language-plaintext highlighter-rouge">amsmath</code></dt>
+  <dd>Provides various environments and commands for math alignment, including the <code class="language-plaintext highlighter-rouge">align</code> and <code class="language-plaintext highlighter-rouge">aligned</code> environments.</dd>
+  <dt><code class="language-plaintext highlighter-rouge">amssymb</code></dt>
+  <dd>Provides an extended math symbol collection, including \(\leadsto\).</dd>
+  <dt><code class="language-plaintext highlighter-rouge">stmaryrd</code></dt>
+  <dd>Provides symbols for TCS, including \(\llbracket\) and \(\rrbracket\).</dd>
+  <dt><code class="language-plaintext highlighter-rouge">textcomp</code></dt>
+  <dd>Provides commands for various characters in text mode, including \(\LEX{\APOSTROPHE}\).<sup id="fnref:implicit" role="doc-noteref"><a href="#fn:implicit" class="footnote" rel="footnote">3</a></sup></dd>
+  <dt><code class="language-plaintext highlighter-rouge">xcolor</code></dt>
+  <dd>The <code class="language-plaintext highlighter-rouge">svgnames</code> option provides color names that can also be used on web pages (see the <a href="https://www.w3schools.com/colors">W3schools Colors Tutorial</a>).</dd>
+  <dt><code class="language-plaintext highlighter-rouge">hyperref</code></dt>
+  <dd>Needed for creating hyperlinks. Use <code class="language-plaintext highlighter-rouge">\hypersetup{filebordercolor=White}</code> to avoid colored boxes around references to names in CBS specifications.</dd>
+</dl>
+<p>The following packages are not required, but using them may make the formatting of running text in \(\LaTeX\) closer to that produced from Markdown on web pages:</p>
+<dl>
+  <dt><code class="language-plaintext highlighter-rouge">cmbright</code></dt>
+  <dd>Global sans-serif fonts.</dd>
+  <dt><code class="language-plaintext highlighter-rouge">geometry</code></dt>
+  <dd>Allows adjustment of page dimensions. Set in the preamble, e.g., <code class="language-plaintext highlighter-rouge">\geometry{a4paper, textwidth=150mm, top=10mm, bottom=20mm, footnotesep=10mm plus 10mm}</code>.</dd>
+  <dt><code class="language-plaintext highlighter-rouge">parskip</code></dt>
+  <dd>Uses blank lines to separate paragraphs.</dd>
+</dl>
+      <h2 id="names">
+          <a href="#names" class="anchor-heading" aria-labelledby="names"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Names
+      </h2>
+<p>CBS specifications involve declaration and reference of names for 
+funcons, entities, syntax sorts, and semantic functions.<sup id="fnref:sections" role="doc-noteref"><a href="#fn:sections" class="footnote" rel="footnote">4</a></sup>
+The macro used for a name depends on the namespace.
+Names in different namespaces have different highlighting colors,
+and the colors depend on the configured <code class="language-plaintext highlighter-rouge">color_scheme</code>.</p>
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Plain CBS</th>
+      <th>CBS-LaTeX</th>
+      <th>Formatted CBS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">funcon-name</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\FUN{funcon-name}</code></td>
+      <td>\(\FUN{funcon-name}\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">entity-name</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\FUN{entity-name}</code></td>
+      <td>\(\FUN{entity-name}\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">syntax-name</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\SYN{syntax-name}</code></td>
+      <td>\(\SYN{syntax-name}\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">semantics-name</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\SEM{semantics-name}</code></td>
+      <td>\(\SEM{semantics-name}\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">§2.1 A section</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\textsf{\S\SECT{2.1} A section}</code></td>
+      <td>\(\textsf{\S\SECT{2.1} A section}\)</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h3 id="hyperlinks">
+          <a href="#hyperlinks" class="anchor-heading" aria-labelledby="hyperlinks"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Hyperlinks
+      </h3>
+<p>Variants of the name markup macros indicate that the occurrence of a name is a declaration or a reference.
+In both PDFs and web pages, each name reference becomes a hyperlink to the declaration of that name.
+A name should not be declared (in the same namespace) more than once per document.</p>
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Plain CBS</th>
+      <th>CBS-LaTeX</th>
+      <th>Formatted CBS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">name</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\FUNDEC{name}</code></td>
+      <td>\(\FUNDEC{name}\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">name</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\FUNREF{name}</code></td>
+      <td>\(\FUNREF{name}\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">name</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\FUNHYP{url}{file}{name}</code></td>
+      <td>\(\FUNHYP{.}{macros}{name}\)</td>
+    </tr>
+  </tbody>
+</table></div>
+<p>Similarly for <code class="language-plaintext highlighter-rouge">\SYN</code>, <code class="language-plaintext highlighter-rouge">\SEM</code>, <code class="language-plaintext highlighter-rouge">\SECT</code>.</p>
+      <h3 id="variables">
+          <a href="#variables" class="anchor-heading" aria-labelledby="variables"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Variables
+      </h3>
+<p>The macro for variable names formats its argument in text mode.
+A Greek letter used as a variable name has to be in math mode.
+Subscripts should be marked up directly after the variable name,
+to ensure that they are in the intended sans serif font
+(and to support italic spacing correction).
+Any primes and multiplicity are written after the name and subscript.</p>
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Plain CBS</th>
+      <th>CBS-LaTeX</th>
+      <th>Formatted CBS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">X'</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\VAR{X}'</code></td>
+      <td>\(\VAR{X}'\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">X12''</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\VAR{X}\SUB{12}''</code></td>
+      <td>\(\VAR{X}\SUB{12}''\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">X+</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\VAR{X}\PLUS</code></td>
+      <td>\(\VAR{X}\PLUS\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">X?</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\VAR{X}\QUERY</code></td>
+      <td>\(\VAR{X}\QUERY\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">X*</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\VAR{X}\STAR</code></td>
+      <td>\(\VAR{X}\STAR\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Rho</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\rho</code> or <code class="language-plaintext highlighter-rouge">\VAR{$\rho$}</code></td>
+      <td>\(\VAR{$\rho$}\)</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h2 id="language-specifications">
+          <a href="#language-specifications" class="anchor-heading" aria-labelledby="language-specifications"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Language specifications
+      </h2>
+      <h3 id="grammars">
+          <a href="#grammars" class="anchor-heading" aria-labelledby="grammars"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Grammars
+      </h3>
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Plain CBS</th>
+      <th>CBS-LaTeX</th>
+      <th>Formatted CBS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Lexis ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\KEY{Lexis} ~ ...</code></td>
+      <td>\(\KEY{Lexis} ~ \ldots\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Syntax ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\KEY{Syntax} ~ ...</code></td>
+      <td>\(\KEY{Syntax} ~ \ldots\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">...:... ::= ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">...:... ::= ...</code></td>
+      <td>\(\ldots:\ldots ::= \ldots\)</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h3 id="syntactic-phrase-types">
+          <a href="#syntactic-phrase-types" class="anchor-heading" aria-labelledby="syntactic-phrase-types"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Syntactic phrase types
+      </h3>
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Plain CBS</th>
+      <th>CBS-LaTeX</th>
+      <th>Formatted CBS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">syntax-name</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\SYN{syntax-name}</code></td>
+      <td>\(\SYN{syntax-name}\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">'lexeme'</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\LEX{lexeme}</code></td>
+      <td>\(\LEX{lexeme}\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">P_1 P_2</code></td>
+      <td><code class="language-plaintext highlighter-rouge">P_1 ~ P_2</code></td>
+      <td>\(P_1 ~ P_2\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">P_1 | P_2</code></td>
+      <td><code class="language-plaintext highlighter-rouge">P_1 \mid P_2</code></td>
+      <td>\(P_1 \mid P_2\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">P+</code></td>
+      <td><code class="language-plaintext highlighter-rouge">P\PLUS</code></td>
+      <td>\(P\PLUS\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">P?</code></td>
+      <td><code class="language-plaintext highlighter-rouge">P\QUERY</code></td>
+      <td>\(P\QUERY\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">P*</code></td>
+      <td><code class="language-plaintext highlighter-rouge">P\STAR</code></td>
+      <td>\(P\STAR\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">(P)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\LEFTGROUP P \RIGHTGROUP</code></td>
+      <td>\(\LEFTGROUP P \RIGHTGROUP\)</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h3 id="lexemes">
+          <a href="#lexemes" class="anchor-heading" aria-labelledby="lexemes"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Lexemes
+      </h3>
+<p>Characters in lexemes are marked up as follows.
+Those that require macros include all the special characters of \(\LaTeX\),
+and characters that look different in text and math mode.</p>
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Plain CBS</th>
+      <th>CBS-LaTeX</th>
+      <th>Formatted CBS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">'0...9A...Za...z'</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\LEX{0...9A...Za...z}</code></td>
+      <td>\(\LEX{0...9A...Za...z}\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">'!()*,./:;=?@[]'</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\LEX{!()*,./:;=?@[]}</code></td>
+      <td>\(\LEX{!()*,./:;=?@[]}\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">'#'</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\LEX{\HASH}</code></td>
+      <td>\(\LEX{\HASH}\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">'$'</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\LEX{\DOLLAR}</code></td>
+      <td>\(\LEX{\DOLLAR}\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">'%'</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\LEX{\PERCENT}</code></td>
+      <td>\(\LEX{\PERCENT}\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">'&amp;'</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\LEX{\AMPERSAND}</code></td>
+      <td>\(\LEX{\AMPERSAND}\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">'\''</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\LEX{\APOSTROPHE}</code></td>
+      <td>\(\LEX{\APOSTROPHE}\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">'\\'</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\LEX{\BACKSLASH}</code></td>
+      <td>\(\LEX{\BACKSLASH}\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">'^'</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\LEX{\CARET}</code></td>
+      <td>\(\LEX{\CARET}\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">'_'</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\LEX{\UNDERSCORE}</code></td>
+      <td>\(\LEX{\UNDERSCORE}\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">'`'</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\LEX{\GRAVE}</code></td>
+      <td>\(\LEX{\GRAVE}\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">'{'</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\LEX{\LEFTBRACE}</code></td>
+      <td>\(\LEX{\LEFTBRACE}\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">'}'</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\LEX{\RIGHTBRACE}</code></td>
+      <td>\(\LEX{\RIGHTBRACE}\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">'~'</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\LEX{\TILDE}</code></td>
+      <td>\(\LEX{\TILDE}\)</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h3 id="semantic-functions">
+          <a href="#semantic-functions" class="anchor-heading" aria-labelledby="semantic-functions"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Semantic functions
+      </h3>
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Plain CBS</th>
+      <th>CBS-LaTeX</th>
+      <th>Formatted CBS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Semantics s-n[[_:...]] : ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\KEY{Semantics} ~ \SEMDEC{s-n} \LEFTPHRASE \_ : ... \RIGHTPHRASE : ...</code></td>
+      <td>\(\KEY{Semantics} ~ \SEM{s-n} \LEFTPHRASE \_ : \nobreak \ldots \RIGHTPHRASE : \ldots\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Rule ... = ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\KEY{Rule} ~ ... = ...</code></td>
+      <td>\(\KEY{Rule} ~ \ldots = \ldots\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">[[...]]</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\LEFTPHRASE ... \RIGHTPHRASE</code></td>
+      <td>\(\LEFTPHRASE \ldots \RIGHTPHRASE\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">s-n[[...]]</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\SEMREF{s-n} \LEFTPHRASE ... \RIGHTPHRASE</code></td>
+      <td>\(\SEMREF{s-n} \LEFTPHRASE \ldots \RIGHTPHRASE\)</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h2 id="funcon-specifications">
+          <a href="#funcon-specifications" class="anchor-heading" aria-labelledby="funcon-specifications"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Funcon specifications
+      </h2>
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Plain CBS</th>
+      <th>CBS-LaTeX</th>
+      <th>Formatted CBS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Funcon f-n ... : ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\KEY{Funcon} ~ \FUNDEC{f-n} ... : ...</code></td>
+      <td>\(\KEY{Funcon} ~ \FUN{f-n} \ldots : \ldots\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Alias f-n1 = f-n2</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\KEY{Alias} ~ \FUNDEC{f-n1} = \FUNREF{f-n2}</code></td>
+      <td>\(\KEY{Alias} ~ \FUNDEC{f-n1} = \FUNREF{f-n2}\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Type t-n ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\KEY{Type} ~ \FUNDEC{t-n} ...</code></td>
+      <td>\(\KEY{Type} ~ \FUNDEC{t-n} \ldots\)</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h3 id="datatype-specifications">
+          <a href="#datatype-specifications" class="anchor-heading" aria-labelledby="datatype-specifications"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Datatype specifications
+      </h3>
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Plain CBS</th>
+      <th>CBS-LaTeX</th>
+      <th>Formatted CBS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Datatype d-n ::= ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\KEY{Datatype} ~ \FUNDEC{d-n} ::= ...</code></td>
+      <td>\(\KEY{Datatype} ~ \FUNDEC{d-n} ::= \ldots\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">... | ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">... \mid ...</code></td>
+      <td>\(\ldots \mid \ldots\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">c-n</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\FUNDEC{c-n}</code></td>
+      <td>\(\FUNDEC{c-n}\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">c-n(...)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\FUNDEC{c-n}(...)</code></td>
+      <td>\(\FUNDEC{c-n}(\ldots)\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">{ _ : ... }</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\{ ~ _ : ... ~ \}</code></td>
+      <td>\(\{ ~ \_ : \ldots ~ \}\)</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h3 id="entity-declarations">
+          <a href="#entity-declarations" class="anchor-heading" aria-labelledby="entity-declarations"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Entity declarations
+      </h3>
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Plain CBS</th>
+      <th>CBS-LaTeX</th>
+      <th>Formatted CBS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Entity ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\KEY{Entity} ~ ...</code></td>
+      <td>\(\KEY{Entity} ~ \ldots\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">e-n(_:...)|- _ ---&gt; _</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\FUNDEC{e-n}(\_:...) \vdash \_\TRANS\_</code></td>
+      <td>\(\FUNDEC{e-n}(\_ : \ldots) \vdash \_ \TRANS \_\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;_,e-n(_:...)&gt; ---&gt; &lt;_,e-n(_:...)&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\langle\_,\FUNDEC{e-n}(\_:...)\rangle \TRANS \langle\_,\FUN{e-n}(\_:...)\rangle</code></td>
+      <td>\(\langle\_,\FUN{e-n}(\_:\ldots)\rangle \TRANS \langle\_,\FUN{e-n}(\_:\ldots)\rangle\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">_ -- e-n.(_:...) -&gt; _</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\_ \xrightarrow{\FUNDEC{e-n}.(\_:...)} \_</code></td>
+      <td>\(\_ \xrightarrow{\FUN{e-n}.(\_:\ldots)} \_\)</td>
+    </tr>
+  </tbody>
+</table></div>
+<p>The <code class="language-plaintext highlighter-rouge">.</code> in the last line above should be <code class="language-plaintext highlighter-rouge">!</code>, <code class="language-plaintext highlighter-rouge">?</code>, or omitted.</p>
+      <h3 id="rules">
+          <a href="#rules" class="anchor-heading" aria-labelledby="rules"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Rules
+      </h3>
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Plain CBS</th>
+      <th>CBS-LaTeX</th>
+      <th>Formatted CBS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Rule ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\KEY{Rule} ~ ...</code></td>
+      <td>\(\KEY{Rule} ~ \ldots\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Rule ... ⏎ ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\begin{aligned} \KEY{Rule} ~ &amp; ...\\ &amp; ... \end{aligned}</code></td>
+      <td>\(\begin{aligned}\KEY{Rule}~&amp;\ldots\\[-2ex]&amp;\quad\ldots\end{aligned}\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Rule ... ⏎ ---- ⏎ ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\KEY{Rule} ~ \RULE{...}{...}</code></td>
+      <td>\(\KEY{Rule} ~ \RULE{\ldots}{\ldots}\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Otherwise ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\KEY{Otherwise} ~ ...</code></td>
+      <td>\(\KEY{Otherwise} ~ \ldots\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Assert ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\KEY{Assert} ~ ...</code></td>
+      <td>\(\KEY{Assert} ~ \ldots\)</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h3 id="formulae">
+          <a href="#formulae" class="anchor-heading" aria-labelledby="formulae"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Formulae
+      </h3>
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Plain CBS</th>
+      <th>CBS-LaTeX</th>
+      <th>Formatted CBS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">... ~&gt; ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">... \leadsto ...</code></td>
+      <td>\(\ldots \leadsto \ldots\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">... == ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">... == ...</code></td>
+      <td>\(\ldots == \ldots\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">... =/= ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">... \neq ...</code></td>
+      <td>\(\ldots \neq \ldots\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">... &lt;: ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">... &lt;: ...</code></td>
+      <td>\(\ldots &lt;: \ldots\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">... ---&gt; ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">... \TRANS ...</code></td>
+      <td>\(\ldots \TRANS \ldots\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">e-n(...)|- ...---&gt;...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\FUN{e-n}(...) \vdash ...\TRANS...</code></td>
+      <td>\(\FUNREF{e-n}(\ldots) \vdash \ldots \TRANS \ldots\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;...,e-n(...)&gt; ---&gt; &lt;...,e-n(...)&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\langle...,\FUN{e-n}(...)\rangle \TRANS \langle...,\FUN{e-n}(...)\rangle</code></td>
+      <td>\(\langle\ldots,\FUN{e-n}(\ldots)\rangle \TRANS \langle\ldots,\FUN{e-n}(\ldots)\rangle\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">... -- e-n.(...) -&gt; ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">...\xrightarrow{\FUN{e-n}.(...)}...</code></td>
+      <td>\(\ldots\xrightarrow{\FUN{e-n}.(\ldots)}\ldots\)</td>
+    </tr>
+  </tbody>
+</table></div>
+<p>The <code class="language-plaintext highlighter-rouge">.</code> in the last line above should be <code class="language-plaintext highlighter-rouge">!</code>, <code class="language-plaintext highlighter-rouge">?</code>, or omitted.</p>
+      <h3 id="terms">
+          <a href="#terms" class="anchor-heading" aria-labelledby="terms"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Terms
+      </h3>
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Plain CBS</th>
+      <th>CBS-LaTeX</th>
+      <th>Formatted CBS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">( )</code></td>
+      <td><code class="language-plaintext highlighter-rouge">( ~ )</code></td>
+      <td>\(( ~ )\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">'...'</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\ATOM{text}</code></td>
+      <td>\(\ATOM{text}\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">42</code></td>
+      <td><code class="language-plaintext highlighter-rouge">42</code></td>
+      <td>\(42\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">2.14</code></td>
+      <td><code class="language-plaintext highlighter-rouge">2.14</code></td>
+      <td>\(2.14\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">"..."</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\STRING{text}</code></td>
+      <td>\(\STRING{text}\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">... : ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">... : ...</code></td>
+      <td>\(\ldots : \ldots\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">... =&gt; ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">... \TO ...</code></td>
+      <td>\(\ldots \TO \ldots\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">...+</code></td>
+      <td><code class="language-plaintext highlighter-rouge">...\PLUS</code></td>
+      <td>\(\ldots\PLUS\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">...?</code></td>
+      <td><code class="language-plaintext highlighter-rouge">...\QUERY</code></td>
+      <td>\(\ldots\QUERY\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">...*</code></td>
+      <td><code class="language-plaintext highlighter-rouge">...\STAR</code></td>
+      <td>\(\ldots\STAR\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">... | ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">... \mid ...</code></td>
+      <td>\(\ldots \mid \ldots\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">... &amp; ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">... \&amp; ...</code></td>
+      <td>\(\ldots \&amp; \ldots\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">...^N</code></td>
+      <td><code class="language-plaintext highlighter-rouge">...^{N}</code></td>
+      <td>\(\ldots^{N}\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">(..., ...)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">(..., ...)</code></td>
+      <td>\((\ldots, \ldots)\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">[..., ...]</code></td>
+      <td><code class="language-plaintext highlighter-rouge">[..., ...]</code></td>
+      <td>\([\ldots, \ldots]\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">{..., ...}</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\{..., ...\}</code></td>
+      <td>\(\{\ldots, \ldots\}\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">{...|-&gt;..., ...}</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\{... \mapsto ..., \cdots\}</code></td>
+      <td>\(\{\ldots \mapsto \ldots, \cdots\}\)</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h3 id="other-specifications">
+          <a href="#other-specifications" class="anchor-heading" aria-labelledby="other-specifications"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Other specifications
+      </h3>
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Plain CBS</th>
+      <th>CBS-LaTeX</th>
+      <th>Formatted CBS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Auxiliary K ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\KEY{Auxiliary K} ~ ...</code></td>
+      <td>\(\KEY{Auxiliary K} ~ \ldots\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Built-in K ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\KEY{Built-in K} ~ ...</code></td>
+      <td>\(\KEY{Built-in K} ~ \ldots\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Meta-variables ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\KEY{Meta-variables} ~ ...</code></td>
+      <td>\(\KEY{Meta-variables} ~ \ldots\)</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h2 id="alignment">
+          <a href="#alignment" class="anchor-heading" aria-labelledby="alignment"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Alignment
+      </h2>
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Plain CBS</th>
+      <th>CBS-LaTeX</th>
+      <th>Formatted CBS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">... ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">... \ ...</code></td>
+      <td>\(\ldots \ \ldots\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">...   ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">...\quad...</code></td>
+      <td>\(\ldots\quad\ldots\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">...      ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">...\qquad...</code></td>
+      <td>\(\ldots\qquad\ldots\)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">... ... ⏎    ...</code></td>
+      <td><code class="language-plaintext highlighter-rouge">\begin{aligned} ... ~ &amp; ... \\ ~ &amp; ... \end{aligned}</code></td>
+      <td>\(\begin{aligned} \ldots ~ &amp; \ldots \\ ~ &amp; \ldots \end{aligned}\)</td>
+    </tr>
+  </tbody>
+</table></div><hr />
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:generation" role="doc-endnote">
+      <p>Generation of marked-up CBS from CBS source text is currently being implemented in <a href="https://www.metaborg.org">Spoofax</a>;
+when complete, the tool will be made freely available as an Eclipse plugin. <a href="#fnref:generation" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:prefix" role="doc-endnote">
+      <p>An alternative would be to prefix all macro names with <code class="language-plaintext highlighter-rouge">cbs</code>. <a href="#fnref:prefix" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:implicit" role="doc-endnote">
+      <p>The <code class="language-plaintext highlighter-rouge">textcomp</code> package is automatically loaded in recent \(\LaTeX\) distributions. <a href="#fnref:implicit" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:sections" role="doc-endnote">
+      <p>CBS section numbers are also treated as names. <a href="#fnref:sections" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+          <hr>
+      </div>
+    </div>
+      <div class="search-overlay"></div>
+  </div>
+  <script type="text/javascript" src="/cbs-latex/assets/js/toggle_mode.js"></script>
+</body>
+</html>
