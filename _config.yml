@@ -5,8 +5,8 @@ description: >-
   formatted for the web using LaTeX, Markdown, KaTeX, and MathJax.
   One of the aims is for CBS on web pages look like the CBS in published papers,
   using mathematical symbols instead of plain text.
-baseurl: "/cbs-latex"
-url: "https://plancomps.github.io"
+baseurl: /cbs-latex
+url: https://plancomps.github.io
 github_username:  plancomps-admin
 
 remote_theme: pdmosses/just-the-docs@combination-rec-nav
@@ -16,14 +16,14 @@ plugins:
 defaults:
   -
     scope:
-      path: "docs"
-      type: "pages"
+      path: docs
+      type: pages
     values:
-      layout: "default"
+      layout: default
 
 aux_links:
-  "CBS-LaTeX on GitHub":
-    - "//github.com/plancomps/cbs-latex"
+  CBS-LaTeX on GitHub:
+    - https://github.com/plancomps/cbs-latex
 
 compress_html:
   blanklines: true

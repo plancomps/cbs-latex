@@ -1,7 +1,8 @@
 source "https://rubygems.org"
-gem "jekyll"
+gem "jekyll", ">= 3.9"
 gem "jekyll-remote-theme"
 gem "just-the-docs", github: "pdmosses/just-the-docs", branch: "combination-rec-nav"
+gem "kramdown-parser-gfm"
 
 # group :jekyll_plugins do
 #   gem "jekyll-feed", "~> 0.12"

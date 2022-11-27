@@ -1,10 +1,17 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13/dist/katex.min.css" crossorigin="anonymous">
+<!-- Copied from https://katex.org/docs/browser.html#starter-template -->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.css" crossorigin="anonymous">
 
 <!-- The loading of KaTeX is deferred to speed up page rendering -->
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.js" crossorigin="anonymous">
+</script>
+
+<!-- Automatically display code inside script tags with type=math/tex using KaTeX -->
+<script defer src="/cbs-latex/assets/js/mathtex-script-type.js">
+</script>
 
 <!-- To automatically render math in text elements, include the auto-render extension: -->
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13/dist/contrib/auto-render.min.js" crossorigin="anonymous"
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/contrib/auto-render.min.js" crossorigin="anonymous"
   onload="
     const macros = {
       '\\\n': '\\ ',

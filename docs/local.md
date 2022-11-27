@@ -10,7 +10,7 @@ In case of difficulties, see more on [Testing your GitHub Pages site locally wit
 
 - [Ruby] 2.6.5 or >= 2.7.2
     
-- [Jekyll] 3.8.9 or 4.x
+- [Jekyll] 3.9.x or 4.x
 
 ## Setting up
 
@@ -20,10 +20,10 @@ In case of difficulties, see more on [Testing your GitHub Pages site locally wit
     
     ```bash
     bundle update
-    bundle exec jekyll serve --config _config.yml,_config_local.yml
+    bundle exec jekyll serve
     ```
     
-    The default port `4000` can be overridden using `jekyll serve --port ....`.
+    The default port `4000` can be overridden using `bundle exec jekyll serve --port ....`.
 
 ## Browsing
 
@@ -38,10 +38,6 @@ Jekyll updates the web pages when you change the Markdown files (it takes a few 
 ## Colors
 
 The CBS highlighting colors can be changed by editing the SCSS files in `_sass/custom`.[^colors]
-
-[^colors]:
-    The current highlighting colors should be distinguishable to users with Deuteranopia
-    (tested using [Color Oracle](https://colororacle.org)).
 
 {:.note}
 > When browsing these web pages on GitHub, the color scheme can be toggled between `light` and `dark`.
@@ -67,5 +63,11 @@ For local browsing, the following configuration options are provided:
 
 `toggle_text_2`
 : set the label on the button for changing to the `light` scheme
+
+----
+
+[^colors]:
+    The current highlighting colors should be distinguishable to users with Deuteranopia
+    (tested using [Color Oracle](https://colororacle.org)).
 
 {% include links.md %}

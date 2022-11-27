@@ -1,5 +1,0 @@
-# For local development and testing with Jekyll >= 4.2, use the option:
-# --config _config.yml,_config_local.yml
-# See https://stackoverflow.com/a/27400343
-
-url: http://localhost:4000/
